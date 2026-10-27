@@ -434,7 +434,7 @@ def probe_tcp(endpoint: tuple[str, int]) -> tuple[tuple[str, int], float | None]
     try:
         with socket.create_connection(endpoint, timeout=1.5):
             return endpoint, (time.perf_counter() - started) * 1000
-    except OSError:
+    except (OSError, UnicodeError, OverflowError, ValueError):
         return endpoint, None
 
 
