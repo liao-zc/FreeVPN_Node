@@ -748,7 +748,7 @@ def main() -> int:
     protocol_links["v2ray"] = v2ray
     protocol_links["ss-ssr"] = ss_ssr
     protocol_links.pop("clash", None)
-    write_readme()
+    write_readme(protocol_links, clash_nodes)
     counts = ", ".join(f"{key}={len(values)}" for key, values in protocol_links.items())
     print(f"Published tunnel-speed-ranked nodes: {counts}, Clash={len(clash_nodes)}, Selected={len(selected_uris)}, All={len(full_uris)}.")
     return 0
