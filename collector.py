@@ -6,6 +6,7 @@ from __future__ import annotations
 import base64
 from datetime import datetime, timezone
 import hashlib
+import html
 import json
 import os
 import re
@@ -106,7 +107,9 @@ def uri_items(text: str) -> list[str]:
             candidate = decode_text(decoded)
             if "://" in candidate or candidate.lstrip().startswith(("proxies:", "proxies :")):
                 text = candidate
-    return [line.strip().strip("\"'") for line in text.splitlines() if "://" in line]
+    text = html.unescape(text)
+    pattern = r"(?:vmess|vless|trojan|ssr?|hysteria2|hy2|socks5?|https?|wireguard)://[^\s<>]+"
+    return [item.rstrip(",;)]}") for item in re.findall(pattern, text, flags=re.I)]
 
 
 def endpoint_uri_items(text: str, scheme: str, limit: int = 2500) -> list[str]:
