@@ -587,11 +587,11 @@ def update_readme_node_lists(protocol_links: dict[str, list[str]], clash_nodes: 
     lines = ["# Subscriptions", "", "## Primary URLs"]
     for key in order:
         extension = "yaml" if key == "clash" else "txt"
-        lines.extend([f"{labels[key]}:", f"https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/{key}.{extension}"])
+        lines.append(f"- {labels[key]}: https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/{key}.{extension}")
     lines.extend(["", "## Backup URLs"])
     for key in order:
         extension = "yaml" if key == "clash" else "txt"
-        lines.extend([f"{labels[key]}:", f"https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/{key}.{extension}"])
+        lines.append(f"- {labels[key]}: https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/{key}.{extension}")
     lines.extend(["", "<!-- GENERATED-NODES:START -->", "## Current nodes",
                   "At most 30 nodes per feed, sorted by TCP connection time measured from GitHub Actions. WireGuard and Hysteria2 use UDP; TCP connection time is only a port reachability reference, not UDP handshake or VPN tunnel latency."])
     for key in order:
