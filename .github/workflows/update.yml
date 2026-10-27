@@ -22,14 +22,24 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements.txt
-      - name: Install Mihomo for real tunnel speed tests
+      - uses: actions/cache@v4
+        id: mihomo-cache
+        with:
+          path: /tmp/mihomo-cache
+          key: mihomo-1.19.33-linux-amd64-compatible
+      - name: Download Mihomo for real tunnel speed tests
+        if: steps.mihomo-cache.outputs.cache-hit != 'true'
         shell: bash
         run: |
           version=1.19.33
           archive="mihomo-linux-amd64-compatible-v${version}.gz"
-          curl --fail --silent --show-error --location "https://github.com/MetaCubeX/mihomo/releases/download/v${version}/${archive}" --output "/tmp/${archive}"
-          gzip -dc "/tmp/${archive}" > /tmp/mihomo
-          binary=/tmp/mihomo
+          mkdir -p /tmp/mihomo-cache
+          curl --fail --silent --show-error --location --retry 3 --retry-delay 5 --connect-timeout 20 --max-time 180 "https://github.com/MetaCubeX/mihomo/releases/download/v${version}/${archive}" --output "/tmp/${archive}"
+          gzip -dc "/tmp/${archive}" > /tmp/mihomo-cache/mihomo
+      - name: Add Mihomo to PATH
+        shell: bash
+        run: |
+          binary=/tmp/mihomo-cache/mihomo
           chmod +x "$binary"
           echo "$(dirname "$binary")" >> "$GITHUB_PATH"
           "$binary" version
