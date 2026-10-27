@@ -51,3 +51,26 @@ https://sub.445569.xyz
 # xrayfree/free-ssr-ss-v2ray-vpn-clash (1.8k stars): public Base64 V2Ray feed advertised by its README.
 https://www.xrayvip.com/free.txt
 
+
+# mahdibland/V2RayAggregator (4.0k stars): speed-tested, protocol-specific feeds.
+https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/splitted/ss.txt
+https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/splitted/ssr.txt
+# Maintained protocol-specific feeds from active GitHub publishers.
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/protocols/vmess.txt
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/protocols/vless.txt
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/protocols/shadowsocks.txt
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/protocols/shadowsocksr.txt
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/protocols/socks.txt
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/protocols/trojan.txt
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/protocols/hysteria2.txt
+https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/Express_freevpn/vmess.txt
+https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/Express_freevpn/vless.txt
+https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/Express_freevpn/ss.txt
+https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/Express_freevpn/trojan.txt
+https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/Express_freevpn/wireguard.txt
+https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/Express_freevpn/hysteria2.txt
+https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/socks.txt
+http|https://raw.githubusercontent.com/SoliSpirit/proxy-list/master/http.txt
+socks5|https://raw.githubusercontent.com/SoliSpirit/proxy-list/master/socks5.txt
+http|https://raw.githubusercontent.com/roosterkid/openproxylist/master/HTTPS_RAW.txt
+socks5|https://raw.githubusercontent.com/roosterkid/openproxylist/master/SOCKS5_RAW.txt

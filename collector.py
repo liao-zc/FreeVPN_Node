@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch public proxy subscriptions and publish V2Ray, Clash, and SS/SSR feeds."""
+"""Fetch public proxy subscriptions and publish protocol-specific feeds."""
 
 from __future__ import annotations
 
@@ -9,7 +9,10 @@ import hashlib
 import json
 import os
 import re
+import socket
 import sys
+import time
+from concurrent.futures import ThreadPoolExecutor
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -24,7 +27,13 @@ OUTPUT = Path(os.environ.get("OUTPUT_DIR", ROOT / "subscriptions"))
 MAX_BYTES = int(os.environ.get("MAX_SOURCE_BYTES", str(5 * 1024 * 1024)))
 TIMEOUT = int(os.environ.get("FETCH_TIMEOUT", "20"))
 USER_AGENT = "FreeVPN-Node-Aggregator/1.0 (public subscription parser)"
-SCHEMES = {"vmess", "vless", "trojan", "ss", "ssr", "hysteria2", "hy2"}
+SCHEMES = {"vmess", "vless", "trojan", "ss", "ssr", "hysteria2", "hy2", "socks", "socks5", "http", "https", "wireguard"}
+PROTOCOL_FEEDS = {
+    "vmess": ("vmess",), "vless": ("vless",), "ss": ("ss",),
+    "socks": ("socks", "socks5"), "http": ("http", "https"),
+    "trojan": ("trojan",), "wireguard": ("wireguard",),
+    "hysteria2": ("hysteria2", "hy2"),
+}
 
 
 def decode_b64(value: str) -> bytes | None:
@@ -97,6 +106,32 @@ def uri_items(text: str) -> list[str]:
                 text = candidate
     return [line.strip().strip("\"'") for line in text.splitlines() if "://" in line]
 
+
+def endpoint_uri_items(text: str, scheme: str, limit: int = 2500) -> list[str]:
+    """Convert a bounded plain host:port proxy list into share links."""
+    if scheme not in {"http", "socks5"}:
+        return []
+    results: list[str] = []
+    seen: set[str] = set()
+    for line in text.splitlines():
+        value = line.strip().strip("\"'")
+        if not value or value.startswith(("#", "//")) or "://" in value or any(ch.isspace() for ch in value):
+            continue
+        try:
+            parsed = urllib.parse.urlsplit("//" + value)
+            host, port = parsed.hostname, parsed.port
+        except ValueError:
+            continue
+        if not host or not port or not (1 <= port <= 65535):
+            continue
+        authority_host = f"[{host}]" if ":" in host and not host.startswith("[") else host
+        uri = f"{scheme}://{authority_host}:{port}"
+        if uri not in seen:
+            results.append(uri)
+            seen.add(uri)
+        if len(results) >= limit:
+            break
+    return results
 
 def from_clash(document: Any) -> list[dict[str, Any]]:
     if not isinstance(document, dict) or not isinstance(document.get("proxies"), list):
@@ -193,6 +228,39 @@ def from_uri(uri: str) -> dict[str, Any] | None:
             return None
         name = urllib.parse.unquote(parsed.fragment) or f"{scheme}-{parsed.hostname}"
         query = urllib.parse.parse_qs(parsed.query)
+        if scheme in {"socks", "socks5", "http", "https"}:
+            kind = "socks5" if scheme in {"socks", "socks5"} else "http"
+            node = {"name": name, "type": kind, "server": parsed.hostname, "port": parsed.port, "udp": True}
+            if parsed.username is not None:
+                username = urllib.parse.unquote(parsed.username)
+                password = urllib.parse.unquote(parsed.password or "")
+                decoded_auth = decode_b64(username) if not password else None
+                if decoded_auth != b":":
+                    if username:
+                        node["username"] = username
+                    if password:
+                        node["password"] = password
+            if scheme == "https" or query.get("tls", [""])[0].lower() == "true":
+                node["tls"] = True
+            return node
+        if scheme == "wireguard":
+            private_key = urllib.parse.unquote(parsed.username or "")
+            public_key = query.get("publickey", query.get("public-key", [""]))[0]
+            address = query.get("address", query.get("ip", [""]))[0]
+            if not (private_key and public_key and address):
+                return None
+            node = {"name": name, "type": "wireguard", "server": parsed.hostname, "port": parsed.port,
+                    "private-key": private_key, "public-key": public_key, "ip": address, "udp": True}
+            if query.get("presharedkey", [""])[0]:
+                node["preshared-key"] = query["presharedkey"][0]
+            if query.get("reserved", [""])[0]:
+                try:
+                    node["reserved"] = [int(part) for part in query["reserved"][0].split(",")]
+                except ValueError:
+                    return None
+            if query.get("mtu", [""])[0].isdigit():
+                node["mtu"] = int(query["mtu"][0])
+            return node
         if scheme == "vless":
             node = {"name": name, "type": "vless", "server": parsed.hostname, "port": parsed.port,
                     "uuid": urllib.parse.unquote(parsed.username or ""), "udp": True}
@@ -315,6 +383,33 @@ def uri_from_node(node: dict[str, Any]) -> str | None:
                 params[key] = str(node[key])
         query = "?" + urllib.parse.urlencode(params) if params else ""
         return f"hysteria2://{urllib.parse.quote(password, safe='')}@{host}:{port}{query}#{label}"
+    if kind in {"socks", "socks5", "http"}:
+        scheme = "socks5" if kind in {"socks", "socks5"} else ("https" if node.get("tls") else "http")
+        username = str(node.get("username", ""))
+        password = str(node.get("password", ""))
+        credentials = ""
+        if username:
+            credentials = urllib.parse.quote(username, safe="")
+            if password:
+                credentials += ":" + urllib.parse.quote(password, safe="")
+            credentials += "@"
+        return f"{scheme}://{credentials}{host}:{port}#{label}"
+
+    if kind == "wireguard":
+        private_key = str(node.get("private-key", node.get("private_key", "")))
+        public_key = str(node.get("public-key", node.get("public_key", "")))
+        address = str(node.get("ip", node.get("address", "")))
+        if not (private_key and public_key and address):
+            return None
+        params = {"address": address, "publickey": public_key}
+        if node.get("preshared-key") or node.get("preshared_key"):
+            params["presharedkey"] = str(node.get("preshared-key", node.get("preshared_key")))
+        if node.get("reserved") is not None:
+            reserved = node["reserved"]
+            params["reserved"] = ",".join(str(x) for x in reserved) if isinstance(reserved, list) else str(reserved)
+        if node.get("mtu"):
+            params["mtu"] = str(node["mtu"])
+        return f"wireguard://{urllib.parse.quote(private_key, safe='')}@{host}:{port}?{urllib.parse.urlencode(params)}#{label}"
     if kind == "ss":
         method, password = str(node.get("cipher", "")), str(node.get("password", ""))
         if not method or not password:
@@ -414,7 +509,51 @@ def stable_key(node: dict[str, Any]) -> str:
     return hashlib.sha256(payload.encode()).hexdigest()
 
 
-def load_source(url: str) -> tuple[list[str], list[dict[str, Any]]]:
+def endpoint_key(node: dict[str, Any]) -> tuple[str, int] | None:
+    host, port = str(node.get("server", "")).strip(), node.get("port")
+    try:
+        port_number = int(port)
+    except (TypeError, ValueError):
+        return None
+    if not host or not 1 <= port_number <= 65535:
+        return None
+    return host.lower().strip("[]"), port_number
+
+
+def probe_tcp(endpoint: tuple[str, int]) -> tuple[tuple[str, int], float | None]:
+    """Measure TCP connect latency in milliseconds; None means unreachable/timeout."""
+    started = time.perf_counter()
+    try:
+        with socket.create_connection(endpoint, timeout=1.5):
+            return endpoint, (time.perf_counter() - started) * 1000
+    except (OSError, UnicodeError, OverflowError, ValueError):
+        return endpoint, None
+
+
+def measure_latencies(nodes: list[dict[str, Any]]) -> dict[tuple[str, int], float | None]:
+    endpoints = sorted({key for node in nodes if (key := endpoint_key(node)) is not None})
+    with ThreadPoolExecutor(max_workers=256) as pool:
+        results = dict(pool.map(probe_tcp, endpoints))
+    reachable = sum(value is not None for value in results.values())
+    print(f"TCP latency probes: {reachable}/{len(endpoints)} endpoints reachable")
+    return results
+
+
+def latency_sort_key(node: dict[str, Any], latencies: dict[tuple[str, int], float | None]) -> tuple[bool, float, str]:
+    endpoint = endpoint_key(node)
+    latency = latencies.get(endpoint) if endpoint else None
+    return latency is None, latency if latency is not None else float("inf"), stable_key(node)
+
+
+def log_latency_results(group: str, nodes: list[dict[str, Any]], latencies: dict[tuple[str, int], float | None]) -> None:
+    for rank, node in enumerate(nodes, 1):
+        endpoint = endpoint_key(node)
+        value = latencies.get(endpoint) if endpoint else None
+        milliseconds = f"{value:.2f}" if value is not None else "unreachable"
+        server = f"{endpoint[0]}:{endpoint[1]}" if endpoint else "unknown"
+        name = str(node.get("name", "")).replace("\t", " ").replace("\r", " ").replace("\n", " ")
+        print(f"LATENCY_RESULT\t{group}\t{rank}\t{milliseconds}\t{node.get('type', '')}\t{server}\t{name}")
+def load_source(url: str, raw_proxy_type: str | None = None) -> tuple[list[str], list[dict[str, Any]]]:
     url = url.replace("{date}", datetime.now(timezone.utc).strftime("%Y%m%d"))
     raw = fetch(url)
     text = decode_text(raw)
@@ -430,11 +569,55 @@ def load_source(url: str) -> tuple[list[str], list[dict[str, Any]]]:
         clash_nodes = from_clash(document)
     elif isinstance(document, dict) and isinstance(document.get("outbounds"), list):
         clash_nodes = from_xray(document)
-    return uri_items(text), clash_nodes
+    uris = uri_items(text)
+    if raw_proxy_type:
+        uris.extend(endpoint_uri_items(text, raw_proxy_type))
+    return uris, clash_nodes
 
+def update_readme_node_lists(protocol_links: dict[str, list[str]], clash_nodes: list[dict[str, Any]]) -> None:
+    """Keep stable main and backup URLs plus generated node snapshots in README."""
+    readme_path = ROOT / "README.md"
+    labels = {
+        "v2ray": "V2Ray (VMess + VLESS + Trojan)", "ss-ssr": "SS / SSR",
+        "clash": "Clash / Mihomo", "vmess": "VMess", "vless": "VLESS",
+        "ss": "Shadowsocks", "socks": "SOCKS", "http": "HTTP",
+        "trojan": "Trojan", "wireguard": "WireGuard", "hysteria2": "Hysteria2",
+    }
+    order = ("v2ray", "ss-ssr", "clash", "vmess", "vless", "ss", "socks", "http", "trojan", "wireguard", "hysteria2")
+    lines = ["# Subscriptions", "", "## Primary URLs"]
+    for key in order:
+        extension = "yaml" if key == "clash" else "txt"
+        lines.extend([f"{labels[key]}:", f"https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/{key}.{extension}"])
+    lines.extend(["", "## Backup URLs"])
+    for key in order:
+        extension = "yaml" if key == "clash" else "txt"
+        lines.extend([f"{labels[key]}:", f"https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/{key}.{extension}"])
+    lines.extend(["", "<!-- GENERATED-NODES:START -->", "## Current nodes",
+                  "At most 30 nodes per feed, sorted by TCP connection time measured from GitHub Actions. WireGuard and Hysteria2 use UDP; TCP connection time is only a port reachability reference, not UDP handshake or VPN tunnel latency."])
+    for key in order:
+        if key == "clash":
+            content = yaml.safe_dump({"proxies": clash_nodes}, allow_unicode=True, sort_keys=False).rstrip() if clash_nodes else "proxies: []"
+            fence = "yaml"
+        else:
+            values = protocol_links.get(key, [])
+            content = "\n".join(values) if values else "(No usable nodes this round)"
+            fence = "text"
+        lines.extend(["", f"### {labels[key]}", f"```{fence}", content, "```"])
+    lines.append("<!-- GENERATED-NODES:END -->")
+    readme_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 def main() -> int:
-    sources = [line.strip() for line in SOURCES_FILE.read_text(encoding="utf-8").splitlines()
-               if line.strip() and not line.lstrip().startswith("#")]
+    source_lines = [line.strip() for line in SOURCES_FILE.read_text(encoding="utf-8").splitlines()
+                    if line.strip() and not line.lstrip().startswith("#")]
+    sources: list[tuple[str, str | None]] = []
+    for line in source_lines:
+        if "|" in line:
+            raw_proxy_type, url = line.split("|", 1)
+            if raw_proxy_type not in {"http", "socks5"}:
+                print(f"Unsupported raw proxy type in source entry: {raw_proxy_type}", file=sys.stderr)
+                continue
+            sources.append((url.strip(), raw_proxy_type))
+        else:
+            sources.append((line, None))
     if not sources:
         print("No source URLs configured", file=sys.stderr)
         return 2
@@ -442,18 +625,28 @@ def main() -> int:
     all_uris: dict[str, str] = {}
     all_nodes: dict[str, dict[str, Any]] = {}
     successes = 0
-    for url in sources:
+
+    def fetch_one(source: tuple[str, str | None]) -> tuple[str, list[str], list[dict[str, Any]], Exception | None]:
+        url, raw_proxy_type = source
         try:
-            uris, clash = load_source(url)
+            uris, clash = load_source(url, raw_proxy_type)
+            return url, uris, clash, None
+        except (urllib.error.URLError, TimeoutError, ValueError, OSError) as exc:
+            return url, [], [], exc
+
+    with ThreadPoolExecutor(max_workers=16) as source_pool:
+        for url, uris, clash, error in source_pool.map(fetch_one, sources):
+            if error is not None:
+                print(f"{url}: {type(error).__name__}: {error}", file=sys.stderr)
+                continue
             found = 0
             for uri in uris:
-                valid = canonical_uri(uri)
+                # Publish only links that the client-format parser can fully parse.
                 node = from_uri(uri)
-                if valid:
+                valid = canonical_uri(uri) if node else None
+                if valid and node:
                     all_uris.setdefault(valid, valid)
-                if node:
                     all_nodes.setdefault(stable_key(node), node)
-                if valid or node:
                     found += 1
             for node in clash:
                 all_nodes.setdefault(stable_key(node), node)
@@ -466,15 +659,30 @@ def main() -> int:
             if found:
                 successes += 1
             print(f"{url}: parsed {found} entries")
-        except (urllib.error.URLError, TimeoutError, ValueError, OSError) as exc:
-            print(f"{url}: {type(exc).__name__}: {exc}", file=sys.stderr)
-
     if not successes:
         print("All sources failed or returned no usable entries; preserving existing feeds.", file=sys.stderr)
         return 1
 
-    v2ray = sorted(uri for uri in all_uris.values() if uri.startswith(("vmess://", "vless://", "trojan://")))
-    ss_ssr = sorted(uri for uri in all_uris.values() if uri.startswith(("ss://", "ssr://")))
+    latencies = measure_latencies(list(all_nodes.values()))
+
+    def uri_latency_key(uri: str) -> tuple[bool, float, str]:
+        node = from_uri(uri)
+        return latency_sort_key(node, latencies) if node else (True, float("inf"), uri)
+
+    protocol_links: dict[str, list[str]] = {}
+    for feed, accepted_schemes in PROTOCOL_FEEDS.items():
+        protocol_links[feed] = sorted(
+            (uri for uri in all_uris.values() if uri.partition(":")[0].lower() in accepted_schemes),
+            key=uri_latency_key,
+        )[:30]
+    v2ray = sorted(
+        (uri for uri in all_uris.values() if uri.startswith(("vmess://", "vless://", "trojan://"))),
+        key=uri_latency_key,
+    )[:30]
+    ss_ssr = sorted(
+        (uri for uri in all_uris.values() if uri.startswith(("ss://", "ssr://"))),
+        key=uri_latency_key,
+    )[:30]
     clash_nodes = sorted(all_nodes.values(), key=lambda item: (str(item.get("name", "")).casefold(), stable_key(item)))
     # Clash requires stable, unique proxy labels for groups.
     used_names: set[str] = set()
@@ -486,11 +694,18 @@ def main() -> int:
             suffix += 1
         node["name"] = name
         used_names.add(name)
-    if not v2ray and not ss_ssr and not clash_nodes:
+    clash_nodes.sort(key=lambda item: latency_sort_key(item, latencies))
+    clash_nodes = clash_nodes[:30]
+    log_latency_results("V2Ray", [node for uri in v2ray if (node := from_uri(uri)) is not None], latencies)
+    log_latency_results("SS-SSR", [node for uri in ss_ssr if (node := from_uri(uri)) is not None], latencies)
+    log_latency_results("Clash", clash_nodes, latencies)
+    if not v2ray and not ss_ssr and not clash_nodes and not any(protocol_links.values()):
         print("No supported nodes were parsed; preserving existing feeds.", file=sys.stderr)
         return 1
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
+    for feed, values in protocol_links.items():
+        (OUTPUT / f"{feed}.txt").write_text(base64.b64encode("\n".join(values).encode()).decode() + "\n", encoding="ascii")
     (OUTPUT / "v2ray.txt").write_text(base64.b64encode("\n".join(v2ray).encode()).decode() + "\n", encoding="ascii")
     (OUTPUT / "ss-ssr.txt").write_text(base64.b64encode("\n".join(ss_ssr).encode()).decode() + "\n", encoding="ascii")
     document = {"port": 7890, "socks-port": 7891, "allow-lan": False, "mode": "rule", "log-level": "warning",
@@ -499,7 +714,12 @@ def main() -> int:
                                   "url": "https://www.gstatic.com/generate_204", "interval": 300}],
                 "rules": ["MATCH,AUTO"]}
     (OUTPUT / "clash.yaml").write_text(yaml.safe_dump(document, allow_unicode=True, sort_keys=False), encoding="utf-8")
-    print(f"Published {len(v2ray)} V2Ray-family URIs, {len(ss_ssr)} SS/SSR URIs, {len(clash_nodes)} Clash nodes.")
+    protocol_links["v2ray"] = v2ray
+    protocol_links["ss-ssr"] = ss_ssr
+    protocol_links.pop("clash", None)
+    update_readme_node_lists(protocol_links, clash_nodes)
+    counts = ", ".join(f"{key}={len(values)}" for key, values in protocol_links.items())
+    print(f"Published fastest nodes: {counts}, Clash={len(clash_nodes)} (maximum 30 per feed).")
     return 0
 
 
