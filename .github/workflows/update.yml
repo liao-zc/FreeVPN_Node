@@ -38,6 +38,6 @@ jobs:
       - name: Purge jsDelivr cache
         if: success()
         run: |
-          for path in v2ray.txt ss-ssr.txt clash.yaml vmess.txt vless.txt ss.txt socks.txt http.txt trojan.txt wireguard.txt hysteria2.txt; do
+          for path in v2ray.txt ss-ssr.txt clash.yaml vmess.txt vless.txt ss.txt ssr.txt socks.txt http.txt trojan.txt wireguard.txt hysteria2.txt; do
             curl --fail --silent --show-error "https://purge.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/$path" || true
           done

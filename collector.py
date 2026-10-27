@@ -29,7 +29,7 @@ TIMEOUT = int(os.environ.get("FETCH_TIMEOUT", "20"))
 USER_AGENT = "FreeVPN-Node-Aggregator/1.0 (public subscription parser)"
 SCHEMES = {"vmess", "vless", "trojan", "ss", "ssr", "hysteria2", "hy2", "socks", "socks5", "http", "https", "wireguard"}
 PROTOCOL_FEEDS = {
-    "vmess": ("vmess",), "vless": ("vless",), "ss": ("ss",),
+    "vmess": ("vmess",), "vless": ("vless",), "ss": ("ss",), "ssr": ("ssr",),
     "socks": ("socks", "socks5"), "http": ("http", "https"),
     "trojan": ("trojan",), "wireguard": ("wireguard",),
     "hysteria2": ("hysteria2", "hy2"),
@@ -580,10 +580,10 @@ def update_readme_node_lists(protocol_links: dict[str, list[str]], clash_nodes: 
     labels = {
         "v2ray": "V2Ray (VMess + VLESS + Trojan)", "ss-ssr": "SS / SSR",
         "clash": "Clash / Mihomo", "vmess": "VMess", "vless": "VLESS",
-        "ss": "Shadowsocks", "socks": "SOCKS", "http": "HTTP",
+        "ss": "Shadowsocks", "ssr": "ShadowsocksR", "socks": "SOCKS", "http": "HTTP",
         "trojan": "Trojan", "wireguard": "WireGuard", "hysteria2": "Hysteria2",
     }
-    order = ("v2ray", "ss-ssr", "clash", "vmess", "vless", "ss", "socks", "http", "trojan", "wireguard", "hysteria2")
+    order = ("v2ray", "ss-ssr", "clash", "vmess", "vless", "ss", "ssr", "socks", "http", "trojan", "wireguard", "hysteria2")
     lines = ["# Subscriptions", "", "## Primary URLs"]
     for key in order:
         extension = "yaml" if key == "clash" else "txt"
@@ -699,6 +699,8 @@ def main() -> int:
     log_latency_results("V2Ray", [node for uri in v2ray if (node := from_uri(uri)) is not None], latencies)
     log_latency_results("SS-SSR", [node for uri in ss_ssr if (node := from_uri(uri)) is not None], latencies)
     log_latency_results("Clash", clash_nodes, latencies)
+    for feed, links in protocol_links.items():
+        log_latency_results(feed, [node for uri in links if (node := from_uri(uri)) is not None], latencies)
     if not v2ray and not ss_ssr and not clash_nodes and not any(protocol_links.values()):
         print("No supported nodes were parsed; preserving existing feeds.", file=sys.stderr)
         return 1
