@@ -24,7 +24,7 @@ OUTPUT = Path(os.environ.get("OUTPUT_DIR", ROOT / "subscriptions"))
 MAX_BYTES = int(os.environ.get("MAX_SOURCE_BYTES", str(5 * 1024 * 1024)))
 TIMEOUT = int(os.environ.get("FETCH_TIMEOUT", "20"))
 USER_AGENT = "FreeVPN-Node-Aggregator/1.0 (public subscription parser)"
-SCHEMES = {"vmess", "vless", "trojan", "ss", "ssr"}
+SCHEMES = {"vmess", "vless", "trojan", "ss", "ssr", "hysteria2", "hy2"}
 
 
 def decode_b64(value: str) -> bytes | None:
@@ -211,6 +211,16 @@ def from_uri(uri: str) -> dict[str, Any] | None:
             elif network == "grpc":
                 node["grpc-opts"] = {"grpc-service-name": query.get("serviceName", [""])[0]}
             return node if node["uuid"] else None
+        if scheme in {"hysteria2", "hy2"}:
+            password = urllib.parse.unquote(parsed.username or "")
+            if not password:
+                return None
+            node = {"name": name, "type": "hysteria2", "server": parsed.hostname, "port": parsed.port,
+                    "password": password, "udp": True}
+            for key in ("sni", "obfs", "obfs-password"):
+                if query.get(key, [""])[0]:
+                    node[key] = query[key][0]
+            return node
         if scheme == "trojan":
             node = {"name": name, "type": "trojan", "server": parsed.hostname, "port": parsed.port,
                     "password": urllib.parse.unquote(parsed.username or ""), "udp": True}
@@ -295,6 +305,16 @@ def uri_from_node(node: dict[str, Any]) -> str | None:
             params["serviceName"] = str(grpc["grpc-service-name"])
         return f"trojan://{urllib.parse.quote(password, safe='')}@{host}:{port}?{urllib.parse.urlencode(params)}#{label}"
 
+    if kind in {"hysteria2", "hy2"}:
+        password = str(node.get("password", ""))
+        if not password:
+            return None
+        params = {}
+        for key in ("sni", "obfs", "obfs-password"):
+            if node.get(key):
+                params[key] = str(node[key])
+        query = "?" + urllib.parse.urlencode(params) if params else ""
+        return f"hysteria2://{urllib.parse.quote(password, safe='')}@{host}:{port}{query}#{label}"
     if kind == "ss":
         method, password = str(node.get("cipher", "")), str(node.get("password", ""))
         if not method or not password:

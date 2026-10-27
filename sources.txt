@@ -40,7 +40,7 @@ https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.y
 https://raw.githubusercontent.com/snakem982/proxypool/main/source/v2ray-2.txt
 https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/clash.config.yaml
 https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/v2ray.config.txt
-https://raw.githubusercontent.com/mfuu/FreeProxies/master/sub.yaml
+https://raw.githubusercontent.com/mfuu/FreeProxies/master/sub
 
 # igareck/vpn-configs-for-russia (9.3k stars): Xray JSON export, GLOBAL profile.
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Export/v2rayNG_Android/GLOBAL/BLACK_VLESS_RUS_mobile_v2rayNG_global.json
