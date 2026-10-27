@@ -1,10 +1,10 @@
 # 订阅地址
 
-V2Ray：
-https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/v2ray.txt
+V2Ray（v2rayNG）：
+https://testingcf.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/v2ray.txt
 
 Clash / Mihomo：
-https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/clash.yaml
+https://testingcf.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/clash.yaml
 
 SS / SSR：
-https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/ss-ssr.txt
+https://testingcf.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/ss-ssr.txt
