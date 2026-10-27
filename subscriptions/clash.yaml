@@ -25487,19 +25487,6 @@ proxies:
   type: vless
   udp: true
   uuid: f667a096-5231-4cfb-8759-92bb32473139
-- client-fingerprint: firefox
-  name: vless-1827156655
-  network: tcp
-  port: 25895
-  reality-opts:
-    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-    short-id: a73f0410d728c823
-  server: ee.h1cloud.net
-  servername: www.samsung.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: vless-1827162765
@@ -61086,30 +61073,6 @@ proxies:
   udp: true
   uuid: 473c2217-677d-58c8-87df-a75de10de1ad
   name: 乌克兰 020 [7e3c32f04e9ba955]
-- name: 乌克兰+V2CROSS.COM
-  type: vless
-  server: v2.drsachi.com
-  port: 443
-  uuid: 270c3fa5-0293-4d68-875c-6cdc3bdc5b84
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-- name: 乌克兰+V2CROSS.COM-2
-  type: vless
-  server: 91.196.163.150
-  port: 8443
-  uuid: e0216964-ffa1-4d39-82c4-0e40879a470d
-  udp: true
-  tls: true
-  servername: stable.nullo.pro
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: XYkuP_Keu-yL7EQ8xZc4RTmcVAfp06Z1onV2ZNrlsHM
-    short-id: c31f187b
-  network: tcp
 - alterId: 0
   cipher: auto
   network: ws
@@ -61214,6 +61177,19 @@ proxies:
   port: 26587
   cipher: aes-256-gcm
   password: M9FMqvj5u2
+- name: 以色列+V2CROSS.COM
+  type: vless
+  server: ee.h1cloud.net
+  port: 25895
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  udp: true
+  tls: true
+  servername: www.samsung.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
+    short-id: a73f0410d728c823
+  network: tcp
 - network: ws
   port: 443
   server: 31.57.190.89
@@ -63129,6 +63105,19 @@ proxies:
     path: /A2DJOPFT
     headers:
       Host: lg10.cfcdn1.xyz
+- name: 俄罗斯+V2CROSS.COM
+  type: vless
+  server: 94.228.167.12
+  port: 443
+  uuid: 37ca5f34-2531-4fda-a781-20f3845fea88
+  udp: true
+  tls: true
+  servername: washingphonicseatable.solsticedigest.me
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: dCaQHVtwEPBeiH3ivVU9ycGJZ8uCO2JaIVjYBnfaTWY
+    short-id: c13c9bd7bd45847d
+  network: tcp
 - network: tcp
   password: MeaDiUmPlkWbZJ2BON8tz
   port: 28259
@@ -77776,18 +77765,6 @@ proxies:
       Host: wstg.datasynctrue.online
     path: /api/connect
   name: 巴西 049 [0c02b96dc89456d1]
-- name: 巴西+V2CROSS.COM
-  type: ss
-  server: 177.202.111.22
-  port: 56137
-  cipher: chacha20-ietf-poly1305
-  password: uvKNudV-N8AUCrykPiyznA
-- name: 巴西+V2CROSS.COM-2
-  type: ss
-  server: 177.202.111.20
-  port: 56137
-  cipher: chacha20-ietf-poly1305
-  password: uvKNudV-N8AUCrykPiyznA
 - client-fingerprint: chrome
   network: ws
   port: 8443
@@ -79210,6 +79187,19 @@ proxies:
   name: 德国 131 [379bf959ea2eb2ea]
 - name: 德国+V2CROSS.COM
   type: vless
+  server: dorado.yokkastars.com
+  port: 40443
+  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
+  udp: true
+  tls: true
+  servername: deepl.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+    short-id: 68a8
+  network: tcp
+- name: 德国+V2CROSS.COM-2
+  type: vless
   server: 5.253.28.240
   port: 40443
   uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
@@ -79221,6 +79211,19 @@ proxies:
     public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
     short-id: 88b6
   network: raw
+- name: 德国+V2CROSS.COM-3
+  type: vless
+  server: 194.59.183.2
+  port: 8443
+  uuid: e0216964-ffa1-4d39-82c4-0e40879a470d
+  udp: true
+  tls: true
+  servername: ger.nullo.pro
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: e8vusEkL9FTC7oxFCp8biOWMFH-e-1IN21V6YNynGDg
+    short-id: 6350d1647a4880
+  network: tcp
 - alterId: 0
   cipher: auto
   network: tcp
@@ -80669,16 +80672,6 @@ proxies:
   ws-opts:
     path: /
   name: 智利 001 [c684f47daf8f8833]
-- name: 智利+V2CROSS.COM
-  type: vless
-  server: hk013.zestapp778.com
-  port: 59746
-  uuid: 99fa1d27-b252-4cba-b04d-50c3d0873700
-  udp: true
-  tls: true
-  servername: hk013.zestapp778.com
-  client-fingerprint: chrome
-  network: tcp
 - name: 未命名
   type: hysteria2
   server: starlink-ft.251313.xyz
@@ -83529,6 +83522,19 @@ proxies:
   udp: true
   uuid: a3bd1997-6f78-4e61-83e1-4f5d5000ed24
   name: 爱尔兰 003 [31bacf25ad5dbca3]
+- name: 爱尔兰+V2CROSS.COM
+  type: vless
+  server: 78.17.178.125
+  port: 443
+  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
+  udp: true
+  tls: true
+  servername: cdn.tbank.ru
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE
+    short-id: e0215064d8d1fd7c
+  network: tcp
 - name: 爱沙尼亚(mibei77.com 米贝节点分享)
   type: vless
   server: l415ng0o.himoy.space
@@ -102858,29 +102864,48 @@ proxies:
     headers:
       Host: lvryzenkvm1gb.sharecentre.online
   servername: lvryzenkvm1gb.sharecentre.online
-- name: 美国+V2CROSS.COM
+- name: 美国+CloudFlare节点
   type: vless
-  server: 168.222.193.184
+  server: cf.877774.xyz
   port: 443
-  uuid: afbd410e-1663-4f40-9d3b-df5117aa23ca
+  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
   tls: true
-  servername: 168.222.193.184.sslip.io
+  servername: ccc.010304.xyz
   client-fingerprint: chrome
-  reality-opts:
-    public-key: lvq2jh6X7yT88vvcV9GUriwtWL0HeqaLHr773Vgb5ks
-    short-id: b8307998cdaf0d55
-  network: tcp
-- name: 美国+V2CROSS.COM-2
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
+    headers:
+      Host: ccc.010304.xyz
+- name: 美国+CloudFlare节点-2
   type: vless
-  server: swz.proxyplankton.ru
+  server: 172.64.153.153
   port: 443
-  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
+  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
   tls: true
-  servername: swz.proxyplankton.ru
+  servername: ccc.010304.xyz
   client-fingerprint: chrome
-  network: tcp
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
+- name: 美国+加利福尼亚
+  type: vless
+  server: 64.188.83.188
+  port: 2083
+  uuid: 75b517db-1f97-4bda-a479-863d988c31a0
+  udp: true
+  tls: true
+  servername: speedtestmark.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vless-ws
+    headers:
+      Host: ''
 - name: 美国2|@ripaojiedian
   type: trojan
   server: 63182sh8-4d7b.aws-agent.net
@@ -104016,15 +104041,15 @@ proxies:
   name: 英国 091 [f2d0533eb669295b]
 - name: 英国+V2CROSS.COM
   type: vless
-  server: 109.176.229.51
+  server: 31.76.89.226
   port: 443
   uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
   udp: true
   tls: true
-  servername: ad9.vkusnews.com
+  servername: ai.eosshop.net
   client-fingerprint: chrome
   reality-opts:
-    public-key: 4FgTYQNtmGhIj137SdjagESDb61Kl6Anj_de5JP7YBs
+    public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
     short-id: ''
   network: tcp
 - network: ws
@@ -108434,19 +108459,6 @@ proxies:
     short-id: ''
   network: tcp
 - name: 🇩🇪 德国 | DEU-10
-  type: vless
-  server: 94.228.167.12
-  port: 443
-  uuid: 37ca5f34-2531-4fda-a781-20f3845fea88
-  udp: true
-  tls: true
-  servername: washingphonicseatable.solsticedigest.me
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: dCaQHVtwEPBeiH3ivVU9ycGJZ8uCO2JaIVjYBnfaTWY
-    short-id: c13c9bd7bd45847d
-  network: tcp
-- name: 🇩🇪 德国 | DEU-11
   server: de7.pad-sservice.lat
   port: 443
   type: vless
@@ -108460,14 +108472,14 @@ proxies:
   client-fingerprint: firefox
   network: tcp
   udp: true
-- name: 🇩🇪 德国 | DEU-12
+- name: 🇩🇪 德国 | DEU-11
   type: hysteria2
   server: 94.103.169.109
   port: 4443
   password: c0242d1b-db7a-4dcf-95ff-e10a3ef1c1a3
   udp: true
   sni: de3.shvpn.ru
-- name: 🇩🇪 德国 | DEU-13
+- name: 🇩🇪 德国 | DEU-12
   type: vless
   server: de7.pad-sservice.lat
   port: 443
@@ -109432,22 +109444,8 @@ proxies:
     path: /@Marisa_kristi
     headers:
       Host: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
-- name: 🇩🇪_德国 (19)
-  type: vless
-  server: 64.188.83.188
-  port: 2083
-  uuid: 75b517db-1f97-4bda-a479-863d988c31a0
-  udp: true
-  tls: true
-  servername: speedtestmark.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vless-ws
-    headers:
-      Host: ''
 - type: vless
-  name: 🇩🇪_德国 (19)-2
+  name: 🇩🇪_德国 (19)
   server: 64.188.83.188
   port: 2083
   uuid: 75b517db-1f97-4bda-a479-863d988c31a0
@@ -109909,19 +109907,6 @@ proxies:
   reality-opts:
     public-key: kBVqBeTLp4F9KLA2qfqRLgiwd1oTxK3PM3GnrRzMYCA
     short-id: e9c407d1
-- name: 🇩🇪_德国_111
-  type: vless
-  server: 78.17.178.125
-  port: 443
-  uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
-  udp: true
-  tls: true
-  servername: cdn.tbank.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE
-    short-id: e0215064d8d1fd7c
-  network: tcp
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   port: 443
@@ -129847,6 +129832,16 @@ proxies:
   network: tcp
 - name: 🇳🇱 荷兰 | NLD-6
   type: vless
+  server: swz.proxyplankton.ru
+  port: 443
+  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
+  udp: true
+  tls: true
+  servername: swz.proxyplankton.ru
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇳🇱 荷兰 | NLD-7
+  type: vless
   server: 13.143.172.34
   port: 443
   uuid: fafc7c16-f890-45ee-a856-02df225172dd
@@ -129858,7 +129853,7 @@ proxies:
     public-key: cHJfClQkyUnSxMCi9kmfC8j5OpMrUpyvrjVboO50YXM
     short-id: 4f135b9a6e5da9c5
   network: xhttp
-- name: 🇳🇱 荷兰 | NLD-7
+- name: 🇳🇱 荷兰 | NLD-8
   server: 13.143.172.34
   port: 2052
   type: vless
@@ -144655,19 +144650,6 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
-- name: 🇺🇸_美国 (22)-2
-  type: vless
-  server: 31.76.89.226
-  port: 443
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
-  udp: true
-  tls: true
-  servername: ai.eosshop.net
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
-    short-id: ''
-  network: tcp
 - name: 🇺🇸_美国 (23)
   type: vless
   server: 38.207.187.61
@@ -150369,20 +150351,6 @@ proxies:
   ws-opts:
     path: /assignment
   name: 🏳️_未知_165 [aeacb99e3d56f2ba]
-- name: 🏳️_未知_166
-  type: vless
-  server: 172.64.153.153
-  port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
-  udp: true
-  tls: true
-  servername: ccc.010304.xyz
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ccc.010304.xyz
 - client-fingerprint: chrome
   network: ws
   port: 443
@@ -154096,7 +154064,6 @@ proxy-groups:
   - vless-1827156240
   - vless-1827156566
   - vless-1827156586
-  - vless-1827156655
   - vless-1827162765
   - vless-1827162767
   - vless-1827162772
@@ -157151,8 +157118,6 @@ proxy-groups:
   - 乌克兰 017 [b60e00a5af240c64]
   - 乌克兰 019 [2851e028bc8c5978]
   - 乌克兰 020 [7e3c32f04e9ba955]
-  - 乌克兰+V2CROSS.COM
-  - 乌克兰+V2CROSS.COM-2
   - 乌兹别克斯坦 001 [fea5180d7b8b5fb7]
   - 亚太地区 001 [c25e8fb2106a6711]
   - 亚太地区 002 [b706dc557de7ecb3]
@@ -157164,6 +157129,7 @@ proxy-groups:
   - 亚洲(油管:破解资源君)-5
   - 亚洲(油管:破解资源君)-6
   - 亚洲(油管:破解资源君)-7
+  - 以色列+V2CROSS.COM
   - 伊朗 001 [aac0e1771529a57a]
   - 伊朗 002 [f77c18703c9a33d4]
   - 伊朗 003 [7cdb4c974d3ce931]
@@ -157339,6 +157305,7 @@ proxy-groups:
   - 俄罗斯(油管:破解资源君)-7
   - 俄罗斯(油管:破解资源君)-8
   - 俄罗斯(油管:破解资源君)-9
+  - 俄罗斯+V2CROSS.COM
   - 保加利亚 001 [3f67104e94521c47]
   - 保加利亚 002 [dc37539173d1d68c]
   - 保加利亚 003 [747b87fe39f985c2]
@@ -158672,8 +158639,6 @@ proxy-groups:
   - 巴西 046 [7fcadd8e584e42ac]
   - 巴西 048 [0fbd7e93773aeac6]
   - 巴西 049 [0c02b96dc89456d1]
-  - 巴西+V2CROSS.COM
-  - 巴西+V2CROSS.COM-2
   - 希腊 001 [b016d7589c4242b6]
   - 德国 003 [72c499cb16966379]
   - 德国 004 [ecc3fc0d6e14a73d]
@@ -158801,6 +158766,8 @@ proxy-groups:
   - 德国 130 [099c1b46e9cc7419]
   - 德国 131 [379bf959ea2eb2ea]
   - 德国+V2CROSS.COM
+  - 德国+V2CROSS.COM-2
+  - 德国+V2CROSS.COM-3
   - 意大利 001 [e9947e596483a63e]
   - 拉脱维亚 001 [dcc4262becafeb70]
   - 捷克 001 [54dec856dc22621d]
@@ -158915,7 +158882,6 @@ proxy-groups:
   - 日本2|@ripaojiedian
   - 日本2|@ripaojiedian [97bb11c962b0c374]
   - 智利 001 [c684f47daf8f8833]
-  - 智利+V2CROSS.COM
   - 未命名
   - 未命名 [9013d3c1982be307]
   - 未知
@@ -159144,6 +159110,7 @@ proxy-groups:
   - 爱尔兰 001 [baed0041f0f60e7a]
   - 爱尔兰 002 [c825ec9849a55383]
   - 爱尔兰 003 [31bacf25ad5dbca3]
+  - 爱尔兰+V2CROSS.COM
   - 爱沙尼亚(mibei77.com 米贝节点分享)
   - 瑞典 003 [69ae2aa0f656dce9]
   - 瑞典 004 [4950bb22790e5587]
@@ -160582,8 +160549,9 @@ proxy-groups:
   - 美国(油管:破解资源君2.0)-8
   - 美国(油管:破解资源君2.0)-9
   - 美国(油管:破解资源君2.0)-10
-  - 美国+V2CROSS.COM
-  - 美国+V2CROSS.COM-2
+  - 美国+CloudFlare节点
+  - 美国+CloudFlare节点-2
+  - 美国+加利福尼亚
   - 美国2|@ripaojiedian
   - 美国|@ripaojiedian
   - 美國丨yoyapai.com
@@ -161059,7 +161027,6 @@ proxy-groups:
   - 🇩🇪 德国 | DEU-10
   - 🇩🇪 德国 | DEU-11
   - 🇩🇪 德国 | DEU-12
-  - 🇩🇪 德国 | DEU-13
   - '🇩🇪 德国 | DEU #1'
   - '🇩🇪 德国 | DEU #1-2'
   - '🇩🇪 德国 | DEU #1 [b8ab104623a6338d]'
@@ -161139,7 +161106,6 @@ proxy-groups:
   - 🇩🇪_德国 (18)
   - 🇩🇪_德国 (18)-2
   - 🇩🇪_德国 (19)
-  - 🇩🇪_德国 (19)-2
   - 🇩🇪_德国 (2)
   - 🇩🇪_德国 (2)-2
   - 🇩🇪_德国 (20)
@@ -161171,7 +161137,6 @@ proxy-groups:
   - 🇩🇪_德国 (8)-2
   - 🇩🇪_德国 (9)
   - 🇩🇪_德国 (9)-2
-  - 🇩🇪_德国_111
   - 🇩🇪_德国_111 [eafdd46a9c49bea6]
   - 🇩🇪_德国_114 [8b5b714cd085d4b0]
   - 🇩🇪_德国_159 [6e0659301d25e8a3]
@@ -162492,6 +162457,7 @@ proxy-groups:
   - 🇳🇱 荷兰 | NLD-5
   - 🇳🇱 荷兰 | NLD-6
   - 🇳🇱 荷兰 | NLD-7
+  - 🇳🇱 荷兰 | NLD-8
   - '🇳🇱 荷兰 | NLD #1'
   - '🇳🇱 荷兰 | NLD #1-2'
   - '🇳🇱 荷兰 | NLD #2'
@@ -163603,7 +163569,6 @@ proxy-groups:
   - 🇺🇸_美国 (21)
   - 🇺🇸_美国 (21)-2
   - 🇺🇸_美国 (22)
-  - 🇺🇸_美国 (22)-2
   - 🇺🇸_美国 (23)
   - 🇺🇸_美国 (23)-2
   - 🇺🇸_美国 (24)
@@ -164032,7 +163997,6 @@ proxy-groups:
   - 🏳️_未知_163
   - 🏳️_未知_163 [9471bc277d4dbaba]
   - 🏳️_未知_165 [aeacb99e3d56f2ba]
-  - 🏳️_未知_166
   - 🏳️_未知_166 [f9d65416b8d5c5dc]
   - 🏳️_未知_167
   - 🏳️_未知_167 [a64a629ad213d9d4]
