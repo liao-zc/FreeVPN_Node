@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import base64
+from datetime import datetime, timezone
 import hashlib
 import json
 import os
@@ -229,6 +230,7 @@ def stable_key(node: dict[str, Any]) -> str:
 
 
 def load_source(url: str) -> tuple[list[str], list[dict[str, Any]]]:
+    url = url.replace("{date}", datetime.now(timezone.utc).strftime("%Y%m%d"))
     raw = fetch(url)
     text = decode_text(raw)
     clash_nodes: list[dict[str, Any]] = []

@@ -31,7 +31,7 @@ GitHub Actions 的 cron 可能延迟，仓库长期无活动时 GitHub 也可能
 
 ## 配置来源
 
-在 `sources.txt` 中每行添加一个公开的纯文本或 Base64 订阅 URL。当前示例来自三个用户提到的仓库和 Pawdroid/Free-servers。若上游调整了路径，可替换 URL。采集器支持常见 V2Ray URI、SS/SSR URI 和 Clash YAML；其他格式会跳过。每个源单独失败不会阻止其他源更新；所有源都不可用或没有可解析节点时，程序以错误退出并保留上一轮输出。
+在 `sources.txt` 中每行添加一个公开的纯文本或 Base64 订阅 URL。URL 可使用 `{date}` 占位符，采集时会替换为 UTC 日期 `YYYYMMDD`；Clashfree 的每日文件使用此方式。当前示例来自三个用户提到的仓库和 Pawdroid/Free-servers。若上游调整了路径，可替换 URL。采集器支持常见 V2Ray URI、SS/SSR URI 和 Clash YAML；其他格式会跳过。每个源单独失败不会阻止其他源更新；所有源都不可用或没有可解析节点时，程序以错误退出并保留上一轮输出。
 
 可以通过 Actions Variables 设置 `FETCH_TIMEOUT`、`MAX_SOURCE_BYTES`、`SOURCES_FILE` 或 `OUTPUT_DIR`。`SOURCES_FILE` 和 `OUTPUT_DIR` 是运行环境中的文件路径。
 

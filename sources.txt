@@ -2,7 +2,7 @@
 # Prefer raw text/base64 subscriptions (vmess://, vless://, trojan://, ss://, ssr://).
 # Treat imported nodes as untrusted: their operators can observe traffic and connection metadata.
 https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub
-https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml
+https://raw.githubusercontent.com/free-nodes/clashfree/main/clash{date}.yml
 https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt
 https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
 
