@@ -22,6 +22,8 @@ from typing import Any
 
 import yaml
 from discovery import discover_recent_feeds
+from readme_content import write_readme
+from mihomo_speed import measure_download_speeds
 
 ROOT = Path(__file__).resolve().parent
 SOURCES_FILE = Path(os.environ.get("SOURCES_FILE", ROOT / "sources.txt"))
@@ -182,7 +184,8 @@ def parse_ssr(uri: str) -> dict[str, Any] | None:
     payload = decode_b64(uri[len("ssr://"):])
     if not payload:
         return None
-    core = decode_text(payload).split("/?", 1)[0]
+    decoded = decode_text(payload)
+    core, _, query = decoded.partition("/?")
     fields = core.split(":", 5)
     if len(fields) != 6:
         return None
@@ -190,10 +193,19 @@ def parse_ssr(uri: str) -> dict[str, Any] | None:
     password = decode_text(decode_b64(password64) or b"")
     if not (server and port.isdigit() and protocol and method and obfs and password):
         return None
-    return {"name": f"ssr-{server}", "type": "ssr", "server": server, "port": int(port),
+    node = {"name": f"ssr-{server}", "type": "ssr", "server": server, "port": int(port),
             "cipher": method, "password": password, "protocol": protocol, "obfs": obfs}
-
-
+    params = urllib.parse.parse_qs(query)
+    for source, target in (("obfsparam", "obfs-param"), ("protoparam", "protocol-param")):
+        if params.get(source):
+            value = decode_b64(params[source][0])
+            if value is not None:
+                node[target] = decode_text(value)
+    if params.get("remarks"):
+        value = decode_b64(params["remarks"][0])
+        if value:
+            node["name"] = decode_text(value)
+    return node
 def from_uri(uri: str) -> dict[str, Any] | None:
     uri = canonical_uri(uri)
     if not uri:
@@ -509,7 +521,7 @@ def from_xray(document: Any) -> list[dict[str, Any]]:
 
 def stable_key(node: dict[str, Any]) -> str:
     # Names are deliberately excluded so mirrors label-identically configured servers the same way.
-    identity = {key: value for key, value in node.items() if key != "name"}
+    identity = {key: value for key, value in node.items() if key not in {"name", "udp"}}
     payload = json.dumps(identity, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
     return hashlib.sha256(payload.encode()).hexdigest()
 
@@ -664,6 +676,9 @@ def main() -> int:
                     normalized = canonical_uri(share)
                     if normalized:
                         all_uris.setdefault(normalized, normalized)
+                        linked_node = from_uri(normalized)
+                        if linked_node:
+                            all_nodes.setdefault(stable_key(linked_node), linked_node)
                 found += 1
             if found:
                 successes += 1
@@ -673,27 +688,35 @@ def main() -> int:
         return 1
 
     latencies = measure_latencies(list(all_nodes.values()))
+    speeds = measure_download_speeds(list(all_nodes.values()), latencies)
 
-    def uri_latency_key(uri: str) -> tuple[bool, float, str]:
-        node = from_uri(uri)
-        return latency_sort_key(node, latencies) if node else (True, float("inf"), uri)
+    def speed_for_node(node: dict[str, Any]) -> float | None:
+        return speeds.get(stable_key(node))
+
+    def speed_sort_key(node: dict[str, Any]) -> tuple[bool, float, bool, float, str]:
+        speed = speed_for_node(node)
+        endpoint = endpoint_key(node)
+        latency = latencies.get(endpoint) if endpoint else None
+        return speed is None, -(speed if speed is not None else 0.0), latency is None, latency if latency is not None else float("inf"), stable_key(node)
+
+    def measured_links(uris: list[str]) -> list[str]:
+        result = []
+        for uri in uris:
+            node = from_uri(uri)
+            if node and speed_for_node(node) is not None:
+                result.append(uri)
+        return result
 
     protocol_links: dict[str, list[str]] = {}
     for feed, accepted_schemes in PROTOCOL_FEEDS.items():
-        protocol_links[feed] = sorted(
-            (uri for uri in all_uris.values() if uri.partition(":")[0].lower() in accepted_schemes),
-            key=uri_latency_key,
-        )[:30]
-    v2ray = sorted(
-        (uri for uri in all_uris.values() if uri.startswith(("vmess://", "vless://", "trojan://"))),
-        key=uri_latency_key,
-    )[:30]
-    ss_ssr = sorted(
-        (uri for uri in all_uris.values() if uri.startswith(("ss://", "ssr://"))),
-        key=uri_latency_key,
-    )[:30]
-    clash_nodes = sorted(all_nodes.values(), key=lambda item: (str(item.get("name", "")).casefold(), stable_key(item)))
-    # Clash requires stable, unique proxy labels for groups.
+        candidates = [uri for uri in all_uris.values() if uri.partition(":")[0].lower() in accepted_schemes]
+        protocol_links[feed] = sorted(measured_links(candidates), key=lambda uri: speed_sort_key(from_uri(uri)))[:30]
+    v2ray_candidates = [uri for uri in all_uris.values() if uri.startswith(("vmess://", "vless://", "trojan://"))]
+    ss_candidates = [uri for uri in all_uris.values() if uri.startswith(("ss://", "ssr://"))]
+    v2ray = sorted(measured_links(v2ray_candidates), key=lambda uri: speed_sort_key(from_uri(uri)))[:30]
+    ss_ssr = sorted(measured_links(ss_candidates), key=lambda uri: speed_sort_key(from_uri(uri)))[:30]
+    clash_nodes = sorted((node for node in all_nodes.values() if speed_for_node(node) is not None), key=speed_sort_key)
+    clash_nodes = clash_nodes[:30]
     used_names: set[str] = set()
     for node in clash_nodes:
         base = str(node.get("name") or node.get("server") or node["type"])
@@ -703,13 +726,6 @@ def main() -> int:
             suffix += 1
         node["name"] = name
         used_names.add(name)
-    clash_nodes.sort(key=lambda item: latency_sort_key(item, latencies))
-    clash_nodes = clash_nodes[:30]
-    log_latency_results("V2Ray", [node for uri in v2ray if (node := from_uri(uri)) is not None], latencies)
-    log_latency_results("SS-SSR", [node for uri in ss_ssr if (node := from_uri(uri)) is not None], latencies)
-    log_latency_results("Clash", clash_nodes, latencies)
-    for feed, links in protocol_links.items():
-        log_latency_results(feed, [node for uri in links if (node := from_uri(uri)) is not None], latencies)
     if not v2ray and not ss_ssr and not clash_nodes and not any(protocol_links.values()):
         print("No supported nodes were parsed; preserving existing feeds.", file=sys.stderr)
         return 1
@@ -719,6 +735,10 @@ def main() -> int:
         (OUTPUT / f"{feed}.txt").write_text(base64.b64encode("\n".join(values).encode()).decode() + "\n", encoding="ascii")
     (OUTPUT / "v2ray.txt").write_text(base64.b64encode("\n".join(v2ray).encode()).decode() + "\n", encoding="ascii")
     (OUTPUT / "ss-ssr.txt").write_text(base64.b64encode("\n".join(ss_ssr).encode()).decode() + "\n", encoding="ascii")
+    selected_uris = list(dict.fromkeys([*v2ray, *ss_ssr, *(uri for values in protocol_links.values() for uri in values)]))
+    (OUTPUT / "selected.txt").write_text(base64.b64encode("\n".join(selected_uris).encode()).decode() + "\n", encoding="ascii")
+    full_uris = sorted(all_uris.values())
+    (OUTPUT / "all.txt").write_text(base64.b64encode("\n".join(full_uris).encode()).decode() + "\n", encoding="ascii")
     document = {"port": 7890, "socks-port": 7891, "allow-lan": False, "mode": "rule", "log-level": "warning",
                 "proxies": clash_nodes,
                 "proxy-groups": [{"name": "AUTO", "type": "url-test", "proxies": [p["name"] for p in clash_nodes],
@@ -728,9 +748,9 @@ def main() -> int:
     protocol_links["v2ray"] = v2ray
     protocol_links["ss-ssr"] = ss_ssr
     protocol_links.pop("clash", None)
-    update_readme_node_lists(protocol_links, clash_nodes)
+    write_readme()
     counts = ", ".join(f"{key}={len(values)}" for key, values in protocol_links.items())
-    print(f"Published fastest nodes: {counts}, Clash={len(clash_nodes)} (maximum 30 per feed).")
+    print(f"Published tunnel-speed-ranked nodes: {counts}, Clash={len(clash_nodes)}, Selected={len(selected_uris)}, All={len(full_uris)}.")
     return 0
 
 

@@ -72,5 +72,18 @@ def discover_recent_feeds(timeout: int = 15, max_repositories: int = 20) -> list
                 f"https://raw.githubusercontent.com/{full_name}/{urllib.parse.quote(branch, safe='')}/{urllib.parse.quote(path, safe='/')}"
             )
         print(f"GitHub discovery: {full_name} ({repo.get('stargazers_count', 0)} stars), {min(3, len(paths))} feed candidates")
+        readme_url = f"https://raw.githubusercontent.com/{full_name}/{urllib.parse.quote(branch, safe='')}/README.md"
+        try:
+            request = urllib.request.Request(readme_url, headers={"User-Agent": UA})
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                readme = response.read(512 * 1024).decode("utf-8", errors="replace")
+            channels = sorted(set(re.findall(r"(?:https?://)?t\.me/(?:s/)?([A-Za-z0-9_]{5,})", readme, flags=re.I)))
+            channels = [name for name in channels if name.lower() not in {"share", "joinchat", "addstickers", "proxy", "socks"}]
+            for channel in channels[:3]:
+                discovered.append(f"https://t.me/s/{channel}")
+            if channels[:3]:
+                print(f"GitHub discovery: {full_name}, {min(3, len(channels))} public Telegram previews")
+        except Exception:
+            pass
     print(f"GitHub discovery added {len(discovered)} candidate feeds")
     return discovered
