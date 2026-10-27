@@ -35,3 +35,12 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: refresh public subscriptions"
           git push
+      - name: Purge subscription CDN caches
+        continue-on-error: true
+        run: |
+          for path in subscriptions/v2ray.txt subscriptions/clash.yaml subscriptions/ss-ssr.txt; do
+            echo "Purging $path"
+            curl --fail --silent --show-error --retry 2 --retry-delay 2 \
+              "https://purge.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/$path"
+            echo
+          done
