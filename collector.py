@@ -453,6 +453,14 @@ def latency_sort_key(node: dict[str, Any], latencies: dict[tuple[str, int], floa
     return latency is None, latency if latency is not None else float("inf"), stable_key(node)
 
 
+def log_latency_results(group: str, nodes: list[dict[str, Any]], latencies: dict[tuple[str, int], float | None]) -> None:
+    for rank, node in enumerate(nodes, 1):
+        endpoint = endpoint_key(node)
+        value = latencies.get(endpoint) if endpoint else None
+        milliseconds = f"{value:.2f}" if value is not None else "unreachable"
+        server = f"{endpoint[0]}:{endpoint[1]}" if endpoint else "unknown"
+        name = str(node.get("name", "")).replace("\t", " ").replace("\r", " ").replace("\n", " ")
+        print(f"LATENCY_RESULT\t{group}\t{rank}\t{milliseconds}\t{node.get('type', '')}\t{server}\t{name}")
 def load_source(url: str) -> tuple[list[str], list[dict[str, Any]]]:
     url = url.replace("{date}", datetime.now(timezone.utc).strftime("%Y%m%d"))
     raw = fetch(url)
@@ -575,6 +583,9 @@ def main() -> int:
         used_names.add(name)
     clash_nodes.sort(key=lambda item: latency_sort_key(item, latencies))
     clash_nodes = clash_nodes[:30]
+    log_latency_results("V2Ray", [node for uri in v2ray if (node := from_uri(uri)) is not None], latencies)
+    log_latency_results("SS-SSR", [node for uri in ss_ssr if (node := from_uri(uri)) is not None], latencies)
+    log_latency_results("Clash", clash_nodes, latencies)
     if not v2ray and not ss_ssr and not clash_nodes:
         print("No supported nodes were parsed; preserving existing feeds.", file=sys.stderr)
         return 1
