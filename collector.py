@@ -9,7 +9,10 @@ import hashlib
 import json
 import os
 import re
+import socket
 import sys
+import time
+from concurrent.futures import ThreadPoolExecutor
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -414,6 +417,42 @@ def stable_key(node: dict[str, Any]) -> str:
     return hashlib.sha256(payload.encode()).hexdigest()
 
 
+def endpoint_key(node: dict[str, Any]) -> tuple[str, int] | None:
+    host, port = str(node.get("server", "")).strip(), node.get("port")
+    try:
+        port_number = int(port)
+    except (TypeError, ValueError):
+        return None
+    if not host or not 1 <= port_number <= 65535:
+        return None
+    return host.lower().strip("[]"), port_number
+
+
+def probe_tcp(endpoint: tuple[str, int]) -> tuple[tuple[str, int], float | None]:
+    """Measure TCP connect latency in milliseconds; None means unreachable/timeout."""
+    started = time.perf_counter()
+    try:
+        with socket.create_connection(endpoint, timeout=1.5):
+            return endpoint, (time.perf_counter() - started) * 1000
+    except OSError:
+        return endpoint, None
+
+
+def measure_latencies(nodes: list[dict[str, Any]]) -> dict[tuple[str, int], float | None]:
+    endpoints = sorted({key for node in nodes if (key := endpoint_key(node)) is not None})
+    with ThreadPoolExecutor(max_workers=256) as pool:
+        results = dict(pool.map(probe_tcp, endpoints))
+    reachable = sum(value is not None for value in results.values())
+    print(f"TCP latency probes: {reachable}/{len(endpoints)} endpoints reachable")
+    return results
+
+
+def latency_sort_key(node: dict[str, Any], latencies: dict[tuple[str, int], float | None]) -> tuple[bool, float, str]:
+    endpoint = endpoint_key(node)
+    latency = latencies.get(endpoint) if endpoint else None
+    return latency is None, latency if latency is not None else float("inf"), stable_key(node)
+
+
 def load_source(url: str) -> tuple[list[str], list[dict[str, Any]]]:
     url = url.replace("{date}", datetime.now(timezone.utc).strftime("%Y%m%d"))
     raw = fetch(url)
@@ -473,8 +512,20 @@ def main() -> int:
         print("All sources failed or returned no usable entries; preserving existing feeds.", file=sys.stderr)
         return 1
 
-    v2ray = sorted(uri for uri in all_uris.values() if uri.startswith(("vmess://", "vless://", "trojan://")))
-    ss_ssr = sorted(uri for uri in all_uris.values() if uri.startswith(("ss://", "ssr://")))
+    latencies = measure_latencies(list(all_nodes.values()))
+
+    def uri_latency_key(uri: str) -> tuple[bool, float, str]:
+        node = from_uri(uri)
+        return latency_sort_key(node, latencies) if node else (True, float("inf"), uri)
+
+    v2ray = sorted(
+        (uri for uri in all_uris.values() if uri.startswith(("vmess://", "vless://", "trojan://"))),
+        key=uri_latency_key,
+    )
+    ss_ssr = sorted(
+        (uri for uri in all_uris.values() if uri.startswith(("ss://", "ssr://"))),
+        key=uri_latency_key,
+    )
     clash_nodes = sorted(all_nodes.values(), key=lambda item: (str(item.get("name", "")).casefold(), stable_key(item)))
     # Clash requires stable, unique proxy labels for groups.
     used_names: set[str] = set()
@@ -486,6 +537,7 @@ def main() -> int:
             suffix += 1
         node["name"] = name
         used_names.add(name)
+    clash_nodes.sort(key=lambda item: latency_sort_key(item, latencies))
     if not v2ray and not ss_ssr and not clash_nodes:
         print("No supported nodes were parsed; preserving existing feeds.", file=sys.stderr)
         return 1
