@@ -447,13 +447,13 @@ def main() -> int:
             uris, clash = load_source(url)
             found = 0
             for uri in uris:
-                valid = canonical_uri(uri)
+                # Publish only links that the client-format parser can fully parse.
+                # canonical_uri() alone admitted malformed links and broke some clients.
                 node = from_uri(uri)
-                if valid:
+                valid = canonical_uri(uri) if node else None
+                if valid and node:
                     all_uris.setdefault(valid, valid)
-                if node:
                     all_nodes.setdefault(stable_key(node), node)
-                if valid or node:
                     found += 1
             for node in clash:
                 all_nodes.setdefault(stable_key(node), node)
