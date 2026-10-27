@@ -23,7 +23,7 @@ https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.
 https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/v2ray.txt
 
 # awesome-vpn/awesome-vpn (6.7k stars): generated Clash output from a validated aggregator.
-https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/main/clash.yaml
+https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/clash.yaml
 
 # Au1rxx/free-vpn-subscriptions (1.0k stars): shards explicitly labeled all-verified.
 https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/all-verified/clash-0001.yaml
