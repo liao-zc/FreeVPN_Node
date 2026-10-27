@@ -26,8 +26,8 @@ jobs:
         run: python collector.py
       - name: Publish changed files
         run: |
-          git add subscriptions
-          if git diff --cached --quiet -- subscriptions; then
+          git add subscriptions README.md
+          if git diff --cached --quiet -- subscriptions README.md; then
             echo "No subscription changes."
             exit 0
           fi
