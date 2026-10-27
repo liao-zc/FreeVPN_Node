@@ -471,6 +471,42 @@ def load_source(url: str) -> tuple[list[str], list[dict[str, Any]]]:
         clash_nodes = from_xray(document)
     return uri_items(text), clash_nodes
 
+def update_readme_node_lists(v2ray: list[str], ss_ssr: list[str], clash_nodes: list[dict[str, Any]]) -> None:
+    """Keep the README's published node snapshots in sync with subscription files."""
+    readme_path = ROOT / "README.md"
+    current = readme_path.read_text(encoding="utf-8") if readme_path.exists() else ""
+    start_marker = "<!-- GENERATED-NODES:START -->"
+    end_marker = "<!-- GENERATED-NODES:END -->"
+    clash_text = yaml.safe_dump({"proxies": clash_nodes}, allow_unicode=True, sort_keys=False).rstrip()
+    block = "\n".join([
+        start_marker,
+        "## Current fastest nodes",
+        "Sorted by TCP connect latency measured in GitHub Actions; up to 30 nodes per type.",
+        "",
+        "### V2Ray",
+        "```text",
+        "\n".join(v2ray) if v2ray else "(No nodes this round)",
+        "```",
+        "",
+        "### SS / SSR",
+        "```text",
+        "\n".join(ss_ssr) if ss_ssr else "(No nodes this round)",
+        "```",
+        "",
+        "### Clash / Mihomo",
+        "```yaml",
+        clash_text if clash_nodes else "proxies: []",
+        "```",
+        end_marker,
+    ])
+    start = current.find(start_marker)
+    end = current.find(end_marker)
+    if start >= 0 and end >= start:
+        updated = current[:start] + block + current[end + len(end_marker):]
+    else:
+        updated = current.rstrip() + "\n\n" + block + "\n"
+    readme_path.write_text(updated, encoding="utf-8")
+
 def main() -> int:
     sources = [line.strip() for line in SOURCES_FILE.read_text(encoding="utf-8").splitlines()
                if line.strip() and not line.lstrip().startswith("#")]
@@ -552,6 +588,7 @@ def main() -> int:
                                   "url": "https://www.gstatic.com/generate_204", "interval": 300}],
                 "rules": ["MATCH,AUTO"]}
     (OUTPUT / "clash.yaml").write_text(yaml.safe_dump(document, allow_unicode=True, sort_keys=False), encoding="utf-8")
+    update_readme_node_lists(v2ray, ss_ssr, clash_nodes)
     print(f"Published fastest reachable nodes: V2Ray={len(v2ray)}, SS/SSR={len(ss_ssr)}, Clash={len(clash_nodes)} (maximum 30 per feed).")
     return 0
 
