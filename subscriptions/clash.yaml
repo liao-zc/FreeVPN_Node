@@ -4,45 +4,93 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- cipher: aes-256-gcm
-  name: shadowsocks-1875129452
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 95.215.201.18
-  type: ss
-  udp: true
-- name: 🇺🇸US_153|759KB/s|P002-260618 [66ebf6ae1341]
-  password: ''
-  port: 9002
-  server: 138.199.35.210
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  username: ''
-  udp: true
-- port: 443
-  server: 129.153.93.183
-  skip-cert-verify: true
-  sni: 129.153.93.183
-  tls: true
-  type: http
-  name: US - zhuhai.uk 11 [95e2a7fea09e4c22]
-- name: 🇺🇸US_250|796KB/s|R002-260618 [073cbc5426d6]
-  port: 9002
-  server: 138.199.35.213
+- name: 🇫🇷FR_47|7.5MB/s|R002-260618 [39873ef4d996]
+  port: 443
+  server: 172.64.68.89
   skip-cert-verify: true
   sub_tag: R002-260618
   tls: true
   type: http
   udp: true
-- port: 9002
-  server: 138.199.35.213
-  skip-cert-verify: true
-  tls: true
-  type: http
-  name: US - zhuhai.uk 04 [faaf4ca32a937bb2]
+- name: '@FarazV2ray '
+  type: vmess
+  server: 104.17.147.222
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: /ws?ed=2048
+    headers:
+      Host: vmess.lbw666.dpdns.org
 - name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  type: wireguard
+  server: 162.159.192.2
+  port: 500
+  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 39
+  - 4
+  - 107
+  mtu: 1280
+- name: CA 🇨🇦 | @Raydikalx | 0AD519
+  type: vmess
+  server: 172.67.187.145
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: /ws?ed=2048
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: us|81c2|puddincat07@Telegram
+  password: 4291c983-c520-46ac-82cc-48f14bef573f
+  port: 35013
+  server: 129.213.91.185
+  skip-cert-verify: true
+  sni: 129.213.91.185
+  tls: false
+  type: hysteria2
+- name: 🇺🇸US_334|595KB/s|S004-260618 [be44a9b5d3bb]
+  type: vmess
+  server: 104.17.147.222
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- cipher: rc4-md5
+  name: shadowsocks-1827147700
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.199.42.68
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  obfs: plain
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  protocol: origin
+  server: 107.151.182.253
+  type: ssr
+  name: SSR-美国-NF解锁自制剧-ChatGPT-TikTok-YouTube-107.151.182.253:8080 [4a752126a796617e]
+- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
   type: wireguard
   server: 162.159.192.3
   port: 500
@@ -55,123 +103,6 @@ proxies:
   - 74
   - 19
   mtu: 1280
-- name: 🇺🇸US_239|815KB/s|R002-260618 [1fd0f978ab09]
-  password: 'null'
-  port: 9002
-  server: 138.199.35.197
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  username: 'null'
-  udp: true
-- name: 🇺🇸US_32|833KB/s|P002-260618 [a8fb52dac60b]
-  password: None
-  port: 9002
-  server: 138.199.35.196
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇺🇸US_156|614KB/s|M002-260618 [71fe45c6a8fb]
-  type: vmess
-  server: 129.146.77.248
-  port: 39495
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: 129.146.77.248
-- name: 🇺🇸US_443|1002KB/s|A004-260618 [9b10e8e6bf84]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 95.215.201.18
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇺🇸US_338|974KB/s|A004-260618 [836b9e2c1c7b]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.151.182.253
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1828227588
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.53.169
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  obfs: plain
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  protocol: origin
-  server: 107.151.182.253
-  type: ssr
-  name: SSR-美国-NF解锁自制剧-ChatGPT-TikTok-YouTube-107.151.182.253:8080 [4a752126a796617e]
-- name: 🇺🇸US_208|836KB/s|M003-260806 [2d3c6b97d127]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.53.169
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- name: 🇺🇸US_15|4.2MB/s
-  port: 443
-  server: 129.153.93.183
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇺🇸US_297|816KB/s [518e0351a46f]
-  password: ''
-  port: 9002
-  server: 138.199.35.203
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: ''
-  udp: true
-- name: 🇺🇸US_148|224KB/s|A004-260618 [0e40b52615aa]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.151.182.197
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇺🇸US_420|879KB/s|A004-260618 [d92318afee09]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.54.250
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1827962976
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.151.182.197
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1870576345
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.54.250
-  type: ss
-  udp: true
 - name: hysteria2-1853974956
   password: bce6c821-200d-421f-bf3d-7159e5246ea0
   port: 33333
@@ -186,75 +117,69 @@ proxies:
   skip-cert-verify: true
   sni: ''
   type: hysteria2
-- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
-  type: wireguard
-  server: 162.159.192.2
-  port: 500
-  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 39
-  - 4
-  - 107
-  mtu: 1280
-- name: 🇺🇸US_216|819KB/s|R002-260618 [f3757137fc03]
+- name: hysteria2-1832764823
+  password: gf1:gfhysteria2024
   port: 443
-  server: 129.153.93.183
+  server: 66.94.121.46
   skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: us|81c2|puddincat07@Telegram
-  password: 4291c983-c520-46ac-82cc-48f14bef573f
-  port: 35013
-  server: 129.213.91.185
-  skip-cert-verify: true
-  sni: 129.213.91.185
-  tls: false
+  sni: www.broadcom.com
   type: hysteria2
-- cipher: rc4-md5
-  name: shadowsocks-1827963043
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.151.182.253
-  type: ss
-  udp: true
-- name: 🇺🇸US_156|614KB/s|M002-260618 [71fe45c6a8fb]-2
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 39495
-  server: 129.146.77.248
+- name: 🇺🇸US_450|584KB/s|R002-260618 [c8c20681e01a]
+  type: ssr
+  server: api.meituan88.com
+  port: 39266
+  cipher: rc4-md5
+  password: di15PV
+  protocol: auth_aes128_md5
+  obfs: plain
+  obfs-param: f7d23929.douyin.com
+  protocol-param: 23929:563537032
+- name: 🇺🇸US_492|511KB/s|R002-260618 [872d9174af8b]
+  type: ssr
+  server: api.meituan88.com
+  port: 44883
+  cipher: chacha20-ietf
+  password: di15PV
+  protocol: auth_aes128_md5
+  obfs: tls1.2_ticket_auth
+  obfs-param: 6f5218522.douyin.com
+  protocol-param: 218522:0hfCJk
+- name: hysteria2-1908512041
+  password: dd50a499-7e43-4589-8490-f3b9c2451473
+  port: 443
+  server: 109.235.49.234
+  skip-cert-verify: true
+  sni: nl-hy-test.tcp-reset-club.net
+  type: hysteria2
+- name: hysteria2-1923902590
+  password: 529f1911-04d5-4427-94b9-c851fd459a27
+  port: 443
+  server: 109.235.49.234
   skip-cert-verify: false
-  sub_tag: M002-260618
-  tls: false
-  type: vmess
+  sni: nl-hy-test.tcp-reset-club.net
+  type: hysteria2
+- name: 🇺🇸US_492|511KB/s|R002-260618 [872d9174af8b]-2
+  cipher: chacha20-ietf
+  obfs: tls1.2_ticket_auth
+  obfs-param: 6f5218522.douyin.com
+  password: di15PV
+  port: 44883
+  protocol: auth_aes128_md5
+  protocol-param: 218522:0hfCJk
+  server: api.meituan88.com
+  sub_tag: R002-260618
+  type: ssr
   udp: true
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  ws-opts:
-    headers:
-      Host: 129.146.77.248
-    path: /cctv13.m3u8
-  xudp: true
-  packet-encoding: xudp
-  servername: 129.146.77.248
-- name: US 🇺🇸 | @Raydikalx | 452ED5
-  type: vmess
-  server: 129.146.77.248
-  port: 39495
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  alterId: 0
-  cipher: auto
+- name: 🇳🇱NL_255|505KB/s|R002-260618 [8b79f7273e58]
+  cipher: chacha20-ietf
+  obfs: tls1.2_ticket_auth
+  password: dongtaiwang.com
+  port: 33336
+  protocol: auth_chain_a
+  server: 109.104.153.43
+  sub_tag: R002-260618
+  type: ssr
   udp: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: ''
 - name: hysteria2-1832764816
   password: 96ab5cd282733fd4c312a61f972f330a
   port: 443
@@ -269,40 +194,149 @@ proxies:
   password: 96ab5cd282733fd4c312a61f972f330a
   udp: true
   sni: vp3.yysyy.online
+- name: hysteria2-1832765307
+  password: b4c8ee9caa74b7ba0a61
+  port: 35076
+  server: 78.17.128.153
+  skip-cert-verify: true
+  sni: scrap.halyvanedorogo.ru
+  type: hysteria2
+- name: 🇺🇸US_355|569KB/s|A004-260618 [c5175ff0debf]
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 80
+  server: 172.67.187.145
+  skip-cert-verify: false
+  sub_tag: A004-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  ws-opts:
+    headers:
+      Host: vmess.lbw666.dpdns.org
+    path: /ws
+  xudp: true
+  packet-encoding: xudp
+  servername: vmess.lbw666.dpdns.org
+- name: 🇺🇸US_355|569KB/s|A004-260618 [c5175ff0debf]-2
+  type: vmess
+  server: 172.67.187.145
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: hysteria2-1832765048
+  password: b4c8ee9caa74b7ba0a61
+  port: 35076
+  server: scrap.halyvanedorogo.ru
+  skip-cert-verify: true
+  sni: scrap.halyvanedorogo.ru
+  type: hysteria2
+- name: 🇺🇸US_334|595KB/s|S004-260618 [be44a9b5d3bb]-2
+  alpn:
+  - ''
+  alterId: '0'
+  cipher: auto
+  network: ws
+  port: 80
+  server: 104.17.147.222
+  skip-cert-verify: false
+  sub_tag: S004-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: vmess.lbw666.dpdns.org
+    max-early-data: 2048
+    path: /ws
+  xudp: true
+  packet-encoding: xudp
+- name: 🇺🇸US_450|584KB/s|R002-260618 [c8c20681e01a]-2
+  cipher: rc4-md5
+  obfs: plain
+  obfs-param: f7d23929.douyin.com
+  password: di15PV
+  port: 39266
+  protocol: auth_aes128_md5
+  protocol-param: 23929:563537032
+  server: api.meituan88.com
+  sub_tag: R002-260618
+  type: ssr
+  udp: true
+- name: hysteria2-1828371338
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2
+  type: hysteria2
+- name: hysteria2-1830466990
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 103.115.109.49
+  skip-cert-verify: true
+  sni: https%3a%2f%2ft.me%2fwangcai2%f0%9f%87%a8%f0%9f%87%b3
+  type: hysteria2
+- name: hysteria2-1874927573
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2üá®üá
+  type: hysteria2
+- name: hysteria2-1853331603
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 202.146.222.29
+  skip-cert-verify: true
+  sni: https://t.me/wangcai2ⁿß«ⁿß
+  type: hysteria2
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - shadowsocks-1875129452
-  - 🇺🇸US_153|759KB/s|P002-260618 [66ebf6ae1341]
-  - US - zhuhai.uk 11 [95e2a7fea09e4c22]
-  - 🇺🇸US_250|796KB/s|R002-260618 [073cbc5426d6]
-  - US - zhuhai.uk 04 [faaf4ca32a937bb2]
+  - 🇫🇷FR_47|7.5MB/s|R002-260618 [39873ef4d996]
+  - '@FarazV2ray '
   - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
-  - 🇺🇸US_239|815KB/s|R002-260618 [1fd0f978ab09]
-  - 🇺🇸US_32|833KB/s|P002-260618 [a8fb52dac60b]
-  - 🇺🇸US_156|614KB/s|M002-260618 [71fe45c6a8fb]
-  - 🇺🇸US_443|1002KB/s|A004-260618 [9b10e8e6bf84]
-  - 🇺🇸US_338|974KB/s|A004-260618 [836b9e2c1c7b]
-  - shadowsocks-1828227588
+  - CA 🇨🇦 | @Raydikalx | 0AD519
+  - us|81c2|puddincat07@Telegram
+  - 🇺🇸US_334|595KB/s|S004-260618 [be44a9b5d3bb]
+  - shadowsocks-1827147700
   - SSR-美国-NF解锁自制剧-ChatGPT-TikTok-YouTube-107.151.182.253:8080 [4a752126a796617e]
-  - 🇺🇸US_208|836KB/s|M003-260806 [2d3c6b97d127]
-  - 🇺🇸US_15|4.2MB/s
-  - 🇺🇸US_297|816KB/s [518e0351a46f]
-  - 🇺🇸US_148|224KB/s|A004-260618 [0e40b52615aa]
-  - 🇺🇸US_420|879KB/s|A004-260618 [d92318afee09]
-  - shadowsocks-1827962976
-  - shadowsocks-1870576345
+  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
   - hysteria2-1853974956
   - hysteria2-1832863516
-  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
-  - 🇺🇸US_216|819KB/s|R002-260618 [f3757137fc03]
-  - us|81c2|puddincat07@Telegram
-  - shadowsocks-1827963043
-  - 🇺🇸US_156|614KB/s|M002-260618 [71fe45c6a8fb]-2
-  - US 🇺🇸 | @Raydikalx | 452ED5
+  - hysteria2-1832764823
+  - 🇺🇸US_450|584KB/s|R002-260618 [c8c20681e01a]
+  - 🇺🇸US_492|511KB/s|R002-260618 [872d9174af8b]
+  - hysteria2-1908512041
+  - hysteria2-1923902590
+  - 🇺🇸US_492|511KB/s|R002-260618 [872d9174af8b]-2
+  - 🇳🇱NL_255|505KB/s|R002-260618 [8b79f7273e58]
   - hysteria2-1832764816
   - hysteria2-1832764952
+  - hysteria2-1832765307
+  - 🇺🇸US_355|569KB/s|A004-260618 [c5175ff0debf]
+  - 🇺🇸US_355|569KB/s|A004-260618 [c5175ff0debf]-2
+  - hysteria2-1832765048
+  - 🇺🇸US_334|595KB/s|S004-260618 [be44a9b5d3bb]-2
+  - 🇺🇸US_450|584KB/s|R002-260618 [c8c20681e01a]-2
+  - hysteria2-1828371338
+  - hysteria2-1830466990
+  - hysteria2-1874927573
+  - hysteria2-1853331603
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
