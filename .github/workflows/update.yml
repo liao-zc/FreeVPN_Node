@@ -1,0 +1,37 @@
+name: Update public subscriptions
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-subscriptions
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Fetch and build subscriptions
+        run: python collector.py
+      - name: Publish changed files
+        run: |
+          git add subscriptions
+          if git diff --cached --quiet -- subscriptions; then
+            echo "No subscription changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh public subscriptions"
+          git push
