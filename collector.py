@@ -20,6 +20,7 @@ from pathlib import Path
 from typing import Any
 
 import yaml
+from discovery import discover_recent_feeds
 
 ROOT = Path(__file__).resolve().parent
 SOURCES_FILE = Path(os.environ.get("SOURCES_FILE", ROOT / "sources.txt"))
@@ -621,6 +622,8 @@ def main() -> int:
             sources.append((url.strip(), raw_proxy_type))
         else:
             sources.append((line, None))
+    for discovered_url in discover_recent_feeds():
+        sources.append((discovered_url, None))
     if not sources:
         print("No source URLs configured", file=sys.stderr)
         return 2
