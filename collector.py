@@ -222,6 +222,171 @@ def from_uri(uri: str) -> dict[str, Any] | None:
     return None
 
 
+def uri_from_node(node: dict[str, Any]) -> str | None:
+    """Convert supported Clash/Xray node dictionaries back to share-link formats."""
+    kind = str(node.get("type", "")).lower()
+    server = str(node.get("server", ""))
+    port = str(node.get("port", ""))
+    name = str(node.get("name") or f"{kind}-{server}")
+    if not server or not port:
+        return None
+    host = f"[{server}]" if ":" in server and not server.startswith("[") else server
+    label = urllib.parse.quote(name, safe="")
+    network = str(node.get("network", "tcp"))
+    ws = node.get("ws-opts", {}) if isinstance(node.get("ws-opts"), dict) else {}
+    ws_headers = ws.get("headers", {}) if isinstance(ws.get("headers"), dict) else {}
+    grpc = node.get("grpc-opts", {}) if isinstance(node.get("grpc-opts"), dict) else {}
+
+    if kind == "vmess":
+        value = {"v": "2", "ps": name, "add": server, "port": port,
+                 "id": str(node.get("uuid", "")), "aid": str(node.get("alterId", 0)),
+                 "scy": str(node.get("cipher", "auto")), "net": network, "type": "none",
+                 "host": str(ws_headers.get("Host", "")), "path": str(ws.get("path", grpc.get("grpc-service-name", "/"))),
+                 "tls": "tls" if node.get("tls") else ""}
+        if node.get("servername"):
+            value["sni"] = str(node["servername"])
+        if not value["id"]:
+            return None
+        payload = base64.b64encode(json.dumps(value, separators=(",", ":"), ensure_ascii=False).encode()).decode()
+        return "vmess://" + payload
+
+    if kind == "vless":
+        uid = str(node.get("uuid", ""))
+        if not uid:
+            return None
+        params: dict[str, str] = {"encryption": "none", "type": network}
+        reality = node.get("reality-opts", {}) if isinstance(node.get("reality-opts"), dict) else {}
+        if reality:
+            params["security"] = "reality"
+            if reality.get("public-key"):
+                params["pbk"] = str(reality["public-key"])
+            if reality.get("short-id"):
+                params["sid"] = str(reality["short-id"])
+        elif node.get("tls"):
+            params["security"] = "tls"
+        sni = node.get("servername") or node.get("sni")
+        if sni:
+            params["sni"] = str(sni)
+        if node.get("client-fingerprint"):
+            params["fp"] = str(node["client-fingerprint"])
+        if node.get("flow"):
+            params["flow"] = str(node["flow"])
+        if network == "ws":
+            params["path"] = str(ws.get("path", "/"))
+            if ws_headers.get("Host"):
+                params["host"] = str(ws_headers["Host"])
+        elif network == "grpc" and grpc.get("grpc-service-name"):
+            params["serviceName"] = str(grpc["grpc-service-name"])
+        return f"vless://{urllib.parse.quote(uid, safe='')}@{host}:{port}?{urllib.parse.urlencode(params)}#{label}"
+
+    if kind == "trojan":
+        password = str(node.get("password", ""))
+        if not password:
+            return None
+        params = {"security": "tls" if node.get("tls", True) else "none", "type": network}
+        sni = node.get("sni") or node.get("servername")
+        if sni:
+            params["sni"] = str(sni)
+        if network == "ws":
+            params["path"] = str(ws.get("path", "/"))
+            if ws_headers.get("Host"):
+                params["host"] = str(ws_headers["Host"])
+        elif network == "grpc" and grpc.get("grpc-service-name"):
+            params["serviceName"] = str(grpc["grpc-service-name"])
+        return f"trojan://{urllib.parse.quote(password, safe='')}@{host}:{port}?{urllib.parse.urlencode(params)}#{label}"
+
+    if kind == "ss":
+        method, password = str(node.get("cipher", "")), str(node.get("password", ""))
+        if not method or not password:
+            return None
+        auth = base64.b64encode(f"{method}:{password}".encode()).decode().rstrip("=")
+        return f"ss://{auth}@{host}:{port}#{label}"
+
+    if kind == "ssr":
+        method, password = str(node.get("cipher", "")), str(node.get("password", ""))
+        protocol, obfs = str(node.get("protocol", "")), str(node.get("obfs", ""))
+        if not method or not password or not protocol or not obfs:
+            return None
+        b64 = lambda value: base64.urlsafe_b64encode(value.encode()).decode().rstrip("=")
+        core = f"{server}:{port}:{protocol}:{method}:{obfs}:{b64(password)}"
+        params = []
+        if node.get("obfs-param"):
+            params.append("obfsparam=" + b64(str(node["obfs-param"])))
+        if node.get("protocol-param"):
+            params.append("protoparam=" + b64(str(node["protocol-param"])))
+        params.append("remarks=" + b64(name))
+        return "ssr://" + b64(core + "/?" + "&".join(params))
+    return None
+
+
+def from_xray(document: Any) -> list[dict[str, Any]]:
+    """Extract proxy outbounds from an Xray JSON client configuration."""
+    if not isinstance(document, dict) or not isinstance(document.get("outbounds"), list):
+        return []
+    nodes: list[dict[str, Any]] = []
+    for outbound in document["outbounds"]:
+        if not isinstance(outbound, dict):
+            continue
+        kind = str(outbound.get("protocol", "")).lower()
+        settings = outbound.get("settings", {})
+        stream = outbound.get("streamSettings", {})
+        if not isinstance(settings, dict) or not isinstance(stream, dict):
+            continue
+        network = str(stream.get("network", "tcp"))
+        security = str(stream.get("security", "")).lower()
+        tls = stream.get("tlsSettings", {}) if isinstance(stream.get("tlsSettings"), dict) else {}
+        reality = stream.get("realitySettings", {}) if isinstance(stream.get("realitySettings"), dict) else {}
+        base: dict[str, Any] = {"type": kind, "name": str(outbound.get("tag") or f"{kind}-node"),
+                                 "network": network, "udp": True}
+        if security in {"tls", "reality"}:
+            base["tls"] = True
+            base["servername"] = str(tls.get("serverName") or reality.get("serverName") or "")
+            if security == "reality":
+                base["reality-opts"] = {"public-key": str(reality.get("publicKey", "")),
+                                        "short-id": str(reality.get("shortId", ""))}
+                if reality.get("fingerprint"):
+                    base["client-fingerprint"] = str(reality["fingerprint"])
+            elif tls.get("fingerprint"):
+                base["client-fingerprint"] = str(tls["fingerprint"])
+        ws = stream.get("wsSettings", {}) if isinstance(stream.get("wsSettings"), dict) else {}
+        if network == "ws":
+            headers = ws.get("headers", {}) if isinstance(ws.get("headers"), dict) else {}
+            base["ws-opts"] = {"path": str(ws.get("path", "/")), "headers": {"Host": str(headers.get("Host", ""))}}
+        grpc = stream.get("grpcSettings", {}) if isinstance(stream.get("grpcSettings"), dict) else {}
+        if network == "grpc":
+            base["grpc-opts"] = {"grpc-service-name": str(grpc.get("serviceName", ""))}
+
+        if kind in {"vless", "vmess"}:
+            servers = settings.get("vnext", [])
+            for server in servers if isinstance(servers, list) else []:
+                if not isinstance(server, dict) or not server.get("address") or not server.get("port"):
+                    continue
+                for user in server.get("users", []):
+                    if not isinstance(user, dict) or not user.get("id"):
+                        continue
+                    node = {**base, "server": str(server["address"]), "port": int(server["port"]), "uuid": str(user["id"])}
+                    if kind == "vmess":
+                        node["alterId"] = int(user.get("alterId", 0) or 0)
+                        node["cipher"] = str(user.get("security", "auto") or "auto")
+                    elif user.get("flow"):
+                        node["flow"] = str(user["flow"])
+                    nodes.append(node)
+        elif kind in {"trojan", "shadowsocks"}:
+            for server in settings.get("servers", []) if isinstance(settings.get("servers", []), list) else []:
+                if not isinstance(server, dict) or not server.get("address") or not server.get("port"):
+                    continue
+                node = {**base, "type": "ss" if kind == "shadowsocks" else "trojan",
+                        "server": str(server["address"]), "port": int(server["port"])}
+                if kind == "trojan":
+                    node["password"] = str(server.get("password", ""))
+                    node["sni"] = base.get("servername", "")
+                else:
+                    node["cipher"] = str(server.get("method", ""))
+                    node["password"] = str(server.get("password", ""))
+                if node.get("password"):
+                    nodes.append(node)
+    return nodes
+
 def stable_key(node: dict[str, Any]) -> str:
     # Names are deliberately excluded so mirrors label-identically configured servers the same way.
     identity = {key: value for key, value in node.items() if key != "name"}
@@ -234,14 +399,18 @@ def load_source(url: str) -> tuple[list[str], list[dict[str, Any]]]:
     raw = fetch(url)
     text = decode_text(raw)
     clash_nodes: list[dict[str, Any]] = []
-    # YAML feeds can start with comments or other top-level Clash settings, so
-    # do not require `proxies:` to be the first line before attempting a parse.
     try:
-        clash_nodes = from_clash(yaml.safe_load(text))
-    except yaml.YAMLError:
-        pass
+        document = json.loads(text)
+    except (json.JSONDecodeError, TypeError):
+        try:
+            document = yaml.safe_load(text)
+        except yaml.YAMLError:
+            document = None
+    if isinstance(document, dict) and isinstance(document.get("proxies"), list):
+        clash_nodes = from_clash(document)
+    elif isinstance(document, dict) and isinstance(document.get("outbounds"), list):
+        clash_nodes = from_xray(document)
     return uri_items(text), clash_nodes
-
 
 def main() -> int:
     sources = [line.strip() for line in SOURCES_FILE.read_text(encoding="utf-8").splitlines()
@@ -268,6 +437,11 @@ def main() -> int:
                     found += 1
             for node in clash:
                 all_nodes.setdefault(stable_key(node), node)
+                share = uri_from_node(node)
+                if share:
+                    normalized = canonical_uri(share)
+                    if normalized:
+                        all_uris.setdefault(normalized, normalized)
                 found += 1
             if found:
                 successes += 1

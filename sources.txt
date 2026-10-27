@@ -6,3 +6,48 @@ https://raw.githubusercontent.com/free-nodes/clashfree/main/clash{date}.yml
 https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt
 https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
 
+# free18/v2ray (5.7k stars): daily V2Ray and Clash exports.
+https://raw.githubusercontent.com/free18/v2ray/main/v.txt
+https://raw.githubusercontent.com/free18/v2ray/main/c.yaml
+
+# ermaozi/get_subscribe (9.4k stars): use its actively checked reachable partition.
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/reachable/v2ray.txt
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/reachable/clash.yml
+
+# PuddinCat/BestClash (2.0k stars): periodically refreshed Clash proxy pool.
+https://raw.githubusercontent.com/PuddinCat/BestClash/main/proxies.yaml
+
+# Additional active publishers with public generated feeds.
+https://raw.githubusercontent.com/shaoyouvip/free/main/mihomo.yaml
+https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml
+https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/v2ray.txt
+
+# awesome-vpn/awesome-vpn (6.7k stars): generated Clash output from a validated aggregator.
+https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/main/clash.yaml
+
+# Au1rxx/free-vpn-subscriptions (1.0k stars): shards explicitly labeled all-verified.
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/all-verified/clash-0001.yaml
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/all-verified/clash-0002.yaml
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/all-verified/clash-0003.yaml
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/all-verified/clash-0004.yaml
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/all-verified/clash-0005.yaml
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/all-verified/clash-0006.yaml
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/all-verified/clash-0007.yaml
+
+# Additional maintained aggregators with repository-hosted generated outputs.
+https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/merged.yaml
+https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
+https://raw.githubusercontent.com/snakem982/proxypool/main/source/v2ray-2.txt
+https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/clash.config.yaml
+https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/v2ray.config.txt
+https://raw.githubusercontent.com/mfuu/FreeProxies/master/sub.yaml
+
+# igareck/vpn-configs-for-russia (9.3k stars): Xray JSON export, GLOBAL profile.
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Export/v2rayNG_Android/GLOBAL/BLACK_VLESS_RUS_mobile_v2rayNG_global.json
+
+# Jsnzkpg/Jsnzkpg (4.3k stars): public Base64 subscription advertised by its README.
+https://sub.445569.xyz
+
+# xrayfree/free-ssr-ss-v2ray-vpn-clash (1.8k stars): public Base64 V2Ray feed advertised by its README.
+https://www.xrayvip.com/free.txt
+
