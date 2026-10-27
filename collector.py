@@ -518,18 +518,14 @@ def main() -> int:
         node = from_uri(uri)
         return latency_sort_key(node, latencies) if node else (True, float("inf"), uri)
 
-    v2ray = [
-        uri for uri in sorted(
-            (uri for uri in all_uris.values() if uri.startswith(("vmess://", "vless://", "trojan://"))),
-            key=uri_latency_key,
-        ) if not uri_latency_key(uri)[0]
-    ][:30]
-    ss_ssr = [
-        uri for uri in sorted(
-            (uri for uri in all_uris.values() if uri.startswith(("ss://", "ssr://"))),
-            key=uri_latency_key,
-        ) if not uri_latency_key(uri)[0]
-    ][:30]
+    v2ray = sorted(
+        (uri for uri in all_uris.values() if uri.startswith(("vmess://", "vless://", "trojan://"))),
+        key=uri_latency_key,
+    )[:30]
+    ss_ssr = sorted(
+        (uri for uri in all_uris.values() if uri.startswith(("ss://", "ssr://"))),
+        key=uri_latency_key,
+    )[:30]
     clash_nodes = sorted(all_nodes.values(), key=lambda item: (str(item.get("name", "")).casefold(), stable_key(item)))
     # Clash requires stable, unique proxy labels for groups.
     used_names: set[str] = set()
@@ -542,10 +538,7 @@ def main() -> int:
         node["name"] = name
         used_names.add(name)
     clash_nodes.sort(key=lambda item: latency_sort_key(item, latencies))
-    clash_nodes = [
-        node for node in clash_nodes
-        if (endpoint := endpoint_key(node)) is not None and latencies.get(endpoint) is not None
-    ][:30]
+    clash_nodes = clash_nodes[:30]
     if not v2ray and not ss_ssr and not clash_nodes:
         print("No supported nodes were parsed; preserving existing feeds.", file=sys.stderr)
         return 1
