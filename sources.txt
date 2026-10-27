@@ -53,6 +53,8 @@ https://www.xrayvip.com/free.txt
 
 
 # mahdibland/V2RayAggregator (4.0k stars): speed-tested, protocol-specific feeds.
+https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/splitted/vmess.txt
+https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/splitted/trojan.txt
 https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/splitted/ss.txt
 https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/splitted/ssr.txt
 # Maintained protocol-specific feeds from active GitHub publishers.
