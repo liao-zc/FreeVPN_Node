@@ -4,339 +4,448 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: 分享日记_196_2
+- name: US 🇺🇸 | @Raydikalx | 26EF34
+  type: socks5
+  server: 20.75.169.229
+  port: 3000
+  udp: true
+- name: US 🇺🇸 | @Raydikalx | 79FEB8
   type: vless
-  server: microsoft.com
+  server: 199.232.239.239
   port: 443
-  uuid: 19804f6b-3661-4eca-b294-ba37196dab5b
+  uuid: af3a7e12-989a-454c-fcae-d00fd50c5237
+  udp: true
   tls: true
-  servername: graph.instagram.com.cyylr.eu.cc
+  servername: www.firefox.com
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /id-tksi
-- name: 🇺🇸US_481|888KB/s|K001-260618 [264821797083]
-  password: None
+    path: /?ed=2056/?RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS
+    headers:
+      Host: mpkoe7ypcibr80p102020.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | AB6DCD
+  type: vless
+  server: 199.232.239.239
   port: 443
-  server: 64.98.50.100
-  skip-cert-verify: true
-  sub_tag: K001-260618
-  tls: true
-  type: http
-  username: ''
-  udp: true
-- name: https-64.98.50.100
-  type: http
-  server: 64.98.50.100
-  port: 443
-  udp: true
-  password: None
-  tls: true
-- name: US_speednode_0041
-  port: 443
-  server: 64.98.50.100
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: 🇺🇸US_8|1.5MB/s
-  password: None
-  port: 443
-  server: 64.98.50.100
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: https-64.98.50.100-2
-  type: http
-  server: 64.98.50.100
-  port: 443
+  uuid: af3a7e12-989a-454c-fcae-d00fd50c5237
   udp: true
   tls: true
-- name: US 🇺🇸 | @Raydikalx | 5A1BD6
+  servername: speedtest.net
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056?/TELEGRAM--KANAL--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray
+    headers:
+      Host: mr_anonoijji.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | FED217
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: b3f3f34c-cbcd-427d-9894-5330738ac0da
+  udp: true
+  tls: true
+  servername: speedtest.net
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056?/TELEGRAM--KANAL--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray
+    headers:
+      Host: mr_anonoijji.global.ssl.fastly.net
+- name: '🇩🇪 德国 | DEU #5-2'
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 36805edb-1e85-4199-a59f-117010b70017
+  udp: true
+  tls: true
+  servername: firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel?ed=2056fp=chrome
+    headers:
+      Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | F052AF
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 05355ffb-a8f3-473b-cb9c-c8401897b03f
+  udp: true
+  tls: true
+  servername: firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056/?RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS
+    headers:
+      Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 243C46
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 05355ffb-a8f3-473b-cb9c-c8401897b03f
+  udp: true
+  tls: true
+  servername: firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056/?TELEGRAM--BYA--CHANEL---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN--@JKVPN---@JKVPN---@JKVPN---@JKVPN
+    headers:
+      Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | DEBD3F
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 8e6efaba-ba3d-49ec-98aa-c8f9baaf1d17
+  udp: true
+  tls: true
+  servername: firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512
+    headers:
+      Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 6F845C
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: af3a7e12-989a-454c-fcae-d00fd50c5237
+  udp: true
+  tls: true
+  servername: www.firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056/?TELEGRAM--BYA--CHANEL---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN--@JKVPN---@JKVPN---@JKVPN---@JKVPN
+    headers:
+      Host: mpkoe7ypcibr80p102020.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 64CA3C
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: af3a7e12-989a-454c-fcae-d00fd50c5237
+  udp: true
+  tls: true
+  servername: speedtest.net
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056?/TELEGRAM--BYA--CHANEL---@CoonfigCloud---@CoonfigCloud---@CoonfigCloud---@CoonfigCloud---@CoonfigCloud---@CoonfigCloud---@CoonfigCloud---@CoonfigCloud---@CoonfigCloud---@CoonfigCloud
+    headers:
+      Host: mr_anonoijji.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 894586
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 0617eade-fb92-422f-9b59-c9a4b65b2906
+  udp: true
+  tls: true
+  servername: speedtest.net
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056?/TELEGRAM--KANAL--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray
+    headers:
+      Host: mr_anonoijji.global.ssl.fastly.net
+- name: 🇩🇪 德国 | DEU-4
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 36805edb-1e85-4199-a59f-117010b70017
+  udp: true
+  tls: true
+  servername: firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel?ed=2056
+    headers:
+      Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 28B1E7
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 434f0115-bf40-44ac-cf80-5c14f4b6f6b3
+  udp: true
+  tls: true
+  servername: www.firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056/?TELEGRAM---TOOTFFARANGI
+    headers:
+      Host: mpkoe7ypcibr80p102020.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 015026
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: b020c472-934e-4d99-e8f8-3851c001683a
+  udp: true
+  tls: true
+  servername: speedtest.net
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056?/TELEGRAM--KANAL--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray
+    headers:
+      Host: mr_anonoijji.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 8C5608
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 434f0115-bf40-44ac-cf80-5c14f4b6f6b3
+  udp: true
+  tls: true
+  servername: www.firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056/?RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS--@RK_VPS
+    headers:
+      Host: mpkoe7ypcibr80p102020.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 79ADBC
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 434f0115-bf40-44ac-cf80-5c14f4b6f6b3
+  udp: true
+  tls: true
+  servername: www.firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512
+    headers:
+      Host: mpkoe7ypcibr80p102020.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 05E44B
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: af3a7e12-989a-454c-fcae-d00fd50c5237
+  udp: true
+  tls: true
+  servername: www.firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NETed=2056
+    headers:
+      Host: mpkoe7ypcibr80p102020.global.ssl.fastly.net
+- name: 🇩🇪 德国 | DEU 5-2
+  server: 199.232.239.239
+  port: 443
+  type: vless
+  uuid: 36805edb-1e85-4199-a59f-117010b70017
+  tls: true
+  alpn:
+  - h2
+  servername: firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel?ed=2056
+    headers:
+      Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+  udp: true
+- name: US 🇺🇸 | @Raydikalx | 378C85
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 05355ffb-a8f3-473b-cb9c-c8401897b03f
+  udp: true
+  network: tcp
+- name: US 🇺🇸 | @Raydikalx | 90A840
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 36805edb-1e85-4199-a59f-117010b70017
+  udp: true
+  tls: true
+  servername: firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@VPsave/@VPsave/@VPsave/@VPsave/@VPsave/@VPsave?ed=2056
+    headers:
+      Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+- name: 🇫🇮FI芬兰丨yoyapai.com_5
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 71a195c5-df47-47ad-81be-f4d3a3a21be3
+  network: xhttp
+  servername: ssl.fastly.com
+  tls: true
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  xhttp-opts:
+    path: /@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel
+    host: cloudnet2026.global.ssl.fastly.net
+    mode: auto
+  skip-cert-verify: false
+  udp: true
+- name: US 🇺🇸 | @Raydikalx | 012D54
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 434f0115-bf40-44ac-cf80-5c14f4b6f6b3
+  udp: true
+  tls: true
+  servername: www.firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056/?TELEGRAM--KANAL--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray
+    headers:
+      Host: mpkoe7ypcibr80p102020.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 396613
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 49883404-5bd4-42fc-9cb4-913980e278ad
+  udp: true
+  tls: true
+  servername: firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel?ed=2056/?TELEGRAM—@V2ray_V2ray_confiig
+    headers:
+      Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 917753
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 8e6efaba-ba3d-49ec-98aa-c8f9baaf1d17
+  udp: true
+  tls: true
+  servername: firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel?ed=2056
+    headers:
+      Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 618410
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 49883404-5bd4-42fc-9cb4-913980e278ad
+  udp: true
+  tls: true
+  servername: firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel?ed=2056
+    headers:
+      Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 5FF4DD
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 434f0115-bf40-44ac-cf80-5c14f4b6f6b3
+  udp: true
+  tls: true
+  servername: www.firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056/?TELEGRAM--BYA--CHANEL---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN--@JKVPN---@JKVPN---@JKVPN---@JKVPN
+    headers:
+      Host: mpkoe7ypcibr80p102020.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 38A58C
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: 434f0115-bf40-44ac-cf80-5c14f4b6f6b3
+  udp: true
+  tls: true
+  servername: www.firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056/?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
+    headers:
+      Host: mpkoe7ypcibr80p102020.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 950927
+  type: vless
+  server: 199.232.239.239
+  port: 443
+  uuid: af3a7e12-989a-454c-fcae-d00fd50c5237
+  udp: true
+  tls: true
+  servername: www.firefox.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed=2056/?TELEGRAM--KANAL--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray
+    headers:
+      Host: mpkoe7ypcibr80p102020.global.ssl.fastly.net
+- name: 🇫🇷法國丨yoyapai.com
+  type: vless
+  server: 94.140.0.100
+  port: 8880
+  uuid: 78e6619e-e82a-cd8d-b482-0973d8498305
+  network: ws
+  tls: false
+  ws-opts:
+    path: /sync
+    headers:
+      Host: silent-pine-a674.jfadwkglaugul.workers.dev
+  skip-cert-verify: false
+  udp: true
+- name: US 🇺🇸 | @Raydikalx | F4AE80
   type: vmess
-  server: 8.8.8.8
-  port: 53
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  server: 66.241.124.229
+  port: 443
+  uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
   alterId: 0
   cipher: auto
   udp: true
-  tls: false
-  network: tcp,udp
-- name: 🇺🇸US_208|546KB/s|R002-260618 [e49a7cefc91f]
-  port: 443
-  server: 24.225.10.211
-  skip-cert-verify: true
-  sub_tag: R002-260618
   tls: true
-  type: http
-  udp: true
-- type: vless
-  name: igareck-node-014
-  network: xhttp
-  udp: true
-  tls: true
-  servername: Apps.apple.com
-  client-fingerprint: safari
-  server: 151.101.3.6
-  port: 443
-  uuid: 80c2ebdb-755f-4516-a3ea-72fc3f4caed0
-- type: vless
-  name: igareck-node-008
-  network: xhttp
-  udp: true
-  tls: true
-  servername: Apps.apple.com
-  client-fingerprint: android
-  server: 151.101.3.6
-  port: 443
-  uuid: 80c2ebdb-755f-4516-a3ea-72fc3f4caed0
-- type: vless
-  name: igareck-node-012
-  network: xhttp
-  udp: true
-  tls: true
-  servername: Apps.apple.com
-  client-fingerprint: ios
-  server: 151.101.3.6
-  port: 443
-  uuid: 80c2ebdb-755f-4516-a3ea-72fc3f4caed0
-- type: vless
-  name: igareck-node-013
-  network: xhttp
-  udp: true
-  tls: true
-  servername: Apps.apple.com
-  client-fingerprint: qq
-  server: 151.101.3.6
-  port: 443
-  uuid: 80c2ebdb-755f-4516-a3ea-72fc3f4caed0
-- type: vless
-  name: igareck-node-010
-  network: xhttp
-  udp: true
-  tls: true
-  servername: Apps.apple.com
-  client-fingerprint: edge
-  server: 151.101.3.6
-  port: 443
-  uuid: 80c2ebdb-755f-4516-a3ea-72fc3f4caed0
-- type: vless
-  name: igareck-node-009
-  network: xhttp
-  udp: true
-  tls: true
-  servername: Apps.apple.com
-  client-fingerprint: chrome
-  server: 151.101.3.6
-  port: 443
-  uuid: 80c2ebdb-755f-4516-a3ea-72fc3f4caed0
-- type: vless
-  name: igareck-node-011
-  network: xhttp
-  udp: true
-  tls: true
-  servername: Apps.apple.com
-  client-fingerprint: firefox
-  server: 151.101.3.6
-  port: 443
-  uuid: 80c2ebdb-755f-4516-a3ea-72fc3f4caed0
-- name: 🇺🇸_美国 (39)
-  type: trojan
-  server: 167.82.76.27
-  port: 443
-  password: MiTiVPN
-  udp: true
-  sni: ssl.fastly.com
-  network: ws
-- type: trojan
-  name: 🇺🇸_美国 (39)-2
-  server: 167.82.76.27
-  port: 443
-  password: MiTiVPN
-  udp: true
-  tls: true
-  servername: ssl.fastly.com
-  sni: ssl.fastly.com
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+    path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
     headers:
-      Host: mitivpn---ss--s---mitivpn-3.global.ssl.fastly.net
-- name: US 🇺🇸 | @Raydikalx | AF02C0
-  type: trojan
-  server: 167.82.76.27
-  port: 443
-  password: mitivpn
-  udp: true
-  sni: ssl.fastly.com
-  network: ws
-- name: US 🇺🇸 | @Raydikalx | 8FC609
-  type: vless
-  server: 151.101.36.99
-  port: 443
-  uuid: 5028942d-7ac8-4f82-871c-dc1efb8ef2dc
-  udp: true
-  tls: true
-  servername: cdn.akamai.steamstatic.com
-  client-fingerprint: chrome
-  network: xhttp
-- client-fingerprint: chrome
-  network: ws
-  port: 80
-  server: 151.101.194.228
-  servername: joinxvproxybedee.ir
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: b4b4a987-1cbb-490c-a060-8309cabc93b5
-  ws-opts:
-    headers:
-      Host: joinxvproxybedee.ir
-    path: /
-  name: 美国 1269 [6b7c23d676b6bd70]
-- name: 分享日记_268
-  type: vless
-  server: 151.101.195.8
-  port: 80
-  uuid: 3ff60b54-f6d6-467f-9189-df1a0567c647
-  tls: false
-  servername: norbert-team-free1.global.ssl.fastly.net
-  network: ws
-  ws-opts:
-    path: /
-- name: US 🇺🇸 | @Raydikalx | 01EC9F
-  type: vless
-  server: 199.232.8.223
-  port: 443
-  uuid: 771e1d71-bd9f-45fb-af00-b72423f9cd51
-  udp: true
-  tls: true
-  servername: global.fastly.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sevenfeshab.global.ssl.fastly.net.
-- network: ws
-  port: 443
-  server: 199.232.8.223
-  servername: sevenfeshab.global.ssl.fastly.net.
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 771e1d71-bd9f-45fb-af00-b72423f9cd51
-  ws-opts:
-    headers:
-      Host: sevenfeshab.global.ssl.fastly.net.
-    path: /
-  name: 美国 1053 [75ec61792b4d5bde]
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146556
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.167
-  type: ss
-  udp: true
-- name: 🇺🇸US-156.146.38.167-0101
-  type: ss
-  server: 156.146.38.167
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸US_90|388KB/s|A004-260618 [e4bee8339fae]
-  cipher: aes-128-gcm
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.167
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  network: xhttp
-  port: 443
-  server: 199.232.245.94
-  servername: global.fastly.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1cbf2f56-926e-4a69-a325-d2794a22d411
-  name: 美国 881 [f2a5741b92e5dac0]
-- name: US 🇺🇸 | @Raydikalx | 2CE194
-  type: vless
-  server: 199.232.245.94
-  port: 443
-  uuid: 1cbf2f56-926e-4a69-a325-d2794a22d411
-  udp: true
-  tls: true
-  servername: global.fastly.com
-  client-fingerprint: chrome
-  network: xhttp
-- client-fingerprint: chrome
-  network: xhttp
-  port: 443
-  server: 199.232.77.215
-  servername: global.fastly.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1cbf2f56-926e-4a69-a325-d2794a22d411
-  name: 美国 882 [c093e6dfbbce7405]
-- name: US 🇺🇸 | @Raydikalx | 29FC3D
-  type: vless
-  server: 199.232.77.215
-  port: 443
-  uuid: 1cbf2f56-926e-4a69-a325-d2794a22d411
-  udp: true
-  tls: true
-  servername: global.fastly.com
-  client-fingerprint: chrome
-  network: xhttp
+      Host: cold-dawn-9246.fly.dev
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - 分享日记_196_2
-  - 🇺🇸US_481|888KB/s|K001-260618 [264821797083]
-  - https-64.98.50.100
-  - US_speednode_0041
-  - 🇺🇸US_8|1.5MB/s
-  - https-64.98.50.100-2
-  - US 🇺🇸 | @Raydikalx | 5A1BD6
-  - 🇺🇸US_208|546KB/s|R002-260618 [e49a7cefc91f]
-  - igareck-node-014
-  - igareck-node-008
-  - igareck-node-012
-  - igareck-node-013
-  - igareck-node-010
-  - igareck-node-009
-  - igareck-node-011
-  - 🇺🇸_美国 (39)
-  - 🇺🇸_美国 (39)-2
-  - US 🇺🇸 | @Raydikalx | AF02C0
-  - US 🇺🇸 | @Raydikalx | 8FC609
-  - 美国 1269 [6b7c23d676b6bd70]
-  - 分享日记_268
-  - US 🇺🇸 | @Raydikalx | 01EC9F
-  - 美国 1053 [75ec61792b4d5bde]
-  - shadowsocks-1827146556
-  - 🇺🇸US-156.146.38.167-0101
-  - 🇺🇸US_90|388KB/s|A004-260618 [e4bee8339fae]
-  - 美国 881 [f2a5741b92e5dac0]
-  - US 🇺🇸 | @Raydikalx | 2CE194
-  - 美国 882 [c093e6dfbbce7405]
-  - US 🇺🇸 | @Raydikalx | 29FC3D
+  - US 🇺🇸 | @Raydikalx | 26EF34
+  - US 🇺🇸 | @Raydikalx | 79FEB8
+  - US 🇺🇸 | @Raydikalx | AB6DCD
+  - US 🇺🇸 | @Raydikalx | FED217
+  - '🇩🇪 德国 | DEU #5-2'
+  - US 🇺🇸 | @Raydikalx | F052AF
+  - US 🇺🇸 | @Raydikalx | 243C46
+  - US 🇺🇸 | @Raydikalx | DEBD3F
+  - US 🇺🇸 | @Raydikalx | 6F845C
+  - US 🇺🇸 | @Raydikalx | 64CA3C
+  - US 🇺🇸 | @Raydikalx | 894586
+  - 🇩🇪 德国 | DEU-4
+  - US 🇺🇸 | @Raydikalx | 28B1E7
+  - US 🇺🇸 | @Raydikalx | 015026
+  - US 🇺🇸 | @Raydikalx | 8C5608
+  - US 🇺🇸 | @Raydikalx | 79ADBC
+  - US 🇺🇸 | @Raydikalx | 05E44B
+  - 🇩🇪 德国 | DEU 5-2
+  - US 🇺🇸 | @Raydikalx | 378C85
+  - US 🇺🇸 | @Raydikalx | 90A840
+  - 🇫🇮FI芬兰丨yoyapai.com_5
+  - US 🇺🇸 | @Raydikalx | 012D54
+  - US 🇺🇸 | @Raydikalx | 396613
+  - US 🇺🇸 | @Raydikalx | 917753
+  - US 🇺🇸 | @Raydikalx | 618410
+  - US 🇺🇸 | @Raydikalx | 5FF4DD
+  - US 🇺🇸 | @Raydikalx | 38A58C
+  - US 🇺🇸 | @Raydikalx | 950927
+  - 🇫🇷法國丨yoyapai.com
+  - US 🇺🇸 | @Raydikalx | F4AE80
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
