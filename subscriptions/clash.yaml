@@ -4,431 +4,305 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: 分享日记_196_2
-  type: vless
-  server: microsoft.com
-  port: 443
-  uuid: 19804f6b-3661-4eca-b294-ba37196dab5b
+- cipher: aes-256-gcm
+  name: shadowsocks-1875129452
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 95.215.201.18
+  type: ss
+  udp: true
+- name: 🇺🇸US_153|759KB/s|P002-260618 [66ebf6ae1341]
+  password: ''
+  port: 9002
+  server: 138.199.35.210
+  skip-cert-verify: true
+  sub_tag: P002-260618
   tls: true
-  servername: graph.instagram.com.cyylr.eu.cc
-  network: ws
-  ws-opts:
-    path: /id-tksi
-- name: 🏁RELAY-162.159.242.143-8375
+  type: http
+  username: ''
+  udp: true
+- port: 443
+  server: 129.153.93.183
+  skip-cert-verify: true
+  sni: 129.153.93.183
+  tls: true
+  type: http
+  name: US - zhuhai.uk 11 [95e2a7fea09e4c22]
+- name: 🇺🇸US_250|796KB/s|R002-260618 [073cbc5426d6]
+  port: 9002
+  server: 138.199.35.213
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- port: 9002
+  server: 138.199.35.213
+  skip-cert-verify: true
+  tls: true
+  type: http
+  name: US - zhuhai.uk 04 [faaf4ca32a937bb2]
+- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  type: wireguard
+  server: 162.159.192.3
+  port: 500
+  private-key: 2D+QMolgGWVRVGdJJvsQ4VBDCcZTym0c1sFN00PeMUs=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 213
+  - 74
+  - 19
+  mtu: 1280
+- name: 🇺🇸US_239|815KB/s|R002-260618 [1fd0f978ab09]
+  password: 'null'
+  port: 9002
+  server: 138.199.35.197
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  username: 'null'
+  udp: true
+- name: 🇺🇸US_32|833KB/s|P002-260618 [a8fb52dac60b]
+  password: None
+  port: 9002
+  server: 138.199.35.196
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇺🇸US_156|614KB/s|M002-260618 [71fe45c6a8fb]
   type: vmess
-  server: 162.159.242.143
-  port: 2095
-  uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+  server: 129.146.77.248
+  port: 39495
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   network: ws
   ws-opts:
-    path: /hgcefomn
+    path: /cctv13.m3u8
     headers:
-      Host: ''
-- name: vless-1855944862
-  network: ws
-  port: 8080
-  server: 104.18.26.94
-  type: vless
+      Host: 129.146.77.248
+- name: 🇺🇸US_443|1002KB/s|A004-260618 [9b10e8e6bf84]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 95.215.201.18
+  sub_tag: A004-260618
+  type: ss
   udp: true
-  uuid: 989d58b8-d2ea-4d28-b5ff-0f3cd078f2cf
-- name: 🇫🇷FR_225|822KB/s|M003-260806 [5b9c987a5d38]
-  encryption: none
-  network: ws
+- name: 🇺🇸US_338|974KB/s|A004-260618 [836b9e2c1c7b]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
   port: 8080
-  server: 104.18.26.94
+  server: 107.151.182.253
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1828227588
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 79.110.53.169
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  obfs: plain
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  protocol: origin
+  server: 107.151.182.253
+  type: ssr
+  name: SSR-美国-NF解锁自制剧-ChatGPT-TikTok-YouTube-107.151.182.253:8080 [4a752126a796617e]
+- name: 🇺🇸US_208|836KB/s|M003-260806 [2d3c6b97d127]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 79.110.53.169
   sub_tag: M003-260806
-  type: vless
+  type: ss
   udp: true
-  uuid: 989d58b8-d2ea-4d28-b5ff-0f3cd078f2cf
-  ws-opts:
-    headers:
-      Host: sdf23g-billowing-moon-348e.mzm468gc.workers.dev
-      User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/43.0.2357.65 Safari/537.36
-    path: /
-  xudp: true
-  packet-encoding: xudp
-  servername: www.gov.se
-- name: '🇸🇬[www.v2nodes.com] vless-SG #4-2'
-  type: vless
-  server: 104.18.26.94
-  port: 8080
-  uuid: 989d58b8-d2ea-4d28-b5ff-0f3cd078f2cf
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sdf23g-billowing-moon-348e.mzm468gc.workers.dev
-- network: ws
-  port: 80
-  server: 172.67.139.85
-  servername: cxrolvpn.vipserver2.workers.dev
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 429efff7-16bd-499e-85a5-a6f4b89c2773
-  ws-opts:
-    headers:
-      Host: cxrolvpn.vipserver2.workers.dev
-    path: /AWGG17eLHc5QLzJr?ed=2560
-  name: 美国 937 [774ab6b06b8b5be4]
-- name: CA 🇨🇦 | @Raydikalx | 32022F
-  type: vless
-  server: 172.67.139.85
-  port: 80
-  uuid: 85c4c0ce-08ef-493d-96f3-a711a70ec995
-  udp: true
-  network: ws
-  ws-opts:
-    path: /LnR5ZD5AxThxzVDc?ed=2560
-    headers:
-      Host: cxrolvpn.vipserver2.workers.dev
-- name: CA 🇨🇦 | @Raydikalx | C92CDD
-  type: vless
-  server: 172.67.139.85
-  port: 80
-  uuid: 429efff7-16bd-499e-85a5-a6f4b89c2773
-  udp: true
-  network: ws
-  ws-opts:
-    path: /AWGG17eLHc5QLzJr?ed=2560
-    headers:
-      Host: cxrolvpn.vipserver2.workers.dev
-- name: vless-1853969345
-  network: ws
+- name: 🇺🇸US_15|4.2MB/s
   port: 443
-  server: 104.16.10.2
-  servername: jp3.yohototo.top
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- name: 🇹🇭TH_2|386KB/s|B007-260618 [abab5289a964]
-  client-fingerprint: chrome
-  encryption: none
-  network: ws
-  port: 443
-  server: 104.16.10.2
-  sub_tag: B007-260618
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  ws-opts:
-    headers:
-      Host: v2ray.simspeedup.com
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/51.0.2704.103 Safari/537.36
-    path: /ws
-  xudp: true
-  packet-encoding: xudp
-  servername: v2ray.simspeedup.com
-- name: CA 🇨🇦 | @Raydikalx | 70B462
-  type: vless
-  server: 104.16.10.2
-  port: 443
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-  udp: true
-  tls: true
-  servername: a.cwvps.eu.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: a.cwvps.eu.org
-- name: CA 🇨🇦 | @Raydikalx | AEEE17
-  type: vless
-  server: 104.16.10.2
-  port: 443
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-  udp: true
-  tls: true
-  servername: a.cwvps.eu.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws#TELEGRAM--MARAMBASHI--MARAMBASHI?ed=512
-    headers:
-      Host: a.cwvps.eu.org
-- name: vless-1827151283
-  network: ws
-  port: 443
-  server: 104.16.10.2
-  servername: v2ray.simspeedup.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-- name: CA 🇨🇦 | @Raydikalx | F1502D
-  type: vless
-  server: 104.16.10.2
-  port: 443
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: vless-1854330909
-  network: ws
-  port: 2053
-  server: 172.67.133.118
-  servername: uwu.blueknightnet.qzz.io
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: aa5d861a-7799-41a7-bdf4-7a6414cf98fd
-- name: 🇩🇪DE_75|100KB/s|M002-260618 [6baca32b953d]
-  alpn:
-  - h2
-  client-fingerprint: chrome
-  encryption: none
-  network: ws
-  port: 2053
-  server: 172.67.133.118
-  sub_tag: M002-260618
-  tls: true
-  type: vless
-  udp: true
-  uuid: aa5d861a-7799-41a7-bdf4-7a6414cf98fd
-  ws-opts:
-    headers:
-      Host: uwu.blueknightnet.qzz.io
-      User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; de-DE) AppleWebKit/534.17
-        (KHTML, like Gecko) Chrome/10.0.649.0 Safari/534.17
-    path: /@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net
-  xudp: true
-  packet-encoding: xudp
-  servername: uwu.blueknightnet.qzz.io
-- name: 美国+CloudFlare节点
-  type: vless
-  server: 172.67.133.118
-  port: 2053
-  uuid: aa5d861a-7799-41a7-bdf4-7a6414cf98fd
-  udp: true
-  tls: true
-  servername: uwu.blueknightnet.qzz.io
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net
-    headers:
-      Host: uwu.blueknightnet.qzz.io
-- client-fingerprint: chrome
-  network: ws
-  port: 2053
-  server: 104.17.26.230
-  servername: nova-mango-cloud-c883.nova-5dd64d.workers.dev
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7327168e-4da6-4104-82ab-d52dd7128c47
-  ws-opts:
-    headers:
-      Host: nova-mango-cloud-c883.nova-5dd64d.workers.dev
-    path: /?u=ommkkobot
-  name: 美国 1042 [f10bc482313b4966]
-- name: CA 🇨🇦 | @Raydikalx | 37ACEE
-  type: vless
-  server: 104.17.26.230
-  port: 2053
-  uuid: 7327168e-4da6-4104-82ab-d52dd7128c47
-  udp: true
-  tls: true
-  servername: nova-mango-cloud-c883.nova-5dd64d.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?u=ommkkobot
-    headers:
-      Host: nova-mango-cloud-c883.nova-5dd64d.workers.dev
-- alterId: 0
-  cipher: auto
-  network: ws
-  port: 443
-  server: 190.93.246.2
+  server: 129.153.93.183
   skip-cert-verify: true
   tls: true
-  type: vmess
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  ws-opts:
-    headers:
-      Host: lg1.trump2023.us
-    path: /ECTCJ0DF
-  name: 哥斯达黎加 001 [c047caf853e96901]
-- name: 🏁RELAY-190.93.246.2-3186
-  type: vmess
-  server: 190.93.246.2
-  port: 443
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: ws
-  ws-opts:
-    path: /ECTCJ0DF
-    headers:
-      Host: ''
-- name: 欧洲(油管:破解资源君)-39
-  type: vmess
-  server: 190.93.246.2
-  port: 443
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: ws
-  ws-opts:
-    path: /ECTCJ0DF
-    headers:
-      Host: lg1.trump2023.us
-- name: socks5-104.17.124.183
-  type: socks5
-  server: 104.17.124.183
-  port: 80
-  udp: true
-- name: 🇸🇬SG新加坡丨yoyapai.com_11
-  type: vless
-  server: 104.21.28.176
-  port: 443
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /Singapore1
-    headers:
-      Host: sg.lovehk.xyz
-  skip-cert-verify: false
-  udp: true
-- name: http-104.16.19.171
   type: http
-  server: 104.16.19.171
-  port: 80
-  udp: true
-- name: 分享日记_202_2
-  type: vless
-  server: 104.18.33.45
-  port: 2096
-  uuid: 128d1209-9e9f-4952-9faf-df47ae3648d2
+- name: 🇺🇸US_297|816KB/s [518e0351a46f]
+  password: ''
+  port: 9002
+  server: 138.199.35.203
+  skip-cert-verify: true
   tls: true
-  servername: 490RvDeCdQ.bElAnImAn.InFo
-  network: ws
-  ws-opts:
-    path: /
-  client-fingerprint: firefox
-- name: CA 🇨🇦 | @Raydikalx | E58F87
-  type: vless
-  server: 104.21.18.41
-  port: 443
-  uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82
+  type: http
+  username: ''
   udp: true
-  tls: true
-  servername: www.getasa.ir
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /--Telegram---@MiTiVPN/---@MiTiVPN/---MiTiVPN/---@MiTiVPN
-    headers:
-      Host: www.getasa.ir
-- client-fingerprint: chrome
-  network: ws
-  port: 443
-  server: 104.21.18.41
-  servername: www.getasa.ir
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82
-  ws-opts:
-    headers:
-      Host: www.getasa.ir
-    path: /--Telegram---
-  name: 美国 1168 [be5ee98110686f3f]
-- name: vless-1831100702
-  network: ws
-  port: 443
-  server: 172.66.44.133
-  servername: web-tomcat.pages.dev
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2cf94f4d-9d5b-49ca-81a3-ddc0529a2dac
-- name: 🇫🇷FR_208|4.5MB/s|A004-260618 [436825c450f9]
-  client-fingerprint: chrome
-  network: ws
-  port: 443
-  server: 172.66.44.133
+- name: 🇺🇸US_148|224KB/s|A004-260618 [0e40b52615aa]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 107.151.182.197
   sub_tag: A004-260618
-  tls: true
-  type: vless
+  type: ss
   udp: true
-  uuid: 2cf94f4d-9d5b-49ca-81a3-ddc0529a2dac
+- name: 🇺🇸US_420|879KB/s|A004-260618 [d92318afee09]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 79.110.54.250
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1827962976
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 107.151.182.197
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1870576345
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 79.110.54.250
+  type: ss
+  udp: true
+- name: hysteria2-1853974956
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  port: 33333
+  server: 155.248.209.237
+  skip-cert-verify: true
+  sni: hy2.123266.xyz
+  type: hysteria2
+- name: hysteria2-1832863516
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  port: 33333
+  server: 155.248.209.237
+  skip-cert-verify: true
+  sni: ''
+  type: hysteria2
+- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
+  type: wireguard
+  server: 162.159.192.2
+  port: 500
+  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 39
+  - 4
+  - 107
+  mtu: 1280
+- name: 🇺🇸US_216|819KB/s|R002-260618 [f3757137fc03]
+  port: 443
+  server: 129.153.93.183
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: us|81c2|puddincat07@Telegram
+  password: 4291c983-c520-46ac-82cc-48f14bef573f
+  port: 35013
+  server: 129.213.91.185
+  skip-cert-verify: true
+  sni: 129.213.91.185
+  tls: false
+  type: hysteria2
+- cipher: rc4-md5
+  name: shadowsocks-1827963043
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 107.151.182.253
+  type: ss
+  udp: true
+- name: 🇺🇸US_156|614KB/s|M002-260618 [71fe45c6a8fb]-2
+  alterId: 0
+  cipher: auto
+  network: ws
+  port: 39495
+  server: 129.146.77.248
+  skip-cert-verify: false
+  sub_tag: M002-260618
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
   ws-opts:
     headers:
-      Host: web-tomcat.pages.dev
-      User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.7
-        (KHTML, like Gecko) Chrome/7.0.517.44 Safari/534.7
-    path: /
+      Host: 129.146.77.248
+    path: /cctv13.m3u8
   xudp: true
   packet-encoding: xudp
-  servername: web-tomcat.pages.dev
+  servername: 129.146.77.248
+- name: US 🇺🇸 | @Raydikalx | 452ED5
+  type: vmess
+  server: 129.146.77.248
+  port: 39495
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: ''
+- name: hysteria2-1832764816
+  password: 96ab5cd282733fd4c312a61f972f330a
+  port: 443
+  server: 45.32.10.7
+  skip-cert-verify: false
+  sni: vp3.yysyy.online
+  type: hysteria2
+- name: hysteria2-1832764952
+  type: hysteria2
+  server: vp3.yysyy.online
+  port: 443
+  password: 96ab5cd282733fd4c312a61f972f330a
+  udp: true
+  sni: vp3.yysyy.online
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - 分享日记_196_2
-  - 🏁RELAY-162.159.242.143-8375
-  - vless-1855944862
-  - 🇫🇷FR_225|822KB/s|M003-260806 [5b9c987a5d38]
-  - '🇸🇬[www.v2nodes.com] vless-SG #4-2'
-  - 美国 937 [774ab6b06b8b5be4]
-  - CA 🇨🇦 | @Raydikalx | 32022F
-  - CA 🇨🇦 | @Raydikalx | C92CDD
-  - vless-1853969345
-  - 🇹🇭TH_2|386KB/s|B007-260618 [abab5289a964]
-  - CA 🇨🇦 | @Raydikalx | 70B462
-  - CA 🇨🇦 | @Raydikalx | AEEE17
-  - vless-1827151283
-  - CA 🇨🇦 | @Raydikalx | F1502D
-  - vless-1854330909
-  - 🇩🇪DE_75|100KB/s|M002-260618 [6baca32b953d]
-  - 美国+CloudFlare节点
-  - 美国 1042 [f10bc482313b4966]
-  - CA 🇨🇦 | @Raydikalx | 37ACEE
-  - 哥斯达黎加 001 [c047caf853e96901]
-  - 🏁RELAY-190.93.246.2-3186
-  - 欧洲(油管:破解资源君)-39
-  - socks5-104.17.124.183
-  - 🇸🇬SG新加坡丨yoyapai.com_11
-  - http-104.16.19.171
-  - 分享日记_202_2
-  - CA 🇨🇦 | @Raydikalx | E58F87
-  - 美国 1168 [be5ee98110686f3f]
-  - vless-1831100702
-  - 🇫🇷FR_208|4.5MB/s|A004-260618 [436825c450f9]
+  - shadowsocks-1875129452
+  - 🇺🇸US_153|759KB/s|P002-260618 [66ebf6ae1341]
+  - US - zhuhai.uk 11 [95e2a7fea09e4c22]
+  - 🇺🇸US_250|796KB/s|R002-260618 [073cbc5426d6]
+  - US - zhuhai.uk 04 [faaf4ca32a937bb2]
+  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  - 🇺🇸US_239|815KB/s|R002-260618 [1fd0f978ab09]
+  - 🇺🇸US_32|833KB/s|P002-260618 [a8fb52dac60b]
+  - 🇺🇸US_156|614KB/s|M002-260618 [71fe45c6a8fb]
+  - 🇺🇸US_443|1002KB/s|A004-260618 [9b10e8e6bf84]
+  - 🇺🇸US_338|974KB/s|A004-260618 [836b9e2c1c7b]
+  - shadowsocks-1828227588
+  - SSR-美国-NF解锁自制剧-ChatGPT-TikTok-YouTube-107.151.182.253:8080 [4a752126a796617e]
+  - 🇺🇸US_208|836KB/s|M003-260806 [2d3c6b97d127]
+  - 🇺🇸US_15|4.2MB/s
+  - 🇺🇸US_297|816KB/s [518e0351a46f]
+  - 🇺🇸US_148|224KB/s|A004-260618 [0e40b52615aa]
+  - 🇺🇸US_420|879KB/s|A004-260618 [d92318afee09]
+  - shadowsocks-1827962976
+  - shadowsocks-1870576345
+  - hysteria2-1853974956
+  - hysteria2-1832863516
+  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
+  - 🇺🇸US_216|819KB/s|R002-260618 [f3757137fc03]
+  - us|81c2|puddincat07@Telegram
+  - shadowsocks-1827963043
+  - 🇺🇸US_156|614KB/s|M002-260618 [71fe45c6a8fb]-2
+  - US 🇺🇸 | @Raydikalx | 452ED5
+  - hysteria2-1832764816
+  - hysteria2-1832764952
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
