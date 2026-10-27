@@ -42,7 +42,7 @@ jobs:
           binary=/tmp/mihomo-cache/mihomo
           chmod +x "$binary"
           echo "$(dirname "$binary")" >> "$GITHUB_PATH"
-          "$binary" version
+          "$binary" -v
       - name: Fetch and build subscriptions
         env:
           GITHUB_TOKEN: ${{ github.token }}
