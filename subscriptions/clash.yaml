@@ -4,11 +4,6 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: US 🇺🇸 | @Raydikalx | 26EF34
-  type: socks5
-  server: 20.75.169.229
-  port: 3000
-  udp: true
 - name: US 🇺🇸 | @Raydikalx | 79FEB8
   type: vless
   server: 199.232.239.239
@@ -385,38 +380,43 @@ proxies:
     path: /?ed=2056/?TELEGRAM--KANAL--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray--@mainv2ray
     headers:
       Host: mpkoe7ypcibr80p102020.global.ssl.fastly.net
-- name: 🇫🇷法國丨yoyapai.com
-  type: vless
-  server: 94.140.0.100
-  port: 8880
-  uuid: 78e6619e-e82a-cd8d-b482-0973d8498305
-  network: ws
-  tls: false
-  ws-opts:
-    path: /sync
-    headers:
-      Host: silent-pine-a674.jfadwkglaugul.workers.dev
+- network: ws
+  port: 80
+  server: 151.101.56.9
+  servername: freekabotar.global.ssl.fastly.net
   skip-cert-verify: false
-  udp: true
-- name: US 🇺🇸 | @Raydikalx | F4AE80
-  type: vmess
-  server: 66.241.124.229
-  port: 443
-  uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
-  alterId: 0
-  cipher: auto
-  udp: true
+  tfo: false
   tls: true
+  type: vless
+  udp: true
+  uuid: d8b3f1c4-94c7-423e-a03a-bfa7f6af0ea1
+  ws-opts:
+    headers:
+      Host: freekabotar.global.ssl.fastly.net
+    path: /ws
+  name: 美国 1165 [a8a2f355f0afd069]
+- name: US 🇺🇸 | @Raydikalx | 193963
+  type: vless
+  server: 151.101.56.9
+  port: 80
+  uuid: d8b3f1c4-94c7-423e-a03a-bfa7f6af0ea1
+  udp: true
   network: ws
   ws-opts:
-    path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
+    path: /ws
     headers:
-      Host: cold-dawn-9246.fly.dev
+      Host: freekabotar.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 19E653
+  type: vless
+  server: 199.232.237.67
+  port: 80
+  uuid: ed7f8d66-74c8-494b-bd4f-5775de4808cf
+  udp: true
+  network: xhttp
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - US 🇺🇸 | @Raydikalx | 26EF34
   - US 🇺🇸 | @Raydikalx | 79FEB8
   - US 🇺🇸 | @Raydikalx | AB6DCD
   - US 🇺🇸 | @Raydikalx | FED217
@@ -444,8 +444,9 @@ proxy-groups:
   - US 🇺🇸 | @Raydikalx | 5FF4DD
   - US 🇺🇸 | @Raydikalx | 38A58C
   - US 🇺🇸 | @Raydikalx | 950927
-  - 🇫🇷法國丨yoyapai.com
-  - US 🇺🇸 | @Raydikalx | F4AE80
+  - 美国 1165 [a8a2f355f0afd069]
+  - US 🇺🇸 | @Raydikalx | 193963
+  - US 🇺🇸 | @Raydikalx | 19E653
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
