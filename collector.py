@@ -232,11 +232,12 @@ def load_source(url: str) -> tuple[list[str], list[dict[str, Any]]]:
     raw = fetch(url)
     text = decode_text(raw)
     clash_nodes: list[dict[str, Any]] = []
-    if text.lstrip().startswith(("proxies:", "proxies :", "port:", "mixed-port:")):
-        try:
-            clash_nodes = from_clash(yaml.safe_load(text))
-        except yaml.YAMLError:
-            pass
+    # YAML feeds can start with comments or other top-level Clash settings, so
+    # do not require `proxies:` to be the first line before attempting a parse.
+    try:
+        clash_nodes = from_clash(yaml.safe_load(text))
+    except yaml.YAMLError:
+        pass
     return uri_items(text), clash_nodes
 
 
