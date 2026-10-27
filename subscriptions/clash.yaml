@@ -4,185 +4,87 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: 🇩🇪DE德国丨yoyapai.com_12
-  type: vless
-  server: 151.101.69.253
+- network: xhttp
   port: 443
-  uuid: 884f23e9-caab-4775-9ed9-6a3a9cae677f
-  network: xhttp
-  servername: accaunt.fastly.com
-  tls: true
-  client-fingerprint: chrome
-  alpn:
-  - h3
-  xhttp-opts:
-    path: /Lunex
-    host: lunex.store
+  server: 199.232.78.151
+  servername: firefox.com
   skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
   udp: true
-- name: trojan-1926124139
+  uuid: 67b7716d-64f5-4ad9-b075-c95b636bf159
+  name: 美国 1026 [3a4ea753710ef009]
+- password: mitivpn
+  port: 443
+  server: 167.82.64.46
+  skip-cert-verify: true
+  sni: firefox.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: mitivpn-mitivpn.ac.ir
+    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+  name: 🇺🇸_美国_245 [46a2a308d95c19c3]
+- name: 🇺🇸_美国_245
+  type: trojan
+  server: 167.82.64.46
+  port: 443
+  password: mitivpn
+  udp: true
+  sni: firefox.com
+  network: ws
+- name: trojan-1926124170
   password: mitivpn
   port: 443
-  server: 199.232.9.244
+  server: 167.82.64.46
   skip-cert-verify: true
-  sni: ns1.firefox.com
+  sni: firefox.com
   type: trojan
   udp: true
 - client-fingerprint: chrome
   network: xhttp
   port: 443
-  server: 199.232.20.113
-  servername: www.firefox.com
+  server: 167.82.101.119
+  servername: iran.ir
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: 2373eb03-66b2-4f42-bb40-95db8b210877
-  name: 印度 004 [d44f4904b2d9e4c9]
-- network: xhttp
-  port: 80
-  server: 23.235.33.98
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: b742d8e7-ed7d-4f7d-bb16-bf49bdb4cb44
-  name: 美国 1127 [823d9103df046a92]
-- name: 🇺🇸_美国 (39)
-  type: trojan
-  server: 167.82.76.27
-  port: 443
-  password: MiTiVPN
-  udp: true
-  sni: ssl.fastly.com
-  network: ws
-- type: trojan
-  name: 🇺🇸_美国 (39)-2
-  server: 167.82.76.27
-  port: 443
-  password: MiTiVPN
-  udp: true
-  tls: true
-  servername: ssl.fastly.com
-  sni: ssl.fastly.com
-  skip-cert-verify: false
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-    headers:
-      Host: mitivpn---ss--s---mitivpn-3.global.ssl.fastly.net
+  uuid: 2b701acc-0587-42f9-98db-dd8af385d351
+  name: 美国 911 [15bbbf241e6ebcd6]
 - network: ws
   port: 443
-  server: 151.101.109.223
-  servername: pan1.global.ssl.fastly.net
-  skip-cert-verify: true
+  server: 146.75.56.210
+  servername: germanyi.global.ssl.fastly.net.
+  skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: c8541f02-4efd-401d-beb7-dc017b12ee94
+  uuid: 38e2e635-f6a7-4924-8ddd-39ad1f625722
   ws-opts:
     headers:
-      Host: pan1.global.ssl.fastly.net
+      Host: germanyi.global.ssl.fastly.net.
     path: /
-  name: 日本 054 [5a1d50a3211999ad]
-- client-fingerprint: chrome
-  network: xhttp
-  port: 443
-  server: 199.232.245.94
-  servername: global.fastly.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1cbf2f56-926e-4a69-a325-d2794a22d411
-  name: 美国 881 [f2a5741b92e5dac0]
-- encryption: none
-  network: ws
-  packet-encoding: xudp
-  port: 443
-  server: 199.232.245.90
-  servername: default.ssl.fastly.net
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: d27a232b-de94-4204-9bae-b0c243c6b93c
-  ws-opts:
-    headers:
-      Host: newip.global.ssl.fastly.neT.
-    path: /
-  name: 美国 395 [bb2254b6831abc2f]
-- client-fingerprint: chrome
-  network: ws
-  port: 443
-  server: 199.232.78.185
-  servername: bzhqb9r7omu1647.global.ssl.fastly.net
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 75039c69-6b87-449f-a0aa-ced7a8c069d3
-  ws-opts:
-    headers:
-      Host: bzhqb9r7omu1647.global.ssl.fastly.net
-    path: /
-  name: 美国 1052 [d8fee5210c7375cf]
-- client-fingerprint: chrome
-  network: xhttp
-  port: 443
-  server: 199.232.237.245
-  servername: global.fastly.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8e9cbf76-b74a-46b3-8270-9453e281e613
-  name: 美国 1084 [07c896388734b199]
-- name: trojan-1926124156
-  password: mitivpn
-  port: 443
-  server: 151.101.36.244
-  skip-cert-verify: true
-  sni: ns2.firefox.com
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  network: xhttp
-  port: 443
-  server: 199.232.78.150
-  servername: global.fastly.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1cbf2f56-926e-4a69-a325-d2794a22d411
-  name: 美国 883 [3b8e61f22c6787f0]
-- client-fingerprint: chrome
-  network: ws
+  name: 瑞典 012 [b436f07af41f58d8]
+- network: ws
   port: 80
-  server: 151.101.194.228
-  servername: joinxvproxybedee.ir
+  server: 151.101.56.9
+  servername: freekabotar.global.ssl.fastly.net
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: b4b4a987-1cbb-490c-a060-8309cabc93b5
+  uuid: d8b3f1c4-94c7-423e-a03a-bfa7f6af0ea1
   ws-opts:
     headers:
-      Host: joinxvproxybedee.ir
-    path: /
-  name: 美国 1269 [6b7c23d676b6bd70]
+      Host: freekabotar.global.ssl.fastly.net
+    path: /ws
+  name: 美国 1165 [a8a2f355f0afd069]
 - name: 🇺🇸US_473|503KB/s|B007-260618 [b8b7abfab0f7]
   client-fingerprint: chrome
   encryption: none
@@ -248,25 +150,231 @@ proxies:
 - client-fingerprint: chrome
   network: xhttp
   port: 443
-  server: 199.232.78.143
-  servername: default.ssl.fastly.net
+  server: 167.82.101.126
+  servername: iran.ir
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   udp: true
-  uuid: 854860c4-b5e8-453c-a047-90d451fe9c58
-  name: 美国 1077 [e19c86a7734200de]
-- name: 分享日记_268
+  uuid: dbb91d75-3581-4117-9e4a-25cd3cc988a0
+  name: 美国 1167 [048c815833933d6a]
+- type: vless
+  name: igareck-node-031
+  network: ws
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: safari
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+  server: 199.232.78.170
+  port: 443
+  uuid: XpnTeam-54
+- name: 🇫🇷 法国 | FRA 4
+  server: 199.232.78.170
+  port: 443
   type: vless
-  server: 151.101.195.8
-  port: 80
-  uuid: 3ff60b54-f6d6-467f-9189-df1a0567c647
-  tls: false
-  servername: norbert-team-free1.global.ssl.fastly.net
+  uuid: XpnTeam-54
+  tls: true
+  alpn:
+  - http/1.1
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+  udp: true
+- name: '🇫🇷 法国 | FRA #3'
+  type: vless
+  server: 199.232.78.170
+  port: 443
+  uuid: XpnTeam-54
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- type: vless
+  name: igareck-node-029
+  network: ws
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: ios
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+  server: 199.232.78.170
+  port: 443
+  uuid: XpnTeam-54
+- name: 🇫🇷 法国 | FRA
+  type: vless
+  server: 199.232.78.170
+  port: 443
+  uuid: XpnTeam-54
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- type: vless
+  name: igareck-node-030
+  network: ws
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: qq
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+  server: 199.232.78.170
+  port: 443
+  uuid: XpnTeam-54
+- type: vless
+  name: igareck-node-028
+  network: ws
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: firefox
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+  server: 199.232.78.170
+  port: 443
+  uuid: XpnTeam-54
+- name: vless-1931240064
+  network: ws
+  port: 443
+  server: 199.232.78.170
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: XpnTeam-54
+- type: vless
+  name: igareck-node-107
+  network: ws
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: android
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+  server: 199.232.78.170
+  port: 443
+  uuid: XpnTeam-54
+- type: vless
+  name: igareck-node-146
+  network: ws
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+  server: 199.232.78.170
+  port: 443
+  uuid: XpnTeam-54
+- client-fingerprint: chrome
+  network: ws
+  port: 80
+  server: 151.101.66.228
+  servername: joinxvproxybedee.ir
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b4b4a987-1cbb-490c-a060-8309cabc93b5
+  ws-opts:
+    headers:
+      Host: joinxvproxybedee.ir
+    path: /
+  name: 美国 1267 [6bb49e3886e450cb]
+- client-fingerprint: chrome
+  network: xhttp
+  port: 443
+  server: 199.232.78.150
+  servername: global.fastly.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1cbf2f56-926e-4a69-a325-d2794a22d411
+  name: 美国 883 [3b8e61f22c6787f0]
+- alterId: 0
+  cipher: auto
+  network: ws
+  port: 2082
+  server: 172.67.207.209
+  skip-cert-verify: true
+  type: vmess
+  uuid: 082122a2-8479-4089-82f0-f32ba5fc5426
+  ws-opts:
+    headers:
+      Host: hao.huaqian.icu
+    path: /bb
+  name: 美国 645 [5a5522ed2535fc25]
+- client-fingerprint: chrome
+  network: xhttp
+  port: 443
+  server: 199.232.245.94
+  servername: global.fastly.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1cbf2f56-926e-4a69-a325-d2794a22d411
+  name: 美国 881 [f2a5741b92e5dac0]
+- network: xhttp
+  port: 80
+  server: 199.232.237.67
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: ed7f8d66-74c8-494b-bd4f-5775de4808cf
+  name: 美国 1219 [ba49661955179ef9]
+- encryption: none
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: 199.232.245.90
+  servername: default.ssl.fastly.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: d27a232b-de94-4204-9bae-b0c243c6b93c
+  ws-opts:
+    headers:
+      Host: newip.global.ssl.fastly.neT.
+    path: /
+  name: 美国 395 [bb2254b6831abc2f]
 - name: 🇩🇪DE_158|2.0MB/s|B007-260618 [96096347d6a9]
   encryption: none
   network: ws
@@ -299,135 +407,40 @@ proxies:
       Host: 7wwwspeedtestnet.global.ssl.fastly.net
     path: /
   name: 美国 901 [2b116cdf33712ff7]
-- client-fingerprint: chrome
-  network: ws
-  port: 80
-  server: 151.101.130.228
-  servername: joinxvproxybedee.ir
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: b4b4a987-1cbb-490c-a060-8309cabc93b5
-  ws-opts:
-    headers:
-      Host: joinxvproxybedee.ir
-    path: /
-  name: 美国 1268 [358aeeba6855f7ec]
-- name: 🇺🇸_US美國丨yoyapai.com
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 6e2e03e2-4f66-479a-a186-a34d66ca8c91
-  network: ws
-  servername: ssl.fastly.com
-  tls: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER?ed=2053
-    headers:
-      Host: pan11.global.ssl.fastly.net
-  skip-cert-verify: false
-  udp: true
-- network: ws
-  port: 443
-  server: 199.232.78.159
-  servername: lofinlaoijji.global.ssl.fastly.net
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 08902a33-9968-4e5c-a0fa-52ff6a734eb3
-  ws-opts:
-    headers:
-      Host: lofinlaoijji.global.ssl.fastly.net
-  name: 美国 841 [6b729a9b75f411df]
-- type: vless
-  name: igareck-node-011
-  network: xhttp
-  udp: true
-  tls: true
-  servername: Apps.apple.com
-  client-fingerprint: safari
-  server: 151.101.3.6
-  port: 443
-  uuid: 80c2ebdb-755f-4516-a3ea-72fc3f4caed0
-- type: vless
-  name: igareck-node-009
-  network: xhttp
-  udp: true
-  tls: true
-  servername: Apps.apple.com
-  client-fingerprint: ios
-  server: 151.101.3.6
-  port: 443
-  uuid: 80c2ebdb-755f-4516-a3ea-72fc3f4caed0
-- type: vless
-  name: igareck-node-010
-  network: xhttp
-  udp: true
-  tls: true
-  servername: Apps.apple.com
-  client-fingerprint: qq
-  server: 151.101.3.6
-  port: 443
-  uuid: 80c2ebdb-755f-4516-a3ea-72fc3f4caed0
-- type: vless
-  name: igareck-node-007
-  network: xhttp
-  udp: true
-  tls: true
-  servername: Apps.apple.com
-  client-fingerprint: chrome
-  server: 151.101.3.6
-  port: 443
-  uuid: 80c2ebdb-755f-4516-a3ea-72fc3f4caed0
-- type: vless
-  name: igareck-node-008
-  network: xhttp
-  udp: true
-  tls: true
-  servername: Apps.apple.com
-  client-fingerprint: firefox
-  server: 151.101.3.6
-  port: 443
-  uuid: 80c2ebdb-755f-4516-a3ea-72fc3f4caed0
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - 🇩🇪DE德国丨yoyapai.com_12
-  - trojan-1926124139
-  - 印度 004 [d44f4904b2d9e4c9]
-  - 美国 1127 [823d9103df046a92]
-  - 🇺🇸_美国 (39)
-  - 🇺🇸_美国 (39)-2
-  - 日本 054 [5a1d50a3211999ad]
-  - 美国 881 [f2a5741b92e5dac0]
-  - 美国 395 [bb2254b6831abc2f]
-  - 美国 1052 [d8fee5210c7375cf]
-  - 美国 1084 [07c896388734b199]
-  - trojan-1926124156
-  - 美国 883 [3b8e61f22c6787f0]
-  - 美国 1269 [6b7c23d676b6bd70]
+  - 美国 1026 [3a4ea753710ef009]
+  - 🇺🇸_美国_245 [46a2a308d95c19c3]
+  - 🇺🇸_美国_245
+  - trojan-1926124170
+  - 美国 911 [15bbbf241e6ebcd6]
+  - 瑞典 012 [b436f07af41f58d8]
+  - 美国 1165 [a8a2f355f0afd069]
   - 🇺🇸US_473|503KB/s|B007-260618 [b8b7abfab0f7]
   - '🇺🇸[www.v2nodes.com] vless-US-1... #14'
   - 🇺🇸 美国 | USA 6
   - '🇺🇸[www.v2nodes.com] vless-US-1... #14-2'
-  - 美国 1077 [e19c86a7734200de]
-  - 分享日记_268
+  - 美国 1167 [048c815833933d6a]
+  - igareck-node-031
+  - 🇫🇷 法国 | FRA 4
+  - '🇫🇷 法国 | FRA #3'
+  - igareck-node-029
+  - 🇫🇷 法国 | FRA
+  - igareck-node-030
+  - igareck-node-028
+  - vless-1931240064
+  - igareck-node-107
+  - igareck-node-146
+  - 美国 1267 [6bb49e3886e450cb]
+  - 美国 883 [3b8e61f22c6787f0]
+  - 美国 645 [5a5522ed2535fc25]
+  - 美国 881 [f2a5741b92e5dac0]
+  - 美国 1219 [ba49661955179ef9]
+  - 美国 395 [bb2254b6831abc2f]
   - 🇩🇪DE_158|2.0MB/s|B007-260618 [96096347d6a9]
   - 美国 901 [2b116cdf33712ff7]
-  - 美国 1268 [358aeeba6855f7ec]
-  - 🇺🇸_US美國丨yoyapai.com
-  - 美国 841 [6b729a9b75f411df]
-  - igareck-node-011
-  - igareck-node-009
-  - igareck-node-010
-  - igareck-node-007
-  - igareck-node-008
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
