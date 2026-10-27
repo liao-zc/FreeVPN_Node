@@ -28,6 +28,7 @@ MAX_BYTES = int(os.environ.get("MAX_SOURCE_BYTES", str(5 * 1024 * 1024)))
 TIMEOUT = int(os.environ.get("FETCH_TIMEOUT", "20"))
 USER_AGENT = "FreeVPN-Node-Aggregator/1.0 (public subscription parser)"
 SCHEMES = {"vmess", "vless", "trojan", "ss", "ssr", "hysteria2", "hy2", "socks", "socks5", "http", "https", "wireguard"}
+UDP_SCHEMES = {"wireguard", "hysteria2", "hy2"}
 PROTOCOL_FEEDS = {
     "vmess": ("vmess",), "vless": ("vless",), "ss": ("ss",), "ssr": ("ssr",),
     "socks": ("socks", "socks5"), "http": ("http", "https"),
@@ -531,7 +532,7 @@ def probe_tcp(endpoint: tuple[str, int]) -> tuple[tuple[str, int], float | None]
 
 
 def measure_latencies(nodes: list[dict[str, Any]]) -> dict[tuple[str, int], float | None]:
-    endpoints = sorted({key for node in nodes if (key := endpoint_key(node)) is not None})
+    endpoints = sorted({key for node in nodes if str(node.get("type", "")).lower() not in UDP_SCHEMES and (key := endpoint_key(node)) is not None})
     with ThreadPoolExecutor(max_workers=256) as pool:
         results = dict(pool.map(probe_tcp, endpoints))
     reachable = sum(value is not None for value in results.values())
@@ -541,15 +542,17 @@ def measure_latencies(nodes: list[dict[str, Any]]) -> dict[tuple[str, int], floa
 
 def latency_sort_key(node: dict[str, Any], latencies: dict[tuple[str, int], float | None]) -> tuple[bool, float, str]:
     endpoint = endpoint_key(node)
-    latency = latencies.get(endpoint) if endpoint else None
+    kind = str(node.get("type", "")).lower()
+    latency = latencies.get(endpoint) if endpoint and kind not in UDP_SCHEMES else None
     return latency is None, latency if latency is not None else float("inf"), stable_key(node)
 
 
 def log_latency_results(group: str, nodes: list[dict[str, Any]], latencies: dict[tuple[str, int], float | None]) -> None:
     for rank, node in enumerate(nodes, 1):
         endpoint = endpoint_key(node)
-        value = latencies.get(endpoint) if endpoint else None
-        milliseconds = f"{value:.2f}" if value is not None else "unreachable"
+        kind = str(node.get("type", "")).lower()
+        value = latencies.get(endpoint) if endpoint and kind not in UDP_SCHEMES else None
+        milliseconds = f"{value:.2f}" if value is not None else ("untested/UDP" if kind in UDP_SCHEMES else "unreachable")
         server = f"{endpoint[0]}:{endpoint[1]}" if endpoint else "unknown"
         name = str(node.get("name", "")).replace("\t", " ").replace("\r", " ").replace("\n", " ")
         print(f"LATENCY_RESULT\t{group}\t{rank}\t{milliseconds}\t{node.get('type', '')}\t{server}\t{name}")
@@ -593,7 +596,7 @@ def update_readme_node_lists(protocol_links: dict[str, list[str]], clash_nodes: 
         extension = "yaml" if key == "clash" else "txt"
         lines.append(f"- {labels[key]}: https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/{key}.{extension}")
     lines.extend(["", "<!-- GENERATED-NODES:START -->", "## Current nodes",
-                  "At most 30 nodes per feed, sorted by TCP connection time measured from GitHub Actions. WireGuard and Hysteria2 use UDP; TCP connection time is only a port reachability reference, not UDP handshake or VPN tunnel latency."])
+                  "At most 30 nodes per feed, sorted by TCP connection time measured from GitHub Actions. WireGuard and Hysteria2 use UDP and are marked untested by this TCP probe; their entries are listed after TCP-measured nodes."])
     for key in order:
         if key == "clash":
             content = yaml.safe_dump({"proxies": clash_nodes}, allow_unicode=True, sort_keys=False).rstrip() if clash_nodes else "proxies: []"
