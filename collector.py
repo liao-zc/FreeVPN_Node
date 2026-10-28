@@ -734,8 +734,10 @@ def main() -> int:
     for feed, values in protocol_links.items():
         (OUTPUT / f"{feed}.txt").write_text(base64.b64encode("\n".join(values).encode()).decode() + "\n", encoding="ascii")
     (OUTPUT / "v2ray.txt").write_text(base64.b64encode("\n".join(v2ray).encode()).decode() + "\n", encoding="ascii")
+    (OUTPUT / "ssr.txt").write_text(base64.b64encode("\n".join(ss_ssr).encode()).decode() + "\n", encoding="ascii")
     (OUTPUT / "ss-ssr.txt").write_text(base64.b64encode("\n".join(ss_ssr).encode()).decode() + "\n", encoding="ascii")
-    selected_uris = list(dict.fromkeys([*v2ray, *ss_ssr, *(uri for values in protocol_links.values() for uri in values)]))
+    selected_candidates = list(dict.fromkeys([*v2ray, *ss_ssr, *(uri for values in protocol_links.values() for uri in values)]))
+    selected_uris = sorted(selected_candidates, key=lambda uri: speed_sort_key(from_uri(uri)))[:30]
     (OUTPUT / "selected.txt").write_text(base64.b64encode("\n".join(selected_uris).encode()).decode() + "\n", encoding="ascii")
     full_uris = sorted(all_uris.values())
     (OUTPUT / "all.txt").write_text(base64.b64encode("\n".join(full_uris).encode()).decode() + "\n", encoding="ascii")
@@ -746,7 +748,9 @@ def main() -> int:
                 "rules": ["MATCH,AUTO"]}
     (OUTPUT / "clash.yaml").write_text(yaml.safe_dump(document, allow_unicode=True, sort_keys=False), encoding="utf-8")
     protocol_links["v2ray"] = v2ray
+    protocol_links["ssr"] = ss_ssr
     protocol_links["ss-ssr"] = ss_ssr
+    protocol_links["selected"] = selected_uris
     protocol_links.pop("clash", None)
     write_readme(protocol_links, clash_nodes)
     counts = ", ".join(f"{key}={len(values)}" for key, values in protocol_links.items())

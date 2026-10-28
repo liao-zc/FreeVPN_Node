@@ -15,9 +15,9 @@ import requests
 import yaml
 
 SPEED_URL = os.environ.get("SPEED_TEST_URL", "https://speed.cloudflare.com/__down?bytes=1048576")
-MAX_TEST_BYTES = int(os.environ.get("SPEED_TEST_BYTES", "1048576"))
-MAX_PER_PROTOCOL = int(os.environ.get("MAX_SPEED_CANDIDATES_PER_PROTOCOL", "40"))
-PROBE_WORKERS = int(os.environ.get("SPEED_TEST_WORKERS", "12"))
+MAX_TEST_BYTES = int(os.environ.get("SPEED_TEST_BYTES", "524288"))
+MAX_PER_PROTOCOL = int(os.environ.get("MAX_SPEED_CANDIDATES_PER_PROTOCOL", "160"))
+PROBE_WORKERS = int(os.environ.get("SPEED_TEST_WORKERS", "24"))
 SUPPORTED = {"vmess", "vless", "trojan", "ss", "ssr", "socks", "socks5", "http", "hysteria2", "hy2", "wireguard"}
 
 
@@ -132,7 +132,7 @@ def measure_download_speeds(
                     count = 0
                     try:
                         with session.get(SPEED_URL, proxies={"http": proxy, "https": proxy},
-                                         stream=True, timeout=(6, 12)) as response:
+                                         stream=True, timeout=(4, 8)) as response:
                             response.raise_for_status()
                             for chunk in response.iter_content(chunk_size=64 * 1024):
                                 if chunk:
