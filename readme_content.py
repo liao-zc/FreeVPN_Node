@@ -28,6 +28,9 @@ def make_qr(url: str, path: Path) -> None:
 
 def write_readme(protocol_links: dict[str, list[str]], clash_nodes: list[dict]) -> None:
     qr_dir = ROOT / "qrcodes"
+    qr_dir.mkdir(parents=True, exist_ok=True)
+    for old_qr in qr_dir.glob("*.png"):
+        old_qr.unlink()
     lines = [
         "# 免费节点订阅", "",
         "GitHub Actions 每 10 分钟自动更新节点。精选节点须通过 GitHub Actions 境外运行环境中的 Mihomo 隧道下载测速，按下载速度排序，每个订阅组最多 30 个。境外测速不能代表上海移动 5G 的实测可用性；免费节点可能随时失效。",
@@ -35,15 +38,19 @@ def write_readme(protocol_links: dict[str, list[str]], clash_nodes: list[dict]) 
     ]
     for label, path in FEEDS:
         url = f"{BASE}/{path}"
-        qr_path = f"qrcodes/main-{Path(path).stem}.png"
-        make_qr(url, qr_dir / f"main-{Path(path).stem}.png")
-        lines.extend([f"### {label}", "", url, "", f"![{label}主订阅二维码]({qr_path})", ""])
+        lines.extend([f"### {label}", "", url, ""])
     lines.extend(["## 备用订阅", "", "每条备用地址单独一行：", ""])
     for label, path in FEEDS:
         url = f"{CDN}/{path}"
-        qr_path = f"qrcodes/backup-{Path(path).stem}.png"
-        make_qr(url, qr_dir / f"backup-{Path(path).stem}.png")
-        lines.extend([f"### {label}", "", url, "", f"![{label}备用订阅二维码]({qr_path})", ""])
+        lines.extend([f"### {label}", "", url, ""])
+    qr_items = (("精选主订阅", f"{BASE}/selected.txt", "main-selected.png"),
+                ("精选备用订阅", f"{CDN}/selected.txt", "backup-selected.png"),
+                ("全量主订阅", f"{BASE}/all.txt", "main-all.png"),
+                ("全量备用订阅", f"{CDN}/all.txt", "backup-all.png"))
+    lines.extend(["## 综合订阅二维码", "", "以下四张二维码对应精选与全量订阅的主、备用地址。", ""])
+    for title, url, filename in qr_items:
+        make_qr(url, qr_dir / filename)
+        lines.extend([f"### {title}", "", f"![{title}](qrcodes/{filename})", ""])
     lines.extend([
         "## 节点说明", "",
         "V2Ray 订阅合并 VMess、VLESS 和 Trojan；SSR 订阅合并 Shadowsocks 与 ShadowsocksR。采集时按协议分别解析，再合并输出。Clash 订阅为 Mihomo 格式。",
