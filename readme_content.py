@@ -35,7 +35,7 @@ def write_readme(protocol_links: dict[str, list[str]], clash_nodes: list[dict]) 
         old_qr.unlink()
     lines = [
         "# 免费节点订阅", "",
-        "GitHub Actions 每 10 分钟自动更新节点。",
+        "GitHub Actions 每 5 分钟尝试刷新节点；实际触发时间受 GitHub 调度影响。",
         f"最近成功刷新时间：{datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}",
         "精选节点按下载速度排序，境外测速不能代表实测可用性；每个订阅组最多 30 个，免费节点可能随时失效。",
         "", "## 精选订阅", "", "主订阅地址（每条单独一行）：", "",
