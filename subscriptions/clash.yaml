@@ -4,21 +4,6 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: 🇺🇸 United States/Washington [GH:barry-far/V2r]
-  type: ss
-  server: 185.230.230.18
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-- name: 🇺🇸US_429|1.5MB/s|A004-260618 [bd1e79add0e4]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.230.230.18
-  sub_tag: A004-260618
-  type: ss
-  udp: true
 - name: 🇺🇸 United States/Ashburn [GH:barry-far/V2r]
   type: ss
   server: 45.86.51.18
@@ -26,11 +11,26 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   cipher: aes-256-gcm
   udp: true
+- name: hysteria2-1830343753
+  password: 4291c983-c520-46ac-82cc-48f14bef573f
+  port: 35013
+  server: 129.213.91.185
+  skip-cert-verify: true
+  sni: 129.213.91.185
+  type: hysteria2
 - name: 🇺🇸US_431|1.9MB/s|A004-260618 [16f4c5e97fb4]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 45.86.51.18
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: 🇺🇸US_429|1.5MB/s|A004-260618 [bd1e79add0e4]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 185.230.230.18
   sub_tag: A004-260618
   type: ss
   udp: true
@@ -42,20 +42,28 @@ proxies:
   sni: 129.213.91.185
   tls: false
   type: hysteria2
-- name: hysteria2-1830343753
-  password: 4291c983-c520-46ac-82cc-48f14bef573f
-  port: 35013
-  server: 129.213.91.185
+- name: 🇺🇸_美国 (58
+  type: trojan
+  server: 66.163.122.113
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: api.searchnationwidecareerchangehelperandguidancetoday.com
+  network: tcp
+- name: 🇺🇸 United States/Washington [GH:barry-far/V2r]
+  type: ss
+  server: 185.230.230.18
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  udp: true
+- name: trojan-1935007686
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.122.113
   skip-cert-verify: true
-  sni: 129.213.91.185
-  type: hysteria2
-- name: 🇺🇸US_289|1.0MB/s|R002-260618 [c29176c7fb94]
-  port: 9443
-  server: 198.44.135.19
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
+  sni: api.searchnationwidecareerchangehelperandguidancetoday.com
+  type: trojan
   udp: true
 - name: 🇺🇸US_11|1.7MB/s
   password: None
@@ -64,27 +72,21 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇺🇸 United States/New York [GH:Mahdi0024/Pro]
-  type: ss
-  server: 37.19.198.236
+- name: 🇺🇸 美国 | USA 6
+  server: 66.163.122.7
   port: 443
-  password: shadowsocks
-  cipher: aes-128-gcm
-  udp: true
-- name: 🇺🇸US_7|2.6MB/s
-  password: None
-  port: 9443
-  server: 198.44.135.19
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
   skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇺🇸US_133|1.9MB/s|A004-260618 [40dfa7ea8e05]
-  cipher: aes-128-gcm
-  password: shadowsocks
+  udp: true
+- name: trojan-1929965353
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 37.19.198.236
-  sub_tag: A004-260618
-  type: ss
+  server: 66.163.122.113
+  skip-cert-verify: false
+  sni: api.searchnationwidecareerchangehelperandguidancetoday.com
+  type: trojan
   udp: true
 - name: 🇺🇸US_320|905KB/s|R002-260618 [6fc9be775683]
   port: 443
@@ -94,13 +96,47 @@ proxies:
   tls: true
   type: http
   udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146051
-  password: shadowsocks
+- type: trojan
+  name: 🇺🇸_美国 (59)
+  server: 66.163.122.7
   port: 443
-  server: 37.19.198.243
-  type: ss
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
+  tls: true
+  servername: www.searchnationwidecareerchangehelperandguidancetoday.com
+  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
+  skip-cert-verify: false
+- name: trojan-1930538310
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.122.25
+  skip-cert-verify: true
+  sni: cdn.searchnationwidecareerchangehelperandguidancetoday.com
+  type: trojan
+  udp: true
+- name: trojan-1929965334
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.122.25
+  skip-cert-verify: false
+  sni: cdn.searchnationwidecareerchangehelperandguidancetoday.com
+  type: trojan
+  udp: true
+- name: trojan-1929965334-2
+  type: trojan
+  server: 66.163.122.25
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: cdn.searchnationwidecareerchangehelperandguidancetoday.com
+  network: tcp
+- name: 🇺🇸US_7|2.6MB/s
+  password: None
+  port: 9443
+  server: 198.44.135.19
+  skip-cert-verify: true
+  tls: true
+  type: http
 - cipher: aes-128-gcm
   name: shadowsocks-1827146742
   password: shadowsocks
@@ -108,11 +144,42 @@ proxies:
   server: 37.19.198.244
   type: ss
   udp: true
+- name: 🇺🇸US_1|1002KB/s
+  type: trojan
+  server: 66.163.122.7
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
+  network: tcp
+- name: 🇺🇸 United States/New York [GH:Mahdi0024/Pro]
+  type: ss
+  server: 37.19.198.236
+  port: 443
+  password: shadowsocks
+  cipher: aes-128-gcm
+  udp: true
 - cipher: aes-128-gcm
-  name: shadowsocks-1827146248
+  name: shadowsocks-1827146051
   password: shadowsocks
   port: 443
-  server: 37.19.198.160
+  server: 37.19.198.243
+  type: ss
+  udp: true
+- name: 🇺🇸US_289|1.0MB/s|R002-260618 [c29176c7fb94]
+  port: 9443
+  server: 198.44.135.19
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇺🇸US_66|1.9MB/s|A004-260618 [263395b13258]
+  cipher: aes-128-gcm
+  password: shadowsocks
+  port: 443
+  server: 37.19.198.244
+  sub_tag: A004-260618
   type: ss
   udp: true
 - cipher: 2022-blake3-aes-256-gcm
@@ -120,6 +187,14 @@ proxies:
   password: Q2YsIzc5YkchSFjsqUZWrQAFtsSpqf7XxYxkG4+Jbsk=:zT1SecPttPY/XPW6NwjK5Wql+/6zbcGSDJK21Jk8uLo=
   port: 443
   server: 216.9.225.189
+  type: ss
+  udp: true
+- name: 🇺🇸US_133|1.9MB/s|A004-260618 [40dfa7ea8e05]
+  cipher: aes-128-gcm
+  password: shadowsocks
+  port: 443
+  server: 37.19.198.236
+  sub_tag: A004-260618
   type: ss
   udp: true
 - name: 🇺🇸US_447|1.9MB/s|B007-260618 [719341a104ed]
@@ -130,28 +205,21 @@ proxies:
   sub_tag: B007-260618
   type: ss
   udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1870576149
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 98.98.79.198
-  type: ss
-  udp: true
-- name: 🇺🇸US_66|1.9MB/s|A004-260618 [263395b13258]
-  cipher: aes-128-gcm
-  password: shadowsocks
+- name: trojan-1932476944
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 37.19.198.244
-  sub_tag: A004-260618
-  type: ss
+  server: 66.163.122.7
+  skip-cert-verify: true
+  sni: ''
+  type: trojan
   udp: true
-- name: 🇺🇸US_421|1.6MB/s|A004-260618 [1feecb3b9b0d]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 98.98.79.198
-  sub_tag: A004-260618
-  type: ss
+- name: 🇫🇷FR_47|7.5MB/s|R002-260618 [39873ef4d996]
+  port: 443
+  server: 172.64.68.89
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
   udp: true
 - name: 🇺🇸 United States/Newark [GH:barry-far/V2r]
   type: ss
@@ -173,104 +241,40 @@ proxies:
   - 4
   - 107
   mtu: 1280
-- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
-  type: wireguard
-  server: 162.159.192.3
-  port: 500
-  private-key: 2D+QMolgGWVRVGdJJvsQ4VBDCcZTym0c1sFN00PeMUs=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 213
-  - 74
-  - 19
-  mtu: 1280
-- cipher: aes-256-gcm
-  name: shadowsocks-1875129451
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.18
-  type: ss
-  udp: true
-- name: 🇺🇸 United States/Miami [GH:barry-far/V2r]
-  type: ss
-  server: 193.151.160.9
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-- name: 🇺🇸US_430|1.0MB/s|A004-260618 [b62cf4f7c9b4]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.9
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇺🇸US_510|238KB/s|B006-260618 [5b514ba02d6c]
-  type: ss
-  server: 216.128.153.186
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: gWXhRbGoI53aSRV8fv9alMwr
-- name: 🇺🇸 United States/Chicago [GH:Mahdi0024/Pro]
-  type: ss
-  server: 138.199.42.68
-  port: 8080
-  password: 14fFPrbezE3HDZzsMOr6
-  cipher: rc4-md5
-  udp: true
-- name: 🇺🇸US_435|1.3MB/s|C001-260618 [c9148f5355de]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.18
-  sub_tag: C001-260618
-  type: ss
-  udp: true
-- name: 🇺🇸US_510|238KB/s|B006-260618 [5b514ba02d6c]-2
-  cipher: chacha20-ietf-poly1305
-  password: gWXhRbGoI53aSRV8fv9alMwr
-  port: 443
-  server: 216.128.153.186
-  sub_tag: B006-260618
-  type: ss
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - 🇺🇸 United States/Washington [GH:barry-far/V2r]
-  - 🇺🇸US_429|1.5MB/s|A004-260618 [bd1e79add0e4]
   - 🇺🇸 United States/Ashburn [GH:barry-far/V2r]
-  - 🇺🇸US_431|1.9MB/s|A004-260618 [16f4c5e97fb4]
-  - us|81c2|puddincat07@Telegram
   - hysteria2-1830343753
-  - 🇺🇸US_289|1.0MB/s|R002-260618 [c29176c7fb94]
+  - 🇺🇸US_431|1.9MB/s|A004-260618 [16f4c5e97fb4]
+  - 🇺🇸US_429|1.5MB/s|A004-260618 [bd1e79add0e4]
+  - us|81c2|puddincat07@Telegram
+  - 🇺🇸_美国 (58
+  - 🇺🇸 United States/Washington [GH:barry-far/V2r]
+  - trojan-1935007686
   - 🇺🇸US_11|1.7MB/s
-  - 🇺🇸 United States/New York [GH:Mahdi0024/Pro]
-  - 🇺🇸US_7|2.6MB/s
-  - 🇺🇸US_133|1.9MB/s|A004-260618 [40dfa7ea8e05]
+  - 🇺🇸 美国 | USA 6
+  - trojan-1929965353
   - 🇺🇸US_320|905KB/s|R002-260618 [6fc9be775683]
-  - shadowsocks-1827146051
+  - 🇺🇸_美国 (59)
+  - trojan-1930538310
+  - trojan-1929965334
+  - trojan-1929965334-2
+  - 🇺🇸US_7|2.6MB/s
   - shadowsocks-1827146742
-  - shadowsocks-1827146248
-  - shadowsocks-1853341729
-  - 🇺🇸US_447|1.9MB/s|B007-260618 [719341a104ed]
-  - shadowsocks-1870576149
+  - 🇺🇸US_1|1002KB/s
+  - 🇺🇸 United States/New York [GH:Mahdi0024/Pro]
+  - shadowsocks-1827146051
+  - 🇺🇸US_289|1.0MB/s|R002-260618 [c29176c7fb94]
   - 🇺🇸US_66|1.9MB/s|A004-260618 [263395b13258]
-  - 🇺🇸US_421|1.6MB/s|A004-260618 [1feecb3b9b0d]
+  - shadowsocks-1853341729
+  - 🇺🇸US_133|1.9MB/s|A004-260618 [40dfa7ea8e05]
+  - 🇺🇸US_447|1.9MB/s|B007-260618 [719341a104ed]
+  - trojan-1932476944
+  - 🇫🇷FR_47|7.5MB/s|R002-260618 [39873ef4d996]
   - 🇺🇸 United States/Newark [GH:barry-far/V2r]
   - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
-  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
-  - shadowsocks-1875129451
-  - 🇺🇸 United States/Miami [GH:barry-far/V2r]
-  - 🇺🇸US_430|1.0MB/s|A004-260618 [b62cf4f7c9b4]
-  - 🇺🇸US_510|238KB/s|B006-260618 [5b514ba02d6c]
-  - 🇺🇸 United States/Chicago [GH:Mahdi0024/Pro]
-  - 🇺🇸US_435|1.3MB/s|C001-260618 [c9148f5355de]
-  - 🇺🇸US_510|238KB/s|B006-260618 [5b514ba02d6c]-2
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
