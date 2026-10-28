@@ -10,6 +10,7 @@ FEEDS = (
     ("精选综合订阅（多协议）", "selected.txt"),
     ("V2Ray（VMess / VLESS / Trojan）", "v2ray.txt"),
     ("SSR（Shadowsocks + ShadowsocksR）", "ssr.txt"),
+    ("SS / SSR（旧订阅地址兼容）", "ss-ssr.txt"),
     ("Clash / Mihomo", "clash.yaml"),
     ("VMess", "vmess.txt"), ("VLESS", "vless.txt"),
     ("Shadowsocks", "ss.txt"), ("SOCKS", "socks.txt"),
