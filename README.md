@@ -24,6 +24,12 @@ https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/ssr.tx
 
 ![SSR（Shadowsocks + ShadowsocksR）主订阅二维码](qrcodes/main-ssr.png)
 
+### SS / SSR（旧订阅地址兼容）
+
+https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/ss-ssr.txt
+
+![SS / SSR（旧订阅地址兼容）主订阅二维码](qrcodes/main-ss-ssr.png)
+
 ### Clash / Mihomo
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/clash.yaml
@@ -106,6 +112,12 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/ssr.txt
 
 ![SSR（Shadowsocks + ShadowsocksR）备用订阅二维码](qrcodes/backup-ssr.png)
 
+### SS / SSR（旧订阅地址兼容）
+
+https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/ss-ssr.txt
+
+![SS / SSR（旧订阅地址兼容）备用订阅二维码](qrcodes/backup-ss-ssr.png)
+
 ### Clash / Mihomo
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/clash.yaml
@@ -178,120 +190,262 @@ V2Ray 订阅合并 VMess、VLESS 和 Trojan；SSR 订阅合并 Shadowsocks 与 S
 ### V2Ray（VMess / VLESS / Trojan）
 
 ```text
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.13:443?security=tls&type=tcp&sni=blog.unlockyourfuturefindyourperfectcareer.com#trojan-1929965350
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.13:443?security=tls&type=tcp&sni=blog.unlockyourfuturefindyourperfectcareer.com#trojan-1934958569
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.13:443?security=tls&type=tcp&sni=blog.unlockyourfuturefindyourperfectcareer.com#trojan-1935007689
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.13:443?sni=blog.unlockyourfuturefindyourperfectcareer.com&type=tcp#US
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.13:443?security=tls&sni=blog.unlockyourfuturefindyourperfectcareer.com&type=tcp#US
-vmess://eyJ2IjoiMiIsInBzIjoiXHVkODNjXHVkZGZhXHVkODNjXHVkZGY4VVNfMTU2fDYxNEtCL3N8TTAwMi0yNjA2MTggWzcxZmU0NWM2YThmYl0iLCJhZGQiOiIxMjkuMTQ2Ljc3LjI0OCIsInBvcnQiOiIzOTQ5NSIsImlkIjoiZjgzNmM3MzYtODdmYy00ZmRlLWFhYmMtMDA4NTdlY2RmZjNlIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6IjEyOS4xNDYuNzcuMjQ4IiwicGF0aCI6Ii9jY3R2MTMubTN1OCIsInRscyI6IiIsInNuaSI6IjEyOS4xNDYuNzcuMjQ4In0
-vmess://eyJ2IjoiMiIsInBzIjoiVVMgXHVkODNjXHVkZGZhXHVkODNjXHVkZGY4IHwgQFJheWRpa2FseCB8IDlCNEY4MyIsImFkZCI6IjEyOS4xNDYuNzcuMjQ4IiwicG9ydCI6IjM5NDk1IiwiaWQiOiJmODM2YzczNi04N2ZjLTRmZGUtYWFiYy0wMDg1N2VjZGZmM2UiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6IiIsInRscyI6IiIsInBhdGgiOiIvY2N0djEzLm0zdTgiLCJob3N0IjoiMTI5LjE0Ni43Ny4yNDgifQ
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?security=tls&type=tcp&sni=resources.unlockyourfuturefindyourperfectcareer.com#trojan-1929965338
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?security=tls&type=tcp&sni=resources.unlockyourfuturefindyourperfectcareer.com#trojan-1932467279
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?security=tls&type=tcp&sni=resources.unlockyourfuturefindyourperfectcareer.com#trojan-1935007700
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?allowInsecure=1&sni=resources.unlockyourfuturefindyourperfectcareer.com&type=tcp#US
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=resources.unlockyourfuturefindyourperfectcareer.com#US
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?security=tls&type=tcp&sni=unlockyourfuturefindyourperfectcareer.com#trojan-1929965329
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?security=tls&type=tcp&sni=unlockyourfuturefindyourperfectcareer.com#trojan-1935007691
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?sni=unlockyourfuturefindyourperfectcareer.com&type=tcp#US
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?security=tls&sni=unlockyourfuturefindyourperfectcareer.com&type=tcp#US
-vmess://eyJ2IjoiMiIsInBzIjoiVVMgXHVkODNjXHVkZGZhXHVkODNjXHVkZGY4IHwgQFJheWRpa2FseCB8IDQ1MkVENSIsImFkZCI6IjEyOS4xNDYuNzcuMjQ4IiwicG9ydCI6IjM5NDk1IiwiaWQiOiJmODM2YzczNi04N2ZjLTRmZGUtYWFiYy0wMDg1N2VjZGZmM2UiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6IiIsInRscyI6IiIsImFscG4iOiIiLCJwYXRoIjoiL2NjdHYxMy5tM3U4In0
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?security=tls&type=tcp&sni=www.unlockyourfuturefindyourperfectcareer.com#trojan-1929965349
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?security=tls&type=tcp&sni=www.unlockyourfuturefindyourperfectcareer.com#trojan-1935007697
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?allowInsecure=1&sni=www.unlockyourfuturefindyourperfectcareer.com&type=tcp#US
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?security=tls&sni=www.unlockyourfuturefindyourperfectcareer.com#US
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.171:443?security=tls&type=tcp&sni=learn.unlockyourfuturefindyourperfectcareer.com#trojan-1929965345
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.171:443?security=tls&type=tcp&sni=learn.unlockyourfuturefindyourperfectcareer.com#trojan-1935007703
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.171:443?allowInsecure=1&sni=learn.unlockyourfuturefindyourperfectcareer.com&type=tcp#US
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.171:443?security=tls&sni=learn.unlockyourfuturefindyourperfectcareer.com#US
-vmess://eyJ2IjoiMiIsInBzIjoidm1lc3MtMTgyNzE1ODIxNSIsImFkZCI6IjEyOS4xNDYuMTQzLjgwIiwicG9ydCI6IjQ4MTExIiwiaWQiOiJkNDYwM2NjMi1lMGVlLTQ2NTEtODNmNS0xZGI1YjcxNjgxNzciLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiJub25lIiwiaG9zdCI6IiIsInBhdGgiOiIvIiwidGxzIjoiIn0
-vmess://eyJ2IjoiMiIsInBzIjoidm1lc3MtMTgyODY2NTE4OCIsImFkZCI6IjEyOS4xNDYuMTQzLjgwIiwicG9ydCI6IjQ4MTExIiwiaWQiOiJkNDYwM2NjMi1lMGVlLTQ2NTEtODNmNS0xZGI1YjcxNjgxNzciLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiJub25lIiwiaG9zdCI6IiIsInBhdGgiOiIvIiwidGxzIjoiIn0
-vmess://eyJ2IjoiMiIsInBzIjoidm1lc3MtMTgzNzM4NjAxOCIsImFkZCI6IjEyOS4xNDYuMTQzLjgwIiwicG9ydCI6IjQ4MTExIiwiaWQiOiJkNDYwM2NjMi1lMGVlLTQ2NTEtODNmNS0xZGI1YjcxNjgxNzciLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiJub25lIiwiaG9zdCI6IiIsInBhdGgiOiIvIiwidGxzIjoiIn0
-vmess://eyJ2IjoiMiIsInBzIjoidm1lc3MtMTg0MjEyMjQ3NyIsImFkZCI6IjEyOS4xNDYuMTQzLjgwIiwicG9ydCI6IjQ4MTExIiwiaWQiOiJkNDYwM2NjMi1lMGVlLTQ2NTEtODNmNS0xZGI1YjcxNjgxNzciLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiJub25lIiwiaG9zdCI6IiIsInBhdGgiOiIvIiwidGxzIjoiIn0
-vmess://eyJ2IjoiMiIsInBzIjoidm1lc3MtMTg1MzM1MDQyOCIsImFkZCI6IjEyOS4xNDYuMTQzLjgwIiwicG9ydCI6IjQ4MTExIiwiaWQiOiJkNDYwM2NjMi1lMGVlLTQ2NTEtODNmNS0xZGI1YjcxNjgxNzciLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiJub25lIiwiaG9zdCI6IiIsInBhdGgiOiIvIiwidGxzIjoiIn0
+vmess://eyJ2IjoiMiIsInBzIjoiQ0EgXHVkODNjXHVkZGU4XHVkODNjXHVkZGU2IHwgQFJheWRpa2FseCB8IDI1M0IxMiIsImFkZCI6IjEwNC4xNy4xMzYuMTk4IiwicG9ydCI6IjQ0MyIsImlkIjoiMGNmNmQ5NzAtM2YxZC00YWFlLWE5ODktOTJhOGY3NmFlM2RiIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6InZtZXNzLmxidzY2Ni5kcGRucy5vcmciLCJwYXRoIjoiL3dzP2VkPTIwNDgiLCJ0bHMiOiJ0bHMiLCJzbmkiOiJ2bWVzcy5sYnc2NjYuZHBkbnMub3JnIiwiZnAiOiJjaHJvbWUifQ
+vmess://eyJhZGQiOiIxMDQuMTcuMTM2LjE5OCIsImFpZCI6MCwiaG9zdCI6InZtZXNzLmxidzY2Ni5kcGRucy5vcmciLCJpZCI6IjBjZjZkOTcwLTNmMWQtNGFhZS1hOTg5LTkyYThmNzZhZTNkYiIsIm5ldCI6IndzIiwicGF0aCI6Ii93cyIsInBvcnQiOiI0NDMiLCJwcyI6IkNBIFx1ZDgzY1x1ZGRlOFx1ZDgzY1x1ZGRlNiB8IEBSYXlkaWthbHggfCBCNDYxN0UiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+vmess://eyJ2IjoiMiIsInBzIjoiXHVkODNjXHVkZGZhXHVkODNjXHVkZGY4VVNfMzQ4fDU2MEtCL3N8TTAwMy0yNjA4MDYgW2M0MWIzMjU0YmY5Zl0iLCJhZGQiOiIxMDQuMTcuMTM2LjE5OCIsInBvcnQiOiI0NDMiLCJpZCI6IjBjZjZkOTcwLTNmMWQtNGFhZS1hOTg5LTkyYThmNzZhZTNkYiIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiJ2bWVzcy5sYnc2NjYuZHBkbnMub3JnIiwicGF0aCI6Ii93cyIsInRscyI6InRscyIsInNuaSI6InZtZXNzLmxidzY2Ni5kcGRucy5vcmcifQ
+vmess://eyJhZGQiOiIxMDQuMTcuMTM2LjE5OCIsImFpZCI6MCwiaG9zdCI6InZtZXNzLmxidzY2Ni5kcGRucy5vcmciLCJpZCI6IjBjZjZkOTcwLTNmMWQtNGFhZS1hOTg5LTkyYThmNzZhZTNkYiIsIm5ldCI6IndzIiwicGF0aCI6Ii93cyIsInBvcnQiOiI0NDMiLCJwcyI6IkNBIFx1ZDgzY1x1ZGRlOFx1ZDgzY1x1ZGRlNiB8IEBSYXlkaWthbHggfCAxOUZGQzkiLCJzbmkiOiJ2bWVzcy5sYnc2NjYuZHBkbnMub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+vmess://eyJhZGQiOiIxMDQuMjEuNy4xMzMiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6InZtZXNzLmxidzY2Ni5kcGRucy5vcmciLCJpZCI6IjBjZjZkOTcwLTNmMWQtNGFhZS1hOTg5LTkyYThmNzZhZTNkYiIsImluc2VjdXJlIjoiMCIsIm5ldCI6IndzIiwicGF0aCI6Ii93cz9lZD0yMDQ4IiwicGNzIjoiIiwicG9ydCI6IjgwIiwicHMiOiJDQSBcdWQ4M2NcdWRkZThcdWQ4M2NcdWRkZTYgfCBAUmF5ZGlrYWx4IHwgMjJBODNDIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6Im5vbmUiLCJ0eXBlIjoiYXV0byIsInYiOiIyIiwidmNuIjoiIiwibmFtZSI6IkNBIFx1ZDgzY1x1ZGRlOFx1ZDgzY1x1ZGRlNiB8IEBSYXlkaWthbHggfCAyMkE4M0MifQ
+vmess://eyJ2IjoiMiIsInBzIjoiXHVkODNjXHVkZGZhXHVkODNjXHVkZGY4VVNfMzg3fDE3MktCL3N8TTAwMy0yNjA4MDYgWzk2M2Y1ODRjMjdlNl0iLCJhZGQiOiIxMDQuMjEuNy4xMzMiLCJwb3J0IjoiODAiLCJpZCI6IjBjZjZkOTcwLTNmMWQtNGFhZS1hOTg5LTkyYThmNzZhZTNkYiIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiJ2bWVzcy5sYnc2NjYuZHBkbnMub3JnIiwicGF0aCI6Ii93cyIsInRscyI6IiJ9
+vmess://eyJhZGQiOiIxMDQuMjEuNy4xMzMiLCJhaWQiOjAsImhvc3QiOiJ2bWVzcy5sYnc2NjYuZHBkbnMub3JnIiwiaWQiOiIwY2Y2ZDk3MC0zZjFkLTRhYWUtYTk4OS05MmE4Zjc2YWUzZGIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvd3MiLCJwb3J0IjoiODAiLCJwcyI6IkNBIFx1ZDgzY1x1ZGRlOFx1ZDgzY1x1ZGRlNiB8IEBSYXlkaWthbHggfCA3Qzk3QTEiLCJzbmkiOiJ2bWVzcy5sYnc2NjYuZHBkbnMub3JnIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+vless://6202b230-417c-4d8e-b624-0f71afa9c75d@45.131.209.30:8880?encryption=none&type=ws&path=%2F&host=vms.lifetime04.workers.dev#%F0%9F%87%AB%F0%9F%87%B7FR_87%7C1.1MB%2Fs%20%5B92cbb997c804%5D
+vless://6202b230-417c-4d8e-b624-0f71afa9c75d@45.131.209.30:8880?security=none&type=ws&path=/&host=vms.lifetime04.workers.dev&packetEncoding=xudp&encryption=none#BZ
+vless://aa5d861a-7799-41a7-bdf4-7a6414cf98fd@172.67.204.153:2053?security=tls&sni=uwu.blueknightnet.qzz.io&type=ws&host=uwu.blueknightnet.qzz.io&path=%2F%40BlueKnight_net--%40BlueKnight_net--%40BlueKnight_net--%40BlueKnight_net--%40BlueKnight_net--%40BlueKnight_net&fp=chrome&alpn=h2&allowInsecure=0#CA
+vmess://eyJ2IjoiMiIsInBzIjoiXHVkODNjXHVkZGZhXHVkODNjXHVkZGY4VVNfMzMzfDIwNUtCL3N8TTAwMy0yNjA4MDYgWzExMjAyYjIxODkyYV0iLCJhZGQiOiIxNzIuNjcuMTY3Ljc4IiwicG9ydCI6Ijg0NDMiLCJpZCI6IjYwNDQxNTQ4LWI2OGUtNDNiMi04MTkxLWUzYjg4NGJlNGIzYyIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiJ2MnJheTEuZG96YXBwLnh5eiIsInBhdGgiOiIvbE1uc1pVTjQvIiwidGxzIjoidGxzIiwic25pIjoidjJyYXkxLmRvemFwcC54eXoifQ
+vmess://eyJ2IjoiMiIsInBzIjoiQ0EgXHVkODNjXHVkZGU4XHVkODNjXHVkZGU2IHwgQFJheWRpa2FseCB8IDVENzQ1NCIsImFkZCI6IjE3Mi42Ny4xNjcuNzgiLCJwb3J0IjoiODQ0MyIsImlkIjoiNjA0NDE1NDgtYjY4ZS00M2IyLTgxOTEtZTNiODg0YmU0YjNjIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiIiLCJ0bHMiOiJ0bHMiLCJzbmkiOiJ2MnJheTEuZG96YXBwLnh5eiIsInBhdGgiOiIvbE1uc1pVTjQvIiwiaG9zdCI6InYycmF5MS5kb3phcHAueHl6In0
+vless://d18c6897-2849-456a-8c46-d7ecece47c20@172.65.90.41:2053?&security=tls&fp=chrome&sni=wzs.echo.net.eu.org&type=ws&headerType=none&host=wzs.echo.net.eu.org&path=%2Fvideo%2FHxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlNSSwUEURwBVwcWUQYJGxsPQldGTQ8OBgJWFUU%3D#CA
+vmess://eyJ2IjoiMiIsInBzIjoiXHVkODNjXHVkZGZhXHVkODNjXHVkZGY4VVNfNDE1fDg2S0Ivc3xNMDAxLTI2MDYxOCBbYWQ2Nzg5OTU2MDVjXSIsImFkZCI6IjE3Mi42Ny4xNjEuMTQ0IiwicG9ydCI6Ijg0NDMiLCJpZCI6IjYwNDQxNTQ4LWI2OGUtNDNiMi04MTkxLWUzYjg4NGJlNGIzYyIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsImhvc3QiOiJ2MnJheTEuZG96YXBwLnh5eiIsInBhdGgiOiIvbE1uc1pVTjQvIiwidGxzIjoidGxzIiwic25pIjoidjJyYXkxLmRvemFwcC54eXoifQ
+vmess://eyJ2IjoiMiIsInBzIjoiQ0EgXHVkODNjXHVkZGU4XHVkODNjXHVkZGU2IHwgQFJheWRpa2FseCB8IEU1QUJCQSIsImFkZCI6IjE3Mi42Ny4xNjEuMTQ0IiwicG9ydCI6Ijg0NDMiLCJpZCI6IjYwNDQxNTQ4LWI2OGUtNDNiMi04MTkxLWUzYjg4NGJlNGIzYyIsImFpZCI6IjAiLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoiIiwidGxzIjoidGxzIiwiYWxwbiI6IiIsInNuaSI6InYycmF5MS5kb3phcHAueHl6IiwicGF0aCI6Ii9sTW5zWlVONC8iLCJob3N0IjoidjJyYXkxLmRvemFwcC54eXoifQ
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@104.17.210.74:443?encryption=none&type=ws&security=tls&sni=jp3.yohototo.top&fp=chrome&path=%2Ftyxyws&host=jp3.yohototo.top#%F0%9F%87%AF%F0%9F%87%B5JP_47%7C96KB%2Fs%7CA004-260618%20%5B4be13078d74f%5D
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@104.17.210.74:443?host=jp3.yohototo.top&path=%2Ftyxyws&security=tls&sni=jp3.yohototo.top&type=ws#CA
 ```
 
 ### SSR（Shadowsocks + ShadowsocksR）
 
 ```text
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiUVpsN0hEeFNhYnIxRnVyVFlRSEZV@216.105.168.18:443#shadowsocks-1827145925
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiUVpsN0hEeFNhYnIxRnVyVFlRSEZV@216.105.168.18:443#%F0%9F%87%BA%F0%9F%87%B8US_409%7C159KB%2Fs%7CA004-260618%20%5Bd0fc3b195866%5D
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiUVpsN0hEeFNhYnIxRnVyVFlRSEZV@216.105.168.18:443#US
-ssr://MTA3LjE1MS4xODIuMjUzOjgwODA6b3JpZ2luOnJjNC1tZDU6cGxhaW46TVRSbVJsQnlZbVY2UlROSVJGcDZjMDFQY2pZLz9yZW1hcmtzPVUxTlNMZWUtanVXYnZTMU9SdWluby1tVWdlaUhxdVdJdHVXSnB5MURhR0YwUjFCVUxWUnBhMVJ2YXkxWmIzVlVkV0psTFRFd055NHhOVEV1TVRneUxqSTFNem80TURnd0lGczBZVGMxTWpFeU5tRTNPVFkyTVRkbFhR
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@79.110.54.250:8080#shadowsocks-1870576345
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@79.110.54.250:8080#%F0%9F%87%BA%F0%9F%87%B8US_420%7C879KB%2Fs%7CA004-260618%20%5Bd92318afee09%5D
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@79.110.54.250:8080#US
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.151.182.253:8080#shadowsocks-1827963043
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.151.182.253:8080#%F0%9F%87%BA%F0%9F%87%B8US_338%7C974KB%2Fs%7CA004-260618%20%5B836b9e2c1c7b%5D
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.151.182.253:8080#US
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@95.215.201.18:19999#shadowsocks-1875129452
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@95.215.201.18:19999#%F0%9F%87%BA%F0%9F%87%B8US_443%7C1002KB%2Fs%7CA004-260618%20%5B9b10e8e6bf84%5D
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@95.215.201.18:19999#%F0%9F%87%BA%F0%9F%87%B8US-95.215.201.18-0150
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@95.215.201.18:19999#US
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoQ0NXT2NJc0s1d3JGejRPWDcwcldm@216.105.168.18:443#shadowsocks-1827534198
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoQ0NXT2NJc0s1d3JGejRPWDcwcldm@216.105.168.18:443#%F0%9F%87%BA%F0%9F%87%B8US-216.105.168.18-0199
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoQ0NXT2NJc0s1d3JGejRPWDcwcldm@216.105.168.18:443#US
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@79.110.53.169:8080#shadowsocks-1828227588
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@79.110.53.169:8080#%F0%9F%87%BA%F0%9F%87%B8US_208%7C836KB%2Fs%7CM003-260806%20%5B2d3c6b97d127%5D
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@79.110.53.169:8080#US
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.151.182.197:8080#shadowsocks-1827962976
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.151.182.197:8080#%F0%9F%87%BA%F0%9F%87%B8US_148%7C224KB%2Fs%7CA004-260618%20%5B0e40b52615aa%5D
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.151.182.197:8080#US
-ss://MjAyMi1ibGFrZTMtYWVzLTEyOC1nY206TnpKbE9UUTVOV1l0TTJaa1lpMDBDZz09@103.11.76.248:28679#shadowsocks-1827145755
-ss://MjAyMi1ibGFrZTMtYWVzLTEyOC1nY206TnpKbE9UUTVOV1l0TTJaa1lpMDBDZz09@103.11.76.248:28679#US
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.155.57.11:8080#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2FSan%20Jose%20%5BGH%3AMahdi0024%2FPro%5D
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.155.57.11:8080#shadowsocks-1827963705
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.155.57.11:8080#%F0%9F%87%BA%F0%9F%87%B8US_44%7C964KB%2Fs%7CA004-260618%20%5B26dae539cbdd%5D
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.155.57.11:8080#US
-ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.155.57.51:8080#shadowsocks-1827963676
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.167:443#shadowsocks-1827146556
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.167:443#%F0%9F%87%BA%F0%9F%87%B8US_90%7C388KB%2Fs%7CA004-260618%20%5Be4bee8339fae%5D
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.167:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.167-0102
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.167:443#US
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.169:443#shadowsocks-1827146131
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.169:443#%F0%9F%87%BA%F0%9F%87%B8US_88%7C1.3MB%2Fs%20%5B2b322b68c292%5D
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.169:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.169-0103
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.169:443#US
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.170:443#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2FDallas%20%5BGH%3AMahdi0024%2FPro%5D
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.170:443#shadowsocks-1827146549
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.170:443#%F0%9F%87%BA%F0%9F%87%B8US_89%7C1.2MB%2Fs%20%5B44410bbbcb07%5D
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.170:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.170-0106
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.170:443#US
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.168:443#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2FDallas%20%5BGH%3AMahdi0024%2FPro%5D%20%232
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.168:443#shadowsocks-1827146815
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.168:443#%F0%9F%87%BA%F0%9F%87%B8US_1%7C1.2MB%2Fs%20%5B60b18e513b09%5D
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.168:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.168-0109
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.168:443#US
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@37.19.198.244:443#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2FNew%20York%20%5BGH%3AMahdi0024%2FPro%5D%20%232
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@37.19.198.244:443#shadowsocks-1827146742
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@37.19.198.244:443#%F0%9F%87%BA%F0%9F%87%B8US_66%7C1.9MB%2Fs%7CA004-260618%20%5B263395b13258%5D
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.244:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.244-0110
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@37.19.198.244:443#US
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@137.184.174.93:8080#shadowsocks-1827147479
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@137.184.174.93:8080#%F0%9F%87%A8%F0%9F%87%A6CA_1%7C1.2MB%2Fs%7CA004-260618%20%5B3770023c3c83%5D
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg==@137.184.174.93:8080#%F0%9F%87%A8%F0%9F%87%A6CA-137.184.174.93-0115
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@137.184.174.93:8080#CA
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@37.19.198.236:443#shadowsocks-1827146122
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@37.19.198.236:443#%F0%9F%87%BA%F0%9F%87%B8US_133%7C1.9MB%2Fs%7CA004-260618%20%5B40dfa7ea8e05%5D
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.236:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.236-0104
 ```
 
 ### Clash / Mihomo
 
 ```yaml
 proxies:
-- name: 🇺🇸US_297|816KB/s [518e0351a46f]
-  password: ''
-  port: 9002
-  server: 138.199.35.203
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: ''
-  udp: true
-- name: 🇺🇸US_6|3.4MB/s
-  password: ''
-  port: 9443
-  server: 38.95.111.226
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  username: ''
-- name: 🇺🇸US_409|159KB/s|A004-260618 [d0fc3b195866]
-  cipher: chacha20-ietf-poly1305
-  password: bQZl7HDxSabr1FurTYQHFU
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146556
+  password: shadowsocks
   port: 443
-  server: 216.105.168.18
+  server: 156.146.38.167
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146131
+  password: shadowsocks
+  port: 443
+  server: 156.146.38.169
+  type: ss
+  udp: true
+- name: 🇺🇸US_90|388KB/s|A004-260618 [e4bee8339fae]
+  cipher: aes-128-gcm
+  password: shadowsocks
+  port: 443
+  server: 156.146.38.167
   sub_tag: A004-260618
   type: ss
   udp: true
-- name: 🇺🇸US_134|757KB/s|R002-260618 [17627f7d48bd]
-  port: 9002
-  server: 138.199.35.207
+- name: 🇫🇷FR_47|7.5MB/s|R002-260618 [39873ef4d996]
+  port: 443
+  server: 172.64.68.89
   skip-cert-verify: true
   sub_tag: R002-260618
   tls: true
   type: http
   udp: true
-- password: 'null'
-  port: 9002
-  server: 138.199.35.205
+- name: 🇫🇷FR_49|2.9MB/s|R002-260618 [a676be7daa09]
+  port: 443
+  server: 172.64.69.89
   skip-cert-verify: true
+  sub_tag: R002-260618
   tls: true
   type: http
-  username: 'null'
-  name: US - zhuhai.uk 11 [cd6d3b4d088fee17]
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | 253B12
+  type: vmess
+  server: 104.17.136.198
+  port: 443
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  ws-opts:
+    path: /ws?ed=2048
+    headers:
+      Host: vmess.lbw666.dpdns.org
+  servername: vmess.lbw666.dpdns.org
+- name: 🇺🇸 United States/Dallas [GH:Mahdi0024/Pro]
+  type: ss
+  server: 156.146.38.170
+  port: 443
+  password: shadowsocks
+  cipher: aes-128-gcm
+  udp: true
 - name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  type: wireguard
+  server: 162.159.192.2
+  port: 500
+  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 39
+  - 4
+  - 107
+  mtu: 1280
+- name: 🇺🇸US_348|560KB/s|M003-260806 [c41b3254bf9f]
+  alterId: '0'
+  cipher: auto
+  network: ws
+  port: 443
+  server: 104.17.136.198
+  skip-cert-verify: false
+  sub_tag: M003-260806
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: vmess.lbw666.dpdns.org
+    max-early-data: 2048
+    path: /ws
+  xudp: true
+  packet-encoding: xudp
+  servername: vmess.lbw666.dpdns.org
+- name: CA 🇨🇦 | @Raydikalx | B4617E
+  type: vmess
+  server: 104.17.136.198
+  port: 443
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: '🇺🇸 United States/Dallas [GH:Mahdi0024/Pro] #2'
+  type: ss
+  server: 156.146.38.168
+  port: 443
+  password: shadowsocks
+  cipher: aes-128-gcm
+  udp: true
+- name: hysteria2-1830343753
+  password: 4291c983-c520-46ac-82cc-48f14bef573f
+  port: 35013
+  server: 129.213.91.185
+  skip-cert-verify: true
+  sni: 129.213.91.185
+  type: hysteria2
+- name: 🇺🇸US_348|560KB/s|M003-260806 [c41b3254bf9f]-2
+  type: vmess
+  server: 104.17.136.198
+  port: 443
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+  servername: vmess.lbw666.dpdns.org
+- name: 🇺🇸US_387|172KB/s|M003-260806 [963f584c27e6]
+  alpn:
+  - ''
+  alterId: '0'
+  cipher: auto
+  network: ws
+  port: 80
+  server: 104.21.7.133
+  skip-cert-verify: false
+  sub_tag: M003-260806
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: vmess.lbw666.dpdns.org
+    max-early-data: 2048
+    path: /ws
+  xudp: true
+  packet-encoding: xudp
+- name: us|81c2|puddincat07@Telegram
+  password: 4291c983-c520-46ac-82cc-48f14bef573f
+  port: 35013
+  server: 129.213.91.185
+  skip-cert-verify: true
+  sni: 129.213.91.185
+  tls: false
+  type: hysteria2
+- name: 🇺🇸US_133|1.9MB/s|A004-260618 [40dfa7ea8e05]
+  cipher: aes-128-gcm
+  password: shadowsocks
+  port: 443
+  server: 37.19.198.236
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | 22A83C
+  type: vmess
+  server: 104.21.7.133
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: /ws?ed=2048
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: 🇨🇦CA_2|1.2MB/s|A004-260618 [1a7592edd210]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.197.141.58
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
   type: wireguard
   server: 162.159.192.3
   port: 500
@@ -304,217 +458,82 @@ proxies:
   - 74
   - 19
   mtu: 1280
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-1827145925
-  password: bQZl7HDxSabr1FurTYQHFU
-  port: 443
-  server: 216.105.168.18
+- name: '🇺🇸 United States/New York [GH:Mahdi0024/Pro] #2'
   type: ss
-  udp: true
-- name: 🇺🇸US_160|834KB/s|P002-260618 [6bccc75a3524]
-  password: None
-  port: 9002
-  server: 138.199.35.209
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇺🇸US_153|759KB/s|P002-260618 [66ebf6ae1341]
-  password: ''
-  port: 9002
-  server: 138.199.35.210
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  username: ''
-  udp: true
-- name: hysteria2-1876844122
-  password: 46647da9-d4b4-407f-bea6-ad0b1abc561f
-  port: 2053
-  server: 192.236.226.182
-  skip-cert-verify: true
-  sni: 192.236.226.182
-  type: hysteria2
-- name: trojan-1929965329
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  server: 37.19.198.244
   port: 443
-  server: 66.163.112.31
-  skip-cert-verify: false
-  sni: unlockyourfuturefindyourperfectcareer.com
-  type: trojan
-  udp: true
-- name: trojan-1935007697
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.121
-  skip-cert-verify: true
-  sni: www.unlockyourfuturefindyourperfectcareer.com
-  type: trojan
-  udp: true
-- name: trojan-1935007685
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.76
-  skip-cert-verify: true
-  sni: api.unlockyourfuturefindyourperfectcareer.com
-  type: trojan
-  udp: true
-- name: trojan-1930077586
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.142
-  skip-cert-verify: true
-  sni: cdn.unlockyourfuturefindyourperfectcareer.com
-  type: trojan
-  udp: true
-- name: trojan-1929965338
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.242
-  skip-cert-verify: false
-  sni: resources.unlockyourfuturefindyourperfectcareer.com
-  type: trojan
-  udp: true
-- name: trojan-1929965360
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.142
-  skip-cert-verify: false
-  sni: cdn.unlockyourfuturefindyourperfectcareer.com
-  type: trojan
-  udp: true
-- name: 🇺🇸US_113|742KB/s|P002-260618 [5db2cbf40ac3]
-  password: 'null'
-  port: 9002
-  server: 138.199.35.219
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  username: 'null'
+  password: shadowsocks
+  cipher: aes-128-gcm
   udp: true
 - cipher: rc4-md5
-  obfs: plain
+  name: shadowsocks-1827147479
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
-  protocol: origin
-  server: 107.151.182.253
-  type: ssr
-  name: SSR-美国-NF解锁自制剧-ChatGPT-TikTok-YouTube-107.151.182.253:8080 [4a752126a796617e]
-- name: trojan-1929965350
-  type: trojan
-  server: 66.163.112.13
+  server: 137.184.174.93
+  type: ss
+  udp: true
+- name: 🇺🇸US_444|1.5MB/s|A004-260618 [959578925c29]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 185.215.132.9
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146122
+  password: shadowsocks
   port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  server: 37.19.198.236
+  type: ss
   udp: true
-  sni: blog.unlockyourfuturefindyourperfectcareer.com
-  network: tcp
-- name: trojan-1929965349
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- cipher: aes-256-gcm
+  name: shadowsocks-1875023047
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 185.215.132.18
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146051
+  password: shadowsocks
   port: 443
-  server: 66.163.112.121
-  skip-cert-verify: false
-  sni: www.unlockyourfuturefindyourperfectcareer.com
-  type: trojan
+  server: 37.19.198.243
+  type: ss
   udp: true
-- port: 9002
-  server: 138.199.35.218
-  skip-cert-verify: true
-  tls: true
-  type: http
-  name: US - zhuhai.uk 13 [e8250ca6cfdb3274]
-- name: 🇺🇸US_116|792KB/s|P002-260618 [4cc71e0918ac]
-  password: None
-  port: 9002
-  server: 138.199.35.216
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇺🇸US_292|546KB/s|P002-260618 [0002809537c4]
-  password: None
-  port: 9002
-  server: 138.199.35.218
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-- name: trojan-1935007703
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- name: 🇺🇸 United States/Staten Island [GH:barry-far/V2r]
+  type: ss
+  server: 198.98.53.130
   port: 443
-  server: 66.163.112.171
-  skip-cert-verify: true
-  sni: learn.unlockyourfuturefindyourperfectcareer.com
-  type: trojan
+  password: eDfN7SODQceIOmIAbtJJtK
+  cipher: chacha20-ietf-poly1305
   udp: true
-- name: 🇺🇸US_156|614KB/s|M002-260618 [71fe45c6a8fb]
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 39495
-  server: 129.146.77.248
-  skip-cert-verify: false
-  sub_tag: M002-260618
-  tls: false
-  type: vmess
+- name: 🇺🇸 United States/Newark [GH:barry-far/V2r]
+  type: ss
+  server: 193.151.163.18
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
   udp: true
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  ws-opts:
-    headers:
-      Host: 129.146.77.248
-    path: /cctv13.m3u8
-  xudp: true
-  packet-encoding: xudp
-  servername: 129.146.77.248
-- name: 🇺🇸US_118|847KB/s|P002-260618 [de266c2b5bde]
-  password: None
-  port: 9002
-  server: 138.199.35.215
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
+- cipher: rc4-md5
+  name: shadowsocks-1827147700
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.199.42.68
+  type: ss
   udp: true
-- name: trojan-1929965357
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- cipher: aes-256-gcm
+  name: shadowsocks-1875022992
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 185.215.132.9
+  type: ss
+  udp: true
+- name: 🇺🇸 United States/New York [GH:Mahdi0024/Pro]
+  type: ss
+  server: 37.19.198.160
   port: 443
-  server: 66.163.112.147
-  skip-cert-verify: false
-  sni: courses.unlockyourfuturefindyourperfectcareer.com
-  type: trojan
-  udp: true
-- name: trojan-1935007689
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.13
-  skip-cert-verify: true
-  sni: blog.unlockyourfuturefindyourperfectcareer.com
-  type: trojan
-  udp: true
-- name: 🇺🇸US_156|614KB/s|M002-260618 [71fe45c6a8fb]-2
-  type: vmess
-  server: 129.146.77.248
-  port: 39495
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: 129.146.77.248
-- name: trojan-1935007691
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.31
-  skip-cert-verify: true
-  sni: unlockyourfuturefindyourperfectcareer.com
-  type: trojan
+  password: shadowsocks
+  cipher: aes-128-gcm
   udp: true
 ```
