@@ -10,6 +10,13 @@ import urllib.request
 
 API = "https://api.github.com"
 UA = "FreeVPN-Node-Aggregator/1.0"
+PINNED_FEEDS = {
+    "snakem982/proxypool": ("source/clash-meta-2.yaml", "source/v2ray-2.txt"),
+    "cbusifabcap/daily_free_vpn": ("sub/URI.yml", "sub/ClashMeta.yml"),
+    "free18/v2ray": ("c.yaml", "v.txt"),
+    "ts-sf/fly": ("clash", "v2"),
+    "ermaozi01/free_clash_vpn": ("subscribe/clash.yml", "subscribe/v2ray.txt"),
+}
 
 
 def is_subscription_publisher(repo: dict) -> bool:
@@ -47,7 +54,7 @@ def discover_recent_entries(timeout: int = 15, max_repositories: int = 20) -> tu
         result = get_json(f"{API}/search/repositories?{query}")
     except Exception as exc:
         print(f"GitHub repository search skipped: {type(exc).__name__}: {exc}")
-        return [], []
+        result = {"items": []}
 
     entries: list[dict[str, str | int]] = []
     telegram: list[str] = []
@@ -114,5 +121,39 @@ def discover_recent_entries(timeout: int = 15, max_repositories: int = 20) -> tu
                 print(f"GitHub discovery: {full_name}, {min(3, len(channels))} public Telegram previews")
         except Exception:
             pass
+
+    # Keep these publishers visible and ingest their known feeds even when the
+    # generated filenames do not match the generic discovery heuristics.
+    search_repositories = {
+        str(repo.get("full_name", "")).lower(): repo
+        for repo in result.get("items", [])
+        if repo.get("full_name")
+    }
+    for full_name, paths in PINNED_FEEDS.items():
+        repo = search_repositories.get(full_name.lower())
+        if repo is None:
+            try:
+                repo = get_json(f"{API}/repos/{full_name}")
+            except Exception as exc:
+                print(f"Pinned repository skipped for {full_name}: {type(exc).__name__}: {exc}")
+                continue
+        pushed_at = str(repo.get("pushed_at", ""))
+        if pushed_at[:10] < cutoff:
+            print(f"Pinned README feeds skipped for stale repository {full_name} ({pushed_at[:10]})")
+            continue
+        branch = str(repo.get("default_branch", "main"))
+        for path in paths:
+            url = f"https://raw.githubusercontent.com/{full_name}/{urllib.parse.quote(branch, safe='')}/{urllib.parse.quote(path, safe='/')}"
+            if url in seen_urls:
+                continue
+            entries.append({
+                "repo": full_name,
+                "repo_url": f"https://github.com/{full_name}",
+                "updated_at": pushed_at[:10],
+                "stars": int(repo.get("stargazers_count", 0)),
+                "url": url,
+            })
+            seen_urls.add(url)
+        print(f"Pinned GitHub feeds: {full_name} ({len(paths)} paths)")
     print(f"GitHub discovery added {len(entries)} repository feeds and {len(telegram)} Telegram previews")
     return entries, telegram

@@ -611,6 +611,13 @@ def main() -> int:
         sources.append((entry["url"], None))
     for discovered_url in discovered_channels:
         sources.append((discovered_url, None))
+    unique_sources: list[tuple[str, str | None]] = []
+    seen_sources: set[tuple[str, str | None]] = set()
+    for source in sources:
+        if source not in seen_sources:
+            unique_sources.append(source)
+            seen_sources.add(source)
+    sources = unique_sources
     if not sources:
         print("No source URLs configured", file=sys.stderr)
         return 2

@@ -76,3 +76,15 @@ http|https://raw.githubusercontent.com/SoliSpirit/proxy-list/master/http.txt
 socks5|https://raw.githubusercontent.com/SoliSpirit/proxy-list/master/socks5.txt
 http|https://raw.githubusercontent.com/roosterkid/openproxylist/master/HTTPS_RAW.txt
 socks5|https://raw.githubusercontent.com/roosterkid/openproxylist/master/SOCKS5_RAW.txt
+
+# cbusifabcap/daily_free_vpn: URI and Clash Meta exports.
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/URI.yml
+https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/ClashMeta.yml
+
+# ts-sf/fly: generated aggregate V2Ray and Clash feeds.
+https://raw.githubusercontent.com/ts-sf/fly/main/v2
+https://raw.githubusercontent.com/ts-sf/fly/main/clash
+
+# ermaozi01/free_clash_vpn: public Clash and V2Ray feeds.
+https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml
+https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/v2ray.txt
