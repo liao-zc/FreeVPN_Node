@@ -2,6 +2,7 @@
 
 GitHub Actions 每小时尝试刷新节点；实际触发时间受 GitHub 调度影响。
 精选节点按下载速度排序，境外测速不能代表实测可用性；每个订阅组最多 30 个，免费节点可能随时失效。
+本仓订阅更新时间：2026-10-29 06:01:12 UTC
 
 ## 精选订阅
 
@@ -10,74 +11,60 @@ GitHub Actions 每小时尝试刷新节点；实际触发时间受 GitHub 调度
 ### 精选综合订阅（多协议）
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/selected.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ![精选综合订阅（多协议）主订阅二维码](qrcodes/main-selected.png)
 
 ### V2Ray（VMess / VLESS / Trojan）
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/v2ray.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### SSR（Shadowsocks + ShadowsocksR）
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/ssr.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### SS / SSR（旧订阅地址兼容）
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/ss-ssr.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### Clash / Mihomo
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/clash.yaml
-更新时间：2026-10-29 02:18:25 UTC
 
 ### VMess
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/vmess.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### VLESS
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/vless.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### Shadowsocks
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/ss.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### SOCKS
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/socks.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### HTTP
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/http.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### Trojan
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/trojan.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### WireGuard
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/wireguard.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### Hysteria2
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/hysteria2.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### 非精选全量（多协议）
 
 https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/all.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ![非精选全量（多协议）主订阅二维码](qrcodes/main-all.png)
 
@@ -86,111 +73,87 @@ https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/all.tx
 ### 精选综合订阅（多协议）
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/selected.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ![精选综合订阅（多协议）备用订阅二维码](qrcodes/backup-selected.png)
 
 ### V2Ray（VMess / VLESS / Trojan）
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/v2ray.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### SSR（Shadowsocks + ShadowsocksR）
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/ssr.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### SS / SSR（旧订阅地址兼容）
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/ss-ssr.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### Clash / Mihomo
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/clash.yaml
-更新时间：2026-10-29 02:18:25 UTC
 
 ### VMess
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/vmess.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### VLESS
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/vless.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### Shadowsocks
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/ss.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### SOCKS
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/socks.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### HTTP
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/http.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### Trojan
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/trojan.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### WireGuard
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/wireguard.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### Hysteria2
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/hysteria2.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ### 非精选全量（多协议）
 
 https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
-更新时间：2026-10-29 02:18:25 UTC
 
 ![非精选全量（多协议）备用订阅二维码](qrcodes/backup-all.png)
 
 ## 其他仓最近一周更新的订阅入口
 
-[free-nodes/clashfree](https://github.com/free-nodes/clashfree)（仓库更新：2026-10-28，Stars：17094）
+[free-nodes/clashfree](https://github.com/free-nodes/clashfree)（仓库更新：2026-10-28，Stars：17098）
 
-https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml
+[https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml](https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml)
 
-[chengaopan/AutoMergePublicNodes](https://github.com/chengaopan/AutoMergePublicNodes)（仓库更新：2026-10-29，Stars：8293）
+[chengaopan/AutoMergePublicNodes](https://github.com/chengaopan/AutoMergePublicNodes)（仓库更新：2026-10-29，Stars：8294）
 
-https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes.yml
+[https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes.yml](https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes.yml)
 
-[chengaopan/AutoMergePublicNodes](https://github.com/chengaopan/AutoMergePublicNodes)（仓库更新：2026-10-29，Stars：8293）
+[https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/proxy.yml](https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/proxy.yml)
 
-https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/proxy.yml
-
-[chengaopan/AutoMergePublicNodes](https://github.com/chengaopan/AutoMergePublicNodes)（仓库更新：2026-10-29，Stars：8293）
-
-https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes_CA.yml
+[https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes_CA.yml](https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes_CA.yml)
 
 [proxifly/free-proxy-list](https://github.com/proxifly/free-proxy-list)（仓库更新：2026-10-29，Stars：6983）
 
-https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.txt
+[https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.txt](https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.txt)
 
-[proxifly/free-proxy-list](https://github.com/proxifly/free-proxy-list)（仓库更新：2026-10-29，Stars：6983）
+[https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/meta/data.json](https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/meta/data.json)
 
-https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/meta/data.json
+[https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/countries/AE/data.txt](https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/countries/AE/data.txt)
 
-[proxifly/free-proxy-list](https://github.com/proxifly/free-proxy-list)（仓库更新：2026-10-29，Stars：6983）
+[VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy](https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy)（仓库更新：2026-10-29，Stars：5673）
 
-https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/countries/AE/data.txt
+[https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/v2ray.config.txt](https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/v2ray.config.txt)
 
-[VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy](https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy)（仓库更新：2026-10-28，Stars：5671）
-
-https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/v2ray.config.txt
-
-[VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy](https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy)（仓库更新：2026-10-28，Stars：5671）
-
-https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/clash.config.yaml
+[https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/clash.config.yaml](https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/clash.config.yaml)
