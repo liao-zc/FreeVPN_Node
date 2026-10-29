@@ -1,4 +1,4 @@
-﻿"""Discover subscription artifacts from GitHub repositories pushed in the last week."""
+"""Discover subscription artifacts from GitHub repositories pushed in the last week."""
 from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
@@ -12,12 +12,26 @@ API = "https://api.github.com"
 UA = "FreeVPN-Node-Aggregator/1.0"
 
 
+def is_subscription_publisher(repo: dict) -> bool:
+    name = str(repo.get("full_name", "")).lower()
+    description = str(repo.get("description", "")).lower()
+    text = f"{name} {description}"
+    has_protocol = re.search(r"v2ray|vmess|vless|trojan|shadowsocks|ssr|hysteria|clash|vpn|proxy", text)
+    has_feed_signal = re.search(
+        r"subscription|subscribe|aggregat|proxy[-_ ]?pool|node[-_ ]?pool|node[-_ ]?list|proxy[-_ ]?list|"
+        r"free.{0,35}(?:vpn|proxy|nodes?|v2ray|clash)|public.{0,35}(?:vpn|proxy|nodes?)",
+        text,
+    )
+    is_paid_or_unrelated = re.search(r"non[- ]?free|paid|premium|airport|机场|付费|收费|非免费", text)
+    return bool(has_protocol and has_feed_signal and not is_paid_or_unrelated)
+
+
 def discover_recent_entries(timeout: int = 15, max_repositories: int = 20) -> tuple[list[dict[str, str | int]], list[str]]:
     """Return raw repo feed links plus Telegram previews for the collector."""
     cutoff = (datetime.now(timezone.utc).date() - timedelta(days=7)).isoformat()
     query = urllib.parse.urlencode({
-        "q": f'(v2ray OR clash OR proxy) stars:>300 pushed:>={cutoff}',
-        "sort": "stars", "order": "desc", "per_page": "50",
+        "q": f'(v2ray OR clash OR proxy) in:name,description pushed:>={cutoff}',
+        "sort": "stars", "order": "desc", "per_page": "100",
     })
     headers = {"User-Agent": UA, "Accept": "application/vnd.github+json"}
     token = os.environ.get("GITHUB_TOKEN")
@@ -38,7 +52,12 @@ def discover_recent_entries(timeout: int = 15, max_repositories: int = 20) -> tu
     entries: list[dict[str, str | int]] = []
     telegram: list[str] = []
     seen_urls: set[str] = set()
-    for repo in result.get("items", [])[:max_repositories]:
+    selected_repositories = 0
+    for repo in result.get("items", []):
+        if not is_subscription_publisher(repo):
+            continue
+        if selected_repositories >= max_repositories:
+            break
         full_name = repo.get("full_name", "")
         branch = repo.get("default_branch", "main")
         if not full_name or not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", full_name):
@@ -64,6 +83,9 @@ def discover_recent_entries(timeout: int = 15, max_repositories: int = 20) -> tu
                 continue
             paths.append(path)
         paths.sort(key=lambda path: (not any(term in path.lower() for term in ("subscription", "sub", "clash", "v2ray")), len(path)))
+        if not paths:
+            continue
+        selected_repositories += 1
         added = 0
         for path in paths[:3]:
             url = f"https://raw.githubusercontent.com/{full_name}/{urllib.parse.quote(branch, safe='')}/{urllib.parse.quote(path, safe='/')}"
