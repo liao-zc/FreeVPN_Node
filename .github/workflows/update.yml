@@ -58,6 +58,21 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: refresh public subscriptions"
           git push
+      - name: Verify published README and subscriptions
+        shell: bash
+        run: |
+          set -euo pipefail
+          readme="https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/README.md"
+          curl --fail --silent --show-error --location --retry 5 --retry-delay 3 "$readme" --output /tmp/published-README.md
+          iconv --from-code=UTF-8 --to-code=UTF-8 /tmp/published-README.md >/dev/null
+          grep --fixed-strings --quiet '# 免费节点订阅' /tmp/published-README.md
+          curl --fail --silent --show-error --location --retry 5 --retry-delay 3 \
+            'https://github.com/liao-zc/FreeVPN_Node/blob/main/README.md' --output /tmp/published-README.html
+          grep --fixed-strings --quiet '精选订阅' /tmp/published-README.html
+          for path in selected.txt v2ray.txt ssr.txt ss-ssr.txt clash.yaml vmess.txt vless.txt ss.txt socks.txt http.txt trojan.txt wireguard.txt hysteria2.txt all.txt; do
+            curl --fail --silent --show-error --location --retry 3 --retry-delay 2 \
+              "https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/$path" --output /dev/null
+          done
       - name: Purge jsDelivr cache
         if: success()
         run: |
