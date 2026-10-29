@@ -36,7 +36,7 @@ def write_readme(recent_feeds: list[dict] | None = None) -> None:
     updated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
     lines = [
         "# 免费节点订阅", "",
-        "GitHub Actions 每小时尝试刷新节点；实际触发时间受 GitHub 调度影响。",
+        "GitHub Actions 每 10 分钟尝试刷新节点；实际触发时间受 GitHub 调度影响。",
         "精选节点按下载速度排序，境外测速不能代表实测可用性；每个订阅组最多 30 个，免费节点可能随时失效。",
         f"本仓订阅更新时间：{updated_at}",
         "", "## 精选订阅", "", "主订阅地址：", "",
