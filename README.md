@@ -1,7 +1,7 @@
 # 免费节点订阅
 
 GitHub Actions 每 5 分钟尝试刷新节点；实际触发时间受 GitHub 调度影响。
-最近成功刷新时间：2026-10-29 02:04:24 UTC
+最近成功刷新时间：2026-10-29 02:18:25 UTC
 精选节点按下载速度排序，境外测速不能代表实测可用性；每个订阅组最多 30 个，免费节点可能随时失效。
 
 ## 精选订阅
@@ -132,229 +132,109 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 ## 其他仓最近一周更新的订阅入口
 
-- [clash-verge-rev/clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)（更新：2026-10-29，Stars：154647）
-  https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev/dev/crates/clash-verge-i18n/locales/ar.yml
-- [clash-verge-rev/clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)（更新：2026-10-29，Stars：154647）
-  https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev/dev/crates/clash-verge-i18n/locales/de.yml
-- [clash-verge-rev/clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)（更新：2026-10-29，Stars：154647）
-  https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev/dev/crates/clash-verge-i18n/locales/en.yml
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)（更新：2026-10-28，Stars：115829）
-  https://raw.githubusercontent.com/JuliusBrussee/caveman/main/proxy/internal/pool/providers.json
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)（更新：2026-10-28，Stars：115829）
-  https://raw.githubusercontent.com/JuliusBrussee/caveman/main/engine/evals/fixtures/tool_output.json
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)（更新：2026-10-28，Stars：115829）
-  https://raw.githubusercontent.com/JuliusBrussee/caveman/main/proxy/internal/gateway/cache_warm_table.json
-- [fatedier/frp](https://github.com/fatedier/frp)（更新：2026-10-23，Stars：110255）
-  https://raw.githubusercontent.com/fatedier/frp/dev/web/frpc/tsconfig.node.json
-- [fatedier/frp](https://github.com/fatedier/frp)（更新：2026-10-23，Stars：110255）
-  https://raw.githubusercontent.com/fatedier/frp/dev/web/frps/tsconfig.node.json
-- [rtk-ai/rtk](https://github.com/rtk-ai/rtk)（更新：2026-10-29，Stars：84896）
-  https://raw.githubusercontent.com/rtk-ai/rtk/develop/tests/fixtures/posthook/bash_ansi_output.json
-- [rtk-ai/rtk](https://github.com/rtk-ai/rtk)（更新：2026-10-29，Stars：84896）
-  https://raw.githubusercontent.com/rtk-ai/rtk/develop/engine/tests/fixtures/posthook/bash_ansi_output.json
-- [rtk-ai/rtk](https://github.com/rtk-ai/rtk)（更新：2026-10-29，Stars：84896）
-  https://raw.githubusercontent.com/rtk-ai/rtk/develop/tests/fixtures/ctest_parallel_output_on_failure_raw.txt
-- [headroomlabs-ai/headroom](https://github.com/headroomlabs-ai/headroom)（更新：2026-10-29，Stars：78160）
-  https://raw.githubusercontent.com/headroomlabs-ai/headroom/main/crates/headroom-proxy/data/model_prices_and_context_window.json
-- [headroomlabs-ai/headroom](https://github.com/headroomlabs-ai/headroom)（更新：2026-10-29，Stars：78160）
-  https://raw.githubusercontent.com/headroomlabs-ai/headroom/main/crates/headroom-proxy/tests/fixtures/anthropic_messages_request_real.json
-- [traefik/traefik](https://github.com/traefik/traefik)（更新：2026-10-28，Stars：65400）
-  https://raw.githubusercontent.com/traefik/traefik/master/webui/tsconfig.node.json
-- [traefik/traefik](https://github.com/traefik/traefik)（更新：2026-10-28，Stars：65400）
-  https://raw.githubusercontent.com/traefik/traefik/master/pkg/provider/kubernetes/crd/fixtures/with_node_port_lb.yml
-- [traefik/traefik](https://github.com/traefik/traefik)（更新：2026-10-28，Stars：65400）
-  https://raw.githubusercontent.com/traefik/traefik/master/pkg/provider/kubernetes/ingress/fixtures/Node-Internal-IP.yml
-- [2dust/v2rayNG](https://github.com/2dust/v2rayNG)（更新：2026-10-28，Stars：64884）
-  https://raw.githubusercontent.com/2dust/v2rayNG/master/V2rayNG/app/src/main/assets/v2ray_config.json
-- [2dust/v2rayNG](https://github.com/2dust/v2rayNG)（更新：2026-10-28，Stars：64884）
-  https://raw.githubusercontent.com/2dust/v2rayNG/master/V2rayNG/app/src/main/assets/v2ray_config_with_tun.json
-- [chen08209/FlClash](https://github.com/chen08209/FlClash)（更新：2026-10-24，Stars：59180）
-  https://raw.githubusercontent.com/chen08209/FlClash/main/plugins/proxy/pubspec.yaml
-- [chen08209/FlClash](https://github.com/chen08209/FlClash)（更新：2026-10-24，Stars：59180）
-  https://raw.githubusercontent.com/chen08209/FlClash/main/plugins/proxy/analysis_options.yaml
-- [chen08209/FlClash](https://github.com/chen08209/FlClash)（更新：2026-10-24，Stars：59180）
-  https://raw.githubusercontent.com/chen08209/FlClash/main/plugins/proxy/windows/CMakeLists.txt
-- [mitmproxy/mitmproxy](https://github.com/mitmproxy/mitmproxy)（更新：2026-10-27，Stars：46462）
-  https://raw.githubusercontent.com/mitmproxy/mitmproxy/main/.github/node-version.txt
-- [Z-Siqi/Clash-for-Windows_Chinese](https://github.com/Z-Siqi/Clash-for-Windows_Chinese)（更新：2026-10-28，Stars：28632）
-  https://raw.githubusercontent.com/Z-Siqi/Clash-for-Windows_Chinese/main/app/test/fixtures/legacy-clash.yaml
-- [Z-Siqi/Clash-for-Windows_Chinese](https://github.com/Z-Siqi/Clash-for-Windows_Chinese)（更新：2026-10-28，Stars：28632）
-  https://raw.githubusercontent.com/Z-Siqi/Clash-for-Windows_Chinese/main/app/clash_core/mihomo-core-manifest.json
-- [Z-Siqi/Clash-for-Windows_Chinese](https://github.com/Z-Siqi/Clash-for-Windows_Chinese)（更新：2026-10-28，Stars：28632）
-  https://raw.githubusercontent.com/Z-Siqi/Clash-for-Windows_Chinese/main/app/clash_core/tap-forwarder-manifest.json
-- [mihomo-party-org/clash-party](https://github.com/mihomo-party-org/clash-party)（更新：2026-10-28，Stars：27028）
-  https://raw.githubusercontent.com/mihomo-party-org/clash-party/smart_core/tsconfig.node.json
-- [apify/crawlee](https://github.com/apify/crawlee)（更新：2026-10-28，Stars：26283）
-  https://raw.githubusercontent.com/apify/crawlee/master/docs/guides/docker_node_js.txt
-- [apify/crawlee](https://github.com/apify/crawlee)（更新：2026-10-28，Stars：26283）
-  https://raw.githubusercontent.com/apify/crawlee/master/docs/guides/docker_node_ts.txt
-- [apify/crawlee](https://github.com/apify/crawlee)（更新：2026-10-28，Stars：26283）
-  https://raw.githubusercontent.com/apify/crawlee/master/test/e2e/proxy-rotation/actor/package.json
+- [free-nodes/clashfree](https://github.com/free-nodes/clashfree)（更新：2026-10-28，Stars：17094）
+  https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml
+- [chengaopan/AutoMergePublicNodes](https://github.com/chengaopan/AutoMergePublicNodes)（更新：2026-10-29，Stars：8293）
+  https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes.yml
+- [chengaopan/AutoMergePublicNodes](https://github.com/chengaopan/AutoMergePublicNodes)（更新：2026-10-29，Stars：8293）
+  https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/proxy.yml
+- [chengaopan/AutoMergePublicNodes](https://github.com/chengaopan/AutoMergePublicNodes)（更新：2026-10-29，Stars：8293）
+  https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes_CA.yml
+- [proxifly/free-proxy-list](https://github.com/proxifly/free-proxy-list)（更新：2026-10-29，Stars：6983）
+  https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.txt
+- [proxifly/free-proxy-list](https://github.com/proxifly/free-proxy-list)（更新：2026-10-29，Stars：6983）
+  https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/meta/data.json
+- [proxifly/free-proxy-list](https://github.com/proxifly/free-proxy-list)（更新：2026-10-29，Stars：6983）
+  https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/countries/AE/data.txt
+- [VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy](https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy)（更新：2026-10-28，Stars：5671）
+  https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/v2ray.config.txt
+- [VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy](https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy)（更新：2026-10-28，Stars：5671）
+  https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/clash.config.yaml
 ## 当前精选节点
 
 ### V2Ray（VMess / VLESS / Trojan）
 
 ```text
-vmess://eyJhZGQiOiIxNzIuNjYuMC4xIiwiYWlkIjowLCJob3N0Ijoidm1lc3MubGJ3NjY2LmRwZG5zLm9yZyIsImlkIjoiMGNmNmQ5NzAtM2YxZC00YWFlLWE5ODktOTJhOGY3NmFlM2RiIiwibmV0Ijoid3MiLCJwYXRoIjoiL3dzIiwicG9ydCI6IjQ0MyIsInBzIjoiQ0EgXHVkODNjXHVkZGU4XHVkODNjXHVkZGU2IHwgQFJheWRpa2FseCB8IDIxRkUxQyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0
-vmess://eyJ2IjoiMiIsInBzIjoiXHVkODNjXHVkZGZhXHVkODNjXHVkZGY4VVNfNTEyfDU2MUtCL3N8RjAwMy0yNjA2MTggWzYwNmM1MmZkZWRiOF0iLCJhZGQiOiIxNzIuNjYuMC4xIiwicG9ydCI6IjQ0MyIsImlkIjoiMGNmNmQ5NzAtM2YxZC00YWFlLWE5ODktOTJhOGY3NmFlM2RiIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6InZtZXNzLmxidzY2Ni5kcGRucy5vcmciLCJwYXRoIjoiL3dzIiwidGxzIjoidGxzIiwic25pIjoidm1lc3MubGJ3NjY2LmRwZG5zLm9yZyJ9
-vmess://eyJhZGQiOiIxNzIuNjYuMC4xIiwiYWlkIjowLCJob3N0Ijoidm1lc3MubGJ3NjY2LmRwZG5zLm9yZyIsImlkIjoiMGNmNmQ5NzAtM2YxZC00YWFlLWE5ODktOTJhOGY3NmFlM2RiIiwibmV0Ijoid3MiLCJwYXRoIjoiL3dzIiwicG9ydCI6IjQ0MyIsInBzIjoiQ0EgXHVkODNjXHVkZGU4XHVkODNjXHVkZGU2IHwgQFJheWRpa2FseCB8IDY4RDc5NyIsInNuaSI6InZtZXNzLmxidzY2Ni5kcGRucy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0
-vless://72038860-a526-4385-8f69-b28a4d85fc10@104.25.18.145:443?security=tls&type=ws&path=%2F&host=ddd.abcai.online&sni=ddd.abcai.online&fp=chrome&encryption=none#CA
-vless://e56059f1-5a1a-4d0a-a2d0-58ecb4eb2f3f@172.66.47.45:443?security=tls&type=ws&path=/eyJqdW5rIjoiZWlPODVjTnhnaSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560&host=ezaccess-project-f62c30.pages.dev&packetEncoding=xudp&alpn=http/1.1&sni=EZAcCESS-pROjECt-F62c30.PAGES.dEv&fp=chrome&encryption=none#CA
-vless://e56059f1-5a1a-4d0a-a2d0-58ecb4eb2f3f@172.66.47.45:443?encryption=none&type=ws&security=tls&sni=EZAcCESS-pROjECt-F62c30.PAGES.dEv&fp=chrome&path=%2FeyJqdW5rIjoiZWlPODVjTnhnaSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0%3D&host=ezaccess-project-f62c30.pages.dev#%F0%9F%87%AB%F0%9F%87%B7FR_149%7C336KB%2Fs%7CB007-260618%20%5B39e764cc5f1e%5D
-trojan://70756c73-0000-4000-8000-650000000000@199.181.197.99:443?security=tls&sni=parsa-panel-u48we.wotic15356.workers.dev&type=ws&host=parsa-panel-u48we.wotic15356.workers.dev&path=%2Fpulse&fp=chrome#US
-trojan://gHQP0D7D15@104.25.239.113:2053?security=tls&type=ws&sni=marvdasht.phonecomparisonblog.org&path=%2F#%F0%9F%87%AB%F0%9F%87%AEFI_33%7C1.2MB%2Fs%7CB007-260618%20%5B819f981b89c8%5D
-trojan://gHQP0D7D15@104.25.239.113:2053?path=/&security=tls&insecure=0&type=ws&allowInsecure=0&sni=marvdasht.phonecomparisonblog.org#CA
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?security=tls&type=tcp&sni=www.unlockyourfuturefindyourperfectcareer.com#trojan-1935007697
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?security=tls&type=tcp&sni=www.unlockyourfuturefindyourperfectcareer.com#trojan-1935612121
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?security=tls&type=tcp&sni=www.unlockyourfuturefindyourperfectcareer.com#trojan-1938557366
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?security=tls&type=tcp&sni=www.unlockyourfuturefindyourperfectcareer.com#trojan-1938971737
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?allowInsecure=1&sni=www.unlockyourfuturefindyourperfectcareer.com&type=tcp#US
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=www.unlockyourfuturefindyourperfectcareer.com#US
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.147:443?security=tls&type=tcp&sni=courses.unlockyourfuturefindyourperfectcareer.com#trojan-1934958570
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.147:443?security=tls&type=tcp&sni=courses.unlockyourfuturefindyourperfectcareer.com#trojan-1935007690
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.147:443?security=tls&sni=courses.unlockyourfuturefindyourperfectcareer.com#US
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?security=tls&type=tcp&sni=unlockyourfuturefindyourperfectcareer.com#trojan-1935007691
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?security=tls&type=tcp&sni=unlockyourfuturefindyourperfectcareer.com#trojan-1937002873
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?security=tls&type=tcp&sni=unlockyourfuturefindyourperfectcareer.com#trojan-1938557361
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?sni=unlockyourfuturefindyourperfectcareer.com&type=tcp#US
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?allowInsecure=1&type=tcp&security=tls&fp=chrome&sni=unlockyourfuturefindyourperfectcareer.com#US
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.142:443?security=tls&sni=cdn.unlockyourfuturefindyourperfectcareer.com&insecure=0&type=tcp&headerType=none#%F0%9F%87%BA%F0%9F%87%B8_%E7%BE%8E%E5%9B%BD%20(49
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.142:443?security=tls&type=tcp&sni=cdn.unlockyourfuturefindyourperfectcareer.com#%F0%9F%87%BA%F0%9F%87%B8_%E7%BE%8E%E5%9B%BD%20%2849%29
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.142:443?security=tls&type=tcp&sni=cdn.unlockyourfuturefindyourperfectcareer.com#trojan-1930077586
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.142:443?security=tls&type=tcp&sni=cdn.unlockyourfuturefindyourperfectcareer.com#trojan-1935805067
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.142:443?security=tls&type=tcp&sni=cdn.unlockyourfuturefindyourperfectcareer.com#trojan-1938971757
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.142:443?security=tls&type=tcp&sni=cdn.unlockyourfuturefindyourperfectcareer.com#%F0%9F%87%BA%F0%9F%87%B8_%E7%BE%8E%E5%9B%BD%20%2849%29%20%5B3db8d416d32093e1%5D
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.142:443?allowInsecure=1&sni=cdn.unlockyourfuturefindyourperfectcareer.com&type=tcp#US
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.142:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=cdn.unlockyourfuturefindyourperfectcareer.com#US
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?security=tls&sni=resources.unlockyourfuturefindyourperfectcareer.com&insecure=0&type=tcp&headerType=none#%F0%9F%87%BA%F0%9F%87%B8_%E7%BE%8E%E5%9B%BD%20(50
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?security=tls&type=tcp&sni=resources.unlockyourfuturefindyourperfectcareer.com#%F0%9F%87%BA%F0%9F%87%B8_%E7%BE%8E%E5%9B%BD%20%2850%29
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?security=tls&type=tcp&sni=resources.unlockyourfuturefindyourperfectcareer.com#trojan-1932467279
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?security=tls&type=tcp&sni=resources.unlockyourfuturefindyourperfectcareer.com#trojan-1935007700
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?security=tls&type=tcp&sni=resources.unlockyourfuturefindyourperfectcareer.com#%F0%9F%87%BA%F0%9F%87%B8_%E7%BE%8E%E5%9B%BD%20%2850%29%20%5B0513186f2193387f%5D
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?sni=resources.unlockyourfuturefindyourperfectcareer.com&type=tcp#US
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=resources.unlockyourfuturefindyourperfectcareer.com#US
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.76:443?security=tls&sni=api.unlockyourfuturefindyourperfectcareer.com&insecure=0&type=tcp&headerType=none#%F0%9F%87%BA%F0%9F%87%B8_%E7%BE%8E%E5%9B%BD%20(51
 ```
 
 ### SSR（Shadowsocks + ShadowsocksR）
 
 ```text
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.170:443#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2FDallas%20%5BGH%3AMahdi0024%2FPro%5D
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.170:443#shadowsocks-1827146549
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.170:443#%F0%9F%87%BA%F0%9F%87%B8US_89%7C1.2MB%2Fs%20%5B44410bbbcb07%5D
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.170:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.170-0125
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.170:443#US
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.167:443#shadowsocks-1827146556
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.167:443#%F0%9F%87%BA%F0%9F%87%B8US_90%7C388KB%2Fs%7CA004-260618%20%5Be4bee8339fae%5D
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.167:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.167-0126
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.167:443#US
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.169:443#shadowsocks-1827146131
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.169:443#%F0%9F%87%BA%F0%9F%87%B8US_88%7C1.3MB%2Fs%20%5B2b322b68c292%5D
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.169:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.169-0124
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.169:443#US
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.168:443#shadowsocks-1827146815
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.168:443#%F0%9F%87%BA%F0%9F%87%B8US_1%7C1.2MB%2Fs%20%5B60b18e513b09%5D
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.168:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.168-0123
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@156.146.38.168:443#US
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@185.215.132.9:19999#shadowsocks-1875022992
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@185.215.132.9:19999#%F0%9F%87%BA%F0%9F%87%B8US_444%7C1.5MB%2Fs%7CA004-260618%20%5B959578925c29%5D
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@185.215.132.9:19999#US
-ssr://YXBpLm1laXR1YW44OC5jb206Mjc3MjY6YXV0aF9hZXMxMjhfbWQ1OnJjNC1tZDU6cGxhaW46WkdreE5WQlcvP29iZnNwYXJhbT1aamRrTWpNNU1qa3VaRzkxZVdsdUxtTnZiUSZwcm90b3BhcmFtPU1qTTVNams2TlRZek5UTTNNRE15JnJlbWFya3M9OEotSHV2Q2ZoN2hWVTE4ek56bDhOakkxUzBJdmMzeFNNREF5TFRJMk1EWXhPQ0JiWXpaa016Z3lPVFZrTlRkaVhR
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@185.215.132.18:19999#shadowsocks-1875023047
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@185.215.132.18:19999#%F0%9F%87%BA%F0%9F%87%B8US_446%7C1.3MB%2Fs%7CB007-260618%20%5B54f449a1b321%5D
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@185.215.132.18:19999#US
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@95.215.201.18:19999#shadowsocks-1875129452
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@95.215.201.18:19999#%F0%9F%87%BA%F0%9F%87%B8US_443%7C1002KB%2Fs%7CA004-260618%20%5B9b10e8e6bf84%5D
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@95.215.201.18:19999#%F0%9F%87%BA%F0%9F%87%B8US-95.215.201.18-0181
 ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@95.215.201.18:19999#US
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@193.151.160.18:19999#shadowsocks-1875129451
-ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0@193.151.160.18:19999#%F0%9F%87%BA%F0%9F%87%B8US_435%7C1.3MB%2Fs%7CC001-260618%20%5Bc9148f5355de%5D
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoQ0NXT2NJc0s1d3JGejRPWDcwcldm@216.105.168.18:443#shadowsocks-1827534198
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoQ0NXT2NJc0s1d3JGejRPWDcwcldm@216.105.168.18:443#%F0%9F%87%BA%F0%9F%87%B8US-216.105.168.18-0303
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoQ0NXT2NJc0s1d3JGejRPWDcwcldm@216.105.168.18:443#US
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiUVpsN0hEeFNhYnIxRnVyVFlRSEZV@216.105.168.18:443#shadowsocks-1827145925
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiUVpsN0hEeFNhYnIxRnVyVFlRSEZV@216.105.168.18:443#%F0%9F%87%BA%F0%9F%87%B8US_409%7C159KB%2Fs%7CA004-260618%20%5Bd0fc3b195866%5D
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiUVpsN0hEeFNhYnIxRnVyVFlRSEZV@216.105.168.18:443#US
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@79.110.53.169:8080#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2FLas%20Vegas%20%5BGH%3AMahdi0024%2FPro%5D
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@79.110.53.169:8080#shadowsocks-1828227588
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@79.110.53.169:8080#%F0%9F%87%BA%F0%9F%87%B8US_208%7C836KB%2Fs%7CM003-260806%20%5B2d3c6b97d127%5D
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@79.110.53.169:8080#US
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@173.244.56.9:443#shadowsocks-1827146667
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@173.244.56.9:443#%F0%9F%87%BA%F0%9F%87%B8US_115%7C972KB%2Fs%7CA004-260618%20%5Bb98eb2cf7d3d%5D
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@173.244.56.9:443#%F0%9F%87%BA%F0%9F%87%B8US-173.244.56.9-0154
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@173.244.56.9:443#US
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@173.244.56.9:443
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.151.182.253:8080#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2FLos%20Angeles%20%5BGH%3AMahdi0024%2FPro%5D
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.151.182.253:8080#shadowsocks-1827963043
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.151.182.253:8080#%F0%9F%87%BA%F0%9F%87%B8US_338%7C974KB%2Fs%7CA004-260618%20%5B836b9e2c1c7b%5D
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@107.151.182.253:8080#US
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@173.244.56.6:443#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2FPhoenix%20%5BGH%3AMahdi0024%2FPro%5D
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@173.244.56.6:443#shadowsocks-1827146375
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@173.244.56.6:443#%F0%9F%87%BA%F0%9F%87%B8US_157%7C1016KB%2Fs%20%5B54e0172686df%5D
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@173.244.56.6:443#%F0%9F%87%BA%F0%9F%87%B8US-173.244.56.6-0174
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@173.244.56.6:443#US
+ssr://YXBpLm1laXR1YW44OC5jb206MzkyNjY6YXV0aF9hZXMxMjhfbWQ1OnJjNC1tZDU6cGxhaW46WkdreE5WQlcvP29iZnNwYXJhbT1aamRrTWpNNU1qa3VaRzkxZVdsdUxtTnZiUSZwcm90b3BhcmFtPU1qTTVNams2TlRZek5UTTNNRE15JnJlbWFya3M9OEotSHV2Q2ZoN2hWVTE4ME5UQjhOVGcwUzBJdmMzeFNNREF5TFRJMk1EWXhPQ0JiWXpoak1qQTJPREZsTURGaFhR
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg@79.110.54.250:8080#shadowsocks-1870576345
 ```
 
 ### Clash / Mihomo
 
 ```yaml
 proxies:
-- name: 🇺🇸US_90|388KB/s|A004-260618 [e4bee8339fae]
-  cipher: aes-128-gcm
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.167
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇺🇸 United States/Dallas [GH:Mahdi0024/Pro]
-  type: ss
-  server: 156.146.38.170
-  port: 443
-  password: shadowsocks
-  cipher: aes-128-gcm
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146556
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.167
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146131
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.169
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146815
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.168
-  type: ss
-  udp: true
-- name: 🇺🇸US_11|2.0MB/s
-  port: 443
-  server: 12.221.146.147
+- name: 🇺🇸US_211|724KB/s|P002-260618 [2cca269a4ba7]
+  password: 'null'
+  port: 9002
+  server: 138.199.35.195
   skip-cert-verify: true
+  sub_tag: P002-260618
   tls: true
   type: http
-  udp: true
-- name: 🇺🇸US_273|608KB/s|R002-260618 [1c8a4d9b327b]
-  port: 443
-  server: 12.221.146.147
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875022992
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.9
-  type: ss
-  udp: true
-- name: 🇺🇸US_446|1.3MB/s|B007-260618 [54f449a1b321]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.18
-  sub_tag: B007-260618
-  type: ss
-  udp: true
-- name: 🇫🇷FR_49|2.9MB/s|R002-260618 [a676be7daa09]
-  port: 443
-  server: 172.64.69.89
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇺🇸US_379|625KB/s|R002-260618 [c6d38295d57b]
-  type: ssr
-  server: api.meituan88.com
-  port: 27726
-  cipher: rc4-md5
-  password: di15PV
-  protocol: auth_aes128_md5
-  obfs: plain
-  obfs-param: f7d23929.douyin.com
-  protocol-param: 23929:563537032
-- name: 🇺🇸US_444|1.5MB/s|A004-260618 [959578925c29]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.9
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875023047
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.18
-  type: ss
-  udp: true
-- name: 🇺🇸US_379|625KB/s|R002-260618 [c6d38295d57b]-2
-  cipher: rc4-md5
-  obfs: plain
-  obfs-param: f7d23929.douyin.com
-  password: di15PV
-  port: 27726
-  protocol: auth_aes128_md5
-  protocol-param: 23929:563537032
-  server: api.meituan88.com
-  sub_tag: R002-260618
-  type: ssr
+  username: 'null'
   udp: true
 - cipher: aes-256-gcm
   name: shadowsocks-1875129452
@@ -363,14 +243,77 @@ proxies:
   server: 95.215.201.18
   type: ss
   udp: true
-- name: 🇺🇸US_409|159KB/s|A004-260618 [d0fc3b195866]
-  cipher: chacha20-ietf-poly1305
-  password: bQZl7HDxSabr1FurTYQHFU
+- name: 🇺🇸US_185|756KB/s|R002-260618 [270506a48418]
+  port: 9002
+  server: 138.199.35.202
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇺🇸US_116|792KB/s|P002-260618 [4cc71e0918ac]
+  password: None
+  port: 9002
+  server: 138.199.35.216
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-1827534198
+  password: hCCWOcIsK5wrFz4OX70rWf
   port: 443
   server: 216.105.168.18
-  sub_tag: A004-260618
   type: ss
   udp: true
+- name: 🇺🇸US_197|873KB/s|P002-260618 [30b959b768eb]
+  password: None
+  port: 9002
+  server: 138.199.35.214
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  type: wireguard
+  server: 162.159.192.3
+  port: 500
+  private-key: 2D+QMolgGWVRVGdJJvsQ4VBDCcZTym0c1sFN00PeMUs=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 213
+  - 74
+  - 19
+  mtu: 1280
+- name: trojan-1935007689
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.13
+  skip-cert-verify: true
+  sni: blog.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
+  udp: true
+- type: trojan
+  name: 🇺🇸_美国 (50)
+  server: 66.163.112.242
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  tls: true
+  servername: resources.unlockyourfuturefindyourperfectcareer.com
+  sni: resources.unlockyourfuturefindyourperfectcareer.com
+  skip-cert-verify: false
+- name: hysteria2-1876844122
+  password: 46647da9-d4b4-407f-bea6-ad0b1abc561f
+  port: 2053
+  server: 192.236.226.182
+  skip-cert-verify: true
+  sni: 192.236.226.182
+  type: hysteria2
 - name: 🇺🇸US_443|1002KB/s|A004-260618 [9b10e8e6bf84]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -379,106 +322,170 @@ proxies:
   sub_tag: A004-260618
   type: ss
   udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875129451
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.18
-  type: ss
-  udp: true
-- name: 🇺🇸US_430|1.0MB/s|A004-260618 [b62cf4f7c9b4]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.9
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1870576345
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.54.250
-  type: ss
-  udp: true
-- name: 🇺🇸 United States/Phoenix [GH:Mahdi0024/Pro]
-  type: ss
-  server: 173.244.56.6
+- name: trojan-1935007703
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  password: shadowsocks
-  cipher: aes-128-gcm
+  server: 66.163.112.171
+  skip-cert-verify: true
+  sni: learn.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
   udp: true
-- name: 🇺🇸US_420|879KB/s|A004-260618 [d92318afee09]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.54.250
-  sub_tag: A004-260618
-  type: ss
+- name: 🇺🇸US_243|835KB/s|P002-260618 [1e13e95b0e5a]
+  password: None
+  port: 9002
+  server: 138.199.35.220
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-1827145925
-  password: bQZl7HDxSabr1FurTYQHFU
+- name: trojan-1935007697
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 216.105.168.18
-  type: ss
+  server: 66.163.112.121
+  skip-cert-verify: true
+  sni: www.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
   udp: true
-- name: 🇺🇸US_451|388KB/s|R002-260618 [882fbd16660b]
-  type: ssr
-  server: api.meituan88.com
-  port: 29790
-  cipher: chacha20-ietf
-  password: di15PV
-  protocol: auth_aes128_md5
-  obfs: tls1.2_ticket_auth
-  obfs-param: f7d23929.douyin.com
-  protocol-param: 23929:563537032
-- name: 🇺🇸 United States/Miami [GH:barry-far/V2r]
-  type: ss
-  server: 193.151.160.9
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
+- name: trojan-1932467279
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.242
+  skip-cert-verify: false
+  sni: resources.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
   udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1827962976
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.151.182.197
-  type: ss
+- name: trojan-1935007690
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.147
+  skip-cert-verify: true
+  sni: courses.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
   udp: true
-- name: 🇺🇸US_381|524KB/s|R002-260618 [97d40fd5b306]
-  cipher: chacha20-ietf
-  obfs: tls1.2_ticket_auth
-  obfs-param: f7d23929.douyin.com
-  password: di15PV
-  port: 18534
-  protocol: auth_aes128_md5
-  protocol-param: 23929:563537032
-  server: api.meituan88.com
+- name: trojan-1935007697-2
+  type: trojan
+  server: 66.163.112.121
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: www.unlockyourfuturefindyourperfectcareer.com
+  network: tcp
+- name: 🇺🇸US_295|801KB/s [1b4f015d4078]
+  password: ''
+  port: 9002
+  server: 138.199.35.217
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: ''
+  udp: true
+- name: trojan-1934958570
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.147
+  skip-cert-verify: false
+  sni: courses.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
+  udp: true
+- name: 🇺🇸US_154|641KB/s|P002-260618 [64d55366a21c]
+  password: None
+  port: 9002
+  server: 138.199.35.205
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: trojan-1938557333
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.171
+  skip-cert-verify: false
+  sni: learn.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
+  udp: true
+- name: trojan-1934958570-2
+  type: trojan
+  server: 66.163.112.147
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: courses.unlockyourfuturefindyourperfectcareer.com
+  network: tcp
+- name: trojan-1935612273
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.13
+  skip-cert-verify: true
+  sni: api.nextjobopportunityandclaimyouridealrole.com
+  type: trojan
+  udp: true
+- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
+  type: wireguard
+  server: 162.159.192.2
+  port: 500
+  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 39
+  - 4
+  - 107
+  mtu: 1280
+- type: trojan
+  name: 🇺🇸_美国 (51)
+  server: 66.163.112.76
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  tls: true
+  servername: api.unlockyourfuturefindyourperfectcareer.com
+  sni: api.unlockyourfuturefindyourperfectcareer.com
+  skip-cert-verify: false
+- name: 🇺🇸US_113|742KB/s|P002-260618 [5db2cbf40ac3]
+  password: 'null'
+  port: 9002
+  server: 138.199.35.219
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  username: 'null'
+  udp: true
+- name: trojan-1935007691
+  type: trojan
+  server: 66.163.112.31
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: unlockyourfuturefindyourperfectcareer.com
+  network: tcp
+- name: 🇺🇸_美国 (49
+  type: trojan
+  server: 66.163.112.142
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: cdn.unlockyourfuturefindyourperfectcareer.com
+  network: tcp
+- name: trojan-1938971757
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.142
+  skip-cert-verify: false
+  sni: cdn.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
+  udp: true
+- name: 🇺🇸US_261|812KB/s|R002-260618 [2d2bb008072d]
+  password: 'null'
+  port: 9002
+  server: 138.199.35.212
+  skip-cert-verify: true
   sub_tag: R002-260618
-  type: ssr
-  udp: true
-- name: 🇺🇸 United States/Los Angeles [GH:Mahdi0024/Pro]
-  type: ss
-  server: 107.151.182.253
-  port: 8080
-  password: 14fFPrbezE3HDZzsMOr6
-  cipher: rc4-md5
-  udp: true
-- name: 🇺🇸US_115|972KB/s|A004-260618 [b98eb2cf7d3d]
-  cipher: aes-128-gcm
-  password: shadowsocks
-  port: 443
-  server: 173.244.56.9
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇺🇸 United States/Ashburn [GH:barry-far/V2r]
-  type: ss
-  server: 45.86.51.18
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
+  tls: true
+  type: http
+  username: 'null'
   udp: true
 ```

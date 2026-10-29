@@ -4,116 +4,15 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: 🇺🇸US_90|388KB/s|A004-260618 [e4bee8339fae]
-  cipher: aes-128-gcm
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.167
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇺🇸 United States/Dallas [GH:Mahdi0024/Pro]
-  type: ss
-  server: 156.146.38.170
-  port: 443
-  password: shadowsocks
-  cipher: aes-128-gcm
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146556
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.167
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146131
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.169
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146815
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.168
-  type: ss
-  udp: true
-- name: 🇺🇸US_11|2.0MB/s
-  port: 443
-  server: 12.221.146.147
+- name: 🇺🇸US_211|724KB/s|P002-260618 [2cca269a4ba7]
+  password: 'null'
+  port: 9002
+  server: 138.199.35.195
   skip-cert-verify: true
+  sub_tag: P002-260618
   tls: true
   type: http
-  udp: true
-- name: 🇺🇸US_273|608KB/s|R002-260618 [1c8a4d9b327b]
-  port: 443
-  server: 12.221.146.147
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875022992
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.9
-  type: ss
-  udp: true
-- name: 🇺🇸US_446|1.3MB/s|B007-260618 [54f449a1b321]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.18
-  sub_tag: B007-260618
-  type: ss
-  udp: true
-- name: 🇫🇷FR_49|2.9MB/s|R002-260618 [a676be7daa09]
-  port: 443
-  server: 172.64.69.89
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇺🇸US_379|625KB/s|R002-260618 [c6d38295d57b]
-  type: ssr
-  server: api.meituan88.com
-  port: 27726
-  cipher: rc4-md5
-  password: di15PV
-  protocol: auth_aes128_md5
-  obfs: plain
-  obfs-param: f7d23929.douyin.com
-  protocol-param: 23929:563537032
-- name: 🇺🇸US_444|1.5MB/s|A004-260618 [959578925c29]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.9
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875023047
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.18
-  type: ss
-  udp: true
-- name: 🇺🇸US_379|625KB/s|R002-260618 [c6d38295d57b]-2
-  cipher: rc4-md5
-  obfs: plain
-  obfs-param: f7d23929.douyin.com
-  password: di15PV
-  port: 27726
-  protocol: auth_aes128_md5
-  protocol-param: 23929:563537032
-  server: api.meituan88.com
-  sub_tag: R002-260618
-  type: ssr
+  username: 'null'
   udp: true
 - cipher: aes-256-gcm
   name: shadowsocks-1875129452
@@ -122,14 +21,77 @@ proxies:
   server: 95.215.201.18
   type: ss
   udp: true
-- name: 🇺🇸US_409|159KB/s|A004-260618 [d0fc3b195866]
-  cipher: chacha20-ietf-poly1305
-  password: bQZl7HDxSabr1FurTYQHFU
+- name: 🇺🇸US_185|756KB/s|R002-260618 [270506a48418]
+  port: 9002
+  server: 138.199.35.202
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇺🇸US_116|792KB/s|P002-260618 [4cc71e0918ac]
+  password: None
+  port: 9002
+  server: 138.199.35.216
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-1827534198
+  password: hCCWOcIsK5wrFz4OX70rWf
   port: 443
   server: 216.105.168.18
-  sub_tag: A004-260618
   type: ss
   udp: true
+- name: 🇺🇸US_197|873KB/s|P002-260618 [30b959b768eb]
+  password: None
+  port: 9002
+  server: 138.199.35.214
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  type: wireguard
+  server: 162.159.192.3
+  port: 500
+  private-key: 2D+QMolgGWVRVGdJJvsQ4VBDCcZTym0c1sFN00PeMUs=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 213
+  - 74
+  - 19
+  mtu: 1280
+- name: trojan-1935007689
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.13
+  skip-cert-verify: true
+  sni: blog.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
+  udp: true
+- type: trojan
+  name: 🇺🇸_美国 (50)
+  server: 66.163.112.242
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  tls: true
+  servername: resources.unlockyourfuturefindyourperfectcareer.com
+  sni: resources.unlockyourfuturefindyourperfectcareer.com
+  skip-cert-verify: false
+- name: hysteria2-1876844122
+  password: 46647da9-d4b4-407f-bea6-ad0b1abc561f
+  port: 2053
+  server: 192.236.226.182
+  skip-cert-verify: true
+  sni: 192.236.226.182
+  type: hysteria2
 - name: 🇺🇸US_443|1002KB/s|A004-260618 [9b10e8e6bf84]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -138,142 +100,206 @@ proxies:
   sub_tag: A004-260618
   type: ss
   udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875129451
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.18
-  type: ss
-  udp: true
-- name: 🇺🇸US_430|1.0MB/s|A004-260618 [b62cf4f7c9b4]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.9
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1870576345
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.54.250
-  type: ss
-  udp: true
-- name: 🇺🇸 United States/Phoenix [GH:Mahdi0024/Pro]
-  type: ss
-  server: 173.244.56.6
+- name: trojan-1935007703
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  password: shadowsocks
-  cipher: aes-128-gcm
+  server: 66.163.112.171
+  skip-cert-verify: true
+  sni: learn.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
   udp: true
-- name: 🇺🇸US_420|879KB/s|A004-260618 [d92318afee09]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.54.250
-  sub_tag: A004-260618
-  type: ss
+- name: 🇺🇸US_243|835KB/s|P002-260618 [1e13e95b0e5a]
+  password: None
+  port: 9002
+  server: 138.199.35.220
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-1827145925
-  password: bQZl7HDxSabr1FurTYQHFU
+- name: trojan-1935007697
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 216.105.168.18
-  type: ss
+  server: 66.163.112.121
+  skip-cert-verify: true
+  sni: www.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
   udp: true
-- name: 🇺🇸US_451|388KB/s|R002-260618 [882fbd16660b]
-  type: ssr
-  server: api.meituan88.com
-  port: 29790
-  cipher: chacha20-ietf
-  password: di15PV
-  protocol: auth_aes128_md5
-  obfs: tls1.2_ticket_auth
-  obfs-param: f7d23929.douyin.com
-  protocol-param: 23929:563537032
-- name: 🇺🇸 United States/Miami [GH:barry-far/V2r]
-  type: ss
-  server: 193.151.160.9
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
+- name: trojan-1932467279
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.242
+  skip-cert-verify: false
+  sni: resources.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
   udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1827962976
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.151.182.197
-  type: ss
+- name: trojan-1935007690
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.147
+  skip-cert-verify: true
+  sni: courses.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
   udp: true
-- name: 🇺🇸US_381|524KB/s|R002-260618 [97d40fd5b306]
-  cipher: chacha20-ietf
-  obfs: tls1.2_ticket_auth
-  obfs-param: f7d23929.douyin.com
-  password: di15PV
-  port: 18534
-  protocol: auth_aes128_md5
-  protocol-param: 23929:563537032
-  server: api.meituan88.com
+- name: trojan-1935007697-2
+  type: trojan
+  server: 66.163.112.121
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: www.unlockyourfuturefindyourperfectcareer.com
+  network: tcp
+- name: 🇺🇸US_295|801KB/s [1b4f015d4078]
+  password: ''
+  port: 9002
+  server: 138.199.35.217
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: ''
+  udp: true
+- name: trojan-1934958570
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.147
+  skip-cert-verify: false
+  sni: courses.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
+  udp: true
+- name: 🇺🇸US_154|641KB/s|P002-260618 [64d55366a21c]
+  password: None
+  port: 9002
+  server: 138.199.35.205
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: trojan-1938557333
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.171
+  skip-cert-verify: false
+  sni: learn.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
+  udp: true
+- name: trojan-1934958570-2
+  type: trojan
+  server: 66.163.112.147
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: courses.unlockyourfuturefindyourperfectcareer.com
+  network: tcp
+- name: trojan-1935612273
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.13
+  skip-cert-verify: true
+  sni: api.nextjobopportunityandclaimyouridealrole.com
+  type: trojan
+  udp: true
+- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
+  type: wireguard
+  server: 162.159.192.2
+  port: 500
+  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 39
+  - 4
+  - 107
+  mtu: 1280
+- type: trojan
+  name: 🇺🇸_美国 (51)
+  server: 66.163.112.76
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  tls: true
+  servername: api.unlockyourfuturefindyourperfectcareer.com
+  sni: api.unlockyourfuturefindyourperfectcareer.com
+  skip-cert-verify: false
+- name: 🇺🇸US_113|742KB/s|P002-260618 [5db2cbf40ac3]
+  password: 'null'
+  port: 9002
+  server: 138.199.35.219
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  username: 'null'
+  udp: true
+- name: trojan-1935007691
+  type: trojan
+  server: 66.163.112.31
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: unlockyourfuturefindyourperfectcareer.com
+  network: tcp
+- name: 🇺🇸_美国 (49
+  type: trojan
+  server: 66.163.112.142
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: cdn.unlockyourfuturefindyourperfectcareer.com
+  network: tcp
+- name: trojan-1938971757
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.142
+  skip-cert-verify: false
+  sni: cdn.unlockyourfuturefindyourperfectcareer.com
+  type: trojan
+  udp: true
+- name: 🇺🇸US_261|812KB/s|R002-260618 [2d2bb008072d]
+  password: 'null'
+  port: 9002
+  server: 138.199.35.212
+  skip-cert-verify: true
   sub_tag: R002-260618
-  type: ssr
-  udp: true
-- name: 🇺🇸 United States/Los Angeles [GH:Mahdi0024/Pro]
-  type: ss
-  server: 107.151.182.253
-  port: 8080
-  password: 14fFPrbezE3HDZzsMOr6
-  cipher: rc4-md5
-  udp: true
-- name: 🇺🇸US_115|972KB/s|A004-260618 [b98eb2cf7d3d]
-  cipher: aes-128-gcm
-  password: shadowsocks
-  port: 443
-  server: 173.244.56.9
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇺🇸 United States/Ashburn [GH:barry-far/V2r]
-  type: ss
-  server: 45.86.51.18
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
+  tls: true
+  type: http
+  username: 'null'
   udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - 🇺🇸US_90|388KB/s|A004-260618 [e4bee8339fae]
-  - 🇺🇸 United States/Dallas [GH:Mahdi0024/Pro]
-  - shadowsocks-1827146556
-  - shadowsocks-1827146131
-  - shadowsocks-1827146815
-  - 🇺🇸US_11|2.0MB/s
-  - 🇺🇸US_273|608KB/s|R002-260618 [1c8a4d9b327b]
-  - shadowsocks-1875022992
-  - 🇺🇸US_446|1.3MB/s|B007-260618 [54f449a1b321]
-  - 🇫🇷FR_49|2.9MB/s|R002-260618 [a676be7daa09]
-  - 🇺🇸US_379|625KB/s|R002-260618 [c6d38295d57b]
-  - 🇺🇸US_444|1.5MB/s|A004-260618 [959578925c29]
-  - shadowsocks-1875023047
-  - 🇺🇸US_379|625KB/s|R002-260618 [c6d38295d57b]-2
+  - 🇺🇸US_211|724KB/s|P002-260618 [2cca269a4ba7]
   - shadowsocks-1875129452
-  - 🇺🇸US_409|159KB/s|A004-260618 [d0fc3b195866]
+  - 🇺🇸US_185|756KB/s|R002-260618 [270506a48418]
+  - 🇺🇸US_116|792KB/s|P002-260618 [4cc71e0918ac]
+  - shadowsocks-1827534198
+  - 🇺🇸US_197|873KB/s|P002-260618 [30b959b768eb]
+  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  - trojan-1935007689
+  - 🇺🇸_美国 (50)
+  - hysteria2-1876844122
   - 🇺🇸US_443|1002KB/s|A004-260618 [9b10e8e6bf84]
-  - shadowsocks-1875129451
-  - 🇺🇸US_430|1.0MB/s|A004-260618 [b62cf4f7c9b4]
-  - shadowsocks-1870576345
-  - 🇺🇸 United States/Phoenix [GH:Mahdi0024/Pro]
-  - 🇺🇸US_420|879KB/s|A004-260618 [d92318afee09]
-  - shadowsocks-1827145925
-  - 🇺🇸US_451|388KB/s|R002-260618 [882fbd16660b]
-  - 🇺🇸 United States/Miami [GH:barry-far/V2r]
-  - shadowsocks-1827962976
-  - 🇺🇸US_381|524KB/s|R002-260618 [97d40fd5b306]
-  - 🇺🇸 United States/Los Angeles [GH:Mahdi0024/Pro]
-  - 🇺🇸US_115|972KB/s|A004-260618 [b98eb2cf7d3d]
-  - 🇺🇸 United States/Ashburn [GH:barry-far/V2r]
+  - trojan-1935007703
+  - 🇺🇸US_243|835KB/s|P002-260618 [1e13e95b0e5a]
+  - trojan-1935007697
+  - trojan-1932467279
+  - trojan-1935007690
+  - trojan-1935007697-2
+  - 🇺🇸US_295|801KB/s [1b4f015d4078]
+  - trojan-1934958570
+  - 🇺🇸US_154|641KB/s|P002-260618 [64d55366a21c]
+  - trojan-1938557333
+  - trojan-1934958570-2
+  - trojan-1935612273
+  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
+  - 🇺🇸_美国 (51)
+  - 🇺🇸US_113|742KB/s|P002-260618 [5db2cbf40ac3]
+  - trojan-1935007691
+  - 🇺🇸_美国 (49
+  - trojan-1938971757
+  - 🇺🇸US_261|812KB/s|R002-260618 [2d2bb008072d]
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
