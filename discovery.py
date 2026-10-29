@@ -1,9 +1,4 @@
-"""Discover public subscription artifacts in recently updated, popular GitHub projects.
-
-Only repository metadata and raw data files are fetched. Repository code is never cloned
-or executed. Set GITHUB_TOKEN in CI to avoid the low unauthenticated API rate limit.
-"""
-
+﻿"""Discover subscription artifacts from GitHub repositories pushed in the last week."""
 from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
@@ -17,8 +12,8 @@ API = "https://api.github.com"
 UA = "FreeVPN-Node-Aggregator/1.0"
 
 
-def discover_recent_feeds(timeout: int = 15, max_repositories: int = 20) -> list[str]:
-    """Return likely generated feed files from popular repositories pushed in 7 days."""
+def discover_recent_entries(timeout: int = 15, max_repositories: int = 20) -> tuple[list[dict[str, str | int]], list[str]]:
+    """Return raw repo feed links plus Telegram previews for the collector."""
     cutoff = (datetime.now(timezone.utc).date() - timedelta(days=7)).isoformat()
     query = urllib.parse.urlencode({
         "q": f'(v2ray OR clash OR proxy) stars:>300 pushed:>={cutoff}',
@@ -36,11 +31,13 @@ def discover_recent_feeds(timeout: int = 15, max_repositories: int = 20) -> list
 
     try:
         result = get_json(f"{API}/search/repositories?{query}")
-    except Exception as exc:  # Discovery is additive; curated sources still run.
+    except Exception as exc:
         print(f"GitHub repository search skipped: {type(exc).__name__}: {exc}")
-        return []
+        return [], []
 
-    discovered: list[str] = []
+    entries: list[dict[str, str | int]] = []
+    telegram: list[str] = []
+    seen_urls: set[str] = set()
     for repo in result.get("items", [])[:max_repositories]:
         full_name = repo.get("full_name", "")
         branch = repo.get("default_branch", "main")
@@ -54,10 +51,10 @@ def discover_recent_feeds(timeout: int = 15, max_repositories: int = 20) -> list
             continue
 
         paths = []
-        for entry in tree.get("tree", []):
-            path = str(entry.get("path", ""))
+        for item in tree.get("tree", []):
+            path = str(item.get("path", ""))
             lower = path.lower()
-            if entry.get("type") != "blob" or int(entry.get("size", 5 * 1024 * 1024 + 1)) > 5 * 1024 * 1024:
+            if item.get("type") != "blob" or int(item.get("size", 5 * 1024 * 1024 + 1)) > 5 * 1024 * 1024:
                 continue
             if not lower.endswith((".txt", ".yaml", ".yml", ".json")):
                 continue
@@ -66,12 +63,23 @@ def discover_recent_feeds(timeout: int = 15, max_repositories: int = 20) -> list
             if any(word in lower for word in ("readme", "workflow", "example", "template", "source")):
                 continue
             paths.append(path)
-        paths.sort(key=lambda p: (not any(term in p.lower() for term in ("subscription", "sub", "clash", "v2ray")), len(p)))
+        paths.sort(key=lambda path: (not any(term in path.lower() for term in ("subscription", "sub", "clash", "v2ray")), len(path)))
+        added = 0
         for path in paths[:3]:
-            discovered.append(
-                f"https://raw.githubusercontent.com/{full_name}/{urllib.parse.quote(branch, safe='')}/{urllib.parse.quote(path, safe='/')}"
-            )
-        print(f"GitHub discovery: {full_name} ({repo.get('stargazers_count', 0)} stars), {min(3, len(paths))} feed candidates")
+            url = f"https://raw.githubusercontent.com/{full_name}/{urllib.parse.quote(branch, safe='')}/{urllib.parse.quote(path, safe='/')}"
+            if url in seen_urls:
+                continue
+            entries.append({
+                "repo": full_name,
+                "repo_url": f"https://github.com/{full_name}",
+                "updated_at": str(repo.get("pushed_at", ""))[:10],
+                "stars": int(repo.get("stargazers_count", 0)),
+                "url": url,
+            })
+            seen_urls.add(url)
+            added += 1
+        print(f"GitHub discovery: {full_name} ({repo.get('stargazers_count', 0)} stars), {added} feed candidates")
+
         readme_url = f"https://raw.githubusercontent.com/{full_name}/{urllib.parse.quote(branch, safe='')}/README.md"
         try:
             request = urllib.request.Request(readme_url, headers={"User-Agent": UA})
@@ -79,11 +87,10 @@ def discover_recent_feeds(timeout: int = 15, max_repositories: int = 20) -> list
                 readme = response.read(512 * 1024).decode("utf-8", errors="replace")
             channels = sorted(set(re.findall(r"(?:https?://)?t\.me/(?:s/)?([A-Za-z0-9_]{5,})", readme, flags=re.I)))
             channels = [name for name in channels if name.lower() not in {"share", "joinchat", "addstickers", "proxy", "socks"}]
-            for channel in channels[:3]:
-                discovered.append(f"https://t.me/s/{channel}")
+            telegram.extend(f"https://t.me/s/{name}" for name in channels[:3])
             if channels[:3]:
                 print(f"GitHub discovery: {full_name}, {min(3, len(channels))} public Telegram previews")
         except Exception:
             pass
-    print(f"GitHub discovery added {len(discovered)} candidate feeds")
-    return discovered
+    print(f"GitHub discovery added {len(entries)} repository feeds and {len(telegram)} Telegram previews")
+    return entries, telegram

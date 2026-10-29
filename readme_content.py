@@ -28,7 +28,7 @@ def make_qr(url: str, path: Path) -> None:
     image.save(path)
 
 
-def write_readme(protocol_links: dict[str, list[str]], clash_nodes: list[dict]) -> None:
+def write_readme(protocol_links: dict[str, list[str]], clash_nodes: list[dict], recent_feeds: list[dict] | None = None) -> None:
     qr_dir = ROOT / "qrcodes"
     qr_dir.mkdir(parents=True, exist_ok=True)
     for old_qr in qr_dir.glob("*.png"):
@@ -57,6 +57,13 @@ def write_readme(protocol_links: dict[str, list[str]], clash_nodes: list[dict]) 
             make_qr(url, qr_dir / filename)
             lines.extend(["", f"![{label}备用订阅二维码](qrcodes/{filename})"])
         lines.append("")
+    lines.extend(["## 其他仓最近一周更新的订阅入口", ""])
+    if recent_feeds:
+        for entry in recent_feeds:
+            lines.append(f"- [{entry['repo']}]({entry['repo_url']})（更新：{entry['updated_at']}，Stars：{entry['stars']}）")
+            lines.append(f"  {entry['url']}")
+    else:
+        lines.append("本轮没有发现符合更新时间条件的仓库订阅文件。")
     lines.extend([
         "## 当前精选节点", "",
         "### V2Ray（VMess / VLESS / Trojan）", "", "```text",

@@ -21,7 +21,7 @@ from pathlib import Path
 from typing import Any
 
 import yaml
-from discovery import discover_recent_feeds
+from discovery import discover_recent_entries
 from readme_content import write_readme
 from mihomo_speed import measure_download_speeds
 
@@ -637,7 +637,10 @@ def main() -> int:
             sources.append((url.strip(), raw_proxy_type))
         else:
             sources.append((line, None))
-    for discovered_url in discover_recent_feeds():
+    recent_feed_entries, discovered_channels = discover_recent_entries()
+    for entry in recent_feed_entries:
+        sources.append((entry["url"], None))
+    for discovered_url in discovered_channels:
         sources.append((discovered_url, None))
     if not sources:
         print("No source URLs configured", file=sys.stderr)
@@ -752,7 +755,7 @@ def main() -> int:
     protocol_links["ss-ssr"] = ss_ssr
     protocol_links["selected"] = selected_uris
     protocol_links.pop("clash", None)
-    write_readme(protocol_links, clash_nodes)
+    write_readme(protocol_links, clash_nodes, recent_feed_entries)
     counts = ", ".join(f"{key}={len(values)}" for key, values in protocol_links.items())
     print(f"Published tunnel-speed-ranked nodes: {counts}, Clash={len(clash_nodes)}, Selected={len(selected_uris)}, All={len(full_uris)}.")
     return 0
