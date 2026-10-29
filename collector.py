@@ -593,37 +593,6 @@ def load_source(url: str, raw_proxy_type: str | None = None) -> tuple[list[str],
         uris.extend(endpoint_uri_items(text, raw_proxy_type))
     return uris, clash_nodes
 
-def update_readme_node_lists(protocol_links: dict[str, list[str]], clash_nodes: list[dict[str, Any]]) -> None:
-    """Keep stable main and backup URLs plus generated node snapshots in README."""
-    readme_path = ROOT / "README.md"
-    labels = {
-        "v2ray": "V2Ray (VMess + VLESS + Trojan)", "ss-ssr": "SS / SSR",
-        "clash": "Clash / Mihomo", "vmess": "VMess", "vless": "VLESS",
-        "ss": "Shadowsocks", "ssr": "ShadowsocksR", "socks": "SOCKS", "http": "HTTP",
-        "trojan": "Trojan", "wireguard": "WireGuard", "hysteria2": "Hysteria2",
-    }
-    order = ("v2ray", "ss-ssr", "clash", "vmess", "vless", "ss", "ssr", "socks", "http", "trojan", "wireguard", "hysteria2")
-    lines = ["# Subscriptions", "", "## Primary URLs"]
-    for key in order:
-        extension = "yaml" if key == "clash" else "txt"
-        lines.append(f"- {labels[key]}: https://raw.githubusercontent.com/liao-zc/FreeVPN_Node/main/subscriptions/{key}.{extension}")
-    lines.extend(["", "## Backup URLs"])
-    for key in order:
-        extension = "yaml" if key == "clash" else "txt"
-        lines.append(f"- {labels[key]}: https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/{key}.{extension}")
-    lines.extend(["", "<!-- GENERATED-NODES:START -->", "## Current nodes",
-                  "At most 30 nodes per feed, sorted by TCP connection time measured from GitHub Actions. WireGuard and Hysteria2 use UDP and are marked untested by this TCP probe; their entries are listed after TCP-measured nodes."])
-    for key in order:
-        if key == "clash":
-            content = yaml.safe_dump({"proxies": clash_nodes}, allow_unicode=True, sort_keys=False).rstrip() if clash_nodes else "proxies: []"
-            fence = "yaml"
-        else:
-            values = protocol_links.get(key, [])
-            content = "\n".join(values) if values else "(No usable nodes this round)"
-            fence = "text"
-        lines.extend(["", f"### {labels[key]}", f"```{fence}", content, "```"])
-    lines.append("<!-- GENERATED-NODES:END -->")
-    readme_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 def main() -> int:
     source_lines = [line.strip() for line in SOURCES_FILE.read_text(encoding="utf-8").splitlines()
                     if line.strip() and not line.lstrip().startswith("#")]
@@ -755,7 +724,7 @@ def main() -> int:
     protocol_links["ss-ssr"] = ss_ssr
     protocol_links["selected"] = selected_uris
     protocol_links.pop("clash", None)
-    write_readme(protocol_links, clash_nodes, recent_feed_entries)
+    write_readme(recent_feed_entries)
     counts = ", ".join(f"{key}={len(values)}" for key, values in protocol_links.items())
     print(f"Published tunnel-speed-ranked nodes: {counts}, Clash={len(clash_nodes)}, Selected={len(selected_uris)}, All={len(full_uris)}.")
     return 0
