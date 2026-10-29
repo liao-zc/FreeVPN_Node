@@ -1,5 +1,5 @@
 """Render the Chinese subscription guide and four comprehensive QR codes."""
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import qrcode
 
@@ -33,7 +33,10 @@ def write_readme(recent_feeds: list[dict] | None = None) -> None:
     for old_qr in qr_dir.glob("*.png"):
         old_qr.unlink()
 
-    updated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    utc_now = datetime.now(timezone.utc)
+    beijing_now = utc_now.astimezone(timezone(timedelta(hours=8)))
+    updated_at = (f"UTC：{utc_now.strftime('%Y-%m-%d %H:%M:%S')}；"
+                  f"北京时间：{beijing_now.strftime('%Y-%m-%d %H:%M:%S')}")
     lines = [
         "# 免费节点订阅", "",
         "GitHub Actions 每 10 分钟尝试刷新节点；实际触发时间受 GitHub 调度影响。",
