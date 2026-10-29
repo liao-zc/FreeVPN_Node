@@ -4,273 +4,301 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: 🇺🇸US_431|1.9MB/s|A004-260618 [16f4c5e97fb4]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 45.86.51.18
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: shadowsocks-1941957292
-  password: amazonskr05
-  port: 443
-  server: 54.227.18.80
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875022945
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 45.86.51.18
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875023016
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.230.230.18
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: shadowsocks-1941957291
-  password: amazonskr05
-  port: 443
-  server: 52.201.239.165
-  type: ss
-  udp: true
-- name: 🇺🇸US_289|1.0MB/s|R002-260618 [c29176c7fb94]
-  port: 9443
-  server: 198.44.135.19
+- name: 🇺🇸US_450|584KB/s|R002-260618 [c8c20681e01a]
+  type: ssr
+  server: api.meituan88.com
+  port: 39266
+  cipher: rc4-md5
+  password: di15PV
+  protocol: auth_aes128_md5
+  obfs: plain
+  obfs-param: f7d23929.douyin.com
+  protocol-param: 23929:563537032
+- name: 🇺🇸US_474|616KB/s|R002-260618 [682de90470ca]
+  type: ssr
+  server: api.meituan88.com
+  port: 27561
+  cipher: rc4-md5
+  password: di15PV
+  protocol: auth_aes128_md5
+  obfs: plain
+  obfs-param: 6f5218522.douyin.com
+  protocol-param: 218522:0hfCJk
+- name: 🇺🇸US_237|562KB/s|R002-260618 [5bfea617b8dd]
+  port: 9002
+  server: 138.199.35.204
   skip-cert-verify: true
   sub_tag: R002-260618
   tls: true
   type: http
   udp: true
-- name: 🇺🇸US_429|1.5MB/s|A004-260618 [bd1e79add0e4]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.230.230.18
-  sub_tag: A004-260618
-  type: ss
+- name: 🇺🇸US_154|641KB/s|P002-260618 [64d55366a21c]
+  password: None
+  port: 9002
+  server: 138.199.35.205
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
   udp: true
-- name: 🇺🇸 美国 | USA
-  type: ss
-  server: 54.91.51.67
+- name: 🇺🇸US_211|724KB/s|P002-260618 [2cca269a4ba7]
+  password: 'null'
+  port: 9002
+  server: 138.199.35.195
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  username: 'null'
+  udp: true
+- name: 🇺🇸US_52|678KB/s|R002-260618 [430dc52727da]
+  port: 9002
+  server: 138.199.35.198
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇺🇸US_292|546KB/s|P002-260618 [0002809537c4]
+  password: None
+  port: 9002
+  server: 138.199.35.218
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇺🇸US_186|782KB/s|P002-260618 [30c40c01fb3e]
+  password: 'null'
+  port: 9002
+  server: 138.199.35.211
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  username: 'null'
+  udp: true
+- name: 🇺🇸US_250|796KB/s|R002-260618 [073cbc5426d6]
+  port: 9002
+  server: 138.199.35.213
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇺🇸US_197|873KB/s|P002-260618 [30b959b768eb]
+  password: None
+  port: 9002
+  server: 138.199.35.214
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇺🇸US_379|625KB/s|R002-260618 [c6d38295d57b]
+  cipher: rc4-md5
+  obfs: plain
+  obfs-param: f7d23929.douyin.com
+  password: di15PV
+  port: 27726
+  protocol: auth_aes128_md5
+  protocol-param: 23929:563537032
+  server: api.meituan88.com
+  sub_tag: R002-260618
+  type: ssr
+  udp: true
+- name: 🇺🇸US_149|709KB/s|P002-260618 [3fb4f934a2bc]
+  password: None
+  port: 9002
+  server: 138.199.35.208
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇺🇸US_410|329KB/s|M002-260618 [61d455c00f0f]
+  type: vmess
+  server: 129.146.143.80
+  port: 48111
+  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: tcp
+- name: 🇺🇸US_153|759KB/s|P002-260618 [66ebf6ae1341]
+  password: ''
+  port: 9002
+  server: 138.199.35.210
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  username: ''
+  udp: true
+- name: 🇺🇸US_74|805KB/s|R002-260618 [670189fb9e73]
+  password: ''
+  port: 9002
+  server: 138.199.35.201
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+  username: ''
+- name: trojan-1929965329
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇺🇸US_421|1.6MB/s|A004-260618 [1feecb3b9b0d]
+  server: 66.163.112.31
+  skip-cert-verify: false
+  sni: unlockyourfuturefindyourperfectcareer.com
+  type: trojan
+  udp: true
+- name: hysteria2-1876844122
+  password: 46647da9-d4b4-407f-bea6-ad0b1abc561f
+  port: 2053
+  server: 192.236.226.182
+  skip-cert-verify: true
+  sni: 192.236.226.182
+  type: hysteria2
+- name: 🇺🇸US_338|974KB/s|A004-260618 [836b9e2c1c7b]
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
-  server: 98.98.79.198
+  server: 107.151.182.253
   sub_tag: A004-260618
   type: ss
   udp: true
-- name: us|81c2|puddincat07@Telegram
-  password: 4291c983-c520-46ac-82cc-48f14bef573f
-  port: 35013
-  server: 129.213.91.185
+- name: 🇺🇸US_46|213KB/s|R002-260618 [872d9174af8b]
+  type: ssr
+  server: api.meituan88.com
+  port: 44883
+  cipher: chacha20-ietf
+  password: di15PV
+  protocol: auth_aes128_md5
+  obfs: tls1.2_ticket_auth
+  obfs-param: 6f5218522.douyin.com
+  protocol-param: 218522:0hfCJk
+- cipher: rc4-md5
+  name: shadowsocks-1827962976
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 107.151.182.197
+  type: ss
+  udp: true
+- name: 🇺🇸US_420|879KB/s|A004-260618 [d92318afee09]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 79.110.54.250
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: 🇺🇸US_160|834KB/s|P002-260618 [6bccc75a3524]
+  password: None
+  port: 9002
+  server: 138.199.35.209
   skip-cert-verify: true
-  sni: 129.213.91.185
-  tls: false
-  type: hysteria2
-- cipher: aes-256-cfb
-  name: shadowsocks-1941957290
-  password: amazonskr05
-  port: 443
-  server: 52.90.154.73
-  type: ss
+  sub_tag: P002-260618
+  tls: true
+  type: http
   udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146248
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.160
-  type: ss
-  udp: true
-- name: 🇺🇸 United States/New York [GH:Mahdi0024/Pro]
-  type: ss
-  server: 37.19.198.243
-  port: 443
-  password: shadowsocks
-  cipher: aes-128-gcm
-  udp: true
-- name: 🇺🇸US_66|1.9MB/s|A004-260618 [263395b13258]
-  cipher: aes-128-gcm
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.244
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146122
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.236
-  type: ss
-  udp: true
-- name: 🇺🇸US_133|1.9MB/s|A004-260618 [40dfa7ea8e05]
-  cipher: aes-128-gcm
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.236
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: '🇺🇸 United States/New York [GH:Mahdi0024/Pro] #2'
-  type: ss
-  server: 37.19.198.244
-  port: 443
-  password: shadowsocks
-  cipher: aes-128-gcm
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875023024
+- name: 🇺🇸US_443|1002KB/s|A004-260618 [9b10e8e6bf84]
+  cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 193.151.163.18
+  server: 95.215.201.18
+  sub_tag: A004-260618
   type: ss
   udp: true
-- cipher: aes-256-cfb
-  name: shadowsocks-1941951313
-  password: amazonskr05
+- name: 🇺🇸US_381|524KB/s|R002-260618 [97d40fd5b306]
+  type: ssr
+  server: api.meituan88.com
+  port: 18534
+  cipher: chacha20-ietf
+  password: di15PV
+  protocol: auth_aes128_md5
+  obfs: tls1.2_ticket_auth
+  obfs-param: f7d23929.douyin.com
+  protocol-param: 23929:563537032
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146667
+  password: shadowsocks
   port: 443
-  server: 16.52.78.159
+  server: 173.244.56.9
   type: ss
   udp: true
-- cipher: aes-256-cfb
-  name: shadowsocks-1941951299
-  password: amazonskr05
-  port: 443
-  server: 16.54.253.154
+- cipher: aes-256-gcm
+  name: shadowsocks-1875129452
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 95.215.201.18
   type: ss
   udp: true
 - cipher: rc4-md5
-  name: shadowsocks-1870576149
+  obfs: plain
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
-  server: 98.98.79.198
+  protocol: origin
+  server: 107.151.182.253
+  type: ssr
+  name: SSR-美国-NF解锁自制剧-ChatGPT-TikTok-YouTube-107.151.182.253:8080 [4a752126a796617e]
+- cipher: rc4-md5
+  name: shadowsocks-1827963043
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 107.151.182.253
   type: ss
   udp: true
-- name: 🇺🇸US_447|1.9MB/s|B007-260618 [719341a104ed]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.163.18
-  sub_tag: B007-260618
-  type: ss
-  udp: true
-- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
-  type: wireguard
-  server: 162.159.192.3
-  port: 500
-  private-key: 2D+QMolgGWVRVGdJJvsQ4VBDCcZTym0c1sFN00PeMUs=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 213
-  - 74
-  - 19
-  mtu: 1280
-- cipher: aes-256-gcm
-  name: shadowsocks-1875129451
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.18
-  type: ss
-  udp: true
-- name: 🇺🇸US_430|1.0MB/s|A004-260618 [b62cf4f7c9b4]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.9
+- name: 🇺🇸US_115|972KB/s|A004-260618 [b98eb2cf7d3d]
+  cipher: aes-128-gcm
+  password: shadowsocks
+  port: 443
+  server: 173.244.56.9
   sub_tag: A004-260618
   type: ss
   udp: true
-- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
-  type: wireguard
-  server: 162.159.192.2
-  port: 500
-  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 39
-  - 4
-  - 107
-  mtu: 1280
-- cipher: aes-256-gcm
-  name: shadowsocks-1875022941
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.9
-  type: ss
-  udp: true
-- name: 🇨🇦CA_2|1.2MB/s|A004-260618 [1a7592edd210]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 138.197.141.58
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇨🇦CA_1|1.2MB/s|A004-260618 [3770023c3c83]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 137.184.174.93
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇺🇸US_435|1.3MB/s|C001-260618 [c9148f5355de]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.18
-  sub_tag: C001-260618
-  type: ss
-  udp: true
+- name: hysteria2-1832880232
+  password: 099830134df5ac3a04a4b21d39b8c395
+  port: 50160
+  server: 163.192.14.135
+  skip-cert-verify: true
+  sni: speedtest.tinkoff.ru
+  type: hysteria2
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - 🇺🇸US_431|1.9MB/s|A004-260618 [16f4c5e97fb4]
-  - shadowsocks-1941957292
-  - shadowsocks-1875022945
-  - shadowsocks-1875023016
-  - shadowsocks-1941957291
-  - 🇺🇸US_289|1.0MB/s|R002-260618 [c29176c7fb94]
-  - 🇺🇸US_429|1.5MB/s|A004-260618 [bd1e79add0e4]
-  - 🇺🇸 美国 | USA
-  - 🇺🇸US_421|1.6MB/s|A004-260618 [1feecb3b9b0d]
-  - us|81c2|puddincat07@Telegram
-  - shadowsocks-1941957290
-  - shadowsocks-1827146248
-  - 🇺🇸 United States/New York [GH:Mahdi0024/Pro]
-  - 🇺🇸US_66|1.9MB/s|A004-260618 [263395b13258]
-  - shadowsocks-1827146122
-  - 🇺🇸US_133|1.9MB/s|A004-260618 [40dfa7ea8e05]
-  - '🇺🇸 United States/New York [GH:Mahdi0024/Pro] #2'
-  - shadowsocks-1875023024
-  - shadowsocks-1941951313
-  - shadowsocks-1941951299
-  - shadowsocks-1870576149
-  - 🇺🇸US_447|1.9MB/s|B007-260618 [719341a104ed]
-  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
-  - shadowsocks-1875129451
-  - 🇺🇸US_430|1.0MB/s|A004-260618 [b62cf4f7c9b4]
-  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
-  - shadowsocks-1875022941
-  - 🇨🇦CA_2|1.2MB/s|A004-260618 [1a7592edd210]
-  - 🇨🇦CA_1|1.2MB/s|A004-260618 [3770023c3c83]
-  - 🇺🇸US_435|1.3MB/s|C001-260618 [c9148f5355de]
+  - 🇺🇸US_450|584KB/s|R002-260618 [c8c20681e01a]
+  - 🇺🇸US_474|616KB/s|R002-260618 [682de90470ca]
+  - 🇺🇸US_237|562KB/s|R002-260618 [5bfea617b8dd]
+  - 🇺🇸US_154|641KB/s|P002-260618 [64d55366a21c]
+  - 🇺🇸US_211|724KB/s|P002-260618 [2cca269a4ba7]
+  - 🇺🇸US_52|678KB/s|R002-260618 [430dc52727da]
+  - 🇺🇸US_292|546KB/s|P002-260618 [0002809537c4]
+  - 🇺🇸US_186|782KB/s|P002-260618 [30c40c01fb3e]
+  - 🇺🇸US_250|796KB/s|R002-260618 [073cbc5426d6]
+  - 🇺🇸US_197|873KB/s|P002-260618 [30b959b768eb]
+  - 🇺🇸US_379|625KB/s|R002-260618 [c6d38295d57b]
+  - 🇺🇸US_149|709KB/s|P002-260618 [3fb4f934a2bc]
+  - 🇺🇸US_410|329KB/s|M002-260618 [61d455c00f0f]
+  - 🇺🇸US_153|759KB/s|P002-260618 [66ebf6ae1341]
+  - 🇺🇸US_74|805KB/s|R002-260618 [670189fb9e73]
+  - trojan-1929965329
+  - hysteria2-1876844122
+  - 🇺🇸US_338|974KB/s|A004-260618 [836b9e2c1c7b]
+  - 🇺🇸US_46|213KB/s|R002-260618 [872d9174af8b]
+  - shadowsocks-1827962976
+  - 🇺🇸US_420|879KB/s|A004-260618 [d92318afee09]
+  - 🇺🇸US_160|834KB/s|P002-260618 [6bccc75a3524]
+  - 🇺🇸US_443|1002KB/s|A004-260618 [9b10e8e6bf84]
+  - 🇺🇸US_381|524KB/s|R002-260618 [97d40fd5b306]
+  - shadowsocks-1827146667
+  - shadowsocks-1875129452
+  - SSR-美国-NF解锁自制剧-ChatGPT-TikTok-YouTube-107.151.182.253:8080 [4a752126a796617e]
+  - shadowsocks-1827963043
+  - 🇺🇸US_115|972KB/s|A004-260618 [b98eb2cf7d3d]
+  - hysteria2-1832880232
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
