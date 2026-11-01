@@ -2,7 +2,7 @@
 
 GitHub Actions 每 10 分钟尝试刷新节点；实际触发时间受 GitHub 调度影响。
 精选节点按下载速度排序，境外测速不能代表实测可用性；每个订阅组最多 30 个，免费节点可能随时失效。
-本仓订阅更新时间：UTC：2026-11-01 19:14:57；北京时间：2026-11-02 03:14:57
+本仓订阅更新时间：UTC：2026-11-01 22:51:59；北京时间：2026-11-02 06:51:59
 
 ## 精选订阅
 
@@ -136,7 +136,7 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 [https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml](https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml)
 
-[chengaopan/AutoMergePublicNodes](https://github.com/chengaopan/AutoMergePublicNodes)（仓库更新：2026-11-01，Stars：8311）
+[chengaopan/AutoMergePublicNodes](https://github.com/chengaopan/AutoMergePublicNodes)（仓库更新：2026-11-01，Stars：8310）
 
 [https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes.yml](https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes.yml)
 
