@@ -4,64 +4,158 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: 🇺🇸US_269|779KB/s|P002-260618 [0448992a4efa]
-  password: 'null'
-  port: 9002
-  server: 138.199.35.206
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  username: 'null'
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146549
+  password: shadowsocks
+  port: 443
+  server: 156.146.38.170
+  type: ss
   udp: true
-- name: 🇺🇸US_170|807KB/s|R002-260618 [270506a48418]
-  port: 9002
-  server: 138.199.35.202
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146815
+  password: shadowsocks
+  port: 443
+  server: 156.146.38.168
+  type: ss
   udp: true
-- name: 🇺🇸US_361|926KB/s|A004-260618 [9b10e8e6bf84]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 95.215.201.18
+- name: 🇺🇸US_82|1.1MB/s|A004-260618 [e4bee8339fae]
+  cipher: aes-128-gcm
+  password: shadowsocks
+  port: 443
+  server: 156.146.38.167
   sub_tag: A004-260618
   type: ss
   udp: true
-- name: 🇺🇸US_52|207KB/s [518e0351a46f]
-  password: ''
-  port: 9002
-  server: 138.199.35.203
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: ''
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146131
+  password: shadowsocks
+  port: 443
+  server: 156.146.38.169
+  type: ss
   udp: true
-- name: 🇺🇸US_140|884KB/s|P002-260618 [64d55366a21c]
-  password: None
-  port: 9002
-  server: 138.199.35.205
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146556
+  password: shadowsocks
+  port: 443
+  server: 156.146.38.167
+  type: ss
   udp: true
-- name: 🇺🇸US_5|1.9MB/s
-  port: 9002
-  server: 138.199.35.200
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: 🇺🇸US_195|737KB/s|R002-260618 [024ef203ebf1]
-  port: 9002
-  server: 138.199.35.200
+- name: 🇫🇷FR_16|291KB/s|R002-260618 [a676be7daa09]
+  port: 443
+  server: 172.64.69.89
   skip-cert-verify: true
   sub_tag: R002-260618
   tls: true
   type: http
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1828227588
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 79.110.53.169
+  type: ss
+  udp: true
+- name: 🇺🇸US_39|223KB/s|A004-260618 [d92318afee09]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 79.110.54.250
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: 🇺🇸US_21|263KB/s|A004-260618 [0e40b52615aa]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 107.151.182.197
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: 🇺🇸US_303|932KB/s|A004-260618 [836b9e2c1c7b]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 107.151.182.253
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: 🇺🇸US_194|889KB/s|M003-260806 [2d3c6b97d127]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 79.110.53.169
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1827963043
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 107.151.182.253
+  type: ss
+  udp: true
+- name: hysteria2-1832765317
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  port: 33333
+  server: 155.248.209.237
+  skip-cert-verify: false
+  sni: hy2.123266.xyz
+  type: hysteria2
+- name: hysteria2-1832863516
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  port: 33333
+  server: 155.248.209.237
+  skip-cert-verify: true
+  sni: ''
+  type: hysteria2
+- name: hysteria2-1854030154
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  port: 33333
+  server: 155.248.209.237
+  skip-cert-verify: true
+  sni: 'off'
+  type: hysteria2
+- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  type: wireguard
+  server: 162.159.192.2
+  port: 500
+  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 39
+  - 4
+  - 107
+  mtu: 1280
+- name: 🇺🇸US_404|705KB/s|R002-260618 [e49a7cefc91f]
+  port: 443
+  server: 24.225.10.211
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: hysteria2-1853974956
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  port: 33333
+  server: 155.248.209.237
+  skip-cert-verify: true
+  sni: hy2.123266.xyz
+  type: hysteria2
+- cipher: rc4-md5
+  name: shadowsocks-1827147700
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.199.42.68
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146667
+  password: shadowsocks
+  port: 443
+  server: 173.244.56.9
+  type: ss
   udp: true
 - cipher: aes-256-gcm
   name: shadowsocks-1875129452
@@ -70,231 +164,106 @@ proxies:
   server: 95.215.201.18
   type: ss
   udp: true
-- name: 🇺🇸US_2|2.8MB/s
-  password: 'null'
-  port: 9002
-  server: 138.199.35.213
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: 'null'
-- name: 🇺🇸US_231|765KB/s|R002-260618 [1ac4d958cac3]
-  password: 'null'
-  port: 9002
-  server: 138.199.35.199
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  username: 'null'
-  udp: true
-- name: trojan-1929965349
-  type: trojan
-  server: 66.163.112.121
+- name: 🇺🇸US_61|2.1MB/s|A004-260618 [263395b13258]
+  cipher: aes-128-gcm
+  password: shadowsocks
   port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  sni: www.unlockyourfuturefindyourperfectcareer.com
-  network: tcp
-- name: 🇺🇸US_197|705KB/s|P002-260618 [2cca269a4ba7]
-  password: 'null'
-  port: 9002
-  server: 138.199.35.195
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  username: 'null'
-  udp: true
-- name: trojan-1935007697
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.121
-  skip-cert-verify: true
-  sni: www.unlockyourfuturefindyourperfectcareer.com
-  type: trojan
-  udp: true
-- name: 🇺🇸US_19|393KB/s|R002-260618 [edefc1e55ed7]
-  password: 'null'
-  port: 9002
-  server: 138.199.35.214
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  username: 'null'
-  udp: true
-- name: 🇺🇸US_218|676KB/s|R002-260618 [5bfea617b8dd]
-  port: 9002
-  server: 138.199.35.204
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇺🇸US_230|756KB/s|R002-260618 [073cbc5426d6]
-  port: 9002
-  server: 138.199.35.213
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: trojan-1940485907
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.242
-  skip-cert-verify: true
-  sni: 66.163.112.242
-  type: trojan
-  udp: true
-- name: trojan-1940466756
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.13
-  skip-cert-verify: true
-  sni: ''
-  type: trojan
-  udp: true
-- name: 🇺🇸US_224|761KB/s|P002-260618 [1e13e95b0e5a]
-  password: None
-  port: 9002
-  server: 138.199.35.220
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-- name: 🇺🇸US_518|932KB/s|M003-260806 [e39a40c7a978]
-  client-fingerprint: chrome
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.171
-  skip-cert-verify: false
-  sni: learn.unlockyourfuturefindyourperfectcareer.com
-  sub_tag: M003-260806
-  type: trojan
-  udp: true
-  network: tcp
-- name: trojan-1943754365
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.121
-  skip-cert-verify: true
-  sni: ''
-  type: trojan
-  udp: true
-- name: 🇺🇸US_489|968KB/s|A004-260618 [942617566953]
-  client-fingerprint: chrome
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.31
-  skip-cert-verify: false
-  sni: unlockyourfuturefindyourperfectcareer.com
+  server: 37.19.198.244
   sub_tag: A004-260618
-  type: trojan
+  type: ss
   udp: true
-- name: trojan-1935612269
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146375
+  password: shadowsocks
   port: 443
-  server: 66.163.112.242
-  skip-cert-verify: true
-  sni: api.nextjobopportunityandclaimyouridealrole.com
-  type: trojan
+  server: 173.244.56.6
+  type: ss
   udp: true
-- name: 🇺🇸US_13|3.5MB/s
-  password: None
-  port: 443
-  server: 129.153.93.183
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: trojan-1929965344
-  type: trojan
-  server: 66.163.112.76
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- cipher: aes-256-gcm
+  name: shadowsocks-1875022945
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 45.86.51.18
+  type: ss
   udp: true
-  sni: api.unlockyourfuturefindyourperfectcareer.com
-  network: tcp
-- name: trojan-1935007689
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146051
+  password: shadowsocks
   port: 443
-  server: 66.163.112.13
-  skip-cert-verify: true
-  sni: blog.unlockyourfuturefindyourperfectcareer.com
-  type: trojan
+  server: 37.19.198.243
+  type: ss
   udp: true
-- name: 🇺🇸US_461|1.0MB/s|A004-260618 [1aa20a1c60bb]
-  client-fingerprint: chrome
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- name: 🇺🇸US_101|751KB/s|A004-260618 [b98eb2cf7d3d]
+  cipher: aes-128-gcm
+  password: shadowsocks
   port: 443
-  server: 66.163.112.242
-  skip-cert-verify: false
-  sni: resources.unlockyourfuturefindyourperfectcareer.com
+  server: 173.244.56.9
   sub_tag: A004-260618
-  type: trojan
+  type: ss
   udp: true
-- name: trojan-1935007690
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.147
-  skip-cert-verify: true
-  sni: courses.unlockyourfuturefindyourperfectcareer.com
-  type: trojan
+- name: 🇺🇸US_441|578KB/s|R002-260618
+  type: ss
+  server: 103.11.76.248
+  port: 80
+  cipher: none
+  password: ODI4ZjAwZGMtNDQz
+- name: 🇺🇸US_360|1.8MB/s|A004-260618 [bd1e79add0e4]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 185.230.230.18
+  sub_tag: A004-260618
+  type: ss
   udp: true
-- name: trojan-1940466731
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.242
-  skip-cert-verify: true
-  sni: ''
-  type: trojan
+- name: 🇺🇸US_362|1.6MB/s|A004-260618 [16f4c5e97fb4]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 45.86.51.18
+  sub_tag: A004-260618
+  type: ss
   udp: true
-- name: trojan-1943754374
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.112.76
-  skip-cert-verify: true
-  sni: ''
-  type: trojan
+- cipher: aes-256-gcm
+  name: shadowsocks-1875023024
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 193.151.163.18
+  type: ss
   udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - 🇺🇸US_269|779KB/s|P002-260618 [0448992a4efa]
-  - 🇺🇸US_170|807KB/s|R002-260618 [270506a48418]
-  - 🇺🇸US_361|926KB/s|A004-260618 [9b10e8e6bf84]
-  - 🇺🇸US_52|207KB/s [518e0351a46f]
-  - 🇺🇸US_140|884KB/s|P002-260618 [64d55366a21c]
-  - 🇺🇸US_5|1.9MB/s
-  - 🇺🇸US_195|737KB/s|R002-260618 [024ef203ebf1]
+  - shadowsocks-1827146549
+  - shadowsocks-1827146815
+  - 🇺🇸US_82|1.1MB/s|A004-260618 [e4bee8339fae]
+  - shadowsocks-1827146131
+  - shadowsocks-1827146556
+  - 🇫🇷FR_16|291KB/s|R002-260618 [a676be7daa09]
+  - shadowsocks-1828227588
+  - 🇺🇸US_39|223KB/s|A004-260618 [d92318afee09]
+  - 🇺🇸US_21|263KB/s|A004-260618 [0e40b52615aa]
+  - 🇺🇸US_303|932KB/s|A004-260618 [836b9e2c1c7b]
+  - 🇺🇸US_194|889KB/s|M003-260806 [2d3c6b97d127]
+  - shadowsocks-1827963043
+  - hysteria2-1832765317
+  - hysteria2-1832863516
+  - hysteria2-1854030154
+  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  - 🇺🇸US_404|705KB/s|R002-260618 [e49a7cefc91f]
+  - hysteria2-1853974956
+  - shadowsocks-1827147700
+  - shadowsocks-1827146667
   - shadowsocks-1875129452
-  - 🇺🇸US_2|2.8MB/s
-  - 🇺🇸US_231|765KB/s|R002-260618 [1ac4d958cac3]
-  - trojan-1929965349
-  - 🇺🇸US_197|705KB/s|P002-260618 [2cca269a4ba7]
-  - trojan-1935007697
-  - 🇺🇸US_19|393KB/s|R002-260618 [edefc1e55ed7]
-  - 🇺🇸US_218|676KB/s|R002-260618 [5bfea617b8dd]
-  - 🇺🇸US_230|756KB/s|R002-260618 [073cbc5426d6]
-  - trojan-1940485907
-  - trojan-1940466756
-  - 🇺🇸US_224|761KB/s|P002-260618 [1e13e95b0e5a]
-  - 🇺🇸US_518|932KB/s|M003-260806 [e39a40c7a978]
-  - trojan-1943754365
-  - 🇺🇸US_489|968KB/s|A004-260618 [942617566953]
-  - trojan-1935612269
-  - 🇺🇸US_13|3.5MB/s
-  - trojan-1929965344
-  - trojan-1935007689
-  - 🇺🇸US_461|1.0MB/s|A004-260618 [1aa20a1c60bb]
-  - trojan-1935007690
-  - trojan-1940466731
-  - trojan-1943754374
+  - 🇺🇸US_61|2.1MB/s|A004-260618 [263395b13258]
+  - shadowsocks-1827146375
+  - shadowsocks-1875022945
+  - shadowsocks-1827146051
+  - 🇺🇸US_101|751KB/s|A004-260618 [b98eb2cf7d3d]
+  - 🇺🇸US_441|578KB/s|R002-260618
+  - 🇺🇸US_360|1.8MB/s|A004-260618 [bd1e79add0e4]
+  - 🇺🇸US_362|1.6MB/s|A004-260618 [16f4c5e97fb4]
+  - shadowsocks-1875023024
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
