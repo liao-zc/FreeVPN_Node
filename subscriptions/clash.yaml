@@ -4,24 +4,226 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: 🇫🇷FR_27|6.8MB/s|R002-260618 [39873ef4d996]
+- name: trojan-1935796418
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 172.64.68.89
+  server: 216.152.155.54
+  skip-cert-verify: true
+  sni: 216.152.155.54
+  type: trojan
+  udp: true
+- name: trojan-1934986791
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.131
+  skip-cert-verify: true
+  sni: www.nextjobopportunityandclaimyouridealrole.com
+  type: trojan
+  udp: true
+- name: 🇺🇸US_639|1.2MB/s|C002-260622 [3664e06251a3]
+  client-fingerprint: chrome
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.131
+  skip-cert-verify: true
+  sni: 216.152.155.131
+  sub_tag: C002-260622
+  type: trojan
+  udp: true
+- name: 🇺🇸US_531|1.1MB/s|A004-260618 [02626155c3aa]
+  client-fingerprint: chrome
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.59
+  skip-cert-verify: true
+  sni: api.nextjobopportunityandclaimyouridealrole.com
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
+- name: trojan-1929965348
+  type: trojan
+  server: 216.152.155.54
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: learn.nextjobopportunityandclaimyouridealrole.com
+  network: tcp
+- name: trojan-1929965352
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.59
+  skip-cert-verify: false
+  sni: api.nextjobopportunityandclaimyouridealrole.com
+  type: trojan
+  udp: true
+- name: trojan-1932466739
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.176
+  skip-cert-verify: true
+  sni: 216.152.155.176
+  type: trojan
+  udp: true
+- name: trojan-1945500801
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.131
+  skip-cert-verify: true
+  sni: 216.152.155.131
+  type: trojan
+  udp: true
+- name: trojan-1930077602
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.54
+  skip-cert-verify: true
+  sni: learn.nextjobopportunityandclaimyouridealrole.com
+  type: trojan
+  udp: true
+- name: trojan-1931858183
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.176
+  skip-cert-verify: true
+  sni: blog.nextjobopportunityandclaimyouridealrole.com
+  type: trojan
+  udp: true
+- name: 🇺🇸US_415|522KB/s|R002-260618 [f6534170d607]
+  port: 443
+  server: 193.239.236.134
   skip-cert-verify: true
   sub_tag: R002-260618
   tls: true
   type: http
   udp: true
-- name: 🇺🇸US_421|563KB/s|S004-260618 [8e961e82f369]
+- name: trojan-1929965342
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.176
+  skip-cert-verify: false
+  sni: blog.nextjobopportunityandclaimyouridealrole.com
+  type: trojan
+  udp: true
+- name: 🇺🇸US_298|907KB/s|R002-260618 [91230e8f8348]
+  port: 9443
+  server: 154.47.25.78
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: trojan-1929965342-2
+  type: trojan
+  server: 216.152.155.176
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: blog.nextjobopportunityandclaimyouridealrole.com
+  network: tcp
+- name: trojan-1929965348-2
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.54
+  skip-cert-verify: false
+  sni: learn.nextjobopportunityandclaimyouridealrole.com
+  type: trojan
+  udp: true
+- name: trojan-1931228942
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.176
+  skip-cert-verify: true
+  sni: ''
+  type: trojan
+  udp: true
+- name: 🇺🇸US_541|1007KB/s|B007-260618 [61e75f19337b]
+  client-fingerprint: chrome
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.54
+  skip-cert-verify: false
+  sni: learn.nextjobopportunityandclaimyouridealrole.com
+  sub_tag: B007-260618
+  type: trojan
+  udp: true
+  network: tcp
+- name: trojan-1929965327
+  type: trojan
+  server: 216.152.155.131
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: www.nextjobopportunityandclaimyouridealrole.com
+  network: tcp
+- name: trojan-1929965327-2
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.131
+  skip-cert-verify: false
+  sni: www.nextjobopportunityandclaimyouridealrole.com
+  type: trojan
+  udp: true
+- name: 🇺🇸US_494|1.3MB/s|C002-260622 [0db7a794c99c]
+  client-fingerprint: chrome
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.176
+  skip-cert-verify: true
+  sni: 216.152.155.176
+  sub_tag: C002-260622
+  type: trojan
+  udp: true
+- name: trojan-1936051367
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.59
+  skip-cert-verify: true
+  sni: api.nextjobopportunityandclaimyouridealrole.com
+  type: trojan
+  udp: true
+- name: trojan-1932476946
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.54
+  skip-cert-verify: true
+  sni: ''
+  type: trojan
+  udp: true
+- name: trojan-1943754366
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.131
+  skip-cert-verify: true
+  sni: ''
+  type: trojan
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | 22A83C
+  type: vmess
+  server: 104.21.7.133
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  ws-opts:
+    path: /ws?ed=2048
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: 🇺🇸US_327|589KB/s|M003-260806 [963f584c27e6]
   alpn:
   - ''
   alterId: '0'
   cipher: auto
   network: ws
   port: 80
-  server: 172.67.187.145
+  server: 104.21.7.133
   skip-cert-verify: false
-  sub_tag: S004-260618
+  sub_tag: M003-260806
   tls: false
   type: vmess
   udp: true
@@ -34,112 +236,36 @@ proxies:
     path: /ws
   xudp: true
   packet-encoding: xudp
-- name: CA 🇨🇦 | @Raydikalx | 0AD519
-  type: vmess
-  server: 172.67.187.145
-  port: 80
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
+- name: trojan-1929965352-2
+  type: trojan
+  server: 216.152.155.59
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: /ws?ed=2048
-    headers:
-      Host: vmess.lbw666.dpdns.org
+  sni: api.nextjobopportunityandclaimyouridealrole.com
+  network: tcp
 - cipher: rc4-md5
-  name: shadowsocks-1827147479
+  name: shadowsocks-1827147700
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
-  server: 137.184.174.93
+  server: 138.199.42.68
   type: ss
   udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875022992
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.9
-  type: ss
-  udp: true
-- name: 🇺🇸US_289|191KB/s|S004-260618 [be44a9b5d3bb]
+- name: 🇺🇸US_296|188KB/s|B007-260618 [960f13df6c75]
   type: vmess
-  server: 104.17.147.222
-  port: 80
+  server: 172.64.229.21
+  port: 443
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
   cipher: auto
   udp: true
-  tls: false
+  tls: true
   network: ws
   ws-opts:
     path: /ws
     headers:
       Host: vmess.lbw666.dpdns.org
-- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
-  type: wireguard
-  server: 162.159.192.2
-  port: 500
-  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 39
-  - 4
-  - 107
-  mtu: 1280
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146248
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.160
-  type: ss
-  udp: true
-- name: 🇺🇸US_421|563KB/s|S004-260618 [8e961e82f369]-2
-  type: vmess
-  server: 172.67.187.145
-  port: 80
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-- name: 🇺🇸US_508|1.4MB/s|A004-260618 [959578925c29]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.9
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇨🇦CA_5|1.3MB/s|A004-260618 [3770023c3c83]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 137.184.174.93
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146742
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.244
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146051
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.243
-  type: ss
-  udp: true
+  servername: vmess.lbw666.dpdns.org
 - cipher: aes-256-gcm
   name: shadowsocks-1875022945
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -147,163 +273,55 @@ proxies:
   server: 45.86.51.18
   type: ss
   udp: true
-- name: hysteria2-1830343753
-  password: 4291c983-c520-46ac-82cc-48f14bef573f
-  port: 35013
-  server: 129.213.91.185
-  skip-cert-verify: true
-  sni: 129.213.91.185
-  type: hysteria2
-- name: 🇺🇸US_2|2.1MB/s|A004-260618 [263395b13258]
-  cipher: aes-128-gcm
-  password: shadowsocks
+- name: CA 🇨🇦 | @Raydikalx | 8B1289
+  type: vmess
+  server: 172.64.229.21
   port: 443
-  server: 37.19.198.244
-  sub_tag: A004-260618
-  type: ss
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
   udp: true
-- name: 🇺🇸US_362|1.3MB/s|A004-260618 [16f4c5e97fb4]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 45.86.51.18
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
-  type: wireguard
-  server: 162.159.192.3
-  port: 500
-  private-key: 2D+QMolgGWVRVGdJJvsQ4VBDCcZTym0c1sFN00PeMUs=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 213
-  - 74
-  - 19
-  mtu: 1280
-- name: 🇺🇸US_498|1.5MB/s|B007-260618 [54f449a1b321]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.18
-  sub_tag: B007-260618
-  type: ss
-  udp: true
-- name: 🇺🇸US_356|895KB/s|A004-260618 [d92318afee09]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.54.250
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: US
-  type: ss
-  server: 38.145.220.193
-  port: 8443
-  cipher: 2022-blake3-aes-128-gcm
-  password: jUbDNsFamcyDfpm+rI3Zyw==
-- cipher: rc4-md5
-  name: shadowsocks-1870576345
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.54.250
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875023047
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.18
-  type: ss
-  udp: true
-- name: 🇺🇸US_365|1.3MB/s|C001-260618 [c9148f5355de]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.18
-  sub_tag: C001-260618
-  type: ss
-  udp: true
-- name: 🇺🇸US_736|106KB/s|M003-260806 [d7cc2a8da257]
-  cipher: chacha20-ietf-poly1305
-  password: DZRy4Q3QH0jUGfKFl2jDCZ
-  port: 28960
-  server: 138.197.89.234
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875023016
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.230.230.18
-  type: ss
-  udp: true
-- name: 🇺🇸US_360|1.9MB/s|A004-260618 [bd1e79add0e4]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.230.230.18
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: US-2
-  type: ss
-  server: 96.45.186.114
-  port: 8443
-  cipher: chacha20-ietf-poly1305
-  password: SScN2QK7mR9pV4xH
-- cipher: rc4-md5
-  name: shadowsocks-1827962976
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.151.182.197
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875129451
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.160.18
-  type: ss
-  udp: true
+  tls: true
+  network: ws
+  ws-opts:
+    path: /ws?ed=2048
+    headers:
+      Host: vmess.lbw666.dpdns.org
+  servername: vmess.lbw666.dpdns.org
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - 🇫🇷FR_27|6.8MB/s|R002-260618 [39873ef4d996]
-  - 🇺🇸US_421|563KB/s|S004-260618 [8e961e82f369]
-  - CA 🇨🇦 | @Raydikalx | 0AD519
-  - shadowsocks-1827147479
-  - shadowsocks-1875022992
-  - 🇺🇸US_289|191KB/s|S004-260618 [be44a9b5d3bb]
-  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
-  - shadowsocks-1827146248
-  - 🇺🇸US_421|563KB/s|S004-260618 [8e961e82f369]-2
-  - 🇺🇸US_508|1.4MB/s|A004-260618 [959578925c29]
-  - 🇨🇦CA_5|1.3MB/s|A004-260618 [3770023c3c83]
-  - shadowsocks-1827146742
-  - shadowsocks-1827146051
+  - trojan-1935796418
+  - trojan-1934986791
+  - 🇺🇸US_639|1.2MB/s|C002-260622 [3664e06251a3]
+  - 🇺🇸US_531|1.1MB/s|A004-260618 [02626155c3aa]
+  - trojan-1929965348
+  - trojan-1929965352
+  - trojan-1932466739
+  - trojan-1945500801
+  - trojan-1930077602
+  - trojan-1931858183
+  - 🇺🇸US_415|522KB/s|R002-260618 [f6534170d607]
+  - trojan-1929965342
+  - 🇺🇸US_298|907KB/s|R002-260618 [91230e8f8348]
+  - trojan-1929965342-2
+  - trojan-1929965348-2
+  - trojan-1931228942
+  - 🇺🇸US_541|1007KB/s|B007-260618 [61e75f19337b]
+  - trojan-1929965327
+  - trojan-1929965327-2
+  - 🇺🇸US_494|1.3MB/s|C002-260622 [0db7a794c99c]
+  - trojan-1936051367
+  - trojan-1932476946
+  - trojan-1943754366
+  - CA 🇨🇦 | @Raydikalx | 22A83C
+  - 🇺🇸US_327|589KB/s|M003-260806 [963f584c27e6]
+  - trojan-1929965352-2
+  - shadowsocks-1827147700
+  - 🇺🇸US_296|188KB/s|B007-260618 [960f13df6c75]
   - shadowsocks-1875022945
-  - hysteria2-1830343753
-  - 🇺🇸US_2|2.1MB/s|A004-260618 [263395b13258]
-  - 🇺🇸US_362|1.3MB/s|A004-260618 [16f4c5e97fb4]
-  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
-  - 🇺🇸US_498|1.5MB/s|B007-260618 [54f449a1b321]
-  - 🇺🇸US_356|895KB/s|A004-260618 [d92318afee09]
-  - US
-  - shadowsocks-1870576345
-  - shadowsocks-1875023047
-  - 🇺🇸US_365|1.3MB/s|C001-260618 [c9148f5355de]
-  - 🇺🇸US_736|106KB/s|M003-260806 [d7cc2a8da257]
-  - shadowsocks-1875023016
-  - 🇺🇸US_360|1.9MB/s|A004-260618 [bd1e79add0e4]
-  - US-2
-  - shadowsocks-1827962976
-  - shadowsocks-1875129451
+  - CA 🇨🇦 | @Raydikalx | 8B1289
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
