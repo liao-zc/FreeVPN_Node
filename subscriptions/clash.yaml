@@ -4,21 +4,42 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146549
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.170
+- name: 🇺🇸US_650|1.5MB/s|M003-260806 [34b27eebfe6b]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 38.128.66.32
+  sub_tag: M003-260806
   type: ss
   udp: true
-- name: 🇺🇸US_40|1.2MB/s|A004-260618 [e4bee8339fae]
+- name: 🇫🇷FR_20|7.3MB/s|R002-260618 [39873ef4d996]
+  port: 443
+  server: 172.64.68.89
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: '🇺🇸 美国 | USA #1'
+  type: ss
+  server: 66.23.203.19
+  port: 19690
   cipher: aes-128-gcm
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.167
-  sub_tag: A004-260618
+  password: 4e501338a6c03d7626f2fa0e09ed66d6
+- name: 🇺🇸US_713|1.5MB/s|M003-260806 [9d7e585e7efa]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 67.220.73.178
+  sub_tag: M003-260806
   type: ss
   udp: true
+- name: 🇺🇸US_713|1.5MB/s|M003-260806 [9d7e585e7efa]-2
+  type: ss
+  server: 67.220.73.178
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - cipher: aes-128-gcm
   name: shadowsocks-1827146131
   password: shadowsocks
@@ -26,14 +47,57 @@ proxies:
   server: 156.146.38.169
   type: ss
   udp: true
-- name: 🇺🇸US_689|1.3MB/s|M003-260806 [419de83657da]
+- name: 🇺🇸US_636|1.2MB/s|M003-260806 [90e08528a10b]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.88.62.56
+  server: 167.17.67.171
   sub_tag: M003-260806
   type: ss
   udp: true
+- name: 🇺🇸US_656|1.3MB/s|M003-260806 [c778053e3664]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 38.64.138.135
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- name: 🇺🇸US_636|1.2MB/s|M003-260806 [90e08528a10b]-2
+  type: ss
+  server: 167.17.67.171
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US_71|524KB/s|A004-260618 [e4bee8339fae]
+  cipher: aes-128-gcm
+  password: shadowsocks
+  port: 443
+  server: 156.146.38.167
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1827147700
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.199.42.68
+  type: ss
+  udp: true
+- name: 🇫🇷FR_22|7.5MB/s|R002-260618 [a676be7daa09]
+  port: 443
+  server: 172.64.69.89
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: '🇺🇸[www.v2nodes.com] ss-US-1616... #5'
+  type: ss
+  server: 167.88.62.203
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - cipher: aes-128-gcm
   name: shadowsocks-1827146556
   password: shadowsocks
@@ -41,230 +105,160 @@ proxies:
   server: 156.146.38.167
   type: ss
   udp: true
-- name: 🇺🇸US_687|1.3MB/s|M003-260806 [90e08528a10b]
-  type: ss
-  server: 167.17.67.171
-  port: 19999
+- name: 🇺🇸US_637|1.3MB/s|M003-260806 [5762fa2cd8d3]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: '🏳[www.v2nodes.com] ss- #16'
-  type: ss
+  port: 19999
   server: 167.88.62.203
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US_689|1.3MB/s|M003-260806 [419de83657da]-2
+  sub_tag: M003-260806
   type: ss
-  server: 167.88.62.56
-  port: 19999
+  udp: true
+- name: 🇺🇸US_645|1.5MB/s|M003-260806 [806a2a37cd9c]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- ip: 172.16.0.2/32
-  keepalive: '5'
-  mtu: 1280
-  persistent-keepalive: '5'
-  port: 2408
-  private-key: oDBa7PDoBqN5gYRO5pL59noH6dQpXt40AETlDNlNtl8=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 121
-  - 1
-  - 112
-  server: 162.159.192.2
+  port: 19999
+  server: 216.106.178.169
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
   type: wireguard
+  server: 162.159.192.3
+  port: 500
+  private-key: 2D+QMolgGWVRVGdJJvsQ4VBDCcZTym0c1sFN00PeMUs=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
   udp: true
-  wnoise: quic
-  wnoisecount: '5'
-  wnoisedelay: '5'
-  wpayloadsize: 40-90
-  name: 🇨🇳CN_1|1.9MB/s [3dfd3922efc41c9f]
-- name: 🇺🇸US_688|932KB/s|M003-260806 [5762fa2cd8d3]
+  reserved:
+  - 213
+  - 74
+  - 19
+  mtu: 1280
+- name: 🇺🇸US_650|1.5MB/s|M003-260806 [34b27eebfe6b]-2
+  type: ss
+  server: 38.128.66.32
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146122
+  password: shadowsocks
+  port: 443
+  server: 37.19.198.236
+  type: ss
+  udp: true
+- name: 🇺🇸US_656|1.3MB/s|M003-260806 [c778053e3664]-2
+  type: ss
+  server: 38.64.138.135
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: '🇺🇸[www.v2nodes.com] ss-US-1615... #4'
+  type: ss
+  server: 216.106.178.169
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US_106|2.1MB/s|A004-260618 [40dfa7ea8e05]
+  cipher: aes-128-gcm
+  password: shadowsocks
+  port: 443
+  server: 37.19.198.236
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1827147479
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 137.184.174.93
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146248
+  password: shadowsocks
+  port: 443
+  server: 37.19.198.160
+  type: ss
+  udp: true
+- name: 🇺🇸US_307|1.8MB/s|A004-260618 [bd1e79add0e4]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.88.62.203
+  server: 185.230.230.18
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: 🇺🇸US_654|1.3MB/s|M003-260806 [22a28303568f]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 38.22.17.214
   sub_tag: M003-260806
   type: ss
   udp: true
-- name: 🇺🇸US_685|1.4MB/s|M003-260806 [977f13b2be70]
+- cipher: rc4-md5
+  name: shadowsocks-1827964140
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.197.141.58
+  type: ss
+  udp: true
+- name: 🇺🇸US_649|797KB/s|M003-260806 [cc280f2651db]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 149.40.57.138
+  server: 38.121.43.231
   sub_tag: M003-260806
   type: ss
   udp: true
-- name: '🏳[www.v2nodes.com] ss- #20'
+- name: 🇺🇸US_644|1.8MB/s|M003-260806 [f6d8f9688b2e]
   type: ss
-  server: 149.40.57.133
+  server: 172.111.38.72
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US_681|1.5MB/s|S004-260618 [6e6fc41e104d]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 149.40.57.134
-  sub_tag: S004-260618
-  type: ss
-  udp: true
-- name: '🇺🇸[www.v2nodes.com] ss-US-1616... #1'
-  type: ss
-  server: 38.145.220.193
-  port: 8443
-  cipher: 2022-blake3-aes-128-gcm
-  password: jUbDNsFamcyDfpm+rI3Zyw==
-- name: 🇺🇸US_590|1.4MB/s|M003-260806
+- name: 🇺🇸US_492|1.8MB/s|M003-260806
   type: hysteria2
   server: 6312058b-tmm5c0-tubliy-1la7v.los.hyhuawei.com
   port: 443
   password: 460749c2-bcef-11ee-89fc-f23c913c8d2b
   udp: true
   sni: 6312058b-tmm5c0-tubliy-1la7v.los.hyhuawei.com
-- name: 🇺🇸US_681|1.5MB/s|S004-260618 [6e6fc41e104d]-2
-  type: ss
-  server: 149.40.57.134
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- password: 203d1d64-3313-11ed-bb74-f23c9164ca5d
-  port: 443
-  server: fbe34f09-tmm5c0-trpvht-1ey07.los.hyhuawei.com
-  skip-cert-verify: true
-  sni: fbe34f09-tmm5c0-trpvht-1ey07.los.hyhuawei.com
-  tls: false
-  type: hysteria2
-  name: 🧿100@oneclickvpnkeys [7dea2455ca0b1c8f]
-- name: 🇺🇸US_240|968KB/s|M003-260806 [2d3c6b97d127]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.53.169
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- name: 🇺🇸US_684|1.4MB/s|M003-260806 [eaf21bfcadd2]
-  type: ss
-  server: 149.40.57.135
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146375
-  password: shadowsocks
-  port: 443
-  server: 173.244.56.6
-  type: ss
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146667
-  password: shadowsocks
-  port: 443
-  server: 173.244.56.9
-  type: ss
-  udp: true
-- name: 🇺🇸US_292|925KB/s|A004-260618 [836b9e2c1c7b]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.151.182.253
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇺🇸US_684|1.4MB/s|M003-260806 [eaf21bfcadd2]-2
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 149.40.57.135
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- name: 🇺🇸US_356|895KB/s|A004-260618 [d92318afee09]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.54.250
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🧿98@oneclickvpnkeys
-  type: hysteria2
-  server: 0b28dbb8-tmm5c0-tn3jhp-1qthu.los.hyhuawei.com
-  port: 443
-  password: 8fa4bea0-8703-11ef-83cc-f23c913c8d2b
-  udp: true
-  sni: 0b28dbb8-tmm5c0-tn3jhp-1qthu.los.hyhuawei.com
-- cipher: aes-256-gcm
-  name: shadowsocks-1875022992
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.9
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1827963043
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.151.182.253
-  type: ss
-  udp: true
-- name: 🇺🇸US_217|847KB/s|A004-260618 [0e40b52615aa]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.151.182.197
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇺🇸US_699|1.4MB/s|M003-260806 [58b1401f06ff]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 38.121.43.225
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1828227588
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 79.110.53.169
-  type: ss
-  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - shadowsocks-1827146549
-  - 🇺🇸US_40|1.2MB/s|A004-260618 [e4bee8339fae]
+  - 🇺🇸US_650|1.5MB/s|M003-260806 [34b27eebfe6b]
+  - 🇫🇷FR_20|7.3MB/s|R002-260618 [39873ef4d996]
+  - '🇺🇸 美国 | USA #1'
+  - 🇺🇸US_713|1.5MB/s|M003-260806 [9d7e585e7efa]
+  - 🇺🇸US_713|1.5MB/s|M003-260806 [9d7e585e7efa]-2
   - shadowsocks-1827146131
-  - 🇺🇸US_689|1.3MB/s|M003-260806 [419de83657da]
+  - 🇺🇸US_636|1.2MB/s|M003-260806 [90e08528a10b]
+  - 🇺🇸US_656|1.3MB/s|M003-260806 [c778053e3664]
+  - 🇺🇸US_636|1.2MB/s|M003-260806 [90e08528a10b]-2
+  - 🇺🇸US_71|524KB/s|A004-260618 [e4bee8339fae]
+  - shadowsocks-1827147700
+  - 🇫🇷FR_22|7.5MB/s|R002-260618 [a676be7daa09]
+  - '🇺🇸[www.v2nodes.com] ss-US-1616... #5'
   - shadowsocks-1827146556
-  - 🇺🇸US_687|1.3MB/s|M003-260806 [90e08528a10b]
-  - '🏳[www.v2nodes.com] ss- #16'
-  - 🇺🇸US_689|1.3MB/s|M003-260806 [419de83657da]-2
-  - 🇨🇳CN_1|1.9MB/s [3dfd3922efc41c9f]
-  - 🇺🇸US_688|932KB/s|M003-260806 [5762fa2cd8d3]
-  - 🇺🇸US_685|1.4MB/s|M003-260806 [977f13b2be70]
-  - '🏳[www.v2nodes.com] ss- #20'
-  - 🇺🇸US_681|1.5MB/s|S004-260618 [6e6fc41e104d]
-  - '🇺🇸[www.v2nodes.com] ss-US-1616... #1'
-  - 🇺🇸US_590|1.4MB/s|M003-260806
-  - 🇺🇸US_681|1.5MB/s|S004-260618 [6e6fc41e104d]-2
-  - 🧿100@oneclickvpnkeys [7dea2455ca0b1c8f]
-  - 🇺🇸US_240|968KB/s|M003-260806 [2d3c6b97d127]
-  - 🇺🇸US_684|1.4MB/s|M003-260806 [eaf21bfcadd2]
-  - shadowsocks-1827146375
-  - shadowsocks-1827146667
-  - 🇺🇸US_292|925KB/s|A004-260618 [836b9e2c1c7b]
-  - 🇺🇸US_684|1.4MB/s|M003-260806 [eaf21bfcadd2]-2
-  - 🇺🇸US_356|895KB/s|A004-260618 [d92318afee09]
-  - 🧿98@oneclickvpnkeys
-  - shadowsocks-1875022992
-  - shadowsocks-1827963043
-  - 🇺🇸US_217|847KB/s|A004-260618 [0e40b52615aa]
-  - 🇺🇸US_699|1.4MB/s|M003-260806 [58b1401f06ff]
-  - shadowsocks-1828227588
+  - 🇺🇸US_637|1.3MB/s|M003-260806 [5762fa2cd8d3]
+  - 🇺🇸US_645|1.5MB/s|M003-260806 [806a2a37cd9c]
+  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  - 🇺🇸US_650|1.5MB/s|M003-260806 [34b27eebfe6b]-2
+  - shadowsocks-1827146122
+  - 🇺🇸US_656|1.3MB/s|M003-260806 [c778053e3664]-2
+  - '🇺🇸[www.v2nodes.com] ss-US-1615... #4'
+  - 🇺🇸US_106|2.1MB/s|A004-260618 [40dfa7ea8e05]
+  - shadowsocks-1827147479
+  - shadowsocks-1827146248
+  - 🇺🇸US_307|1.8MB/s|A004-260618 [bd1e79add0e4]
+  - 🇺🇸US_654|1.3MB/s|M003-260806 [22a28303568f]
+  - shadowsocks-1827964140
+  - 🇺🇸US_649|797KB/s|M003-260806 [cc280f2651db]
+  - 🇺🇸US_644|1.8MB/s|M003-260806 [f6d8f9688b2e]
+  - 🇺🇸US_492|1.8MB/s|M003-260806
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
