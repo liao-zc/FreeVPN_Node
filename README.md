@@ -2,7 +2,7 @@
 
 GitHub Actions 每 10 分钟尝试刷新节点；实际触发时间受 GitHub 调度影响。
 精选节点按下载速度排序，境外测速不能代表实测可用性；每个订阅组最多 30 个，免费节点可能随时失效。
-本仓订阅更新时间：UTC：2026-11-10 18:54:19；北京时间：2026-11-11 02:54:19
+本仓订阅更新时间：UTC：2026-11-10 23:50:27；北京时间：2026-11-11 07:50:27
 
 ## 精选订阅
 
@@ -132,7 +132,7 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 ## 其他仓最近一周更新的订阅入口
 
-[free-nodes/clashfree](https://github.com/free-nodes/clashfree)（仓库更新：2026-11-10，Stars：17259）
+[free-nodes/clashfree](https://github.com/free-nodes/clashfree)（仓库更新：2026-11-10，Stars：17258）
 
 [https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml](https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml)
 
@@ -144,7 +144,7 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 [https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes_CA.yml](https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes_CA.yml)
 
-[proxifly/free-proxy-list](https://github.com/proxifly/free-proxy-list)（仓库更新：2026-11-10，Stars：7034）
+[proxifly/free-proxy-list](https://github.com/proxifly/free-proxy-list)（仓库更新：2026-11-10，Stars：7035）
 
 [https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.txt](https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.txt)
 
@@ -182,7 +182,7 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 [https://raw.githubusercontent.com/ts-sf/fly/main/v2](https://raw.githubusercontent.com/ts-sf/fly/main/v2)
 
-[ermaozi01/free_clash_vpn](https://github.com/ermaozi01/free_clash_vpn)（仓库更新：2026-11-10，Stars：832）
+[ermaozi01/free_clash_vpn](https://github.com/ermaozi01/free_clash_vpn)（仓库更新：2026-11-10，Stars：831）
 
 [https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml](https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml)
 
