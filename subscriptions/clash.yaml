@@ -4,14 +4,60 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: 🇺🇸US_505|523KB/s|R002-260618 [13dede6e3b21]
+- type: trojan
+  name: 🇺🇸_美国 (47)
+  server: 216.106.186.46
   port: 443
-  server: 149.22.88.65
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
+  tls: true
+  servername: cdn.findlocaljobnetworkandbuildcommunityconnections.com
+  sni: cdn.findlocaljobnetworkandbuildcommunityconnections.com
+  skip-cert-verify: true
+- name: 🇨🇳CN_2|2.1MB/s [01db3f4c9b4042c3]
+  type: wireguard
+  server: 162.159.192.11
+  port: 3581
+  private-key: 2FaqTm+aXdVK00dvbeuMW/t741BWYu9lNOOVtMI4R3Y=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 80
+  - 103
+  - 64
+  mtu: 1380
+- name: US
+  type: trojan
+  server: 216.106.186.66
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: www.findlocaljobnetworkandbuildcommunityconnections.com
+  network: tcp
+- name: 🇺🇸US_600|270KB/s|M003-260806 [8741a1f6093f]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 38.143.66.146
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1827963904
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.199.43.159
+  type: ss
+  udp: true
+- name: 🇺🇸_美国 (47)-2
+  type: trojan
+  server: 216.106.186.46
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: cdn.findlocaljobnetworkandbuildcommunityconnections.com
+  network: tcp
 - name: 🇨🇳CN_4|3.3MB/s [423ca150cdc82b3c]
   type: wireguard
   server: 162.159.192.5
@@ -25,41 +71,14 @@ proxies:
   - 85
   - 82
   mtu: 1280
-- name: 🇺🇸US_600|270KB/s|M003-260806 [8741a1f6093f]
-  type: ss
-  server: 38.143.66.146
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷FR_17|5.7MB/s|R002-260618 [39873ef4d996]
+- name: trojan-1926289807
+  password: 242a3d8eee5e4ed1a6bfa4141d549a25
   port: 443
-  server: 172.64.68.89
+  server: 216.106.186.66
   skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
+  sni: www.findlocaljobnetworkandbuildcommunityconnections.com
+  type: trojan
   udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1827963904
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 138.199.43.159
-  type: ss
-  udp: true
-- name: 🇺🇸US_600|270KB/s|M003-260806 [8741a1f6093f]-2
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 38.143.66.146
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- name: 🇩🇪DE_5|2.8MB/s
-  port: 443
-  server: 172.64.69.89
-  skip-cert-verify: true
-  tls: true
-  type: http
 - name: ❓Other_1|743KB/s|A004-260618 [19fe6b7745cb]
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
@@ -68,33 +87,56 @@ proxies:
   sub_tag: A004-260618
   type: ss
   udp: true
-- name: 🇩🇪DE_6|3.9MB/s
-  password: None
+- name: 🇺🇸US_600|270KB/s|M003-260806 [8741a1f6093f]-2
+  type: ss
+  server: 38.143.66.146
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: hysteria2-1832764823
+  password: gf1:gfhysteria2024
   port: 443
-  server: 172.64.68.89
+  server: 66.94.121.46
   skip-cert-verify: true
-  tls: true
-  type: http
-- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  sni: www.broadcom.com
+  type: hysteria2
+- ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8e4e:939b:b987:39aa:c46c/128
+  mtu: 1280
+  port: 955
+  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  reserved:
+  - 0
+  - 0
+  - 0
+  server: 8.6.112.100
   type: wireguard
-  server: 162.159.192.2
-  port: 500
-  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
+  udp: true
+  name: 🇨🇳CN_1|1.3MB/s [86a34bc6bc368888]
+- type: trojan
+  name: 🇺🇸_美国 (33)
+  server: 216.106.186.66
+  port: 443
+  password: 242a3d8eee5e4ed1a6bfa4141d549a25
+  udp: true
+  tls: true
+  servername: www.findlocaljobnetworkandbuildcommunityconnections.com
+  sni: www.findlocaljobnetworkandbuildcommunityconnections.com
+  skip-cert-verify: true
+- name: 🇨🇳CN_1|1.3MB/s [86a34bc6bc368888]-2
+  type: wireguard
+  server: 8.6.112.100
+  port: 955
+  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   ip: 172.16.0.2/32
   udp: true
   reserved:
-  - 39
-  - 4
-  - 107
+  - 0
+  - 0
+  - 0
   mtu: 1280
-- name: 🇺🇸US_703|1.5MB/s|M003-260806
-  type: hysteria2
-  server: 64.32.13.230
-  port: 443
-  password: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
-  udp: true
-  sni: 9df552ab-tmkao0-u1vxv2-v3c2.los.hyhuawei.com
 - ip: 172.16.0.2/32
   keepalive: '5'
   mtu: 1280
@@ -114,85 +156,6 @@ proxies:
   wnoisedelay: '5'
   wpayloadsize: 40-90
   name: 🇨🇳CN_3|2.4MB/s [a5d5f61f110a98f1]
-- ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8e4e:939b:b987:39aa:c46c/128
-  mtu: 1280
-  port: 955
-  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 0
-  - 0
-  - 0
-  server: 8.6.112.100
-  type: wireguard
-  udp: true
-  name: 🇨🇳CN_1|1.3MB/s [86a34bc6bc368888]
-- name: 🇫🇷FR_18|2.2MB/s|R002-260618 [a676be7daa09]
-  port: 443
-  server: 172.64.69.89
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
-  type: wireguard
-  server: 162.159.192.3
-  port: 500
-  private-key: 2D+QMolgGWVRVGdJJvsQ4VBDCcZTym0c1sFN00PeMUs=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 213
-  - 74
-  - 19
-  mtu: 1280
-- name: 🇺🇸US_168|923KB/s|M003-260806 [112d3ee5d9f2]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.155.57.51
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- name: hysteria2-1832764823
-  password: gf1:gfhysteria2024
-  port: 443
-  server: 66.94.121.46
-  skip-cert-verify: true
-  sni: www.broadcom.com
-  type: hysteria2
-- name: 🇺🇸US_591|974KB/s|M003-260806 [424fefd765d4]
-  type: ss
-  server: 169.197.142.68
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US_591|974KB/s|M003-260806 [424fefd765d4]-2
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 169.197.142.68
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1827969041
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 23.251.121.242
-  type: ss
-  udp: true
-- name: 🇺🇸US_510|1.0MB/s|A004-260618 [1e322fe84850]
-  cipher: chacha20-ietf-poly1305
-  password: 456c497e-02bc-4b46-883f-06747cabdfbd
-  port: 2096
-  server: 107.172.219.230
-  sub_tag: A004-260618
-  type: ss
-  udp: true
 - name: 🇨🇳CN_3|2.4MB/s [a5d5f61f110a98f1]-2
   type: wireguard
   server: 162.159.192.6
@@ -206,6 +169,25 @@ proxies:
   - 166
   - 252
   mtu: 1280
+- name: 🇺🇸US_419|859KB/s|M003-260806 [012980e5465f]
+  client-fingerprint: chrome
+  password: 242a3d8eee5e4ed1a6bfa4141d549a25
+  port: 443
+  server: 216.106.186.66
+  skip-cert-verify: true
+  sni: www.findlocaljobnetworkandbuildcommunityconnections.com
+  sub_tag: M003-260806
+  type: trojan
+  udp: true
+  network: tcp
+- name: trojan-1927191078
+  password: 242a3d8eee5e4ed1a6bfa4141d549a25
+  port: 443
+  server: 216.106.186.66
+  skip-cert-verify: false
+  sni: www.findlocaljobnetworkandbuildcommunityconnections.com
+  type: trojan
+  udp: true
 - ip: 172.16.0.2/32
   keepalive: '5'
   mtu: 1280
@@ -225,33 +207,70 @@ proxies:
   wnoisedelay: '5'
   wpayloadsize: 40-90
   name: 🇨🇳CN_4|3.3MB/s [423ca150cdc82b3c]-2
-- name: 🇺🇸US_169|958KB/s|M003-260806 [6364b2c615d5]
+- ip: 172.16.0.2/32
+  mtu: 1380
+  port: 3581
+  presharedkey: ''
+  private-key: 2FaqTm+aXdVK00dvbeuMW/t741BWYu9lNOOVtMI4R3Y=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  reserved:
+  - 80
+  - 103
+  - 64
+  server: 162.159.192.11
+  type: wireguard
+  udp: true
+  name: 🇨🇳CN_2|2.1MB/s [01db3f4c9b4042c3]-2
+- name: 🇺🇸US_168|923KB/s|M003-260806 [112d3ee5d9f2]
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
-  server: 23.251.121.242
+  server: 107.155.57.51
   sub_tag: M003-260806
   type: ss
   udp: true
-- name: 🇺🇸US_595|1.1MB/s|M003-260806 [37b95c07165e]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 23.150.152.38
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- name: US
+- name: US-2
   type: ss
   server: 38.145.220.193
   port: 8443
   cipher: 2022-blake3-aes-128-gcm
   password: jUbDNsFamcyDfpm+rI3Zyw==
+- name: 🇺🇸US_580|899KB/s|M003-260806 [3de23dd74123]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 137.184.89.151
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1870576345
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 79.110.54.250
+  type: ss
+  udp: true
 - cipher: rc4-md5
   name: shadowsocks-1827963676
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 107.155.57.51
+  type: ss
+  udp: true
+- name: 🇺🇸US_277|860KB/s|A004-260618 [d92318afee09]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 79.110.54.250
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: 🇺🇸US_591|974KB/s|M003-260806 [424fefd765d4]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 169.197.142.68
+  sub_tag: M003-260806
   type: ss
   udp: true
 - cipher: rc4-md5
@@ -261,54 +280,55 @@ proxies:
   server: 107.155.57.11
   type: ss
   udp: true
-- name: hysteria2-1832863516
-  password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  port: 33333
-  server: 155.248.209.237
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria2
-- name: hysteria2-1832765317
-  password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  port: 33333
-  server: 155.248.209.237
-  skip-cert-verify: false
-  sni: hy2.123266.xyz
-  type: hysteria2
+- cipher: rc4-md5
+  name: shadowsocks-1827969041
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 23.251.121.242
+  type: ss
+  udp: true
+- name: 🇺🇸US_207|960KB/s|M003-260806 [2d3c6b97d127]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 79.110.53.169
+  sub_tag: M003-260806
+  type: ss
+  udp: true
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - 🇺🇸US_505|523KB/s|R002-260618 [13dede6e3b21]
-  - 🇨🇳CN_4|3.3MB/s [423ca150cdc82b3c]
-  - 🇺🇸US_600|270KB/s|M003-260806 [8741a1f6093f]
-  - 🇫🇷FR_17|5.7MB/s|R002-260618 [39873ef4d996]
-  - shadowsocks-1827963904
-  - 🇺🇸US_600|270KB/s|M003-260806 [8741a1f6093f]-2
-  - 🇩🇪DE_5|2.8MB/s
-  - ❓Other_1|743KB/s|A004-260618 [19fe6b7745cb]
-  - 🇩🇪DE_6|3.9MB/s
-  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
-  - 🇺🇸US_703|1.5MB/s|M003-260806
-  - 🇨🇳CN_3|2.4MB/s [a5d5f61f110a98f1]
-  - 🇨🇳CN_1|1.3MB/s [86a34bc6bc368888]
-  - 🇫🇷FR_18|2.2MB/s|R002-260618 [a676be7daa09]
-  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
-  - 🇺🇸US_168|923KB/s|M003-260806 [112d3ee5d9f2]
-  - hysteria2-1832764823
-  - 🇺🇸US_591|974KB/s|M003-260806 [424fefd765d4]
-  - 🇺🇸US_591|974KB/s|M003-260806 [424fefd765d4]-2
-  - shadowsocks-1827969041
-  - 🇺🇸US_510|1.0MB/s|A004-260618 [1e322fe84850]
-  - 🇨🇳CN_3|2.4MB/s [a5d5f61f110a98f1]-2
-  - 🇨🇳CN_4|3.3MB/s [423ca150cdc82b3c]-2
-  - 🇺🇸US_169|958KB/s|M003-260806 [6364b2c615d5]
-  - 🇺🇸US_595|1.1MB/s|M003-260806 [37b95c07165e]
+  - 🇺🇸_美国 (47)
+  - 🇨🇳CN_2|2.1MB/s [01db3f4c9b4042c3]
   - US
+  - 🇺🇸US_600|270KB/s|M003-260806 [8741a1f6093f]
+  - shadowsocks-1827963904
+  - 🇺🇸_美国 (47)-2
+  - 🇨🇳CN_4|3.3MB/s [423ca150cdc82b3c]
+  - trojan-1926289807
+  - ❓Other_1|743KB/s|A004-260618 [19fe6b7745cb]
+  - 🇺🇸US_600|270KB/s|M003-260806 [8741a1f6093f]-2
+  - hysteria2-1832764823
+  - 🇨🇳CN_1|1.3MB/s [86a34bc6bc368888]
+  - 🇺🇸_美国 (33)
+  - 🇨🇳CN_1|1.3MB/s [86a34bc6bc368888]-2
+  - 🇨🇳CN_3|2.4MB/s [a5d5f61f110a98f1]
+  - 🇨🇳CN_3|2.4MB/s [a5d5f61f110a98f1]-2
+  - 🇺🇸US_419|859KB/s|M003-260806 [012980e5465f]
+  - trojan-1927191078
+  - 🇨🇳CN_4|3.3MB/s [423ca150cdc82b3c]-2
+  - 🇨🇳CN_2|2.1MB/s [01db3f4c9b4042c3]-2
+  - 🇺🇸US_168|923KB/s|M003-260806 [112d3ee5d9f2]
+  - US-2
+  - 🇺🇸US_580|899KB/s|M003-260806 [3de23dd74123]
+  - shadowsocks-1870576345
   - shadowsocks-1827963676
+  - 🇺🇸US_277|860KB/s|A004-260618 [d92318afee09]
+  - 🇺🇸US_591|974KB/s|M003-260806 [424fefd765d4]
   - shadowsocks-1827963705
-  - hysteria2-1832863516
-  - hysteria2-1832765317
+  - shadowsocks-1827969041
+  - 🇺🇸US_207|960KB/s|M003-260806 [2d3c6b97d127]
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:

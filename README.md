@@ -2,7 +2,7 @@
 
 GitHub Actions 每 10 分钟尝试刷新节点；实际触发时间受 GitHub 调度影响。
 精选节点按下载速度排序，境外测速不能代表实测可用性；每个订阅组最多 30 个，免费节点可能随时失效。
-本仓订阅更新时间：UTC：2026-11-12 07:45:20；北京时间：2026-11-12 15:45:20
+本仓订阅更新时间：UTC：2026-11-12 16:24:26；北京时间：2026-11-13 00:24:26
 
 ## 精选订阅
 
@@ -132,11 +132,11 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 ## 其他仓最近一周更新的订阅入口
 
-[free-nodes/clashfree](https://github.com/free-nodes/clashfree)（仓库更新：2026-11-11，Stars：17275）
+[free-nodes/clashfree](https://github.com/free-nodes/clashfree)（仓库更新：2026-11-12，Stars：17287）
 
 [https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml](https://raw.githubusercontent.com/free-nodes/clashfree/main/sub.yml)
 
-[chengaopan/AutoMergePublicNodes](https://github.com/chengaopan/AutoMergePublicNodes)（仓库更新：2026-11-12，Stars：8376）
+[chengaopan/AutoMergePublicNodes](https://github.com/chengaopan/AutoMergePublicNodes)（仓库更新：2026-11-12，Stars：8377）
 
 [https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes.yml](https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes.yml)
 
@@ -152,7 +152,7 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 [https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.yaml](https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.yaml)
 
-[VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy](https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy)（仓库更新：2026-11-12，Stars：5731）
+[VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy](https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy)（仓库更新：2026-11-12，Stars：5733）
 
 [https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/v2ray.config.txt](https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/v2ray.config.txt)
 
@@ -164,7 +164,7 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 [https://raw.githubusercontent.com/snakem982/proxypool/main/source/v2ray-2.txt](https://raw.githubusercontent.com/snakem982/proxypool/main/source/v2ray-2.txt)
 
-[cbusifabcap/daily_free_vpn](https://github.com/cbusifabcap/daily_free_vpn)（仓库更新：2026-11-12，Stars：404）
+[cbusifabcap/daily_free_vpn](https://github.com/cbusifabcap/daily_free_vpn)（仓库更新：2026-11-12，Stars：406）
 
 [https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/URI.yml](https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/URI.yml)
 
@@ -176,13 +176,13 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 [https://raw.githubusercontent.com/free18/v2ray/main/v.txt](https://raw.githubusercontent.com/free18/v2ray/main/v.txt)
 
-[ts-sf/fly](https://github.com/ts-sf/fly)（仓库更新：2026-11-12，Stars：717）
+[ts-sf/fly](https://github.com/ts-sf/fly)（仓库更新：2026-11-12，Stars：718）
 
 [https://raw.githubusercontent.com/ts-sf/fly/main/clash](https://raw.githubusercontent.com/ts-sf/fly/main/clash)
 
 [https://raw.githubusercontent.com/ts-sf/fly/main/v2](https://raw.githubusercontent.com/ts-sf/fly/main/v2)
 
-[ermaozi01/free_clash_vpn](https://github.com/ermaozi01/free_clash_vpn)（仓库更新：2026-11-12，Stars：834）
+[ermaozi01/free_clash_vpn](https://github.com/ermaozi01/free_clash_vpn)（仓库更新：2026-11-12，Stars：835）
 
 [https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml](https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml)
 
