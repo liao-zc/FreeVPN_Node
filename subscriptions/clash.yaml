@@ -5,13 +5,42 @@ mode: rule
 log-level: warning
 proxies:
 - cipher: aes-256-gcm
+  name: shadowsocks-1875023016
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 185.230.230.18
+  type: ss
+  udp: true
+- name: 🇺🇸US_262|1.7MB/s|A004-260618 [bd1e79add0e4]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 185.230.230.18
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: 🇺🇸US_502|1.8MB/s|M003-260806 [f6d8f9688b2e]
+  type: ss
+  server: 172.111.38.72
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US_623|546KB/s|R002-260618 [c29176c7fb94]
+  port: 9443
+  server: 198.44.135.19
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- cipher: aes-256-gcm
   name: shadowsocks-1875022945
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 45.86.51.18
   type: ss
   udp: true
-- name: 🇺🇸US_593|779KB/s|M003-260806 [f6d8f9688b2e]
+- name: 🇺🇸US_502|1.8MB/s|M003-260806 [f6d8f9688b2e]-2
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
@@ -19,14 +48,134 @@ proxies:
   sub_tag: M003-260806
   type: ss
   udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875023016
+- name: 🇺🇸US_596|686KB/s|K001-260618 [3eeb791263e2]
+  password: None
+  port: 443
+  server: 198.44.135.27
+  skip-cert-verify: true
+  sub_tag: K001-260618
+  tls: true
+  type: http
+  username: ''
+  udp: true
+- name: 🇺🇸_美国 (84)
+  type: trojan
+  server: 66.163.122.26
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  sni: blog.searchnationwidecareerchangehelperandguidancetoday.com
+  network: tcp
+- name: 🇫🇷FR_272|2.4MB/s [602eec94e97e]
+  password: 'null'
+  port: 443
+  server: 172.64.69.89
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: 'null'
+  udp: true
+- name: 🇩🇪DE_3|2.1MB/s
+  port: 443
+  server: 172.64.69.89
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇺🇸US_490|1.2MB/s|M003-260806 [6d1aaf61f28c]
+  type: ss
+  server: 149.40.57.133
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US_269|2.0MB/s|B007-260618 [719341a104ed]
+  cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 185.230.230.18
+  server: 193.151.163.18
+  sub_tag: B007-260618
   type: ss
   udp: true
-- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+- type: trojan
+  name: 🇺🇸_美国 (89)
+  server: 66.163.122.46
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  udp: true
+  tls: true
+  servername: searchnationwidecareerchangehelperandguidancetoday.com
+  sni: searchnationwidecareerchangehelperandguidancetoday.com
+  skip-cert-verify: true
+- name: 🇺🇸US_490|1.2MB/s|M003-260806 [6d1aaf61f28c]-2
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 149.40.57.133
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- name: CA
+  type: ss
+  server: 54.39.96.233
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: 2cvhpvdg4x7mvbps
+- name: 🇨🇦CA_59|1.5MB/s|M001-260618 [dc95e48e3495]
+  type: ss
+  server: 15.156.192.45
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇩🇪DE_5|2.3MB/s
+  password: 'null'
+  port: 443
+  server: 172.64.69.89
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  username: 'null'
+  x-toolall-mihomo: true
+- name: 🇺🇸US_260|1.6MB/s|A004-260618 [1feecb3b9b0d]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 98.98.79.198
+  sub_tag: A004-260618
+  type: ss
+  udp: true
+- name: 🇺🇸US_492|1.3MB/s|M003-260806 [977f13b2be70]
+  type: ss
+  server: 149.40.57.138
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: CA-2
+  type: ss
+  server: 198.100.154.175
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: 3h3hb2gptqz6suyt
+- name: 🇨🇦CA_42|469KB/s|M003-260806 [10c5f5ae8789]
+  type: ss
+  server: 99.79.32.21
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇺🇸US-18.117.92.138-0167
+  type: ss
+  server: 18.117.92.138
+  port: 443
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇨🇦CA_59|1.5MB/s|M001-260618 [dc95e48e3495]-2
+  cipher: aes-256-cfb
+  password: amazonskr05
+  port: 443
+  server: 15.156.192.45
+  sub_tag: M001-260618
+  type: ss
+  udp: true
+- name: 🇨🇳CN_2|1.1MB/s [41603258e52d064a]
   type: wireguard
   server: 162.159.192.3
   port: 500
@@ -39,172 +188,15 @@ proxies:
   - 74
   - 19
   mtu: 1280
-- name: 🇺🇸US_282|1.7MB/s|A004-260618 [16f4c5e97fb4]
+- name: 🇺🇸US_636|900KB/s|B007-260618 [0ecd490fc1e7]
   cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 45.86.51.18
-  sub_tag: A004-260618
+  password: pKEW8JPByTVTLtM
+  port: 4444
+  server: 15.204.247.244
+  sub_tag: B007-260618
   type: ss
   udp: true
-- ip: 172.16.0.2/32
-  keepalive: '5'
-  mtu: 1280
-  persistent-keepalive: '5'
-  port: 500
-  private-key: KAVFtrqtH6RDA0JBlZ4rISv5rDMaywO1btSJIxi+vn8=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 61
-  - 7
-  - 252
-  server: 162.159.192.7
-  type: wireguard
-  udp: true
-  wnoise: quic
-  wnoisecount: '5'
-  wnoisedelay: '5'
-  wpayloadsize: 40-90
-  name: 🇨🇳CN_3|2.8MB/s [4d77258b6edaff6d]
-- name: 🇺🇸US_593|779KB/s|M003-260806 [f6d8f9688b2e]-2
-  type: ss
-  server: 172.111.38.72
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: ❓Other_23|223KB/s|K001-260618 [0c64150eb2bc]
-  password: None
-  port: 9443
-  server: 198.44.135.19
-  skip-cert-verify: true
-  sub_tag: K001-260618
-  tls: true
-  type: http
-  username: ''
-  udp: true
-- name: ❓Other_3|1.3MB/s [5ebb5b61054b889b]
-  type: wireguard
-  server: 162.159.192.2
-  port: 500
-  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 39
-  - 4
-  - 107
-  mtu: 1280
-- name: ❓Other_1|1.6MB/s [8d14f8824307c329]
-  type: wireguard
-  server: 8.6.112.207
-  port: 8742
-  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 0
-  - 0
-  - 0
-  mtu: 1280
-- name: 🇺🇸US_280|1.3MB/s|A004-260618 [bd1e79add0e4]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.230.230.18
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇺🇸US_318|713KB/s|K001-260618 [3eeb791263e2]
-  password: None
-  port: 443
-  server: 198.44.135.27
-  skip-cert-verify: true
-  sub_tag: K001-260618
-  tls: true
-  type: http
-  username: ''
-  udp: true
-- ip: 172.16.0.2/32
-  keepalive: '5'
-  mtu: 1280
-  persistent-keepalive: '5'
-  port: 4500
-  private-key: 2DpN1E4RZmiBm7x2vlr6vFcIkjixfcTYZtGMlKYPZEM=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 125
-  - 168
-  - 120
-  server: 162.159.192.7
-  type: wireguard
-  udp: true
-  wnoise: quic
-  wnoisecount: '5'
-  wnoisedelay: '5'
-  wpayloadsize: 40-90
-  name: 🇨🇳CN_6|2.0MB/s [dcc2573f92a5d13a]
-- ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8e4e:939b:b987:39aa:c46c/128
-  mtu: 1280
-  port: 1180
-  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 0
-  - 0
-  - 0
-  server: 8.6.112.246
-  type: wireguard
-  udp: true
-  name: 🇨🇳CN_2|2.6MB/s [425b42381d16a20b]
-- ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8e4e:939b:b987:39aa:c46c/128
-  mtu: 1280
-  port: 8742
-  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 0
-  - 0
-  - 0
-  server: 8.6.112.207
-  type: wireguard
-  udp: true
-  name: ❓Other_1|1.6MB/s [8d14f8824307c329]-2
-- name: 🇨🇳CN_3|2.8MB/s [4d77258b6edaff6d]-2
-  type: wireguard
-  server: 162.159.192.7
-  port: 500
-  private-key: KAVFtrqtH6RDA0JBlZ4rISv5rDMaywO1btSJIxi+vn8=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 61
-  - 7
-  - 252
-  mtu: 1280
-- name: 🇺🇸US_583|1.3MB/s|M003-260806 [977f13b2be70]
-  type: ss
-  server: 149.40.57.138
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US_605|1.8MB/s|M003-260806 [0c4b7a94cbdd]
-  type: ss
-  server: 38.91.100.39
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US_581|1.5MB/s|M003-260806 [6d1aaf61f28c]
-  type: ss
-  server: 149.40.57.133
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US_582|1.4MB/s|M003-260806 [eaf21bfcadd2]
+- name: 🇺🇸US_491|1.4MB/s|M003-260806 [eaf21bfcadd2]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
@@ -212,135 +204,65 @@ proxies:
   sub_tag: M003-260806
   type: ss
   udp: true
-- name: 🇺🇸US_528|1.1MB/s|S004-260618 [6e6fc41e104d]
+- cipher: aes-256-gcm
+  name: shadowsocks-1827147377
+  password: pKEW8JPByTVTLtM
+  port: 4444
+  server: 15.204.247.244
+  type: ss
+  udp: true
+- name: 🇺🇸US_571|1.2MB/s|M003-260806 [9d7e585e7efa]
+  type: ss
+  server: 67.220.73.178
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US_528|1.4MB/s|S004-260618 [6e6fc41e104d]
   type: ss
   server: 149.40.57.134
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8e4e:939b:b987:39aa:c46c/128
-  mtu: 1280
-  port: 928
-  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 0
-  - 0
-  - 0
-  server: 8.6.112.23
-  type: wireguard
-  udp: true
-  name: ❓Other_2|1.8MB/s [2178d211d17f1cd8]
-- name: 🇺🇸US_582|1.4MB/s|M003-260806 [eaf21bfcadd2]-2
+- name: 🇺🇸US_491|1.4MB/s|M003-260806 [eaf21bfcadd2]-2
   type: ss
   server: 149.40.57.135
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US_605|1.8MB/s|M003-260806 [0c4b7a94cbdd]-2
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 38.91.100.39
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- name: 🇺🇸US_286|1.9MB/s|B007-260618 [719341a104ed]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.163.18
-  sub_tag: B007-260618
-  type: ss
-  udp: true
-- name: 🇺🇸US_581|1.5MB/s|M003-260806 [6d1aaf61f28c]-2
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 149.40.57.133
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- name: 🇨🇳CN_1|2.1MB/s
-  type: wireguard
-  server: 8.6.112.200
-  port: 4198
-  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 0
-  - 0
-  - 0
-  mtu: 1280
-- name: 🇨🇳CN_6|2.0MB/s [dcc2573f92a5d13a]-2
-  type: wireguard
-  server: 162.159.192.7
-  port: 4500
-  private-key: 2DpN1E4RZmiBm7x2vlr6vFcIkjixfcTYZtGMlKYPZEM=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 125
-  - 168
-  - 120
-  mtu: 1280
-- name: ❓Other_2|1.8MB/s [2178d211d17f1cd8]-2
-  type: wireguard
-  server: 8.6.112.23
-  port: 928
-  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 0
-  - 0
-  - 0
-  mtu: 1280
-- name: CA
-  type: ss
-  server: 15.235.121.109
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: 575hiopq2h28yao6
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - shadowsocks-1875022945
-  - 🇺🇸US_593|779KB/s|M003-260806 [f6d8f9688b2e]
   - shadowsocks-1875023016
-  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
-  - 🇺🇸US_282|1.7MB/s|A004-260618 [16f4c5e97fb4]
-  - 🇨🇳CN_3|2.8MB/s [4d77258b6edaff6d]
-  - 🇺🇸US_593|779KB/s|M003-260806 [f6d8f9688b2e]-2
-  - ❓Other_23|223KB/s|K001-260618 [0c64150eb2bc]
-  - ❓Other_3|1.3MB/s [5ebb5b61054b889b]
-  - ❓Other_1|1.6MB/s [8d14f8824307c329]
-  - 🇺🇸US_280|1.3MB/s|A004-260618 [bd1e79add0e4]
-  - 🇺🇸US_318|713KB/s|K001-260618 [3eeb791263e2]
-  - 🇨🇳CN_6|2.0MB/s [dcc2573f92a5d13a]
-  - 🇨🇳CN_2|2.6MB/s [425b42381d16a20b]
-  - ❓Other_1|1.6MB/s [8d14f8824307c329]-2
-  - 🇨🇳CN_3|2.8MB/s [4d77258b6edaff6d]-2
-  - 🇺🇸US_583|1.3MB/s|M003-260806 [977f13b2be70]
-  - 🇺🇸US_605|1.8MB/s|M003-260806 [0c4b7a94cbdd]
-  - 🇺🇸US_581|1.5MB/s|M003-260806 [6d1aaf61f28c]
-  - 🇺🇸US_582|1.4MB/s|M003-260806 [eaf21bfcadd2]
-  - 🇺🇸US_528|1.1MB/s|S004-260618 [6e6fc41e104d]
-  - ❓Other_2|1.8MB/s [2178d211d17f1cd8]
-  - 🇺🇸US_582|1.4MB/s|M003-260806 [eaf21bfcadd2]-2
-  - 🇺🇸US_605|1.8MB/s|M003-260806 [0c4b7a94cbdd]-2
-  - 🇺🇸US_286|1.9MB/s|B007-260618 [719341a104ed]
-  - 🇺🇸US_581|1.5MB/s|M003-260806 [6d1aaf61f28c]-2
-  - 🇨🇳CN_1|2.1MB/s
-  - 🇨🇳CN_6|2.0MB/s [dcc2573f92a5d13a]-2
-  - ❓Other_2|1.8MB/s [2178d211d17f1cd8]-2
+  - 🇺🇸US_262|1.7MB/s|A004-260618 [bd1e79add0e4]
+  - 🇺🇸US_502|1.8MB/s|M003-260806 [f6d8f9688b2e]
+  - 🇺🇸US_623|546KB/s|R002-260618 [c29176c7fb94]
+  - shadowsocks-1875022945
+  - 🇺🇸US_502|1.8MB/s|M003-260806 [f6d8f9688b2e]-2
+  - 🇺🇸US_596|686KB/s|K001-260618 [3eeb791263e2]
+  - 🇺🇸_美国 (84)
+  - 🇫🇷FR_272|2.4MB/s [602eec94e97e]
+  - 🇩🇪DE_3|2.1MB/s
+  - 🇺🇸US_490|1.2MB/s|M003-260806 [6d1aaf61f28c]
+  - 🇺🇸US_269|2.0MB/s|B007-260618 [719341a104ed]
+  - 🇺🇸_美国 (89)
+  - 🇺🇸US_490|1.2MB/s|M003-260806 [6d1aaf61f28c]-2
   - CA
+  - 🇨🇦CA_59|1.5MB/s|M001-260618 [dc95e48e3495]
+  - 🇩🇪DE_5|2.3MB/s
+  - 🇺🇸US_260|1.6MB/s|A004-260618 [1feecb3b9b0d]
+  - 🇺🇸US_492|1.3MB/s|M003-260806 [977f13b2be70]
+  - CA-2
+  - 🇨🇦CA_42|469KB/s|M003-260806 [10c5f5ae8789]
+  - 🇺🇸US-18.117.92.138-0167
+  - 🇨🇦CA_59|1.5MB/s|M001-260618 [dc95e48e3495]-2
+  - 🇨🇳CN_2|1.1MB/s [41603258e52d064a]
+  - 🇺🇸US_636|900KB/s|B007-260618 [0ecd490fc1e7]
+  - 🇺🇸US_491|1.4MB/s|M003-260806 [eaf21bfcadd2]
+  - shadowsocks-1827147377
+  - 🇺🇸US_571|1.2MB/s|M003-260806 [9d7e585e7efa]
+  - 🇺🇸US_528|1.4MB/s|S004-260618 [6e6fc41e104d]
+  - 🇺🇸US_491|1.4MB/s|M003-260806 [eaf21bfcadd2]-2
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
