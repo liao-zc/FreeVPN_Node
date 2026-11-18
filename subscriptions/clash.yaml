@@ -11,6 +11,25 @@ proxies:
   server: 45.86.51.18
   type: ss
   udp: true
+- name: trojan-1932476943
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.122.81
+  skip-cert-verify: true
+  sni: ''
+  type: trojan
+  udp: true
+- client-fingerprint: chrome
+  name: 🇺🇸US_53|162KB/s|A004-260618
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.122.81
+  skip-cert-verify: true
+  sni: courses.searchnationwidecareerchangehelperandguidancetoday.com
+  sub_tag: A004-260618
+  type: trojan
+  udp: true
 - name: 🇺🇸US_247|1.8MB/s|A004-260618 [16f4c5e97fb4]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -27,13 +46,6 @@ proxies:
   sub_tag: A004-260618
   type: ss
   udp: true
-- name: 🇺🇸 United States/Washington [GH:Mahdi0024/Pro]
-  type: ss
-  server: 172.111.38.72
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
 - name: 🇺🇸US_369|1.9MB/s|M003-260806 [f6d8f9688b2e]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -42,49 +54,61 @@ proxies:
   sub_tag: M003-260806
   type: ss
   udp: true
-- name: 🇺🇸US_446|380KB/s|R002-260618 [c29176c7fb94]
-  port: 9443
-  server: 198.44.135.19
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1875023016
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.230.230.18
-  type: ss
-  udp: true
-- type: trojan
-  name: 🇺🇸_美国 (64)
-  server: 66.163.122.7
-  port: 443
+- name: trojan-1935805065
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  tls: true
-  servername: www.searchnationwidecareerchangehelperandguidancetoday.com
-  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
+  port: 443
+  server: 66.163.122.81
   skip-cert-verify: true
+  sni: 66.163.122.81
+  type: trojan
+  udp: true
 - client-fingerprint: chrome
-  name: ❓Other_82|295KB/s|C002-260622
+  name: 🇺🇸US_52|219KB/s|A004-260618
   network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 66.163.122.7
+  server: 66.163.122.81
   skip-cert-verify: true
-  sni: 66.163.122.7
-  sub_tag: C002-260622
+  sub_tag: A004-260618
   type: trojan
   udp: true
-- name: 🇺🇸_美国 (64)-2
+- name: 🇺🇸US_358|1.5MB/s|M003-260806 [d60ee2c3d529]
   type: trojan
-  server: 66.163.122.7
+  server: 66.163.122.26
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   udp: true
-  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
+  sni: blog.searchnationwidecareerchangehelperandguidancetoday.com
+  network: tcp
+- client-fingerprint: chrome
+  name: 🇺🇸US_68|1.2MB/s|B007-260618
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.122.26
+  skip-cert-verify: false
+  sni: blog.searchnationwidecareerchangehelperandguidancetoday.com
+  sub_tag: B007-260618
+  type: trojan
+  udp: true
+  network: tcp
+- name: trojan-1932448327
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.122.81
+  skip-cert-verify: true
+  sni: courses.searchnationwidecareerchangehelperandguidancetoday.com
+  type: trojan
+  udp: true
+- name: 🇺🇸US_345|1.6MB/s|M003-260806 [863747e5c90a]
+  client-fingerprint: chrome
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.122.81
+  skip-cert-verify: true
+  sni: courses.searchnationwidecareerchangehelperandguidancetoday.com
+  sub_tag: M003-260806
+  type: trojan
+  udp: true
   network: tcp
 - name: 🇺🇸US_329|390KB/s|K001-260618 [3eeb791263e2]
   password: None
@@ -96,64 +120,104 @@ proxies:
   type: http
   username: ''
   udp: true
-- client-fingerprint: chrome
-  name: ❓Other_80|290KB/s|M003-260806
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.122.7
-  skip-cert-verify: true
-  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
-  sub_tag: M003-260806
-  type: trojan
-  udp: true
-  network: tcp
-- name: 🇺🇸US_488|236KB/s|C002-260622 [2565e14eb9c0]
+- name: 🇺🇸US_358|1.5MB/s|M003-260806 [d60ee2c3d529]-2
   client-fingerprint: chrome
   network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 66.163.122.46
+  server: 66.163.122.26
   skip-cert-verify: false
-  sni: searchnationwidecareerchangehelperandguidancetoday.com
-  sub_tag: C002-260622
+  sni: blog.searchnationwidecareerchangehelperandguidancetoday.com
+  sub_tag: M003-260806
   type: trojan
   udp: true
-- name: trojan-1939594316
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.122.7
+- name: 🇺🇸US_369|1.9MB/s|M003-260806 [f6d8f9688b2e]-2
+  type: ss
+  server: 172.111.38.72
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US_446|380KB/s|R002-260618 [c29176c7fb94]
+  port: 9443
+  server: 198.44.135.19
   skip-cert-verify: true
-  sni: 66.163.122.7
-  type: trojan
+  sub_tag: R002-260618
+  tls: true
+  type: http
   udp: true
-- name: trojan-1934958566
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.122.7
+- port: 443
+  server: 172.64.68.89
   skip-cert-verify: true
-  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
-  type: trojan
-  udp: true
+  sni: 172.64.68.89
+  tls: true
+  type: http
+  name: US - zhuhai.uk 03 [7fcf8ef957b494ca]
 - name: US
   type: ss
   server: 138.197.89.234
   port: 28960
   cipher: chacha20-ietf-poly1305
   password: DZRy4Q3QH0jUGfKFl2jDCZ
+- name: 🇩🇪DE_1|1.3MB/s
+  password: 'null'
+  port: 443
+  server: 172.64.68.89
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: 'null'
+- name: 🇫🇷FR_32|440KB/s|P002-260618
+  password: None
+  port: 443
+  server: 172.64.68.89
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
 - cipher: aes-256-gcm
-  name: shadowsocks-1875023024
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.163.18
+  name: 🇺🇸US_106|213KB/s|M003-260806
+  password: itzvpn@321
+  port: 8388
+  server: 135.148.42.13
+  sub_tag: M003-260806
   type: ss
   udp: true
-- name: 🇺🇸US_32|1.0MB/s|A004-260618 [1feecb3b9b0d]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 98.98.79.198
-  sub_tag: A004-260618
+- name: 🇫🇷FR_19|3.3MB/s|R002-260618 [a676be7daa09]
+  port: 443
+  server: 172.64.69.89
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+- name: US-2
   type: ss
+  server: 40.160.86.43
+  port: 8388
+  cipher: aes-256-gcm
+  password: itzvpn@321
+- cipher: chacha20-ietf-poly1305
+  name: 🇺🇸US_66|72KB/s|M003-260806
+  password: DZRy4Q3QH0jUGfKFl2jDCZ
+  port: 28960
+  server: 138.197.89.234
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- name: US-3
+  type: ss
+  server: 135.148.42.13
+  port: 8388
+  cipher: aes-256-gcm
+  password: itzvpn@321
+- name: 🇫🇷FR_4|2.4MB/s|R002-260618 [39873ef4d996]
+  port: 443
+  server: 172.64.68.89
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
   udp: true
 - name: 🇺🇸US_266|2.0MB/s|B007-260618 [719341a104ed]
   cipher: aes-256-gcm
@@ -171,80 +235,19 @@ proxies:
   sub_tag: M003-260806
   type: ss
   udp: true
-- name: 🇺🇸US_374|1.2MB/s|M003-260806 [0c4b7a94cbdd]
-  cipher: aes-256-gcm
+- cipher: aes-256-gcm
+  name: shadowsocks-1875023024
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 38.91.100.39
-  sub_tag: M003-260806
+  server: 193.151.163.18
   type: ss
   udp: true
-- cipher: rc4-md5
-  name: shadowsocks-1870576149
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 98.98.79.198
-  type: ss
-  udp: true
-- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
-  type: wireguard
-  server: 162.159.192.3
-  port: 500
-  private-key: 2D+QMolgGWVRVGdJJvsQ4VBDCcZTym0c1sFN00PeMUs=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  ip: 172.16.0.2/32
-  udp: true
-  reserved:
-  - 213
-  - 74
-  - 19
-  mtu: 1280
-- name: 🇺🇸US_364|414KB/s|M003-260806 [6d1aaf61f28c]
-  type: ss
-  server: 149.40.57.133
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US_366|1.4MB/s|M003-260806 [977f13b2be70]-2
-  type: ss
-  server: 149.40.57.138
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇨🇦CA_48|1.3MB/s|M003-260806 [06e18359eee7]
-  cipher: chacha20-ietf-poly1305
-  password: 3h3hb2gptqz6suyt
-  port: 8080
-  server: 198.100.154.175
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- name: 🇺🇸US_374|1.2MB/s|M003-260806 [0c4b7a94cbdd]-2
-  type: ss
-  server: 38.91.100.39
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US_529|1.6MB/s|M003-260806 [c778053e3664]
+- name: 🇺🇸US_60|1.4MB/s|S004-260618 [6e6fc41e104d]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 38.64.138.135
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- name: 🇨🇦CA_8|256KB/s|M003-260806 [fa556c6b9e5f]
-  type: ss
-  server: 158.51.121.221
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇨🇦CA_45|1.4MB/s|C001-260618 [713e29ff2cef]
-  cipher: chacha20-ietf-poly1305
-  password: kxhnt5jtykd328cg
-  port: 8080
-  server: 15.235.57.6
-  sub_tag: C001-260618
+  server: 149.40.57.134
+  sub_tag: S004-260618
   type: ss
   udp: true
 proxy-groups:
@@ -252,35 +255,35 @@ proxy-groups:
   type: url-test
   proxies:
   - shadowsocks-1875022945
+  - trojan-1932476943
+  - 🇺🇸US_53|162KB/s|A004-260618
   - 🇺🇸US_247|1.8MB/s|A004-260618 [16f4c5e97fb4]
   - 🇺🇸US_245|1.4MB/s|A004-260618 [bd1e79add0e4]
-  - 🇺🇸 United States/Washington [GH:Mahdi0024/Pro]
   - 🇺🇸US_369|1.9MB/s|M003-260806 [f6d8f9688b2e]
-  - 🇺🇸US_446|380KB/s|R002-260618 [c29176c7fb94]
-  - shadowsocks-1875023016
-  - 🇺🇸_美国 (64)
-  - ❓Other_82|295KB/s|C002-260622
-  - 🇺🇸_美国 (64)-2
+  - trojan-1935805065
+  - 🇺🇸US_52|219KB/s|A004-260618
+  - 🇺🇸US_358|1.5MB/s|M003-260806 [d60ee2c3d529]
+  - 🇺🇸US_68|1.2MB/s|B007-260618
+  - trojan-1932448327
+  - 🇺🇸US_345|1.6MB/s|M003-260806 [863747e5c90a]
   - 🇺🇸US_329|390KB/s|K001-260618 [3eeb791263e2]
-  - ❓Other_80|290KB/s|M003-260806
-  - 🇺🇸US_488|236KB/s|C002-260622 [2565e14eb9c0]
-  - trojan-1939594316
-  - trojan-1934958566
+  - 🇺🇸US_358|1.5MB/s|M003-260806 [d60ee2c3d529]-2
+  - 🇺🇸US_369|1.9MB/s|M003-260806 [f6d8f9688b2e]-2
+  - 🇺🇸US_446|380KB/s|R002-260618 [c29176c7fb94]
+  - US - zhuhai.uk 03 [7fcf8ef957b494ca]
   - US
-  - shadowsocks-1875023024
-  - 🇺🇸US_32|1.0MB/s|A004-260618 [1feecb3b9b0d]
+  - 🇩🇪DE_1|1.3MB/s
+  - 🇫🇷FR_32|440KB/s|P002-260618
+  - 🇺🇸US_106|213KB/s|M003-260806
+  - 🇫🇷FR_19|3.3MB/s|R002-260618 [a676be7daa09]
+  - US-2
+  - 🇺🇸US_66|72KB/s|M003-260806
+  - US-3
+  - 🇫🇷FR_4|2.4MB/s|R002-260618 [39873ef4d996]
   - 🇺🇸US_266|2.0MB/s|B007-260618 [719341a104ed]
   - 🇺🇸US_366|1.4MB/s|M003-260806 [977f13b2be70]
-  - 🇺🇸US_374|1.2MB/s|M003-260806 [0c4b7a94cbdd]
-  - shadowsocks-1870576149
-  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
-  - 🇺🇸US_364|414KB/s|M003-260806 [6d1aaf61f28c]
-  - 🇺🇸US_366|1.4MB/s|M003-260806 [977f13b2be70]-2
-  - 🇨🇦CA_48|1.3MB/s|M003-260806 [06e18359eee7]
-  - 🇺🇸US_374|1.2MB/s|M003-260806 [0c4b7a94cbdd]-2
-  - 🇺🇸US_529|1.6MB/s|M003-260806 [c778053e3664]
-  - 🇨🇦CA_8|256KB/s|M003-260806 [fa556c6b9e5f]
-  - 🇨🇦CA_45|1.4MB/s|C001-260618 [713e29ff2cef]
+  - shadowsocks-1875023024
+  - 🇺🇸US_60|1.4MB/s|S004-260618 [6e6fc41e104d]
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
