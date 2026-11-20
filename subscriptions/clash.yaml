@@ -4,153 +4,7 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: trojan-1929965342
-  type: trojan
-  server: 216.152.155.176
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  sni: blog.nextjobopportunityandclaimyouridealrole.com
-  network: tcp
-- name: ❓Other_12|219KB/s|C002-260622 [0db7a794c99c]
-  client-fingerprint: chrome
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.176
-  skip-cert-verify: true
-  sni: 216.152.155.176
-  sub_tag: C002-260622
-  type: trojan
-  udp: true
-- name: 🇺🇸_美国 (35)
-  type: ss
-  server: 38.128.66.32
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: trojan-1929965340
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.23
-  skip-cert-verify: false
-  sni: courses.nextjobopportunityandclaimyouridealrole.com
-  type: trojan
-  udp: true
-- name: trojan-1943754366
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.131
-  skip-cert-verify: true
-  sni: ''
-  type: trojan
-  udp: true
-- name: trojan-1934986797
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.158
-  skip-cert-verify: true
-  sni: resources.nextjobopportunityandclaimyouridealrole.com
-  type: trojan
-  udp: true
-- name: trojan-1929965342-2
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.176
-  skip-cert-verify: false
-  sni: blog.nextjobopportunityandclaimyouridealrole.com
-  type: trojan
-  udp: true
-- name: trojan-1929965327
-  type: trojan
-  server: 216.152.155.131
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  sni: www.nextjobopportunityandclaimyouridealrole.com
-  network: tcp
-- name: trojan-1931858184
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.23
-  skip-cert-verify: true
-  sni: courses.nextjobopportunityandclaimyouridealrole.com
-  type: trojan
-  udp: true
-- name: ❓Other_59|410KB/s|A004-260618 [4c85fce4702d]
-  client-fingerprint: chrome
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.176
-  skip-cert-verify: true
-  sub_tag: A004-260618
-  type: trojan
-  udp: true
-- name: trojan-1935612271
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.59
-  skip-cert-verify: true
-  sni: www.findconnectwithemployersandbuildprofessionalnetwork.com
-  type: trojan
-  udp: true
-- type: ss
-  name: 🇺🇸_美国 (35)-2
-  server: 38.128.66.32
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- name: trojan-1929965327-2
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.131
-  skip-cert-verify: false
-  sni: www.nextjobopportunityandclaimyouridealrole.com
-  type: trojan
-  udp: true
-- name: US 🇺🇸 | @Raydikalx | 882A7F
-  type: vmess
-  server: 38.128.66.212
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: tcp
-  servername: xmfhlpy.com
-- name: 🇺🇸US_95|247KB/s|B007-260618 [f9abe0ae49a6]
-  client-fingerprint: chrome
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.176
-  skip-cert-verify: true
-  sub_tag: B007-260618
-  type: trojan
-  udp: true
-  network: tcp
-- name: ❓Other_42|363KB/s|M003-260806 [c778053e3664]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 38.64.138.135
-  sub_tag: M003-260806
-  type: ss
-  udp: true
-- type: ss
-  name: 🇺🇸_美国 (27)
-  server: 216.106.178.169
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+- name: 🇨🇳CN_7|1.6MB/s
   type: wireguard
   server: 162.159.192.3
   port: 500
@@ -164,69 +18,8 @@ proxies:
   - 19
   mtu: 1280
 - ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8e4e:939b:b987:39aa:c46c/128
-  mtu: 1280
-  port: 4198
-  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 0
-  - 0
-  - 0
-  server: 8.6.112.200
-  type: wireguard
-  udp: true
-  name: ❓Other_1|1.2MB/s [84bd2a6d4e963893]
-- name: trojan-1931858183
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.176
-  skip-cert-verify: true
-  sni: blog.nextjobopportunityandclaimyouridealrole.com
-  type: trojan
-  udp: true
-- name: US 🇺🇸 | @Raydikalx | 072F29
-  type: vmess
-  server: 162.251.61.46
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: tcp
-  servername: xmfhlpy.com
-- name: trojan-1929965348
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.54
-  skip-cert-verify: false
-  sni: learn.nextjobopportunityandclaimyouridealrole.com
-  type: trojan
-  udp: true
-- name: US 🇺🇸 | @Raydikalx | FC978E
-  type: vmess
-  server: 38.64.138.135
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: tcp
-  servername: xmfhlpy.com
-- name: trojan-1929965340-2
-  type: trojan
-  server: 216.152.155.23
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  sni: courses.nextjobopportunityandclaimyouridealrole.com
-  network: tcp
-- ip: 172.16.0.2/32
   keepalive: '5'
   mtu: 1280
-  name: 🇨🇳CN_1|1.2MB/s
   persistent-keepalive: '5'
   port: 500
   private-key: SLQM1iGPVovYSVkSPiyHJo7for5BfVoXBdhB+mPFxUE=
@@ -242,34 +35,149 @@ proxies:
   wnoisecount: '5'
   wnoisedelay: '5'
   wpayloadsize: 40-90
-- name: trojan-1934986791
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.131
-  skip-cert-verify: true
-  sni: www.nextjobopportunityandclaimyouridealrole.com
-  type: trojan
+  name: 🇨🇳CN_1|1.2MB/s [89269e3da95c6123]
+- ip: 172.16.0.2/32
+  keepalive: '5'
+  mtu: 1280
+  name: 🇨🇳CN_5|1.2MB/s
+  persistent-keepalive: '5'
+  port: 987
+  presharedkey: ''
+  private-key: GJTd46xB/fjfi6vyJmpxUiNrNdjZTW0Qhi7b0PkER1Y=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  reserved:
+  - 175
+  - 93
+  - 41
+  server: 188.114.97.6
+  type: wireguard
   udp: true
-- name: trojan-1929965348-2
-  type: trojan
-  server: 216.152.155.54
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  wnoise: quic
+  wnoisecount: '15'
+  wnoisedelay: 1-2
+  wpayloadsize: 5-10
+- ip: 172.16.0.2/32
+  keepalive: '5'
+  mtu: 1280
+  name: 🇨🇳CN_2|1.1MB/s
+  persistent-keepalive: '5'
+  port: 4500
+  private-key: sLd5tWe8IhWTDvMbhdfEbu4+AwbAIVT3iURvlM6bc2g=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  reserved:
+  - 230
+  - 149
+  - 72
+  server: 162.159.192.2
+  type: wireguard
   udp: true
-  sni: learn.nextjobopportunityandclaimyouridealrole.com
-  network: tcp
-- name: US
+  wnoise: quic
+  wnoisecount: '5'
+  wnoisedelay: '5'
+  wpayloadsize: 40-90
+- ip: 172.16.0.2/32
+  keepalive: '5'
+  mtu: 1280
+  name: 🇨🇳CN_3|1.8MB/s
+  persistent-keepalive: '5'
+  port: 2408
+  private-key: oDBa7PDoBqN5gYRO5pL59noH6dQpXt40AETlDNlNtl8=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  reserved:
+  - 121
+  - 1
+  - 112
+  server: 162.159.192.2
+  type: wireguard
+  udp: true
+  wnoise: quic
+  wnoisecount: '5'
+  wnoisedelay: '5'
+  wpayloadsize: 40-90
+- ip: 172.16.0.2/32
+  mtu: 1280
+  name: 🇨🇳CN_7|1.6MB/s-2
+  port: 500
+  presharedkey: ''
+  private-key: 2D+QMolgGWVRVGdJJvsQ4VBDCcZTym0c1sFN00PeMUs=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  reserved:
+  - 213
+  - 74
+  - 19
+  server: 162.159.192.3
+  type: wireguard
+  udp: true
+- name: 🇨🇳CN_3|1.8MB/s-2
+  type: wireguard
+  server: 162.159.192.2
+  port: 2408
+  private-key: oDBa7PDoBqN5gYRO5pL59noH6dQpXt40AETlDNlNtl8=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 121
+  - 1
+  - 112
+  mtu: 1280
+- name: 🇺🇸_美国 (22)
   type: ss
-  server: 67.220.73.178
+  server: 167.88.62.56
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇨🇳CN_1|1.9MB/s
+  type: wireguard
+  server: 8.6.112.58
+  port: 908
+  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 0
+  - 0
+  - 0
+  mtu: 1280
 - name: 🇩🇪DE_5|1.7MB/s
   port: 443
   server: 172.64.69.89
   skip-cert-verify: true
   tls: true
   type: http
+- name: 🇺🇸_美国 (35)
+  type: ss
+  server: 38.128.66.32
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸_美国 (24)
+  type: ss
+  server: 167.88.62.203
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8e4e:939b:b987:39aa:c46c/128
+  mtu: 1280
+  name: 🇨🇳CN_1|1.9MB/s-2
+  port: 908
+  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  reserved:
+  - 0
+  - 0
+  - 0
+  server: 8.6.112.58
+  type: wireguard
+  udp: true
+- name: 🇺🇸_美国 (40)
+  type: ss
+  server: 156.146.38.169
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: ❓Other_31|171KB/s|R002-260618 [a676be7daa09]
   port: 443
   server: 172.64.69.89
@@ -278,40 +186,166 @@ proxies:
   tls: true
   type: http
   udp: true
+- name: 🇫🇷FR_24|219KB/s|P002-260618 [4b14f18b47a8]
+  port: 443
+  server: 172.64.68.89
+  skip-cert-verify: true
+  sni: 172.64.68.89
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- type: ss
+  name: 🇺🇸_美国 (33)
+  server: 156.146.38.170
+  port: 443
+  password: shadowsocks
+  cipher: aes-128-gcm
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- name: 🇺🇸US_75|836KB/s|M003-260806 [90e08528a10b]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 167.17.67.171
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  type: wireguard
+  server: 162.159.192.2
+  port: 500
+  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 39
+  - 4
+  - 107
+  mtu: 1280
+- type: ss
+  name: 🇺🇸_美国 (24)-2
+  server: 167.88.62.203
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- name: 🇺🇸_美国 (33)-2
+  type: ss
+  server: 156.146.38.170
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸US_75|836KB/s|M003-260806 [90e08528a10b]-2
+  type: ss
+  server: 167.17.67.171
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: US
+  type: ss
+  server: 67.220.73.247
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: DGjtV63aPW3E
+- name: 🇩🇪DE_6|3.0MB/s
+  password: 'null'
+  port: 443
+  server: 172.64.69.89
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: 'null'
+- name: 🇩🇪DE_4|2.9MB/s
+  port: 443
+  server: 172.64.68.89
+  skip-cert-verify: true
+  sni: 172.64.68.89
+  tls: true
+  type: http
+- type: ss
+  name: 🇺🇸_美国 (34)
+  server: 156.146.38.168
+  port: 443
+  password: shadowsocks
+  cipher: aes-128-gcm
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- name: ❓Other_42|363KB/s|M003-260806 [c778053e3664]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 38.64.138.135
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- name: 🇺🇸US_55|1.1MB/s|M003-260806 [5762fa2cd8d3]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 167.88.62.203
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1827147700
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.199.42.68
+  type: ss
+  udp: true
+- name: 🇨🇳CN_1|1.2MB/s [89269e3da95c6123]-2
+  type: wireguard
+  server: 162.159.192.5
+  port: 500
+  private-key: SLQM1iGPVovYSVkSPiyHJo7for5BfVoXBdhB+mPFxUE=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 220
+  - 50
+  - 126
+  mtu: 1280
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - trojan-1929965342
-  - ❓Other_12|219KB/s|C002-260622 [0db7a794c99c]
-  - 🇺🇸_美国 (35)
-  - trojan-1929965340
-  - trojan-1943754366
-  - trojan-1934986797
-  - trojan-1929965342-2
-  - trojan-1929965327
-  - trojan-1931858184
-  - ❓Other_59|410KB/s|A004-260618 [4c85fce4702d]
-  - trojan-1935612271
-  - 🇺🇸_美国 (35)-2
-  - trojan-1929965327-2
-  - US 🇺🇸 | @Raydikalx | 882A7F
-  - 🇺🇸US_95|247KB/s|B007-260618 [f9abe0ae49a6]
-  - ❓Other_42|363KB/s|M003-260806 [c778053e3664]
-  - 🇺🇸_美国 (27)
-  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
-  - ❓Other_1|1.2MB/s [84bd2a6d4e963893]
-  - trojan-1931858183
-  - US 🇺🇸 | @Raydikalx | 072F29
-  - trojan-1929965348
-  - US 🇺🇸 | @Raydikalx | FC978E
-  - trojan-1929965340-2
-  - 🇨🇳CN_1|1.2MB/s
-  - trojan-1934986791
-  - trojan-1929965348-2
-  - US
+  - 🇨🇳CN_7|1.6MB/s
+  - 🇨🇳CN_1|1.2MB/s [89269e3da95c6123]
+  - 🇨🇳CN_5|1.2MB/s
+  - 🇨🇳CN_2|1.1MB/s
+  - 🇨🇳CN_3|1.8MB/s
+  - 🇨🇳CN_7|1.6MB/s-2
+  - 🇨🇳CN_3|1.8MB/s-2
+  - 🇺🇸_美国 (22)
+  - 🇨🇳CN_1|1.9MB/s
   - 🇩🇪DE_5|1.7MB/s
+  - 🇺🇸_美国 (35)
+  - 🇺🇸_美国 (24)
+  - 🇨🇳CN_1|1.9MB/s-2
+  - 🇺🇸_美国 (40)
   - ❓Other_31|171KB/s|R002-260618 [a676be7daa09]
+  - 🇫🇷FR_24|219KB/s|P002-260618 [4b14f18b47a8]
+  - 🇺🇸_美国 (33)
+  - 🇺🇸US_75|836KB/s|M003-260806 [90e08528a10b]
+  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
+  - 🇺🇸_美国 (24)-2
+  - 🇺🇸_美国 (33)-2
+  - 🇺🇸US_75|836KB/s|M003-260806 [90e08528a10b]-2
+  - US
+  - 🇩🇪DE_6|3.0MB/s
+  - 🇩🇪DE_4|2.9MB/s
+  - 🇺🇸_美国 (34)
+  - ❓Other_42|363KB/s|M003-260806 [c778053e3664]
+  - 🇺🇸US_55|1.1MB/s|M003-260806 [5762fa2cd8d3]
+  - shadowsocks-1827147700
+  - 🇨🇳CN_1|1.2MB/s [89269e3da95c6123]-2
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
