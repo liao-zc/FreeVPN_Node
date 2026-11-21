@@ -4,178 +4,125 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: 🇺🇸_美国 (31)
+- name: 🇺🇸_美国
   type: ss
-  server: 45.86.51.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US_36|219KB/s|A004-260618 [16f4c5e97fb4]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 45.86.51.18
-  sub_tag: A004-260618
-  type: ss
-  udp: true
-- name: 🇺🇸_美国 (30)
-  type: ss
-  server: 185.230.230.18
+  server: 38.143.66.146
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - type: ss
-  name: 🇺🇸_美国 (31)-2
-  server: 45.86.51.18
+  name: 🇺🇸_美国-2
+  server: 38.143.66.146
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   cipher: aes-256-gcm
   udp: true
   tls: false
   skip-cert-verify: false
-- type: trojan
-  name: 🇺🇸_美国 (132)
-  server: 66.163.122.46
+- name: 🇫🇷FR_3|3.4MB/s|R002-260618 [39873ef4d996]
   port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
+  server: 172.64.68.89
+  skip-cert-verify: true
+  sub_tag: R002-260618
   tls: true
-  servername: searchnationwidecareerchangehelperandguidancetoday.com
-  sni: searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: false
-- name: 🇺🇸US_76|1.1MB/s|M003-260806 [f6d8f9688b2e]
+  type: http
+  udp: true
+- name: 🇫🇷FR_32|5.0MB/s|P002-260618 [8342ff3bd32d]
+  password: None
+  port: 443
+  server: 172.64.68.89
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇩🇪DE_2|1.3MB/s|P002-260618
+  password: None
+  port: 443
+  server: 172.64.68.89
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+  x-toolall-mihomo: true
+- name: 🇩🇪DE_1|2.5MB/s
+  port: 443
+  server: 172.64.68.89
+  skip-cert-verify: true
+  sni: 172.64.68.89
+  tls: true
+  type: http
+- name: 🇺🇸US_550|1.1MB/s|M003-260806 [8741a1f6093f]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 172.111.38.72
+  server: 38.143.66.146
   sub_tag: M003-260806
   type: ss
   udp: true
-- type: ss
-  name: 🇺🇸_美国 (30)-2
-  server: 185.230.230.18
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国 (35)
-  server: 172.111.38.72
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国 (16)
-  server: 37.19.198.243
-  port: 443
-  password: shadowsocks
-  cipher: aes-128-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- name: 🇺🇸_美国 (21)
-  type: ss
-  server: 37.19.198.244
-  port: 443
+- name: 🇨🇦CA_50|844KB/s|A004-260618 [3fb3343bd43b]
   cipher: aes-128-gcm
   password: shadowsocks
-- type: ss
-  name: 🇺🇸_美国 (15)
-  server: 37.19.198.160
   port: 443
-  password: shadowsocks
-  cipher: aes-128-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- name: 🇺🇸_美国 (15)-2
-  type: ss
-  server: 37.19.198.160
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- type: ss
-  name: 🇺🇸_美国 (21)-2
-  server: 37.19.198.244
-  port: 443
-  password: shadowsocks
-  cipher: aes-128-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- type: ss
-  name: 🇺🇸_美国 (17)
-  server: 200.102.179.179
-  port: 8388
-  password: itzvpn@321
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- name: 🇺🇸_美国 (132)-2
-  type: trojan
-  server: 66.163.122.46
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  sni: searchnationwidecareerchangehelperandguidancetoday.com
-  network: tcp
-- name: 🇺🇸_美国 (19)
-  type: ss
-  server: 37.19.198.236
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸_美国 (57)
-  type: ss
-  server: 193.151.163.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- cipher: rc4-md5
-  name: shadowsocks-1870576149
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 98.98.79.198
-  type: ss
-  udp: true
-- type: ss
-  name: 🇺🇸_美国 (57)-2
-  server: 193.151.163.18
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  udp: true
-  tls: false
-  skip-cert-verify: false
-- name: 🇺🇸US_21|480KB/s|B007-260618 [719341a104ed]
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.163.18
-  sub_tag: B007-260618
-  type: ss
-  udp: true
-- name: 🇺🇸US_8|269KB/s|A004-260618 [1feecb3b9b0d]
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 98.98.79.198
+  server: 149.22.95.183
   sub_tag: A004-260618
   type: ss
   udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1827146718
-  password: FoOiGlkAA9yPEGP
-  port: 7307
-  server: 15.204.246.132
+- name: 🇫🇷FR_113|7.5MB/s|P002-260618 [4b14f18b47a8]
+  port: 443
+  server: 172.64.68.89
+  skip-cert-verify: true
+  sni: 172.64.68.89
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+- name: 🇨🇦_加拿大
+  type: ss
+  server: 149.22.95.183
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇫🇷FR_76|8.7MB/s [0aa0aa38a3d8]
+  password: 'null'
+  port: 443
+  server: 172.64.68.89
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: 'null'
+  udp: true
+- name: 🇺🇸US_23|628KB/s|A004-260618 [19fe6b7745cb]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.199.43.159
+  sub_tag: A004-260618
   type: ss
   udp: true
+- type: ss
+  name: 🇨🇦_加拿大-2
+  server: 149.22.95.183
+  port: 443
+  password: shadowsocks
+  cipher: aes-128-gcm
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- cipher: rc4-md5
+  name: shadowsocks-1827963904
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 138.199.43.159
+  type: ss
+  udp: true
+- name: 🇺🇸_美国 (55)
+  type: ss
+  server: 137.184.89.151
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
   type: wireguard
   server: 162.159.192.3
@@ -189,88 +136,152 @@ proxies:
   - 74
   - 19
   mtu: 1280
-- name: 🇺🇸_美国 (17)-2
-  type: ss
-  server: 200.102.179.179
-  port: 8388
-  cipher: aes-256-gcm
-  password: itzvpn@321
-- name: 🇨🇦_加拿大 (5)
-  type: ss
-  server: 158.51.121.221
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- cipher: aes-256-gcm
-  name: shadowsocks-1827147801
-  password: kDWvXYZoTBcGkC4
-  port: 8882
-  server: 15.204.233.41
-  type: ss
-  udp: true
 - type: ss
-  name: 🇺🇸_美国 (56)
-  server: 38.91.100.39
+  name: 🇺🇸_美国 (55)-2
+  server: 137.184.89.151
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   cipher: aes-256-gcm
   udp: true
   tls: false
   skip-cert-verify: false
-- name: CA
-  type: ss
-  server: 198.100.154.175
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: 9dtksxhydjbjkg0w
-- name: 🇺🇸US_63|219KB/s|M003-260806 [0c4b7a94cbdd]
+- type: ss
+  name: 🇺🇸_美国 (6)
+  server: 23.150.152.38
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  udp: true
+  tls: false
+  skip-cert-verify: false
+- name: 🇺🇸US_323|415KB/s|M003-260806 [3de23dd74123]
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 38.91.100.39
+  server: 137.184.89.151
   sub_tag: M003-260806
   type: ss
   udp: true
-- name: 🇺🇸_美国 (56)-2
+- name: 🇺🇸_美国 (6)-2
   type: ss
-  server: 38.91.100.39
+  server: 23.150.152.38
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- cipher: rc4-md5
+  name: shadowsocks-1827969041
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 23.251.121.242
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1827963705
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 107.155.57.11
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1827963676
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 107.155.57.51
+  type: ss
+  udp: true
+- name: 🇺🇸US_330|1.0MB/s|M003-260806 [37b95c07165e]
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 23.150.152.38
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- name: 🇺🇸US_4|299KB/s|M003-260806 [6364b2c615d5]
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 23.251.121.242
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- name: برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
+  type: wireguard
+  server: 162.159.192.2
+  port: 500
+  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  ip: 172.16.0.2/32
+  udp: true
+  reserved:
+  - 39
+  - 4
+  - 107
+  mtu: 1280
+- name: 🇺🇸US_642|975KB/s|M003-260806 [dc2acf418afb]
+  cipher: chacha20-ietf-poly1305
+  password: JUXsy78dSs6ROkasikmoaL
+  port: 11051
+  server: 104.238.140.45
+  sub_tag: M003-260806
+  type: ss
+  udp: true
+- cipher: rc4-md5
+  name: shadowsocks-1828227588
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 79.110.53.169
+  type: ss
+  udp: true
+- name: 🇺🇸US_642|975KB/s|M003-260806 [dc2acf418afb]-2
+  type: ss
+  server: 104.238.140.45
+  port: 11051
+  cipher: chacha20-ietf-poly1305
+  password: JUXsy78dSs6ROkasikmoaL
+- type: ss
+  name: 🇺🇸_美国 (2)
+  server: 169.197.142.68
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  udp: true
+  tls: false
+  skip-cert-verify: false
 proxy-groups:
 - name: AUTO
   type: url-test
   proxies:
-  - 🇺🇸_美国 (31)
-  - 🇺🇸US_36|219KB/s|A004-260618 [16f4c5e97fb4]
-  - 🇺🇸_美国 (30)
-  - 🇺🇸_美国 (31)-2
-  - 🇺🇸_美国 (132)
-  - 🇺🇸US_76|1.1MB/s|M003-260806 [f6d8f9688b2e]
-  - 🇺🇸_美国 (30)-2
-  - 🇺🇸_美国 (35)
-  - 🇺🇸_美国 (16)
-  - 🇺🇸_美国 (21)
-  - 🇺🇸_美国 (15)
-  - 🇺🇸_美国 (15)-2
-  - 🇺🇸_美国 (21)-2
-  - 🇺🇸_美国 (17)
-  - 🇺🇸_美国 (132)-2
-  - 🇺🇸_美国 (19)
-  - 🇺🇸_美国 (57)
-  - shadowsocks-1870576149
-  - 🇺🇸_美国 (57)-2
-  - 🇺🇸US_21|480KB/s|B007-260618 [719341a104ed]
-  - 🇺🇸US_8|269KB/s|A004-260618 [1feecb3b9b0d]
-  - shadowsocks-1827146718
+  - 🇺🇸_美国
+  - 🇺🇸_美国-2
+  - 🇫🇷FR_3|3.4MB/s|R002-260618 [39873ef4d996]
+  - 🇫🇷FR_32|5.0MB/s|P002-260618 [8342ff3bd32d]
+  - 🇩🇪DE_2|1.3MB/s|P002-260618
+  - 🇩🇪DE_1|2.5MB/s
+  - 🇺🇸US_550|1.1MB/s|M003-260806 [8741a1f6093f]
+  - 🇨🇦CA_50|844KB/s|A004-260618 [3fb3343bd43b]
+  - 🇫🇷FR_113|7.5MB/s|P002-260618 [4b14f18b47a8]
+  - 🇨🇦_加拿大
+  - 🇫🇷FR_76|8.7MB/s [0aa0aa38a3d8]
+  - 🇺🇸US_23|628KB/s|A004-260618 [19fe6b7745cb]
+  - 🇨🇦_加拿大-2
+  - shadowsocks-1827963904
+  - 🇺🇸_美国 (55)
   - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩
-  - 🇺🇸_美国 (17)-2
-  - 🇨🇦_加拿大 (5)
-  - shadowsocks-1827147801
-  - 🇺🇸_美国 (56)
-  - CA
-  - 🇺🇸US_63|219KB/s|M003-260806 [0c4b7a94cbdd]
-  - 🇺🇸_美国 (56)-2
+  - 🇺🇸_美国 (55)-2
+  - 🇺🇸_美国 (6)
+  - 🇺🇸US_323|415KB/s|M003-260806 [3de23dd74123]
+  - 🇺🇸_美国 (6)-2
+  - shadowsocks-1827969041
+  - shadowsocks-1827963705
+  - shadowsocks-1827963676
+  - 🇺🇸US_330|1.0MB/s|M003-260806 [37b95c07165e]
+  - 🇺🇸US_4|299KB/s|M003-260806 [6364b2c615d5]
+  - برای اتصال دائمی جوین شو🔐 TelegramID ⌲Express_freevpn 🪩-2
+  - 🇺🇸US_642|975KB/s|M003-260806 [dc2acf418afb]
+  - shadowsocks-1828227588
+  - 🇺🇸US_642|975KB/s|M003-260806 [dc2acf418afb]-2
+  - 🇺🇸_美国 (2)
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
