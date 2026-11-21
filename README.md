@@ -2,7 +2,7 @@
 
 GitHub Actions 每 10 分钟尝试刷新节点；实际触发时间受 GitHub 调度影响。
 精选节点按下载速度排序，境外测速不能代表实测可用性；每个订阅组最多 30 个，免费节点可能随时失效。
-本仓订阅更新时间：UTC：2026-11-21 18:19:45；北京时间：2026-11-22 02:19:45
+本仓订阅更新时间：UTC：2026-11-21 23:27:38；北京时间：2026-11-22 07:27:38
 
 ## 精选订阅
 
@@ -152,7 +152,7 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 [https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.yaml](https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.yaml)
 
-[VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy](https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy)（仓库更新：2026-11-21，Stars：5766）
+[VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy](https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy)（仓库更新：2026-11-21，Stars：5767）
 
 [https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/v2ray.config.txt](https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/v2ray.config.txt)
 
@@ -164,13 +164,13 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 [https://raw.githubusercontent.com/snakem982/proxypool/main/source/v2ray-2.txt](https://raw.githubusercontent.com/snakem982/proxypool/main/source/v2ray-2.txt)
 
-[cbusifabcap/daily_free_vpn](https://github.com/cbusifabcap/daily_free_vpn)（仓库更新：2026-11-21，Stars：440）
+[cbusifabcap/daily_free_vpn](https://github.com/cbusifabcap/daily_free_vpn)（仓库更新：2026-11-21，Stars：441）
 
 [https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/URI.yml](https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/URI.yml)
 
 [https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/ClashMeta.yml](https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/ClashMeta.yml)
 
-[free18/v2ray](https://github.com/free18/v2ray)（仓库更新：2026-11-21，Stars：5958）
+[free18/v2ray](https://github.com/free18/v2ray)（仓库更新：2026-11-21，Stars：5960）
 
 [https://raw.githubusercontent.com/free18/v2ray/main/c.yaml](https://raw.githubusercontent.com/free18/v2ray/main/c.yaml)
 
