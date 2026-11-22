@@ -2,7 +2,7 @@
 
 GitHub Actions 每 10 分钟尝试刷新节点；实际触发时间受 GitHub 调度影响。
 精选节点按下载速度排序，境外测速不能代表实测可用性；每个订阅组最多 30 个，免费节点可能随时失效。
-本仓订阅更新时间：UTC：2026-11-22 18:44:12；北京时间：2026-11-23 02:44:12
+本仓订阅更新时间：UTC：2026-11-22 23:54:12；北京时间：2026-11-23 07:54:12
 
 ## 精选订阅
 
@@ -144,7 +144,7 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 [https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes_CA.yml](https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/snippets/nodes_CA.yml)
 
-[proxifly/free-proxy-list](https://github.com/proxifly/free-proxy-list)（仓库更新：2026-11-22，Stars：7086）
+[proxifly/free-proxy-list](https://github.com/proxifly/free-proxy-list)（仓库更新：2026-11-22，Stars：7088）
 
 [https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.txt](https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.txt)
 
@@ -152,7 +152,7 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 [https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.yaml](https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.yaml)
 
-[VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy](https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy)（仓库更新：2026-11-22，Stars：5769）
+[VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy](https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy)（仓库更新：2026-11-22，Stars：5770）
 
 [https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/v2ray.config.txt](https://raw.githubusercontent.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy/main/combine/v2ray.config.txt)
 
@@ -170,7 +170,7 @@ https://cdn.jsdelivr.net/gh/liao-zc/FreeVPN_Node@main/subscriptions/all.txt
 
 [https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/ClashMeta.yml](https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/main/sub/ClashMeta.yml)
 
-[free18/v2ray](https://github.com/free18/v2ray)（仓库更新：2026-11-22，Stars：5965）
+[free18/v2ray](https://github.com/free18/v2ray)（仓库更新：2026-11-22，Stars：5966）
 
 [https://raw.githubusercontent.com/free18/v2ray/main/c.yaml](https://raw.githubusercontent.com/free18/v2ray/main/c.yaml)
 
